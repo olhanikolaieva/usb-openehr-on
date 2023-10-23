@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "5.0.0",
+      "sem_ver" : "5.1.0",
       "build_uid" : "1afaee66-7252-41cb-9e27-0f4493af42e9",
-      "MD5-CAM-1.0.1" : "1160949268d6139ecbf31e445063f81d",
+      "MD5-CAM-1.0.1" : "860707082edd17c8e77c1c35a49d661c",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -212,7 +212,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Childhood illnesses",
+          "text" : "Childhood Illnesses Anamnesis",
           "description" : "Generic document containing a summary of health information about an individual."
         }
       },
