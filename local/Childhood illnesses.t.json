@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "4.0.0",
       "build_uid" : "1afaee66-7252-41cb-9e27-0f4493af42e9",
-      "MD5-CAM-1.0.1" : "6db99c4cddcb14e395dd4c44d0475f4b",
+      "MD5-CAM-1.0.1" : "8d1aaf204e1583beed9fda6fc0ce09d6",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -7393,7 +7393,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "5acb5677-80a3-4433-8414-e24fa45c629a",
+    "uid" : "1858c516-a1b5-431a-94d5-4269dfabbd36",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7404,20 +7404,58 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-hospitalization_complications-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "fdacfe85-7e6f-3c34-8fe3-ee7fcc7412b2",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "a18a3b21-ead7-4264-bc27-9f0b8a9d6d67",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
+      },
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7457,7 +7495,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "cb531e68-cbb5-4b9e-9e08-ea38ea82d256",
+    "uid" : "f0c43c80-7ab7-497d-85e5-93f4b6841dfe",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7468,20 +7506,7 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7521,7 +7546,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "b724717a-1eb9-4d4b-be23-91a47524dfe6",
+    "uid" : "b95443e3-cb32-4fa2-bd7c-eaa6808a5d09",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7532,20 +7557,7 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7585,7 +7597,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "a4713c09-24e4-43d8-8ad6-61edd7aeb874",
+    "uid" : "cc2a2fef-4ebc-4a96-a5ac-becb137bd95c",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7596,20 +7608,7 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7649,7 +7648,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "17244f20-ce9e-4f62-8631-2cbc006e43a3",
+    "uid" : "97d9f45d-d6fd-4682-af17-f4b97f6396e3",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7660,20 +7659,7 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7713,7 +7699,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "df0177e6-b38f-4573-9036-3832aea75b4a",
+    "uid" : "854961ce-ee9d-4948-afe5-a8f5da4a1fe9",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7724,20 +7710,7 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7777,7 +7750,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "ba059da0-1c1a-4e5d-be48-09af041b0c64",
+    "uid" : "e00a3dda-6833-4c79-9a1f-c66d449ec5ce",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7788,20 +7761,7 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
       },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
@@ -7841,71 +7801,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "7493a6c1-6ada-492a-8da7-e85603f8ddb0",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "991d929152c3e6b83f09858a30b76556"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-hospitalization_complications-009.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "fdacfe85-7e6f-3c34-8fe3-ee7fcc7412b2",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "5048821d-ccfe-45f9-a0e3-77d9c2f0a6c6",
+    "uid" : "41ff99ac-1a33-4ee5-9fbd-5375404374e7",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7922,7 +7818,7 @@
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-hospitalization_complications-001.v0"
+      "value" : "openEHR-EHR-CLUSTER.ovl-hospitalization_complications-009.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
