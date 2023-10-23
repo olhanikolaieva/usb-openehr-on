@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e73e5828bde37ab3afcacf3f0f3e1319">
+		["MD5-CAM-1.0.1"] = <"3ce73fd8fcd139854670aa934f8233cc">
 		["build_uid"] = <"fdacfe85-7e6f-3c34-8fe3-ee7fcc7412b2">
 	>
 
@@ -60,30 +60,6 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Hospitalization
-				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0033,    -- Yes
-							at0034]    -- No
-						}
-					}
-					DV_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0035] occurrences matches {0..1} matches {    -- Complications
-				value matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0036,    -- Yes
-							at0037]    -- No
-						}
-					}
-					DV_TEXT matches {*}
-				}
-			}
 		}
 	}
 
@@ -105,11 +81,11 @@ ontology
 				>
 				["at0027"] = <
 					text = <"Hospitalization">
-					description = <"">
+					description = <"Patient was hospitalized.">
 				>
 				["at0028"] = <
 					text = <"None">
-					description = <"">
+					description = <"Patient was not hospitalized.">
 				>
 				["at0029"] = <
 					text = <"Complications">
@@ -117,34 +93,10 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Complications">
-					description = <"">
+					description = <"Patient had complications.">
 				>
 				["at0031"] = <
 					text = <"None">
-					description = <"">
-				>
-				["at0032"] = <
-					text = <"Hospitalization">
-					description = <"">
-				>
-				["at0033"] = <
-					text = <"Yes">
-					description = <"Patient was hospitalized.">
-				>
-				["at0034"] = <
-					text = <"No">
-					description = <"Patient was not hospitalized.">
-				>
-				["at0035"] = <
-					text = <"Complications">
-					description = <"">
-				>
-				["at0036"] = <
-					text = <"Yes">
-					description = <"Patient had complications.">
-				>
-				["at0037"] = <
-					text = <"No">
 					description = <"Patient had no complications.">
 				>
 			>
