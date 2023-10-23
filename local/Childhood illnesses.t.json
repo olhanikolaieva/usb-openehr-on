@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "1afaee66-7252-41cb-9e27-0f4493af42e9",
-      "MD5-CAM-1.0.1" : "4a0682e2046c353a5f44b817360cc718",
+      "MD5-CAM-1.0.1" : "45688941c76a90fae1fb707c99f3663b",
       "PARENT:MD5-CAM-1.0.1" : "A0DA8D01B967B2B05FC941F6E389A94B"
     },
     "details" : {
@@ -524,6 +524,14 @@
                         "terminologyId" : "SNOMED-CT",
                         "code" : "14189004",
                         "value" : "Measles"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "260413007",
+                        "value" : "None"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "1287211007",
+                        "value" : "No information available"
                       } ]
                     } ]
                   } ],
@@ -1177,6 +1185,10 @@
                         "terminologyId" : "SNOMED-CT",
                         "code" : "36989005",
                         "value" : "Mumps"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "260413007",
+                        "value" : "None"
                       } ]
                     } ]
                   } ],
@@ -1926,6 +1938,10 @@
                         "terminologyId" : "SNOMED-CT",
                         "code" : "38907003",
                         "value" : "Varicella"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "260413007",
+                        "value" : "None"
                       } ]
                     } ]
                   } ],
@@ -7844,7 +7860,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "67c47d9361d1676a3a1ebd0ee464fc6d"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.hospitalization_complications.v0",
     "differential" : true,
