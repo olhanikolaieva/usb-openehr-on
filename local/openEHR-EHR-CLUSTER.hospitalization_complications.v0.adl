@@ -26,37 +26,31 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"991d929152c3e6b83f09858a30b76556">
+		["MD5-CAM-1.0.1"] = <"4cf453e4ab9a718e5035b2ee0a13a593">
 		["build_uid"] = <"fdacfe85-7e6f-3c34-8fe3-ee7fcc7412b2">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Hospitalization Complications
+	CLUSTER[at0000] matches {    -- Additional Information
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Hospitalization
+			ELEMENT[at0026] occurrences matches {0..1} matches {    -- Hospitalization
 				value matches {
-					DV_BOOLEAN matches {*}
-				}
-				name matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0021,    -- Yes
-							at0022]    -- No
+							at0027,    -- Hospitalization
+							at0028]    -- None
 						}
 					}
 				}
 			}
-			ELEMENT[at0023] occurrences matches {0..1} matches {    -- Complications
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- Complications
 				value matches {
-					DV_BOOLEAN matches {*}
-				}
-				name matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0024,    -- Yes
-							at0025]    -- No
+							at0030,    -- Complications
+							at0031]    -- None
 						}
 					}
 				}
@@ -74,36 +68,36 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Hospitalization Complications">
+					text = <"Additional Information">
 					description = <"Hospitalisation Complications">
 				>
 				["at0015"] = <
 					text = <"Comment">
 					description = <"">
 				>
-				["at0020"] = <
+				["at0026"] = <
 					text = <"Hospitalization">
 					description = <"">
 				>
-				["at0021"] = <
-					text = <"Yes">
-					description = <"Patient was hospitalized.">
+				["at0027"] = <
+					text = <"Hospitalization">
+					description = <"">
 				>
-				["at0022"] = <
-					text = <"No">
-					description = <"Patient was not hospitalized.">
+				["at0028"] = <
+					text = <"None">
+					description = <"">
 				>
-				["at0023"] = <
+				["at0029"] = <
 					text = <"Complications">
 					description = <"">
 				>
-				["at0024"] = <
-					text = <"Yes">
-					description = <"Patient had complications.">
+				["at0030"] = <
+					text = <"Complications">
+					description = <"">
 				>
-				["at0025"] = <
-					text = <"No">
-					description = <"Patient had no complications.">
+				["at0031"] = <
+					text = <"None">
+					description = <"">
 				>
 			>
 		>
