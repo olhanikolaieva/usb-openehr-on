@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "2.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e90d1aefeb237bc9fa2d3d3bdad028cd",
+      "MD5-CAM-1.0.1" : "72cae34269e98a4629e7ca7c55105a3a",
       "PARENT:MD5-CAM-1.0.1" : "41914AB89EC39C22523B4461C349BB17"
     },
     "details" : {
@@ -380,12 +380,6 @@
                 "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_BOOLEAN",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
                   "occurrences" : "1..1",
                   "attributes" : [ ],
@@ -407,7 +401,7 @@
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "ac0.44" ],
+                      "constraint" : [ "ac0.48" ],
                       "selectedTerminologies" : [ ]
                     } ]
                   } ],
@@ -427,42 +421,42 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.44" : {
+          "ac0.48" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.44",
+            "code" : "ac0.48",
             "description" : ""
           }
         },
         "pt-br" : {
-          "ac0.44" : {
+          "ac0.48" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.44",
+            "code" : "ac0.48",
             "description" : ""
           }
         },
         "nb" : {
-          "ac0.44" : {
+          "ac0.48" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.44",
+            "code" : "ac0.48",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.44" : {
+          "ac0.48" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.44",
+            "code" : "ac0.48",
             "description" : ""
           }
         },
         "sv" : {
-          "ac0.44" : {
+          "ac0.48" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.44",
+            "code" : "ac0.48",
             "description" : ""
           }
         }
@@ -688,6 +682,26 @@
         "ac0.44" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.44",
+          "members" : [ "at0135", "at0136", "at0137", "at0138", "at0139", "at0140" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
+          "members" : [ "at0135", "at0136", "at0137", "at0138", "at0139", "at0140" ]
+        },
+        "ac0.46" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.46",
+          "members" : [ "at0135", "at0136", "at0137", "at0138", "at0139", "at0140" ]
+        },
+        "ac0.47" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.47",
+          "members" : [ "at0135", "at0136", "at0137", "at0138", "at0139", "at0140" ]
+        },
+        "ac0.48" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.48",
           "members" : [ "at0135", "at0136", "at0137", "at0138", "at0139", "at0140" ]
         }
       }
