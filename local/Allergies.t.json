@@ -1,0 +1,425 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "9d20b3a9-2908-47ba-9a9d-43d1d253b36c",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "name" : "Olha Nikolaieva",
+      "email" : "olha.nikolaieva.med@gmail.com",
+      "organisation" : "University Hospital Basel",
+      "date" : "2023-10-26"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "",
+      "custodian_organisation" : "",
+      "original_namespace" : "",
+      "original_publisher" : "",
+      "custodian_namespace" : "",
+      "sem_ver" : "0.1.0",
+      "build_uid" : "",
+      "MD5-CAM-1.0.1" : "8cf1e7f0bfdd822224f88579ed324a37",
+      "PARENT:MD5-CAM-1.0.1" : "41914AB89EC39C22523B4461C349BB17"
+    },
+    "details" : {
+      "es-ar" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es-ar"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "he" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "he"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.adverse_reaction_list.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.t_adverse_reaction_list.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "existence" : "0..1",
+      "cardinality" : {
+        "@type" : "CARDINALITY",
+        "interval" : "1..*",
+        "ordered" : false,
+        "unique" : false
+      },
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.2",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-adverse_reaction_risk-001.v2",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Allergies",
+          "description" : "A persistent and managed list of adverse reactions experienced by the subject that may influence clinical decision-making and care provision."
+        }
+      },
+      "es-ar" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Allergies",
+          "description" : "Una lista persistente y administrad de las reacciones adversas expermientadas por el sujeto y que puedan influenciar la toma de decisiones clínicas o la provisión de cuidados."
+        }
+      },
+      "pt-br" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Allergies",
+          "description" : "Uma lista permanente e gerenciável de reações adversas experimentadas pelo indivíduo que podem influenciar a tomada de decisões clínicas e provisão de cuidado."
+        }
+      },
+      "he" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Allergies",
+          "description" : "רשימה מנוהלת של תגובות שליליות שחווה הנבדק אשר עשויות לתרום או להשפיע על קבלת החלטות קליניות ומתן טיפול."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "fc2fd2f4-caa5-3c1e-b00d-13abedf552bc",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "Allergies",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "541b676a-8b59-4dbb-b346-792a41a47145",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "19F2BC4F565422749861B468594E50E7"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "" : {
+            "source" : "openEHR,FHIR"
+          }
+        },
+        "pt-br" : {
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "*openEHR,FHIR,DAM(en)"
+          }
+        },
+        "nb" : { },
+        "de" : {
+          "" : {
+            "source" : "openEHR, FHIR"
+          },
+          "/data[at0001]/items[at0101]" : {
+            "source" : "DAM, openEHR"
+          },
+          "/data[at0001]/items[at0058]" : {
+            "source" : "FHIR, DAM"
+          },
+          "/protocol[at0042]/items[at0047]" : {
+            "source" : "FHIR, openEHR, DAM"
+          },
+          "/data[at0001]/items[at0006]" : {
+            "source" : "openEHR"
+          },
+          "/data[at0001]/items[at0117]" : {
+            "source" : "IMH"
+          },
+          "/protocol[at0042]/items[at0062]" : {
+            "source" : "openEHR, FHIR, DAM"
+          },
+          "/data[at0001]/items[at0063]" : {
+            "source" : "FHIR, DAM"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR, FHIR, DAM"
+          }
+        },
+        "sv" : {
+          "/data[at0001]/items[at0101]" : {
+            "source" : "DAM, openEHR"
+          },
+          "/data[at0001]/items[at0058]" : {
+            "source" : "FHIR, DAM"
+          },
+          "/protocol[at0042]/items[at0047]" : {
+            "source" : "FHIR, openEHR, DAM"
+          },
+          "/data[at0001]/items[at0006]" : {
+            "source" : "openEHR"
+          },
+          "/data[at0001]/items[at0117]" : {
+            "source" : "IMH"
+          },
+          "/data[at0001]/items[at0063]" : {
+            "source" : "FHIR, DAM"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR,FHIR,DAM"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.adverse_reaction_risk.v2",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-adverse_reaction_risk-001.v2"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "5-Aminosalicylate", "Acetaminophen", "Acetylcysteine", "Acetylsalicylate", "Alcuronium", "Almond", "Alternaria alternata", "Ambroxol", "Ammonium persulfate", "Amoxicillin", "Ampicillin", "Anisakis", "Another insect", "Another microorganism", "Another plant", "Another substance", "Apple", "Articaine Articaine", "Aspergillus fumigatus", "Aspergillus niger", "Atropine", "Avocado", "Azithromycin", "Baker’s yeast (Saccharomyces cerevisiae)", "Banana", "Beef", "Benzocaine", "Benzylpenicilloyl-polylysine", "Black Pepper", "Blue mussel", "Brazil nut", "Bromhexine", "Bupivacaine", "Cabbage", "Cancer", "Candida albicans", "Candida sp", "Carrot", "Cashew nut", "Cat", "Cedar elm", "Cefaclor", "Cefamandole", "Cefazolin", "Cefoxitin", "Ceftriaxone", "Cefuroxime", "Celery", "Cephalexin", "Cephalosporin", "Cephalosporin C", "Cetuximab", "Cheese", "Cherry", "Chick pea", "Chicken", "Chlorhexidine", "Chymopapain", "Ciprofloxacin", "Cladosporium herbarum", "Clarithromycin", "Clavulanate", "Clindamycin", "Clostridium tetani toxoid", "Cloxacillin", "Coastal maple", "Cocksfoot", "Cocoa", "Coconut", "Codeine", "Common pigweed", "Corn", "Corticotropin", "Cottonwood", "Cow", "Crab", "Curvularia lunata", "Dermatophagoides farinae", "Dermatophagoides pteronyssinus", "Dexamethasone", "Diatrizoate", "Diclofenac", "Dipyrone", "Dog", "Doxycycline", "Droperidol", "Duck feather", "Egg", "English plantain", "English walnut pollen", "Epicoccum purpurascens", "Erythromycin", "Erythrosine B", "Eucalyptus", "Fire ant", "Fish", "Fosfomycin", "Fusarium sp", "Garlic", "Gelatin", "Gelatin, bovine", "Gelatin, porcine", "Gentamicin", "Glutamate", "Gluten", "Goat’s milk", "Goose", "Goosefoot", "Grape", "Grapefruit", "Grass", "Green bean", "Grey alder", "Guinea pig", "Gum tree", "Halibut", "Hamster", "Hazelnut", "Heparin", "Honey bee", "Horse", "House dust", "Ibuprofen", "Indomethacin", "Insulin, bovine", "Insulin, human", "Insulin, porcine", "Italian cypress", "Japanese cedar", "Kiwifruit", "Lactose", "Latex", "Lemon", "Lentils", "Lettuce", "Levothyroxine", "Lidocaine", "Lobster", "Lysine acetylsalicylate", "Macadamia", "Malassezia sp", "Mango", "Mefenamate", "Melon", "Mepivacaine", "Mesquite", "Methylene blue", "Metronidazole", "Mexican firebush", "Milk", "Miscellaneous", "Mite dust", "Mivacurium", "Mosquito", "Moth", "Mountain juniper", "Mouse", "Mucor racemosus", "Mugwort (Artemisia)", "Mustard", "Naproxen", "Neomycin", "Nettle", "Novocaine", "Oat", "Octopus", "Olive", "Onion", "Orange", "Oyster", "Pacific squid", "Pancuronium", "Paper mulberry", "Paprika", "Paraphenylenediamine", "Pea", "Peach", "Peanut", "Pear", "Pecan or hickory nut", "Pecan or hickory tree", "Penicillamine", "Penicillin G", "Penicillin V", "Penicillium notatum", "Penicillium sp", "Phenylbutazone", "Pholcodine", "Phoma sp", "Pine nut", "Pineapple", "Piroxicam", "Pistachio", "Pork", "Potato", "Propofol", "Propyphenazone", "Protamine", "Pyrazole", "Rabbit", "Ragweed (Ambrosia)", "Red maple", "Red mulberry", "Red top grass", "Rice", "Rocuronium", "Rough pigweed", "Rye", "Salmon", "Sardine", "Sesame seed", "Sheep sorrel", "Shrimp", "Silver birch", "Sodium benzoate", "Soybean", "Spinach", "Spiramycin", "Stemphylium botryosum", "Strawberry", "Succinylcholine", "Sulfadiazine", "Sulfalazine", "Sulfamedraxozole", "Sulfamethoxazole", "Sulfisoxazole", "Sulphonamide", "Sunflower", "Sweet gum", "Tartrazine", "Tetracycline", "Thiopental", "Timothy", "Tobramycin", "Tomato", "Trimethoprim", "Trout", "Tuna", "Vecuronium", "Wall pellitory", "Walnut", "Wasp", "Wattle", "Western white pine", "Wheat dust", "White ash", "White bean", "White birch", "White hickory", "Willow", "Wood dust", "Wormwood (Artemisia)" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "de" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "63592b37-306a-4201-a529-181128ace219",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch, Darin Leonhardt",
+        "organisation" : "Medizinische Hochschule Hannover, PLRI",
+        "email" : "Strauch.Natalia@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Emma Malm",
+        "organisation" : "Karolinska Universitetssjukhuset",
+        "email" : "emma.malm@cambio.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke",
+        "organisation" : "Helse Vest IKT AS",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es-ar"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "he"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
