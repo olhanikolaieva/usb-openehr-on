@@ -116,24 +116,26 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"15A478730DA59C58996486A80D7D7D78">
+		["MD5-CAM-1.0.1"] = <"e91f8b391c0daa1765a806f0a3d2cffa">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- Vaccination summary
+	EVALUATION[at0000] matches {    -- Vaccination questionnaire
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Tree
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Vaccine name
 						value matches {
 							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Targeted disease or agent
 						value matches {
 							DV_TEXT matches {*}
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
@@ -194,6 +196,7 @@ definition
 							ELEMENT[at0023] occurrences matches {0..*} matches {    -- Specific vaccine name
 								value matches {
 									DV_TEXT matches {*}
+									DV_CODED_TEXT matches {*}
 								}
 							}
 							allow_archetype CLUSTER[at0034] occurrences matches {0..*} matches {    -- Vaccine details
@@ -285,7 +288,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Vaccination summary">
+					text = <"Vaccination questionnaire">
 					description = <"Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.">
 				>
 				["at0001"] = <
@@ -444,7 +447,7 @@ ontology
 		["es-ar"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination summary (en)">
+					text = <"*Vaccination questionnaire (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -603,7 +606,7 @@ ontology
 		["pt-br"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination summary (en)">
+					text = <"*Vaccination questionnaire (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -762,7 +765,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination summary (en)">
+					text = <"*Vaccination questionnaire (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
