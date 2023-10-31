@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2ebf84601fc2ed8d7f4b7852f2879c6c">
+		["MD5-CAM-1.0.1"] = <"cdf881f16f44fa2979cd2c7eba6e0f5d">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -149,7 +149,8 @@ definition
 									at0085,    -- PCV
 									at0086,    -- PCV13
 									at0087,    -- PPV23
-									at0088]    -- VZV
+									at0088,    -- VZV
+									at0097]    -- FSME-Impfung
 								}
 							}
 						}
@@ -175,9 +176,25 @@ definition
 									at0067,    -- Influenza
 									at0068,    -- Meningokokken Serogruppe B
 									at0069,    -- Meningokokken Serogruppe C
-									at0070]    -- Meningokokken Serogruppe A, C, W und Y
+									at0070,    -- Meningokokken Serogruppe A, C, W und Y
+									at0096]    -- Frühsommer-Meningoenzephalitis
 								}
 							}
+						}
+					}
+					ELEMENT[at0090] occurrences matches {0..1} matches {    -- Type of vaccination
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0091,    -- Empfohlene Basisimpfung
+									at0092,    -- Nachholimpfungen
+									at0093,    -- Empfohlene ergänzende Impfung
+									at0094,    -- Risikogruppen empfohlene Impfungen
+									at0095]    -- Risikosituationen empfohlene Impfungen
+								}
+							}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
@@ -620,6 +637,38 @@ ontology
 					text = <"VZV">
 					description = <"Impfung gegen Varizellen (Varizella-Zoster-Virus)">
 				>
+				["at0090"] = <
+					text = <"Type of vaccination">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Empfohlene Basisimpfung">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Nachholimpfungen">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Empfohlene ergänzende Impfung">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Risikogruppen empfohlene Impfungen">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Risikosituationen empfohlene Impfungen">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Frühsommer-Meningoenzephalitis">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"FSME-Impfung">
+					description = <"Impfung gegen Frühsommer-Meningoenzephalitis">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -914,6 +963,38 @@ ontology
 				["at0088"] = <
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
+				>
+				["at0090"] = <
+					text = <"*Type of vaccination (en)">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"*Empfohlene Basisimpfung (en)">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"*Nachholimpfungen (en)">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"*Empfohlene ergänzende Impfung (en)">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"*Risikogruppen empfohlene Impfungen (en)">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"*Risikosituationen empfohlene Impfungen (en)">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"*Frühsommer-Meningoenzephalitis (en)">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"*FSME-Impfung (en)">
+					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
 				>
 			>
 		>
@@ -1210,6 +1291,38 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
+				["at0090"] = <
+					text = <"*Type of vaccination (en)">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"*Empfohlene Basisimpfung (en)">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"*Nachholimpfungen (en)">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"*Empfohlene ergänzende Impfung (en)">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"*Risikogruppen empfohlene Impfungen (en)">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"*Risikosituationen empfohlene Impfungen (en)">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"*Frühsommer-Meningoenzephalitis (en)">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"*FSME-Impfung (en)">
+					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
+				>
 			>
 		>
 		["de"] = <
@@ -1504,6 +1617,38 @@ ontology
 				["at0088"] = <
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
+				>
+				["at0090"] = <
+					text = <"*Type of vaccination (en)">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"*Empfohlene Basisimpfung (en)">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"*Nachholimpfungen (en)">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"*Empfohlene ergänzende Impfung (en)">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"*Risikogruppen empfohlene Impfungen (en)">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"*Risikosituationen empfohlene Impfungen (en)">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"*Frühsommer-Meningoenzephalitis (en)">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"*FSME-Impfung (en)">
+					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
 				>
 			>
 		>
