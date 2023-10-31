@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e91f8b391c0daa1765a806f0a3d2cffa">
+		["MD5-CAM-1.0.1"] = <"2ebf84601fc2ed8d7f4b7852f2879c6c">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -129,13 +129,55 @@ definition
 					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Vaccine name
 						value matches {
 							DV_TEXT matches {*}
-							DV_CODED_TEXT matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0071,    -- DT
+									at0072,    -- dT
+									at0073,    -- DTPa
+									at0074,    -- dTpa
+									at0075,    -- HBV
+									at0076,    -- Hib
+									at0077,    -- HPV
+									at0078,    -- HZ
+									at0079,    -- IPV
+									at0080,    -- 4CMenB
+									at0081,    -- MCV-C
+									at0082,    -- MCV-ACWY
+									at0083,    -- MMR
+									at0084,    -- MMRV
+									at0085,    -- PCV
+									at0086,    -- PCV13
+									at0087,    -- PPV23
+									at0088]    -- VZV
+								}
+							}
 						}
 					}
 					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Targeted disease or agent
 						value matches {
 							DV_TEXT matches {*}
-							DV_CODED_TEXT matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0055,    -- Diphtherie
+									at0056,    -- Tetanus
+									at0057,    -- Pertussis
+									at0058,    -- Haemophilus influenzae Typ b
+									at0059,    -- Poliomyelitis
+									at0060,    -- Hepatitis B
+									at0061,    -- Pneumokokken
+									at0062,    -- Masern
+									at0063,    -- Mumps
+									at0064,    -- Röteln
+									at0065,    -- Varizellen
+									at0066,    -- Humane Papillomaviren
+									at0067,    -- Influenza
+									at0068,    -- Meningokokken Serogruppe B
+									at0069,    -- Meningokokken Serogruppe C
+									at0070]    -- Meningokokken Serogruppe A, C, W und Y
+								}
+							}
 						}
 					}
 					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
@@ -442,6 +484,142 @@ ontology
 					description = <"Identification of the source of all vaccination information.">
 					comment = <"For example: child health book, clinic record, or parent.">
 				>
+				["at0055"] = <
+					text = <"Diphtherie">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Tetanus">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Pertussis">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Haemophilus influenzae Typ b">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Poliomyelitis">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Hepatitis B">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Pneumokokken">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Masern">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Mumps">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Röteln">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Varizellen">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"Humane Papillomaviren">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"Influenza">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Meningokokken Serogruppe B">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Meningokokken Serogruppe C">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Meningokokken Serogruppe A, C, W und Y">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"DT">
+					description = <"Kombinationsimpfstoff gegen Diphtherie und Tetanus">
+				>
+				["at0072"] = <
+					text = <"dT">
+					description = <"Kombinationsimpfstoff gegen Diphtherie und Tetanus mit geringerer Diphtherietoxoiddosis (d) = «Erwachsenendosierung»">
+				>
+				["at0073"] = <
+					text = <"DTPa">
+					description = <"Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis (Pa=Pertussis azellulär)">
+				>
+				["at0074"] = <
+					text = <"dTpa">
+					description = <"Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis mit einer geringeren Diphtherietoxoid- (d) und Pertussisdosis (pa) = «Erwachsenendosierung»">
+				>
+				["at0075"] = <
+					text = <"HBV">
+					description = <"Impfung gegen Hepatitis B">
+				>
+				["at0076"] = <
+					text = <"Hib">
+					description = <"Impfung gegen Haemophilus influenzae Typ b">
+				>
+				["at0077"] = <
+					text = <"HPV">
+					description = <"Impfung gegen humane Papillomaviren">
+				>
+				["at0078"] = <
+					text = <"HZ">
+					description = <"Impfung gegen Herpes Zoster">
+				>
+				["at0079"] = <
+					text = <"IPV">
+					description = <"Impfung gegen Poliomyelitis (Inactivated Poliomyelitis Vaccine)">
+				>
+				["at0080"] = <
+					text = <"4CMenB">
+					description = <"Rekombinanter Meningokokken-Impfstoff gegen die Serogruppe B">
+				>
+				["at0081"] = <
+					text = <"MCV-C">
+					description = <"Meningokokken-Konjugatimpfstoff gegen die Serogruppe C">
+				>
+				["at0082"] = <
+					text = <"MCV-ACWY">
+					description = <"Meningokokken-Konjugatimpfstoff gegen die Serogruppen A, C, W und Y">
+				>
+				["at0083"] = <
+					text = <"MMR">
+					description = <"Trivalenter Impfstoff gegen Masern, Mumps und Röteln">
+				>
+				["at0084"] = <
+					text = <"MMRV">
+					description = <"Quadrivalenter Impfstoff gegen Masern, Mumps, Röteln und Varizellen">
+				>
+				["at0085"] = <
+					text = <"PCV">
+					description = <"Pneumokokken-Konjugatimpfstoff">
+				>
+				["at0086"] = <
+					text = <"PCV13">
+					description = <"Pneumokokken-Konjugatimpfstoff gegen Pneumokokken, 13-valent">
+				>
+				["at0087"] = <
+					text = <"PPV23">
+					description = <"Polysaccharidimpfstoff gegen Pneumokokken, 23-valent">
+				>
+				["at0088"] = <
+					text = <"VZV">
+					description = <"Impfung gegen Varizellen (Varizella-Zoster-Virus)">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -600,6 +778,142 @@ ontology
 					text = <"Information source">
 					description = <"*Identification of the source of all vaccination information. (en)">
 					comment = <"For example: child health book, clinic record, or parent.">
+				>
+				["at0055"] = <
+					text = <"*Diphtherie (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Tetanus (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Pertussis (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Haemophilus influenzae Typ b (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Poliomyelitis (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Hepatitis B (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*Pneumokokken (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*Masern (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Mumps (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Röteln (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*Varizellen (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*Humane Papillomaviren (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*Influenza (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*Meningokokken Serogruppe B (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*Meningokokken Serogruppe C (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Meningokokken Serogruppe A, C, W und Y (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"*DT (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie und Tetanus (en)">
+				>
+				["at0072"] = <
+					text = <"*dT (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie und Tetanus mit geringerer Diphtherietoxoiddosis (d) = «Erwachsenendosierung» (en)">
+				>
+				["at0073"] = <
+					text = <"*DTPa (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis (Pa=Pertussis azellulär) (en)">
+				>
+				["at0074"] = <
+					text = <"*dTpa (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis mit einer geringeren Diphtherietoxoid- (d) und Pertussisdosis (pa) = «Erwachsenendosierung» (en)">
+				>
+				["at0075"] = <
+					text = <"*HBV (en)">
+					description = <"*Impfung gegen Hepatitis B (en)">
+				>
+				["at0076"] = <
+					text = <"*Hib (en)">
+					description = <"*Impfung gegen Haemophilus influenzae Typ b (en)">
+				>
+				["at0077"] = <
+					text = <"*HPV (en)">
+					description = <"*Impfung gegen humane Papillomaviren (en)">
+				>
+				["at0078"] = <
+					text = <"*HZ (en)">
+					description = <"*Impfung gegen Herpes Zoster (en)">
+				>
+				["at0079"] = <
+					text = <"*IPV (en)">
+					description = <"*Impfung gegen Poliomyelitis (Inactivated Poliomyelitis Vaccine) (en)">
+				>
+				["at0080"] = <
+					text = <"*4CMenB (en)">
+					description = <"*Rekombinanter Meningokokken-Impfstoff gegen die Serogruppe B (en)">
+				>
+				["at0081"] = <
+					text = <"*MCV-C (en)">
+					description = <"*Meningokokken-Konjugatimpfstoff gegen die Serogruppe C (en)">
+				>
+				["at0082"] = <
+					text = <"*MCV-ACWY (en)">
+					description = <"*Meningokokken-Konjugatimpfstoff gegen die Serogruppen A, C, W und Y (en)">
+				>
+				["at0083"] = <
+					text = <"*MMR (en)">
+					description = <"*Trivalenter Impfstoff gegen Masern, Mumps und Röteln (en)">
+				>
+				["at0084"] = <
+					text = <"*MMRV (en)">
+					description = <"*Quadrivalenter Impfstoff gegen Masern, Mumps, Röteln und Varizellen (en)">
+				>
+				["at0085"] = <
+					text = <"*PCV (en)">
+					description = <"*Pneumokokken-Konjugatimpfstoff (en)">
+				>
+				["at0086"] = <
+					text = <"*PCV13 (en)">
+					description = <"*Pneumokokken-Konjugatimpfstoff gegen Pneumokokken, 13-valent (en)">
+				>
+				["at0087"] = <
+					text = <"*PPV23 (en)">
+					description = <"*Polysaccharidimpfstoff gegen Pneumokokken, 23-valent (en)">
+				>
+				["at0088"] = <
+					text = <"*VZV (en)">
+					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
 			>
 		>
@@ -760,6 +1074,142 @@ ontology
 					description = <"*Identification of the source of all vaccination information. (en)">
 					comment = <"*For example: child health book, clinic record, or parent. (en)">
 				>
+				["at0055"] = <
+					text = <"*Diphtherie (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Tetanus (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Pertussis (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Haemophilus influenzae Typ b (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Poliomyelitis (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Hepatitis B (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*Pneumokokken (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*Masern (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Mumps (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Röteln (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*Varizellen (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*Humane Papillomaviren (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*Influenza (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*Meningokokken Serogruppe B (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*Meningokokken Serogruppe C (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Meningokokken Serogruppe A, C, W und Y (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"*DT (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie und Tetanus (en)">
+				>
+				["at0072"] = <
+					text = <"*dT (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie und Tetanus mit geringerer Diphtherietoxoiddosis (d) = «Erwachsenendosierung» (en)">
+				>
+				["at0073"] = <
+					text = <"*DTPa (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis (Pa=Pertussis azellulär) (en)">
+				>
+				["at0074"] = <
+					text = <"*dTpa (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis mit einer geringeren Diphtherietoxoid- (d) und Pertussisdosis (pa) = «Erwachsenendosierung» (en)">
+				>
+				["at0075"] = <
+					text = <"*HBV (en)">
+					description = <"*Impfung gegen Hepatitis B (en)">
+				>
+				["at0076"] = <
+					text = <"*Hib (en)">
+					description = <"*Impfung gegen Haemophilus influenzae Typ b (en)">
+				>
+				["at0077"] = <
+					text = <"*HPV (en)">
+					description = <"*Impfung gegen humane Papillomaviren (en)">
+				>
+				["at0078"] = <
+					text = <"*HZ (en)">
+					description = <"*Impfung gegen Herpes Zoster (en)">
+				>
+				["at0079"] = <
+					text = <"*IPV (en)">
+					description = <"*Impfung gegen Poliomyelitis (Inactivated Poliomyelitis Vaccine) (en)">
+				>
+				["at0080"] = <
+					text = <"*4CMenB (en)">
+					description = <"*Rekombinanter Meningokokken-Impfstoff gegen die Serogruppe B (en)">
+				>
+				["at0081"] = <
+					text = <"*MCV-C (en)">
+					description = <"*Meningokokken-Konjugatimpfstoff gegen die Serogruppe C (en)">
+				>
+				["at0082"] = <
+					text = <"*MCV-ACWY (en)">
+					description = <"*Meningokokken-Konjugatimpfstoff gegen die Serogruppen A, C, W und Y (en)">
+				>
+				["at0083"] = <
+					text = <"*MMR (en)">
+					description = <"*Trivalenter Impfstoff gegen Masern, Mumps und Röteln (en)">
+				>
+				["at0084"] = <
+					text = <"*MMRV (en)">
+					description = <"*Quadrivalenter Impfstoff gegen Masern, Mumps, Röteln und Varizellen (en)">
+				>
+				["at0085"] = <
+					text = <"*PCV (en)">
+					description = <"*Pneumokokken-Konjugatimpfstoff (en)">
+				>
+				["at0086"] = <
+					text = <"*PCV13 (en)">
+					description = <"*Pneumokokken-Konjugatimpfstoff gegen Pneumokokken, 13-valent (en)">
+				>
+				["at0087"] = <
+					text = <"*PPV23 (en)">
+					description = <"*Polysaccharidimpfstoff gegen Pneumokokken, 23-valent (en)">
+				>
+				["at0088"] = <
+					text = <"*VZV (en)">
+					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
+				>
 			>
 		>
 		["de"] = <
@@ -918,6 +1368,142 @@ ontology
 					text = <"*Information source (en)">
 					description = <"*Identification of the source of all vaccination information. (en)">
 					comment = <"*For example: child health book, clinic record, or parent. (en)">
+				>
+				["at0055"] = <
+					text = <"*Diphtherie (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Tetanus (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Pertussis (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Haemophilus influenzae Typ b (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Poliomyelitis (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Hepatitis B (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*Pneumokokken (en)">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"*Masern (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Mumps (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Röteln (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*Varizellen (en)">
+					description = <"">
+				>
+				["at0066"] = <
+					text = <"*Humane Papillomaviren (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*Influenza (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*Meningokokken Serogruppe B (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*Meningokokken Serogruppe C (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Meningokokken Serogruppe A, C, W und Y (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"*DT (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie und Tetanus (en)">
+				>
+				["at0072"] = <
+					text = <"*dT (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie und Tetanus mit geringerer Diphtherietoxoiddosis (d) = «Erwachsenendosierung» (en)">
+				>
+				["at0073"] = <
+					text = <"*DTPa (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis (Pa=Pertussis azellulär) (en)">
+				>
+				["at0074"] = <
+					text = <"*dTpa (en)">
+					description = <"*Kombinationsimpfstoff gegen Diphtherie, Tetanus und Pertussis mit einer geringeren Diphtherietoxoid- (d) und Pertussisdosis (pa) = «Erwachsenendosierung» (en)">
+				>
+				["at0075"] = <
+					text = <"*HBV (en)">
+					description = <"*Impfung gegen Hepatitis B (en)">
+				>
+				["at0076"] = <
+					text = <"*Hib (en)">
+					description = <"*Impfung gegen Haemophilus influenzae Typ b (en)">
+				>
+				["at0077"] = <
+					text = <"*HPV (en)">
+					description = <"*Impfung gegen humane Papillomaviren (en)">
+				>
+				["at0078"] = <
+					text = <"*HZ (en)">
+					description = <"*Impfung gegen Herpes Zoster (en)">
+				>
+				["at0079"] = <
+					text = <"*IPV (en)">
+					description = <"*Impfung gegen Poliomyelitis (Inactivated Poliomyelitis Vaccine) (en)">
+				>
+				["at0080"] = <
+					text = <"*4CMenB (en)">
+					description = <"*Rekombinanter Meningokokken-Impfstoff gegen die Serogruppe B (en)">
+				>
+				["at0081"] = <
+					text = <"*MCV-C (en)">
+					description = <"*Meningokokken-Konjugatimpfstoff gegen die Serogruppe C (en)">
+				>
+				["at0082"] = <
+					text = <"*MCV-ACWY (en)">
+					description = <"*Meningokokken-Konjugatimpfstoff gegen die Serogruppen A, C, W und Y (en)">
+				>
+				["at0083"] = <
+					text = <"*MMR (en)">
+					description = <"*Trivalenter Impfstoff gegen Masern, Mumps und Röteln (en)">
+				>
+				["at0084"] = <
+					text = <"*MMRV (en)">
+					description = <"*Quadrivalenter Impfstoff gegen Masern, Mumps, Röteln und Varizellen (en)">
+				>
+				["at0085"] = <
+					text = <"*PCV (en)">
+					description = <"*Pneumokokken-Konjugatimpfstoff (en)">
+				>
+				["at0086"] = <
+					text = <"*PCV13 (en)">
+					description = <"*Pneumokokken-Konjugatimpfstoff gegen Pneumokokken, 13-valent (en)">
+				>
+				["at0087"] = <
+					text = <"*PPV23 (en)">
+					description = <"*Polysaccharidimpfstoff gegen Pneumokokken, 23-valent (en)">
+				>
+				["at0088"] = <
+					text = <"*VZV (en)">
+					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
 			>
 		>
