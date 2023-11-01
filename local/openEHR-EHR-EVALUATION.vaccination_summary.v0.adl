@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"cdf881f16f44fa2979cd2c7eba6e0f5d">
+		["MD5-CAM-1.0.1"] = <"e3895d7a759249031889c0cb48b26f66">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -188,10 +188,9 @@ definition
 								defining_code matches {
 									[local::
 									at0091,    -- Empfohlene Basisimpfung
-									at0092,    -- Nachholimpfungen
-									at0093,    -- Empfohlene ergänzende Impfung
-									at0094,    -- Risikogruppen empfohlene Impfungen
-									at0095]    -- Risikosituationen empfohlene Impfungen
+									at0092,    -- Empfohlene ergänzende Impfung
+									at0093,    -- Empfohlene Impfungen für Risikogruppen
+									at0094]    -- Impfungen ohne Empfehlungen
 								}
 							}
 							DV_TEXT matches {*}
@@ -646,19 +645,15 @@ ontology
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"Nachholimpfungen">
-					description = <"">
-				>
-				["at0093"] = <
 					text = <"Empfohlene ergänzende Impfung">
 					description = <"">
 				>
-				["at0094"] = <
-					text = <"Risikogruppen empfohlene Impfungen">
+				["at0093"] = <
+					text = <"Empfohlene Impfungen für Risikogruppen">
 					description = <"">
 				>
-				["at0095"] = <
-					text = <"Risikosituationen empfohlene Impfungen">
+				["at0094"] = <
+					text = <"Impfungen ohne Empfehlungen">
 					description = <"">
 				>
 				["at0096"] = <
@@ -973,19 +968,15 @@ ontology
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Nachholimpfungen (en)">
-					description = <"">
-				>
-				["at0093"] = <
 					text = <"*Empfohlene ergänzende Impfung (en)">
 					description = <"">
 				>
-				["at0094"] = <
-					text = <"*Risikogruppen empfohlene Impfungen (en)">
+				["at0093"] = <
+					text = <"*Empfohlene Impfungen für Risikogruppen (en)">
 					description = <"">
 				>
-				["at0095"] = <
-					text = <"*Risikosituationen empfohlene Impfungen (en)">
+				["at0094"] = <
+					text = <"*Impfungen ohne Empfehlungen (en)">
 					description = <"">
 				>
 				["at0096"] = <
@@ -1300,19 +1291,15 @@ ontology
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Nachholimpfungen (en)">
-					description = <"">
-				>
-				["at0093"] = <
 					text = <"*Empfohlene ergänzende Impfung (en)">
 					description = <"">
 				>
-				["at0094"] = <
-					text = <"*Risikogruppen empfohlene Impfungen (en)">
+				["at0093"] = <
+					text = <"*Empfohlene Impfungen für Risikogruppen (en)">
 					description = <"">
 				>
-				["at0095"] = <
-					text = <"*Risikosituationen empfohlene Impfungen (en)">
+				["at0094"] = <
+					text = <"*Impfungen ohne Empfehlungen (en)">
 					description = <"">
 				>
 				["at0096"] = <
@@ -1627,19 +1614,15 @@ ontology
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Nachholimpfungen (en)">
-					description = <"">
-				>
-				["at0093"] = <
 					text = <"*Empfohlene ergänzende Impfung (en)">
 					description = <"">
 				>
-				["at0094"] = <
-					text = <"*Risikogruppen empfohlene Impfungen (en)">
+				["at0093"] = <
+					text = <"*Empfohlene Impfungen für Risikogruppen (en)">
 					description = <"">
 				>
-				["at0095"] = <
-					text = <"*Risikosituationen empfohlene Impfungen (en)">
+				["at0094"] = <
+					text = <"*Impfungen ohne Empfehlungen (en)">
 					description = <"">
 				>
 				["at0096"] = <
