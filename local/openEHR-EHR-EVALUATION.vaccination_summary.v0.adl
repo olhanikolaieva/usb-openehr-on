@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c7adfb5201dffc5ecddf087e7464dfa0">
+		["MD5-CAM-1.0.1"] = <"5f8e244620bfc63d97651b47824dfde6">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -1492,7 +1492,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination questionnaire (en)">
+					text = <"Impfzusammenfassung">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -1642,7 +1642,7 @@ ontology
 					comment = <"*The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible. (en)">
 				>
 				["at0053"] = <
-					text = <"*Information source (en)">
+					text = <"Informationsquelle">
 					description = <"*Identification of the source of all vaccination information. (en)">
 					comment = <"*For example: child health book, clinic record, or parent. (en)">
 				>
