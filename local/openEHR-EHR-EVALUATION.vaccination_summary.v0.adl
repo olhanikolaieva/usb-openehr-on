@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bd5aa9218b2c4d23697fa4f9bff8a2a2">
+		["MD5-CAM-1.0.1"] = <"c7adfb5201dffc5ecddf087e7464dfa0">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -126,7 +126,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Tree
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Vaccine name
+					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Impfstoffe
 						value matches {
 							DV_TEXT matches {*}
 							DV_CODED_TEXT matches {
@@ -160,7 +160,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Targeted disease or agent
+					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Krankheiten
 						value matches {
 							DV_TEXT matches {*}
 							DV_CODED_TEXT matches {
@@ -191,7 +191,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0090] occurrences matches {0..1} matches {    -- Type of vaccination
+					ELEMENT[at0090] occurrences matches {0..1} matches {    -- Empfehlungskategorie
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -205,7 +205,7 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
+					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Impfname
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -224,9 +224,16 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
+					ELEMENT[at0098] occurrences matches {0..1} matches {    -- Serologische Abklärungen
 						value matches {
-							DV_DATE_TIME matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0099,    -- Ja
+									at0100,    -- Nein
+									at0101]    -- Nicht benötigt
+								}
+							}
 						}
 					}
 					ELEMENT[at0047] occurrences matches {0..1} matches {    -- Total number of administrations
@@ -241,16 +248,9 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0098] occurrences matches {0..1} matches {    -- Serologische Abklärungen
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
 						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0099,    -- Ja
-									at0100,    -- Nein
-									at0101]    -- Nicht benötigt
-								}
-							}
+							DV_DATE_TIME matches {*}
 						}
 					}
 					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Date of last vaccination
@@ -274,8 +274,8 @@ definition
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0023] occurrences matches {0..*} matches {    -- Specific vaccine name
 								value matches {
-									DV_TEXT matches {*}
 									DV_CODED_TEXT matches {*}
+									DV_TEXT matches {*}
 								}
 							}
 							allow_archetype CLUSTER[at0034] occurrences matches {0..*} matches {    -- Vaccine details
@@ -375,7 +375,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Targeted disease or agent">
+					text = <"Krankheiten">
 					description = <"Name of the infectious disease or agent targeted by the vaccine.">
 					comment = <"If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible.">
 				>
@@ -453,7 +453,7 @@ ontology
 					description = <"Details about the vaccine, including generic components and batch number if required.">
 				>
 				["at0035"] = <
-					text = <"Description">
+					text = <"Impfname">
 					description = <"Narrative description about vaccination activity and experiences related to the targeted disease or agent.">
 				>
 				["at0038"] = <
@@ -512,7 +512,7 @@ ontology
 					description = <"Additional details about vaccinations related to the targeted disease or agent.">
 				>
 				["at0052"] = <
-					text = <"Vaccine name">
+					text = <"Impfstoffe">
 					description = <"Name of the vaccine administered.">
 					comment = <"The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible.">
 				>
@@ -658,7 +658,7 @@ ontology
 					description = <"Impfung gegen Varizellen (Varizella-Zoster-Virus)">
 				>
 				["at0090"] = <
-					text = <"Type of vaccination">
+					text = <"Empfehlungskategorie">
 					description = <"">
 				>
 				["at0091"] = <
@@ -750,7 +750,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Targeted disease or agent (en)">
+					text = <"*Krankheiten (en)">
 					description = <"*Name of the infectious disease or agent targeted by the vaccine. (en)">
 					comment = <"*If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -828,7 +828,7 @@ ontology
 					description = <"*Details about the vaccine, including generic components and batch number if required. (en)">
 				>
 				["at0035"] = <
-					text = <"*Description (en)">
+					text = <"*Impfname (en)">
 					description = <"*Narrative description about vaccination activity and experiences related to the targeted disease or agent. (en)">
 				>
 				["at0038"] = <
@@ -887,7 +887,7 @@ ontology
 					description = <"*Additional details about vaccinations related to the targeted disease or agent. (en)">
 				>
 				["at0052"] = <
-					text = <"*Vaccine name (en)">
+					text = <"*Impfstoffe (en)">
 					description = <"*Name of the vaccine administered. (en)">
 					comment = <"*The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1033,7 +1033,7 @@ ontology
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
 				["at0090"] = <
-					text = <"*Type of vaccination (en)">
+					text = <"*Empfehlungskategorie (en)">
 					description = <"">
 				>
 				["at0091"] = <
@@ -1125,7 +1125,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Targeted disease or agent (en)">
+					text = <"*Krankheiten (en)">
 					description = <"*Name of the infectious disease or agent targeted by the vaccine. (en)">
 					comment = <"*If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1203,7 +1203,7 @@ ontology
 					description = <"*Details about the vaccine, including generic components and batch number if required. (en)">
 				>
 				["at0035"] = <
-					text = <"*Description (en)">
+					text = <"*Impfname (en)">
 					description = <"*Narrative description about vaccination activity and experiences related to the targeted disease or agent. (en)">
 				>
 				["at0038"] = <
@@ -1262,7 +1262,7 @@ ontology
 					description = <"*Additional details about vaccinations related to the targeted disease or agent. (en)">
 				>
 				["at0052"] = <
-					text = <"*Vaccine name (en)">
+					text = <"*Impfstoffe (en)">
 					description = <"*Name of the vaccine administered. (en)">
 					comment = <"*The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1408,7 +1408,7 @@ ontology
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
 				["at0090"] = <
-					text = <"*Type of vaccination (en)">
+					text = <"*Empfehlungskategorie (en)">
 					description = <"">
 				>
 				["at0091"] = <
@@ -1500,37 +1500,37 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Targeted disease or agent (en)">
+					text = <"Krankheiten">
 					description = <"*Name of the infectious disease or agent targeted by the vaccine. (en)">
 					comment = <"*If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible. (en)">
 				>
 				["at0003"] = <
-					text = <"*Primary course status (en)">
+					text = <"Status des Hauptkurses">
 					description = <"*Status of the primary (or catch up) course of vaccinations, if relevant for the vaccine. (en)">
 					comment = <"*This status should be revised if the course has not been completed and the 'Next vaccination due' date or 'Next review due' has passed.  (en)">
 				>
 				["at0004"] = <
-					text = <"*Course not commenced (en)">
-					description = <"*A course of vaccinations is planned but not commenced. (en)">
+					text = <"Kurs noch nicht begonnen">
+					description = <"Ein Impfkurs ist geplant, aber noch nicht begonnen.">
 				>
 				["at0005"] = <
-					text = <"*Course incomplete (en)">
-					description = <"*A course of vaccinations has been commenced but not completed. (en)">
+					text = <"Kurs unvollständig">
+					description = <"Ein Impfkurs wurde begonnen, aber noch nicht abgeschlossen.">
 				>
 				["at0006"] = <
-					text = <"*Course complete (en)">
-					description = <"*A course of vaccinations has been completed. (en)">
+					text = <"Kurs abgeschlossen">
+					description = <"Ein Impfkurs wurde abgeschlossen.">
 				>
 				["at0007"] = <
-					text = <"*Unknown (en)">
-					description = <"*It is not possible to determine if the primary course has been completed. (en)">
+					text = <"Unbekannt">
+					description = <"Es ist nicht möglich festzustellen, ob der Grundkurs abgeschlossen wurde.">
 				>
 				["at0008"] = <
-					text = <"*Date course completed (en)">
+					text = <"Impfkursabschlussdatum">
 					description = <"*The date on which the (primary or catch-up) course of vaccines was completed. (en)">
 				>
 				["at0009"] = <
-					text = <"*Date of last vaccination (en)">
+					text = <"Letzte Impfungsdatum">
 					description = <"*The date when the most recent vaccine was administered. (en)">
 					comment = <"*Can be a partial date, for example, only a year. (en)">
 				>
@@ -1543,55 +1543,55 @@ ontology
 					description = <"Das Datum, an dem die Impfzusammenfassung zuletzt aktualisiert wurde.">
 				>
 				["at0016"] = <
-					text = <"*Administration comment (en)">
+					text = <"Kommentar der Verwaltung">
 					description = <"*Additional narrative about the vaccine administration for the identified vaccinet, not captured in other fields. (en)">
 				>
 				["at0022"] = <
-					text = <"*Per vaccine administration (en)">
+					text = <"Pro Impfstoffverabreichung">
 					description = <"*Details about a specific vaccine administration. (en)">
 				>
 				["at0023"] = <
-					text = <"*Specific vaccine name (en)">
+					text = <"Spezifische Impfstoffbezeichnung">
 					description = <"*Name of the specific vaccine administered. (en)">
 					comment = <"*For example: a trade name that may be more specific than  the index 'Vaccine name'.  (en)">
 				>
 				["at0024"] = <
-					text = <"*Date of administration (en)">
+					text = <"Datum der Impfstoffverabreichung">
 					description = <"*Date of administration of the specified vaccine. (en)">
 					comment = <"*Can be a partial date, for example, only a year. (en)">
 				>
 				["at0027"] = <
-					text = <"*Administration location (en)">
+					text = <"Verwaltungsstandort">
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"*Sequence in series (en)">
+					text = <"Reihenfolge in der Impfstoffserie">
 					description = <"*The sequence of the vaccine administered within a primary course or series. (en)">
 					comment = <"*For example: 1/2 for first vaccination in a series of 2. (en)">
 				>
 				["at0033"] = <
-					text = <"*Next vaccination due (en)">
+					text = <"Nächste fällige Impfung">
 					description = <"*The date when the next vaccine is due to be administered. (en)">
 				>
 				["at0034"] = <
-					text = <"*Vaccine details (en)">
+					text = <"Details zum Impfstoff">
 					description = <"*Details about the vaccine, including generic components and batch number if required. (en)">
 				>
 				["at0035"] = <
-					text = <"*Description (en)">
+					text = <"Impfname">
 					description = <"*Narrative description about vaccination activity and experiences related to the targeted disease or agent. (en)">
 				>
 				["at0038"] = <
-					text = <"*Administration category (en)">
+					text = <"Verwaltungskategorie">
 					description = <"*Category of the vaccine administered. (en)">
 					comment = <"*For example: primary vaccination; or booster. (en)">
 				>
 				["at0039"] = <
-					text = <"*Primary course (en)">
+					text = <"Primär">
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Booster (en)">
+					text = <"Booster">
 					description = <"">
 				>
 				["at0042"] = <
@@ -1603,17 +1603,17 @@ ontology
 					description = <"*Additional details about the specific vaccine administration. (en)">
 				>
 				["at0045"] = <
-					text = <"*Administration outcome (en)">
+					text = <"Verwaltungsergebnis">
 					description = <"*The observed response to the administration of vaccine. (en)">
 					comment = <"*Coding with an external terminology is preferred, where possible. For example: a reaction such as rash or shortness of breath. (en)">
 				>
 				["at0046"] = <
-					text = <"*Information source (en)">
+					text = <"Informationsquelle">
 					description = <"*Identification of the source of the vaccine administration information. (en)">
 					comment = <"*For example: child health book, clinic record, or parent. (en)">
 				>
 				["at0047"] = <
-					text = <"*Total number of administrations (en)">
+					text = <"Gesamtzahl der Dosen">
 					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
 					comment = <"*May be manually calculated or extracted from EHR sources.
 
@@ -1637,7 +1637,7 @@ ontology
 					description = <"*Additional details about vaccinations related to the targeted disease or agent. (en)">
 				>
 				["at0052"] = <
-					text = <"*Vaccine name (en)">
+					text = <"Impfstoffe">
 					description = <"*Name of the vaccine administered. (en)">
 					comment = <"*The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1783,7 +1783,7 @@ ontology
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
 				["at0090"] = <
-					text = <"*Type of vaccination (en)">
+					text = <"Empfehlungskategorie">
 					description = <"">
 				>
 				["at0091"] = <
@@ -1811,19 +1811,19 @@ ontology
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
 				>
 				["at0098"] = <
-					text = <"*Serologische Abklärungen (en)">
+					text = <"Serologische Abklärungen">
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Ja (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"*Nein (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"*Nicht benötigt (en)">
+					text = <"Nicht benötigt">
 					description = <"">
 				>
 				["at0102"] = <
