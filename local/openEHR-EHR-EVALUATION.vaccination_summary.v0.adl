@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4f93466883b5ee7c5c40ff66cb9a5d26">
+		["MD5-CAM-1.0.1"] = <"315bcd9f6e2b579b09fe99c21fda1971">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -1787,19 +1787,19 @@ ontology
 					description = <"">
 				>
 				["at0091"] = <
-					text = <"*Recommended basic vaccination (en)">
+					text = <"Empfohlene Basisimpfung">
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Recommended supplementary vaccination (en)">
+					text = <"Empfohlene ergänzende Impfung">
 					description = <"">
 				>
 				["at0093"] = <
-					text = <"*Recommended vaccinations for risk groups (en)">
+					text = <"Empfohlene Impfungen für Risikogruppen">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Vaccinations without recommendations (en)">
+					text = <"Impfungen ohne Empfehlungen">
 					description = <"">
 				>
 				["at0096"] = <
