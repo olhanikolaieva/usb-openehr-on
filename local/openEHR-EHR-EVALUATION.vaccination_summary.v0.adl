@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d05499b9883124da3a78c379ae76031e">
+		["MD5-CAM-1.0.1"] = <"64712bdb7615336a050734f6f5f1d35d">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -205,7 +205,7 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Impfname
+					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -224,7 +224,7 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0098] occurrences matches {0..1} matches {    -- Serologische Abklärungen
+					ELEMENT[at0098] occurrences matches {0..1} matches {    -- Serological examinations
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -453,7 +453,7 @@ ontology
 					description = <"Details about the vaccine, including generic components and batch number if required.">
 				>
 				["at0035"] = <
-					text = <"Impfname">
+					text = <"Description">
 					description = <"Narrative description about vaccination activity and experiences related to the targeted disease or agent.">
 				>
 				["at0038"] = <
@@ -686,7 +686,7 @@ ontology
 					description = <"Impfung gegen Frühsommer-Meningoenzephalitis">
 				>
 				["at0098"] = <
-					text = <"Serologische Abklärungen">
+					text = <"Serological examinations">
 					description = <"">
 				>
 				["at0099"] = <
@@ -828,7 +828,7 @@ ontology
 					description = <"*Details about the vaccine, including generic components and batch number if required. (en)">
 				>
 				["at0035"] = <
-					text = <"*Impfname (en)">
+					text = <"*Description (en)">
 					description = <"*Narrative description about vaccination activity and experiences related to the targeted disease or agent. (en)">
 				>
 				["at0038"] = <
@@ -1061,7 +1061,7 @@ ontology
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
 				>
 				["at0098"] = <
-					text = <"*Serologische Abklärungen (en)">
+					text = <"*Serological examinations (en)">
 					description = <"">
 				>
 				["at0099"] = <
@@ -1203,7 +1203,7 @@ ontology
 					description = <"*Details about the vaccine, including generic components and batch number if required. (en)">
 				>
 				["at0035"] = <
-					text = <"*Impfname (en)">
+					text = <"*Description (en)">
 					description = <"*Narrative description about vaccination activity and experiences related to the targeted disease or agent. (en)">
 				>
 				["at0038"] = <
@@ -1436,7 +1436,7 @@ ontology
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
 				>
 				["at0098"] = <
-					text = <"*Serologische Abklärungen (en)">
+					text = <"*Serological examinations (en)">
 					description = <"">
 				>
 				["at0099"] = <
