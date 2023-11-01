@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e3895d7a759249031889c0cb48b26f66">
+		["MD5-CAM-1.0.1"] = <"bd5aa9218b2c4d23697fa4f9bff8a2a2">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -150,7 +150,12 @@ definition
 									at0086,    -- PCV13
 									at0087,    -- PPV23
 									at0088,    -- VZV
-									at0097]    -- FSME-Impfung
+									at0097,    -- FSME-Impfung
+									at0102,    -- HAV
+									at0103,    -- HAV und HBV
+									at0104,    -- PrEP
+									at0105,    -- PEP
+									at0106]    -- Rotaviren
 								}
 							}
 						}
@@ -177,7 +182,11 @@ definition
 									at0068,    -- Meningokokken Serogruppe B
 									at0069,    -- Meningokokken Serogruppe C
 									at0070,    -- Meningokokken Serogruppe A, C, W und Y
-									at0096]    -- Frühsommer-Meningoenzephalitis
+									at0096,    -- Frühsommer-Meningoenzephalitis
+									at0107,    -- Hepatitis A
+									at0108,    -- Herpes Zoster
+									at0109,    -- Tollwut
+									at0110]    -- Rotaviren
 								}
 							}
 						}
@@ -228,6 +237,18 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::at0048]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0098] occurrences matches {0..1} matches {    -- Serologische Abklärungen
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0099,    -- Ja
+									at0100,    -- Nein
+									at0101]    -- Nicht benötigt
 								}
 							}
 						}
@@ -664,6 +685,58 @@ ontology
 					text = <"FSME-Impfung">
 					description = <"Impfung gegen Frühsommer-Meningoenzephalitis">
 				>
+				["at0098"] = <
+					text = <"Serologische Abklärungen">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Nein">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Nicht benötigt">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"HAV">
+					description = <"Impfung gegen Hepatitis A">
+				>
+				["at0103"] = <
+					text = <"HAV und HBV">
+					description = <"Kombinationsimpfung gegen Hepatitis A und Hepatitis B">
+				>
+				["at0104"] = <
+					text = <"PrEP">
+					description = <"Impfung für die präexpositionelle Prophylaxe (PrEP) gegen Tollwut">
+				>
+				["at0105"] = <
+					text = <"PEP">
+					description = <"Postexpositionelle Prophylaxe (PEP) gegen Tollwut">
+				>
+				["at0106"] = <
+					text = <"Rotaviren">
+					description = <"Impfung gegen Rotaviren">
+				>
+				["at0107"] = <
+					text = <"Hepatitis A">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Herpes Zoster">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"Tollwut">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Rotaviren">
+					description = <"">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -986,6 +1059,58 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
+				>
+				["at0098"] = <
+					text = <"*Serologische Abklärungen (en)">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"*Ja (en)">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"*Nein (en)">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"*Nicht benötigt (en)">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"*HAV (en)">
+					description = <"*Impfung gegen Hepatitis A (en)">
+				>
+				["at0103"] = <
+					text = <"*HAV und HBV (en)">
+					description = <"*Kombinationsimpfung gegen Hepatitis A und Hepatitis B (en)">
+				>
+				["at0104"] = <
+					text = <"*PrEP (en)">
+					description = <"*Impfung für die präexpositionelle Prophylaxe (PrEP) gegen Tollwut (en)">
+				>
+				["at0105"] = <
+					text = <"*PEP (en)">
+					description = <"*Postexpositionelle Prophylaxe (PEP) gegen Tollwut (en)">
+				>
+				["at0106"] = <
+					text = <"*Rotaviren (en)">
+					description = <"*Impfung gegen Rotaviren (en)">
+				>
+				["at0107"] = <
+					text = <"*Hepatitis A (en)">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"*Herpes Zoster (en)">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"*Tollwut (en)">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"*Rotaviren (en)">
+					description = <"">
 				>
 			>
 		>
@@ -1310,6 +1435,58 @@ ontology
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
 				>
+				["at0098"] = <
+					text = <"*Serologische Abklärungen (en)">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"*Ja (en)">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"*Nein (en)">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"*Nicht benötigt (en)">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"*HAV (en)">
+					description = <"*Impfung gegen Hepatitis A (en)">
+				>
+				["at0103"] = <
+					text = <"*HAV und HBV (en)">
+					description = <"*Kombinationsimpfung gegen Hepatitis A und Hepatitis B (en)">
+				>
+				["at0104"] = <
+					text = <"*PrEP (en)">
+					description = <"*Impfung für die präexpositionelle Prophylaxe (PrEP) gegen Tollwut (en)">
+				>
+				["at0105"] = <
+					text = <"*PEP (en)">
+					description = <"*Postexpositionelle Prophylaxe (PEP) gegen Tollwut (en)">
+				>
+				["at0106"] = <
+					text = <"*Rotaviren (en)">
+					description = <"*Impfung gegen Rotaviren (en)">
+				>
+				["at0107"] = <
+					text = <"*Hepatitis A (en)">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"*Herpes Zoster (en)">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"*Tollwut (en)">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"*Rotaviren (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -1632,6 +1809,58 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
+				>
+				["at0098"] = <
+					text = <"*Serologische Abklärungen (en)">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"*Ja (en)">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"*Nein (en)">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"*Nicht benötigt (en)">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"*HAV (en)">
+					description = <"*Impfung gegen Hepatitis A (en)">
+				>
+				["at0103"] = <
+					text = <"*HAV und HBV (en)">
+					description = <"*Kombinationsimpfung gegen Hepatitis A und Hepatitis B (en)">
+				>
+				["at0104"] = <
+					text = <"*PrEP (en)">
+					description = <"*Impfung für die präexpositionelle Prophylaxe (PrEP) gegen Tollwut (en)">
+				>
+				["at0105"] = <
+					text = <"*PEP (en)">
+					description = <"*Postexpositionelle Prophylaxe (PEP) gegen Tollwut (en)">
+				>
+				["at0106"] = <
+					text = <"*Rotaviren (en)">
+					description = <"*Impfung gegen Rotaviren (en)">
+				>
+				["at0107"] = <
+					text = <"*Hepatitis A (en)">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"*Herpes Zoster (en)">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"*Tollwut (en)">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"*Rotaviren (en)">
+					description = <"">
 				>
 			>
 		>
