@@ -116,17 +116,17 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5f8e244620bfc63d97651b47824dfde6">
+		["MD5-CAM-1.0.1"] = <"4caf279e2afa12d0aa27dc2ab3df8b7e">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- Vaccination questionnaire
+	EVALUATION[at0000] matches {    -- Vaccination summary
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Tree
 				items cardinality matches {1..*; unordered} matches {
-					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Impfstoffe
+					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Vaccine name
 						value matches {
 							DV_TEXT matches {*}
 							DV_CODED_TEXT matches {
@@ -160,7 +160,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Krankheiten
+					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Targeted disease or agent
 						value matches {
 							DV_TEXT matches {*}
 							DV_CODED_TEXT matches {
@@ -367,7 +367,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Vaccination questionnaire">
+					text = <"Vaccination summary">
 					description = <"Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.">
 				>
 				["at0001"] = <
@@ -375,7 +375,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Krankheiten">
+					text = <"Targeted disease or agent">
 					description = <"Name of the infectious disease or agent targeted by the vaccine.">
 					comment = <"If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible.">
 				>
@@ -512,7 +512,7 @@ ontology
 					description = <"Additional details about vaccinations related to the targeted disease or agent.">
 				>
 				["at0052"] = <
-					text = <"Impfstoffe">
+					text = <"Vaccine name">
 					description = <"Name of the vaccine administered.">
 					comment = <"The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible.">
 				>
@@ -742,7 +742,7 @@ ontology
 		["es-ar"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination questionnaire (en)">
+					text = <"*Vaccination summary (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -750,7 +750,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Krankheiten (en)">
+					text = <"*Targeted disease or agent (en)">
 					description = <"*Name of the infectious disease or agent targeted by the vaccine. (en)">
 					comment = <"*If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -887,7 +887,7 @@ ontology
 					description = <"*Additional details about vaccinations related to the targeted disease or agent. (en)">
 				>
 				["at0052"] = <
-					text = <"*Impfstoffe (en)">
+					text = <"*Vaccine name (en)">
 					description = <"*Name of the vaccine administered. (en)">
 					comment = <"*The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1117,7 +1117,7 @@ ontology
 		["pt-br"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination questionnaire (en)">
+					text = <"*Vaccination summary (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -1125,7 +1125,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Krankheiten (en)">
+					text = <"*Targeted disease or agent (en)">
 					description = <"*Name of the infectious disease or agent targeted by the vaccine. (en)">
 					comment = <"*If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1262,7 +1262,7 @@ ontology
 					description = <"*Additional details about vaccinations related to the targeted disease or agent. (en)">
 				>
 				["at0052"] = <
-					text = <"*Impfstoffe (en)">
+					text = <"*Vaccine name (en)">
 					description = <"*Name of the vaccine administered. (en)">
 					comment = <"*The vaccine name may contain a generic or trade name for a vaccine, the name of a combination vaccine, or a category of vaccine. For example: Measles vaccine; Measles Mumps Rubella (MMR) or 'Measles-containing vaccine'. Coding with an external terminology is preferred, where possible. (en)">
 				>
@@ -1492,7 +1492,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Impfzusammenfassung">
+					text = <"*Vaccination summary (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -1500,7 +1500,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Krankheiten">
+					text = <"Zielkrankheit oder Wirkstoff">
 					description = <"*Name of the infectious disease or agent targeted by the vaccine. (en)">
 					comment = <"*If the 'Vaccine name' is a combination vaccine this data element may contain more than one target disease. Coding with an external terminology is preferred, where possible. (en)">
 				>
