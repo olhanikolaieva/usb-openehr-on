@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"01aa2a886689bc2dba624a8f707ab7a7">
+		["MD5-CAM-1.0.1"] = <"d05499b9883124da3a78c379ae76031e">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -1783,7 +1783,7 @@ ontology
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
 				["at0090"] = <
-					text = <"*Recommendation category (en)">
+					text = <"Empfehlungskategorie">
 					description = <"">
 				>
 				["at0091"] = <
