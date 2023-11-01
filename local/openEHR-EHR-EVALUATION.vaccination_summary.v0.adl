@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"64712bdb7615336a050734f6f5f1d35d">
+		["MD5-CAM-1.0.1"] = <"4f93466883b5ee7c5c40ff66cb9a5d26">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -196,10 +196,10 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0091,    -- Empfohlene Basisimpfung
-									at0092,    -- Empfohlene ergänzende Impfung
-									at0093,    -- Empfohlene Impfungen für Risikogruppen
-									at0094]    -- Impfungen ohne Empfehlungen
+									at0091,    -- Recommended basic vaccination
+									at0092,    -- Recommended supplementary vaccination
+									at0093,    -- Recommended vaccinations for risk groups
+									at0094]    -- Vaccinations without recommendations
 								}
 							}
 							DV_TEXT matches {*}
@@ -229,9 +229,9 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0099,    -- Ja
-									at0100,    -- Nein
-									at0101]    -- Nicht benötigt
+									at0099,    -- Yes
+									at0100,    -- No
+									at0101]    -- Not required
 								}
 							}
 						}
@@ -662,19 +662,19 @@ ontology
 					description = <"">
 				>
 				["at0091"] = <
-					text = <"Empfohlene Basisimpfung">
+					text = <"Recommended basic vaccination">
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"Empfohlene ergänzende Impfung">
+					text = <"Recommended supplementary vaccination">
 					description = <"">
 				>
 				["at0093"] = <
-					text = <"Empfohlene Impfungen für Risikogruppen">
+					text = <"Recommended vaccinations for risk groups">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"Impfungen ohne Empfehlungen">
+					text = <"Vaccinations without recommendations">
 					description = <"">
 				>
 				["at0096"] = <
@@ -690,15 +690,15 @@ ontology
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"Ja">
+					text = <"Yes">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"Nein">
+					text = <"No">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"Nicht benötigt">
+					text = <"Not required">
 					description = <"">
 				>
 				["at0102"] = <
@@ -1037,19 +1037,19 @@ ontology
 					description = <"">
 				>
 				["at0091"] = <
-					text = <"*Empfohlene Basisimpfung (en)">
+					text = <"*Recommended basic vaccination (en)">
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Empfohlene ergänzende Impfung (en)">
+					text = <"*Recommended supplementary vaccination (en)">
 					description = <"">
 				>
 				["at0093"] = <
-					text = <"*Empfohlene Impfungen für Risikogruppen (en)">
+					text = <"*Recommended vaccinations for risk groups (en)">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Impfungen ohne Empfehlungen (en)">
+					text = <"*Vaccinations without recommendations (en)">
 					description = <"">
 				>
 				["at0096"] = <
@@ -1065,15 +1065,15 @@ ontology
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Ja (en)">
+					text = <"*Yes (en)">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"*Nein (en)">
+					text = <"*No (en)">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"*Nicht benötigt (en)">
+					text = <"*Not required (en)">
 					description = <"">
 				>
 				["at0102"] = <
@@ -1412,19 +1412,19 @@ ontology
 					description = <"">
 				>
 				["at0091"] = <
-					text = <"*Empfohlene Basisimpfung (en)">
+					text = <"*Recommended basic vaccination (en)">
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Empfohlene ergänzende Impfung (en)">
+					text = <"*Recommended supplementary vaccination (en)">
 					description = <"">
 				>
 				["at0093"] = <
-					text = <"*Empfohlene Impfungen für Risikogruppen (en)">
+					text = <"*Recommended vaccinations for risk groups (en)">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Impfungen ohne Empfehlungen (en)">
+					text = <"*Vaccinations without recommendations (en)">
 					description = <"">
 				>
 				["at0096"] = <
@@ -1440,15 +1440,15 @@ ontology
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Ja (en)">
+					text = <"*Yes (en)">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"*Nein (en)">
+					text = <"*No (en)">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"*Nicht benötigt (en)">
+					text = <"*Not required (en)">
 					description = <"">
 				>
 				["at0102"] = <
@@ -1492,7 +1492,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Vaccination summary (en)">
+					text = <"Impfzusammenfassung">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0001"] = <
@@ -1787,19 +1787,19 @@ ontology
 					description = <"">
 				>
 				["at0091"] = <
-					text = <"*Empfohlene Basisimpfung (en)">
+					text = <"*Recommended basic vaccination (en)">
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Empfohlene ergänzende Impfung (en)">
+					text = <"*Recommended supplementary vaccination (en)">
 					description = <"">
 				>
 				["at0093"] = <
-					text = <"*Empfohlene Impfungen für Risikogruppen (en)">
+					text = <"*Recommended vaccinations for risk groups (en)">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Impfungen ohne Empfehlungen (en)">
+					text = <"*Vaccinations without recommendations (en)">
 					description = <"">
 				>
 				["at0096"] = <
@@ -1815,15 +1815,15 @@ ontology
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"Ja">
+					text = <"*Yes (en)">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"Nein">
+					text = <"*No (en)">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"Nicht benötigt">
+					text = <"*Not required (en)">
 					description = <"">
 				>
 				["at0102"] = <
