@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2bb8916061683fa223b8e999b6b61986">
+		["MD5-CAM-1.0.1"] = <"07f4ccb986456a69e34ebf53d54858f7">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -155,7 +155,8 @@ definition
 									at0103,    -- HAV und HBV
 									at0104,    -- PrEP
 									at0105,    -- PEP
-									at0106]    -- Rotavirusimpfung
+									at0106,    -- Rotavirusimpfung
+									at0112]    -- Grippeimpfung
 								}
 							}
 						}
@@ -186,7 +187,8 @@ definition
 									at0107,    -- Hepatitis A
 									at0108,    -- Herpes Zoster
 									at0109,    -- Tollwut
-									at0110]    -- Rotaviren
+									at0110,    -- Rotaviren
+									at0111]    -- Grippe
 								}
 							}
 						}
@@ -737,6 +739,14 @@ ontology
 					text = <"Rotaviren">
 					description = <"">
 				>
+				["at0111"] = <
+					text = <"Grippe">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"Grippeimpfung">
+					description = <"Impfung gegen Grippeerkrankung">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -1111,6 +1121,14 @@ ontology
 				["at0110"] = <
 					text = <"*Rotaviren (en)">
 					description = <"">
+				>
+				["at0111"] = <
+					text = <"*Grippe (en)">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"*Grippeimpfung (en)">
+					description = <"*Impfung gegen Grippeerkrankung (en)">
 				>
 			>
 		>
@@ -1487,6 +1505,14 @@ ontology
 					text = <"*Rotaviren (en)">
 					description = <"">
 				>
+				["at0111"] = <
+					text = <"*Grippe (en)">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"*Grippeimpfung (en)">
+					description = <"*Impfung gegen Grippeerkrankung (en)">
+				>
 			>
 		>
 		["de"] = <
@@ -1861,6 +1887,14 @@ ontology
 				["at0110"] = <
 					text = <"*Rotaviren (en)">
 					description = <"">
+				>
+				["at0111"] = <
+					text = <"*Grippe (en)">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"*Grippeimpfung (en)">
+					description = <"*Impfung gegen Grippeerkrankung (en)">
 				>
 			>
 		>
