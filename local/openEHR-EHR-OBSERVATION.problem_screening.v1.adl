@@ -167,7 +167,7 @@ Not to be used to record details about a simple selection list where a question 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ea92fab0721c4ed10222700d3e819c50">
+		["MD5-CAM-1.0.1"] = <"054dd09eb3f6e5a3ac6d3caf3d51db44">
 		["build_uid"] = <"efed7ded-45a8-4363-b846-b15708c1c8a4">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.3">
@@ -182,30 +182,15 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0028] occurrences matches {0..*} matches {    -- Any problems or diagnoses?
-										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {
-													[local::
-													at0031,    -- Complited course
-													at0032,    -- Uncomplited course
-													at0033,    -- Not vaccinated
-													at0044]    -- Unknown
-												}
-											}
-											DV_TEXT matches {*}
-											DV_BOOLEAN matches {*}
-										}
-									}
 									ELEMENT[at0047] occurrences matches {0..1} matches {    -- Diphtheria
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0048,    -- Complited course
-													at0049,    -- Uncomplited course
-													at0050,    -- Not vaccinated
-													at0051]    -- Unknown
+													at0031,    -- Fully vaccinated
+													at0032,    -- Partially vaccinated
+													at0033,    -- Not vaccinated
+													at0044]    -- Unknown
 												}
 											}
 											DV_TEXT matches {*}
@@ -217,8 +202,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0053,    -- Complited course
-													at0054,    -- Uncomplited course
+													at0053,    -- Fully vaccinated
+													at0054,    -- Partially vaccinated
 													at0055,    -- Not vaccinated
 													at0056]    -- Unknown
 												}
@@ -232,8 +217,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0058,    -- Complited course
-													at0059,    -- Uncomplited course
+													at0058,    -- Fully vaccinated
+													at0059,    -- Partially vaccinated
 													at0060,    -- Not vaccinated
 													at0061]    -- Unknown
 												}
@@ -247,8 +232,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0063,    -- Complited course
-													at0064,    -- Uncomplited course
+													at0063,    -- Fully vaccinated
+													at0064,    -- Partially vaccinated
 													at0065,    -- Not vaccinated
 													at0066]    -- Unknown
 												}
@@ -262,8 +247,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0068,    -- Complited course
-													at0069,    -- Uncomplited course
+													at0068,    -- Fully vaccinated
+													at0069,    -- Partially vaccinated
 													at0070,    -- Not vaccinated
 													at0071]    -- Unknown
 												}
@@ -277,8 +262,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0073,    -- Complited course
-													at0074,    -- Uncomplited course
+													at0073,    -- Fully vaccinated
+													at0074,    -- Partially vaccinated
 													at0075,    -- Not vaccinated
 													at0076]    -- Unknown
 												}
@@ -292,8 +277,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0078,    -- Complited course
-													at0079,    -- Uncomplited course
+													at0078,    -- Fully vaccinated
+													at0079,    -- Partially vaccinated
 													at0080,    -- Not vaccinated
 													at0081]    -- Unknown
 												}
@@ -307,8 +292,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0083,    -- Complited course
-													at0084,    -- Uncomplited course
+													at0083,    -- Fully vaccinated
+													at0084,    -- Partially vaccinated
 													at0085,    -- Not vaccinated
 													at0086]    -- Unknown
 												}
@@ -322,8 +307,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0088,    -- Complited course
-													at0089,    -- Uncomplited course
+													at0088,    -- Fully vaccinated
+													at0089,    -- Partially vaccinated
 													at0090,    -- Not vaccinated
 													at0091]    -- Unknown
 												}
@@ -337,8 +322,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0093,    -- Complited course
-													at0094,    -- Uncomplited course
+													at0093,    -- Fully vaccinated
+													at0094,    -- Partially vaccinated
 													at0095,    -- Not vaccinated
 													at0096]    -- Unknown
 												}
@@ -352,8 +337,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0098,    -- Complited course
-													at0099,    -- Uncomplited course
+													at0098,    -- Fully vaccinated
+													at0099,    -- Partially vaccinated
 													at0100,    -- Not vaccinated
 													at0101]    -- Unknown
 												}
@@ -367,8 +352,8 @@ definition
 											DV_CODED_TEXT matches {
 												defining_code matches {
 													[local::
-													at0103,    -- Complited course
-													at0104,    -- Uncomplited course
+													at0103,    -- Fully vaccinated
+													at0104,    -- Partially vaccinated
 													at0105,    -- Not vaccinated
 													at0106]    -- Unknown
 												}
@@ -445,17 +430,12 @@ ontology
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
-				["at0028"] = <
-					text = <"Any problems or diagnoses?">
-					description = <"Is there a history of vaccination relevant for the screening purpose?">
-					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
-				>
 				["at0031"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0033"] = <
@@ -484,33 +464,17 @@ ontology
 					description = <"Is there a history of vaccination relevant for the screening purpose?">
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
-				["at0048"] = <
-					text = <"Complited course">
-					description = <"">
-				>
-				["at0049"] = <
-					text = <"Uncomplited course">
-					description = <"">
-				>
-				["at0050"] = <
-					text = <"Not vaccinated">
-					description = <"">
-				>
-				["at0051"] = <
-					text = <"Unknown">
-					description = <"">
-				>
 				["at0052"] = <
 					text = <"Tetanus">
 					description = <"Is there a history of vaccination relevant for the screening purpose?">
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0053"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0054"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0055"] = <
@@ -527,11 +491,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0058"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0059"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0060"] = <
@@ -548,11 +512,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0063"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0064"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0065"] = <
@@ -569,11 +533,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0068"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0069"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0070"] = <
@@ -590,11 +554,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0073"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0074"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0075"] = <
@@ -611,11 +575,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0078"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0079"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0080"] = <
@@ -632,11 +596,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0083"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0084"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0085"] = <
@@ -653,11 +617,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0088"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0089"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0090"] = <
@@ -674,11 +638,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0093"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0095"] = <
@@ -695,11 +659,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0098"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0100"] = <
@@ -716,11 +680,11 @@ ontology
 					comment = <"In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.">
 				>
 				["at0103"] = <
-					text = <"Complited course">
+					text = <"Fully vaccinated">
 					description = <"">
 				>
 				["at0104"] = <
-					text = <"Uncomplited course">
+					text = <"Partially vaccinated">
 					description = <"">
 				>
 				["at0105"] = <
@@ -761,17 +725,12 @@ ontology
 					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
 					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
 				>
-				["at0028"] = <
-					text = <"Problemer eller diagnoser?">
-					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
-					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
-				>
 				["at0031"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0033"] = <
@@ -800,33 +759,17 @@ ontology
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
-				["at0048"] = <
-					text = <"*Complited course (en)">
-					description = <"">
-				>
-				["at0049"] = <
-					text = <"*Uncomplited course (en)">
-					description = <"">
-				>
-				["at0050"] = <
-					text = <"*Not vaccinated (en)">
-					description = <"">
-				>
-				["at0051"] = <
-					text = <"*Unknown (en)">
-					description = <"">
-				>
 				["at0052"] = <
 					text = <"*Tetanus (en)">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0053"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0054"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0055"] = <
@@ -843,11 +786,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0058"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0059"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0060"] = <
@@ -864,11 +807,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0063"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0064"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0065"] = <
@@ -885,11 +828,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0068"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0069"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0070"] = <
@@ -906,11 +849,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0073"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0074"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0075"] = <
@@ -927,11 +870,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0078"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0079"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0080"] = <
@@ -948,11 +891,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0083"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0084"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0085"] = <
@@ -969,11 +912,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0088"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0089"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0090"] = <
@@ -990,11 +933,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0093"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0095"] = <
@@ -1011,11 +954,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0098"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0100"] = <
@@ -1032,11 +975,11 @@ ontology
 					comment = <"Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN.">
 				>
 				["at0103"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0104"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0105"] = <
@@ -1077,25 +1020,20 @@ ontology
 					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
 					comment = <"Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen.">
 				>
-				["at0028"] = <
-					text = <"Irgendwelche Probleme oder Diagnosen?">
-					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
-					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
-				>
 				["at0031"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Timing (en)">
+					text = <"Timing">
 					description = <"*Indication of timing related to the issue, problem or diagnosis. (en)">
 					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
 				>
@@ -1104,263 +1042,247 @@ ontology
 					description = <"Strukturierte Angaben oder Fragen zum Problem/Diagnose-Screening.">
 				>
 				["at0044"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0046"] = <
-					text = <"*Comment (en)">
+					text = <"Kommentar">
 					description = <"">
 				>
 				["at0047"] = <
-					text = <"*Diphtheria (en)">
+					text = <"Diphtherie">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
-				["at0048"] = <
-					text = <"*Complited course (en)">
-					description = <"">
-				>
-				["at0049"] = <
-					text = <"*Uncomplited course (en)">
-					description = <"">
-				>
-				["at0050"] = <
-					text = <"*Not vaccinated (en)">
-					description = <"">
-				>
-				["at0051"] = <
-					text = <"*Unknown (en)">
-					description = <"">
-				>
 				["at0052"] = <
-					text = <"*Tetanus (en)">
+					text = <"Tetanus">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0053"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0054"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0055"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0056"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0057"] = <
-					text = <"*Pertussis (en)">
+					text = <"Pertussis">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0058"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0059"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0060"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0061"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0062"] = <
-					text = <"*Haemophilus influenzae type b (en)">
+					text = <"Haemophilus influenzae Typ b">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0063"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0064"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0065"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0066"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0067"] = <
-					text = <"*Poliomyelitis (en)">
+					text = <"Poliomyelitis">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0068"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0069"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0070"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0071"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0072"] = <
-					text = <"*Hepatitis B (en)">
+					text = <"Hepatitis B">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0073"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0074"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0075"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0076"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0077"] = <
-					text = <"*Measles (en)">
+					text = <"Masern">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0078"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0079"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0080"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0081"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0082"] = <
-					text = <"*Mumps (en)">
+					text = <"Mumps">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0083"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0084"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0085"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0086"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0087"] = <
-					text = <"*Rubella (en)">
+					text = <"Röteln">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0088"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0089"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0090"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0091"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0092"] = <
-					text = <"*Varicella (en)">
+					text = <"Varizellen">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0093"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0095"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0096"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0097"] = <
-					text = <"*Pneumococcus (en)">
+					text = <"Pneumokokken">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0098"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 				["at0102"] = <
-					text = <"*Human papilloma viruses (en)">
+					text = <"Humane Papillomaviren">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0103"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0104"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0105"] = <
-					text = <"*Not vaccinated (en)">
+					text = <"Nicht geimpft">
 					description = <"">
 				>
 				["at0106"] = <
-					text = <"*Unknown (en)">
+					text = <"Unbekannt">
 					description = <"">
 				>
 			>
@@ -1393,17 +1315,12 @@ ontology
 					description = <"Aanvullende informatie benodigd voor het vastleggen van lokale inhoud of om aan te sluiten bij referenctie modellen/formalismen.">
 					comment = <"Bijvoorbeeld: lokale informatie eisen of aanvullende metadata om aan te sluiten bij FHIR of CIMI equivalenten.">
 				>
-				["at0028"] = <
-					text = <"*Aanwezig?">
-					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
-					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
-				>
 				["at0031"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0033"] = <
@@ -1432,33 +1349,17 @@ ontology
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
-				["at0048"] = <
-					text = <"*Complited course (en)">
-					description = <"">
-				>
-				["at0049"] = <
-					text = <"*Uncomplited course (en)">
-					description = <"">
-				>
-				["at0050"] = <
-					text = <"*Not vaccinated (en)">
-					description = <"">
-				>
-				["at0051"] = <
-					text = <"*Unknown (en)">
-					description = <"">
-				>
 				["at0052"] = <
 					text = <"*Tetanus (en)">
 					description = <"*Is there a history of vaccination relevant for the screening purpose? (en)">
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0053"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0054"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0055"] = <
@@ -1475,11 +1376,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0058"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0059"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0060"] = <
@@ -1496,11 +1397,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0063"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0064"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0065"] = <
@@ -1517,11 +1418,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0068"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0069"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0070"] = <
@@ -1538,11 +1439,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0073"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0074"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0075"] = <
@@ -1559,11 +1460,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0078"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0079"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0080"] = <
@@ -1580,11 +1481,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0083"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0084"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0085"] = <
@@ -1601,11 +1502,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0088"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0089"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0090"] = <
@@ -1622,11 +1523,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0093"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0094"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0095"] = <
@@ -1643,11 +1544,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0098"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0100"] = <
@@ -1664,11 +1565,11 @@ ontology
 					comment = <"*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)">
 				>
 				["at0103"] = <
-					text = <"*Complited course (en)">
+					text = <"*Fully vaccinated (en)">
 					description = <"">
 				>
 				["at0104"] = <
-					text = <"*Uncomplited course (en)">
+					text = <"*Partially vaccinated (en)">
 					description = <"">
 				>
 				["at0105"] = <
@@ -1688,9 +1589,6 @@ ontology
 				["at0031"] = <[SNOMED-CT::373066001]>
 				["at0032"] = <[SNOMED-CT::373067005]>
 				["at0033"] = <[SNOMED-CT::261665006]>
-				["at0048"] = <[SNOMED-CT::373066001]>
-				["at0049"] = <[SNOMED-CT::373067005]>
-				["at0050"] = <[SNOMED-CT::261665006]>
 				["at0053"] = <[SNOMED-CT::373066001]>
 				["at0054"] = <[SNOMED-CT::373067005]>
 				["at0055"] = <[SNOMED-CT::261665006]>
