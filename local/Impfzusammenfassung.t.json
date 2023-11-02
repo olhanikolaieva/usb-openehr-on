@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f763f7768b25baa1ca4cb83daeae9522",
+      "MD5-CAM-1.0.1" : "b46d36d900bfe08782ede0aeda2e6e79",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -244,7 +244,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Impfzusammenfassung",
+          "text" : "Vaccination summary",
           "description" : "Interaction, contact or care event between a subject of care and healthcare provider(s)."
         }
       },
@@ -359,9 +359,73 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "de75e7eeb575de179086894cd3e7514f"
+        "PARENT:MD5-CAM-1.0.1" : "681280ad15426e78f8d09d8a2361b864"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "*To record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)",
+          "keywords" : [ "Immunisierung", "Impfung", "Schutzimpfung", "Immunstatus", "Zusammenfassung", "primär", "Erstimpfung", "Auffrischung" ],
+          "use" : "*Use to record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.\r\n\r\nThe intent of this archetype is to support a clinical determination about whether the individual is up-to-date with vaccinations for the targeted disease/s or agent/s. It is not intended to make a determination about the immunisation status, which is about whether the individual has developed an adequate immune response following vaccination or whether protective immunity has waned. \r\n\r\nThis archetype does not presume any particular schedule or protocol for immunisation. (en)",
+          "misuse" : "*Not to be used to record the vaccination status of an individual at a point in time - use OBSERVATION.vaccination_status for this purpose. \r\n\r\nNot to be used for documenting the detailed administration of a vaccine, including body site, route, manufacturer and batch number etc - use ACTION.vaccination or ACTION.medication for this purpose.\r\n\r\nNot to be used for recording screening question/answer pairs regarding vaccination activity - use OBSERVATION.vaccination_screening for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "*To record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)",
+          "keywords" : [ "vacunación", "inmunización", "resumen", "primario", "ciclo", "refuerzo" ],
+          "use" : "*Use to record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.\r\n\r\nThe intent of this archetype is to support a clinical determination about whether the individual is up-to-date with vaccinations for the targeted disease/s or agent/s. It is not intended to make a determination about the immunisation status, which is about whether the individual has developed an adequate immune response following vaccination or whether protective immunity has waned. \r\n\r\nThis archetype does not presume any particular schedule or protocol for immunisation. (en)",
+          "misuse" : "*Not to be used to record the vaccination status of an individual at a point in time - use OBSERVATION.vaccination_status for this purpose. \r\n\r\nNot to be used for documenting the detailed administration of a vaccine, including body site, route, manufacturer and batch number etc - use ACTION.vaccination or ACTION.medication for this purpose.\r\n\r\nNot to be used for recording screening question/answer pairs regarding vaccination activity - use OBSERVATION.vaccination_screening for this purpose. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "*To record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)",
+          "keywords" : [ "vacinação", "imunização", "sumário", "primário", "etapa", "reforço" ],
+          "use" : "*Use to record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.\r\n\r\nThe intent of this archetype is to support a clinical determination about whether the individual is up-to-date with vaccinations for the targeted disease/s or agent/s. It is not intended to make a determination about the immunisation status, which is about whether the individual has developed an adequate immune response following vaccination or whether protective immunity has waned. \r\n\r\nThis archetype does not presume any particular schedule or protocol for immunisation. (en)",
+          "misuse" : "*Not to be used to record the vaccination status of an individual at a point in time - use OBSERVATION.vaccination_status for this purpose. \r\n\r\nNot to be used for documenting the detailed administration of a vaccine, including body site, route, manufacturer and batch number etc - use ACTION.vaccination or ACTION.medication for this purpose.\r\n\r\nNot to be used for recording screening question/answer pairs regarding vaccination activity - use OBSERVATION.vaccination_screening for this purpose. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.",
+          "keywords" : [ "immunisation", "immunisation", "immunization", "summary", "primary", "course", "booster" ],
+          "use" : "Use to record a summary of vaccine administration events targeting a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.\r\n\r\nThe intent of this archetype is to support a clinical determination about whether the individual is up-to-date with vaccinations for the targeted disease/s or agent/s. It is not intended to make a determination about the immunisation status, which is about whether the individual has developed an adequate immune response following vaccination or whether protective immunity has waned. \r\n\r\nThis archetype does not presume any particular schedule or protocol for immunisation.",
+          "misuse" : "Not to be used to record the vaccination status of an individual at a point in time - use OBSERVATION.vaccination_status for this purpose. \r\n\r\nNot to be used for documenting the detailed administration of a vaccine, including body site, route, manufacturer and batch number etc - use ACTION.vaccination or ACTION.medication for this purpose.\r\n\r\nNot to be used for recording screening question/answer pairs regarding vaccination activity - use OBSERVATION.vaccination_screening for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.vaccination_summary.v0",
     "differential" : true,
@@ -380,38 +444,10 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0106" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0106",
-            "text" : "Rotaviren",
-            "description" : "Impfung gegen Rotaviren"
-          }
-        },
-        "es-ar" : {
-          "at0106" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0106",
-            "text" : "*Rotaviren (en)",
-            "description" : "*Impfung gegen Rotaviren (en)"
-          }
-        },
-        "pt-br" : {
-          "at0106" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0106",
-            "text" : "*Rotaviren (en)",
-            "description" : "*Impfung gegen Rotaviren (en)"
-          }
-        },
-        "de" : {
-          "at0106" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0106",
-            "text" : "*Rotaviren (en)",
-            "description" : "*Impfung gegen Rotaviren (en)"
-          }
-        }
+        "en" : { },
+        "es-ar" : { },
+        "pt-br" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
