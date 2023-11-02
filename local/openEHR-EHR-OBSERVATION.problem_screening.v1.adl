@@ -167,7 +167,7 @@ Not to be used to record details about a simple selection list where a question 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"054dd09eb3f6e5a3ac6d3caf3d51db44">
+		["MD5-CAM-1.0.1"] = <"7689bb77e6a39a6e6bd1f93c50070c98">
 		["build_uid"] = <"efed7ded-45a8-4363-b846-b15708c1c8a4">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.3">
@@ -371,13 +371,9 @@ definition
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0040] occurrences matches {0..*} matches {    -- Timing
+									ELEMENT[at0040] occurrences matches {0..*} matches {    -- Last updated
 										value matches {
-											DV_TEXT matches {*}
-											DV_INTERVAL<DV_DURATION> matches {*}
-											DV_DURATION matches {*}
 											DV_DATE_TIME matches {*}
-											DV_INTERVAL<DV_DATE_TIME> matches {*}
 										}
 									}
 								}
@@ -443,7 +439,7 @@ ontology
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"Timing">
+					text = <"Last updated">
 					description = <"Indication of timing related to the issue, problem or diagnosis.">
 					comment = <"The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year.">
 				>
@@ -738,7 +734,7 @@ ontology
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"Tidsangivelse">
+					text = <"*Last updated (en)">
 					description = <"Tidsangivelsen for bekymringen, plagen, problemet eller diagnosen.">
 					comment = <"Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bekymringen, plagen, problemet eller diagnosen i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Bekymringen, plagen, problemet eller diagnosen faktiske dato og/eller klokkeslett, start- og slutttid for bekymringen, plagen, problemet eller diagnosen, et tidsintervall for når bekymringen, plagen, problemet eller diagnosen oppstod, varigheten av bekymringen, plagen, problemet eller diagnosen, individets alder på tidspunktet for bekymringen, plagen, problemet eller diagnosen, eller hvor lenge det siden det oppstod. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME.">
 				>
@@ -1033,7 +1029,7 @@ ontology
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"Timing">
+					text = <"*Last updated (en)">
 					description = <"*Indication of timing related to the issue, problem or diagnosis. (en)">
 					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
 				>
@@ -1328,7 +1324,7 @@ ontology
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Timing (en)">
+					text = <"*Last updated (en)">
 					description = <"*Indication of timing related to the issue, problem or diagnosis. (en)">
 					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
 				>
