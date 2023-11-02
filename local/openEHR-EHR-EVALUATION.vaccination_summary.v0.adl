@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"315bcd9f6e2b579b09fe99c21fda1971">
+		["MD5-CAM-1.0.1"] = <"de75e7eeb575de179086894cd3e7514f">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -155,7 +155,7 @@ definition
 									at0103,    -- HAV und HBV
 									at0104,    -- PrEP
 									at0105,    -- PEP
-									at0106]    -- Rotaviren
+									at0106]    -- Rotavirusimpfung
 								}
 							}
 						}
@@ -718,7 +718,7 @@ ontology
 					description = <"Postexpositionelle Prophylaxe (PEP) gegen Tollwut">
 				>
 				["at0106"] = <
-					text = <"Rotaviren">
+					text = <"Rotavirusimpfung">
 					description = <"Impfung gegen Rotaviren">
 				>
 				["at0107"] = <
@@ -1093,7 +1093,7 @@ ontology
 					description = <"*Postexpositionelle Prophylaxe (PEP) gegen Tollwut (en)">
 				>
 				["at0106"] = <
-					text = <"*Rotaviren (en)">
+					text = <"*Rotavirusimpfung (en)">
 					description = <"*Impfung gegen Rotaviren (en)">
 				>
 				["at0107"] = <
@@ -1468,7 +1468,7 @@ ontology
 					description = <"*Postexpositionelle Prophylaxe (PEP) gegen Tollwut (en)">
 				>
 				["at0106"] = <
-					text = <"*Rotaviren (en)">
+					text = <"*Rotavirusimpfung (en)">
 					description = <"*Impfung gegen Rotaviren (en)">
 				>
 				["at0107"] = <
@@ -1843,7 +1843,7 @@ ontology
 					description = <"*Postexpositionelle Prophylaxe (PEP) gegen Tollwut (en)">
 				>
 				["at0106"] = <
-					text = <"*Rotaviren (en)">
+					text = <"*Rotavirusimpfung (en)">
 					description = <"*Impfung gegen Rotaviren (en)">
 				>
 				["at0107"] = <
