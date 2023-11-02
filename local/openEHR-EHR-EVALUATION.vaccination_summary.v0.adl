@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"07f4ccb986456a69e34ebf53d54858f7">
+		["MD5-CAM-1.0.1"] = <"681280ad15426e78f8d09d8a2361b864">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -156,7 +156,8 @@ definition
 									at0104,    -- PrEP
 									at0105,    -- PEP
 									at0106,    -- Rotavirusimpfung
-									at0112]    -- Grippeimpfung
+									at0112,    -- Grippeimpfung
+									at0113]    -- Covid-19-Impfung
 								}
 							}
 						}
@@ -188,7 +189,8 @@ definition
 									at0108,    -- Herpes Zoster
 									at0109,    -- Tollwut
 									at0110,    -- Rotaviren
-									at0111]    -- Grippe
+									at0111,    -- Grippe
+									at0114]    -- Covid-19-Erkrankung
 								}
 							}
 						}
@@ -747,6 +749,14 @@ ontology
 					text = <"Grippeimpfung">
 					description = <"Impfung gegen Grippeerkrankung">
 				>
+				["at0113"] = <
+					text = <"Covid-19-Impfung">
+					description = <"Impfung gegen Covid-19-Erkrankung">
+				>
+				["at0114"] = <
+					text = <"Covid-19-Erkrankung">
+					description = <"">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -1129,6 +1139,14 @@ ontology
 				["at0112"] = <
 					text = <"*Grippeimpfung (en)">
 					description = <"*Impfung gegen Grippeerkrankung (en)">
+				>
+				["at0113"] = <
+					text = <"*Covid-19-Impfung (en)">
+					description = <"*Impfung gegen Covid-19-Erkrankung (en)">
+				>
+				["at0114"] = <
+					text = <"*Covid-19-Erkrankung (en)">
+					description = <"">
 				>
 			>
 		>
@@ -1513,6 +1531,14 @@ ontology
 					text = <"*Grippeimpfung (en)">
 					description = <"*Impfung gegen Grippeerkrankung (en)">
 				>
+				["at0113"] = <
+					text = <"*Covid-19-Impfung (en)">
+					description = <"*Impfung gegen Covid-19-Erkrankung (en)">
+				>
+				["at0114"] = <
+					text = <"*Covid-19-Erkrankung (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -1895,6 +1921,14 @@ ontology
 				["at0112"] = <
 					text = <"*Grippeimpfung (en)">
 					description = <"*Impfung gegen Grippeerkrankung (en)">
+				>
+				["at0113"] = <
+					text = <"*Covid-19-Impfung (en)">
+					description = <"*Impfung gegen Covid-19-Erkrankung (en)">
+				>
+				["at0114"] = <
+					text = <"*Covid-19-Erkrankung (en)">
+					description = <"">
 				>
 			>
 		>
