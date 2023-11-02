@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"de75e7eeb575de179086894cd3e7514f">
+		["MD5-CAM-1.0.1"] = <"2bb8916061683fa223b8e999b6b61986">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -1815,15 +1815,15 @@ ontology
 					description = <"">
 				>
 				["at0099"] = <
-					text = <"*Yes (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0100"] = <
-					text = <"*No (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0101"] = <
-					text = <"*Not required (en)">
+					text = <"Nicht benötigt">
 					description = <"">
 				>
 				["at0102"] = <
