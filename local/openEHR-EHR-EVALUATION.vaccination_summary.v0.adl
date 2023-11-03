@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"681280ad15426e78f8d09d8a2361b864">
+		["MD5-CAM-1.0.1"] = <"73fbd6a43e81c79d3ee0e41241c990ee">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -277,6 +277,12 @@ definition
 					CLUSTER[at0022] occurrences matches {0..*} matches {    -- Per vaccine administration
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0023] occurrences matches {0..*} matches {    -- Specific vaccine name
+								value matches {
+									DV_CODED_TEXT matches {*}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0115] occurrences matches {0..1} matches {    -- Vaccine series
 								value matches {
 									DV_CODED_TEXT matches {*}
 									DV_TEXT matches {*}
@@ -757,6 +763,10 @@ ontology
 					text = <"Covid-19-Erkrankung">
 					description = <"">
 				>
+				["at0115"] = <
+					text = <"Vaccine series">
+					description = <"">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -1146,6 +1156,10 @@ ontology
 				>
 				["at0114"] = <
 					text = <"*Covid-19-Erkrankung (en)">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"*Vaccine series (en)">
 					description = <"">
 				>
 			>
@@ -1539,6 +1553,10 @@ ontology
 					text = <"*Covid-19-Erkrankung (en)">
 					description = <"">
 				>
+				["at0115"] = <
+					text = <"*Vaccine series (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -1928,6 +1946,10 @@ ontology
 				>
 				["at0114"] = <
 					text = <"*Covid-19-Erkrankung (en)">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"Impfstopffserie">
 					description = <"">
 				>
 			>
