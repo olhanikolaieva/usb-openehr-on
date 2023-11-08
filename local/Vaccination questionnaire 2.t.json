@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "4ebe0310c0c1b264876501031fae4032",
+      "MD5-CAM-1.0.1" : "9e75b4e1dca6af73593b089746a7a49a",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -423,7 +423,7 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "local_terms",
                                 "code" : "397430003",
-                                "value" : "Diphtheria"
+                                "value" : "Diphtherie"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "76902006",
@@ -435,7 +435,7 @@
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "709410003",
-                                "value" : "Haemophilus influenzae type b infection"
+                                "value" : "Haemophilus influenzae Typ B-Infektion"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "398102009",
@@ -447,11 +447,11 @@
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "16814004",
-                                "value" : "Pneumococcal infectious disease"
+                                "value" : "Pneumokokken-Infektionskrankheit"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "14189004",
-                                "value" : "Measles"
+                                "value" : "Masern"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "36989005",
@@ -459,15 +459,15 @@
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "36653000",
-                                "value" : "Rubella"
+                                "value" : "Röteln"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "38907003",
-                                "value" : "Varicella"
+                                "value" : "Varizellen"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "240532009",
-                                "value" : "Human papillomavirus infection"
+                                "value" : "Infektion mit dem humanen Papillomavirus"
                               } ]
                             } ]
                           } ],
@@ -500,19 +500,19 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "local_terms",
                                 "code" : "425457005",
-                                "value" : "Fully vaccinated"
+                                "value" : "Vollständig geimpft"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "385670004",
-                                "value" : "Partially vaccinated"
+                                "value" : "Teilweise geimpft"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "90351000119108",
-                                "value" : "Not vaccinated"
+                                "value" : "Nicht geimpft"
                               }, {
                                 "terminologyId" : "local_terms",
                                 "code" : "261665006",
-                                "value" : "Unknown"
+                                "value" : "Unbekannt"
                               } ]
                             } ]
                           } ],
@@ -606,7 +606,29 @@
         },
         "fi" : { },
         "nb" : { },
-        "de" : { },
+        "de" : {
+          "at0034.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034.1",
+            "text" : "Impfung",
+            "description" : "Der Kontext oder Grund für das Screening.",
+            "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: \"Screening vor der Aufnahme\" oder der Name des eigentlichen Fragebogens."
+          },
+          "at0029.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029.1",
+            "text" : "Zuletzt aktualisiert",
+            "description" : "Zeitpunkt der erstmaligen Erkennung eines für das Screening relevanten Symptoms oder Anzeichens.",
+            "comment" : "Das Datenelement „Auftreten“ wurde absichtlich locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden können, um zu erfassen, wann ein Symptom oder Anzeichen aufgetreten war. Die spezifische und beabsichtigte Semantik kann in einem Template weiter präzisiert werden.\r\n\r\nZum Beispiel: \r\nDatum/Uhrzeit für Beginn des Symptoms. Intervall von Datum/Uhrzeit für einen Zeitraum, z. B. zwischen 1940 und 1942. Text für Beschreibungen wie \"Unmittelbar nach der Operation\" oder \"Bis vor einer Woche\", \"Bis vor zwei Wochen\", \"Vor drei Wochen\". Dauer für das Alter der Person zu Beginn. Intervall der Dauer für das ungefähre Alter der Person zum Zeitpunkt des Beginns."
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Status des Hauptkurses",
+            "description" : "Gibt es eine Vorgeschichte von Symptomen oder Anzeichen im Zusammenhang mit dem Screening-Zweck?",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          }
+        },
         "it" : { },
         "sv" : { }
       },
