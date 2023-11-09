@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "4.0.0",
+      "sem_ver" : "5.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e54940cd608bb9697a536134a2990824",
+      "MD5-CAM-1.0.1" : "4f052d7ad8ef9bf41f04720dd6eacfa2",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -470,342 +470,6 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.2",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.3",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.4",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.5",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.9",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0034.0.6",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "425457005",
-                                "value" : "Fully vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "385670004",
-                                "value" : "Partially vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "90351000119108",
-                                "value" : "Not vaccinated"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "261665006",
-                                "value" : "Unknown"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
                       "nodeId" : "at0034.0.7",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -830,19 +494,19 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "425457005",
-                                "value" : "Fully vaccinated"
+                                "value" : "Vollständig geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "385670004",
-                                "value" : "Partially vaccinated"
+                                "value" : "Teilweise geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "90351000119108",
-                                "value" : "Not vaccinated"
+                                "value" : "Nicht geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "261665006",
-                                "value" : "Unknown"
+                                "value" : "Unbekannt"
                               } ]
                             } ]
                           } ],
@@ -878,19 +542,19 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "425457005",
-                                "value" : "Fully vaccinated"
+                                "value" : "Vollständig geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "385670004",
-                                "value" : "Partially vaccinated"
+                                "value" : "Teilweise geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "90351000119108",
-                                "value" : "Not vaccinated"
+                                "value" : "Nicht geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "261665006",
-                                "value" : "Unknown"
+                                "value" : "Unbekannt"
                               } ]
                             } ]
                           } ],
@@ -926,19 +590,355 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "425457005",
-                                "value" : "Fully vaccinated"
+                                "value" : "Vollständig geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "385670004",
-                                "value" : "Partially vaccinated"
+                                "value" : "Teilweise geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "90351000119108",
-                                "value" : "Not vaccinated"
+                                "value" : "Nicht geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "261665006",
-                                "value" : "Unknown"
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.3",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.4",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.6",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.5",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0034.0.9",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "existence" : "0..1",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
                               } ]
                             } ]
                           } ],
@@ -974,19 +974,19 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "425457005",
-                                "value" : "Fully vaccinated"
+                                "value" : "Vollständig geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "385670004",
-                                "value" : "Partially vaccinated"
+                                "value" : "Teilweise geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "90351000119108",
-                                "value" : "Not vaccinated"
+                                "value" : "Nicht geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "261665006",
-                                "value" : "Unknown"
+                                "value" : "Unbekannt"
                               } ]
                             } ]
                           } ],
@@ -1022,19 +1022,19 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "425457005",
-                                "value" : "Fully vaccinated"
+                                "value" : "Vollständig geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "385670004",
-                                "value" : "Partially vaccinated"
+                                "value" : "Teilweise geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "90351000119108",
-                                "value" : "Not vaccinated"
+                                "value" : "Nicht geimpft"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "261665006",
-                                "value" : "Unknown"
+                                "value" : "Unbekannt"
                               } ]
                             } ]
                           } ],
@@ -1857,7 +1857,7 @@
           "at0034.0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "text" : "Diphtherie",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
@@ -1870,50 +1870,50 @@
           },
           "at0034.0.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.2",
+            "text" : "Tetanus",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.3" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.3",
+            "text" : "Pertussis",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.4" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.4",
+            "text" : "Haemophilus influenzae Typ B-Infektion",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.5" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.5",
+            "text" : "Poliomyelitis",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.6",
+            "text" : "Pneumokokken-Infektionskrankheit",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.7" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.7",
+            "text" : "Masern",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.8" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.8",
+            "text" : "Mumps",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
@@ -1943,13 +1943,6 @@
             "code" : "ac0.0.3",
             "description" : ""
           },
-          "at0040.0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040.0.1",
-            "text" : "*Timing (en)",
-            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
-            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
-          },
           "at0022.0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.0.1",
@@ -1958,29 +1951,29 @@
           },
           "at0034.0.9" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.9",
+            "text" : "Hepatitis B",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.10" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.10",
+            "text" : "Röteln",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.11" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.11",
+            "text" : "Varizellen",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           },
           "at0034.0.12" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0034.0.1",
-            "text" : "Zweck des Screenings",
+            "code" : "at0034.0.12",
+            "text" : "Infektion mit dem humanen Papillomavirus",
             "description" : "Der Kontext oder Grund für das Screening.",
             "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
           }
