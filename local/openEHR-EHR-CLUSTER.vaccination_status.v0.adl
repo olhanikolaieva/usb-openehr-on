@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3a25e711c2ba86236d42bffad1b824e5">
+		["MD5-CAM-1.0.1"] = <"5f93f84c23e24337a2a2f05c9ea8eb1d">
 		["build_uid"] = <"efc86740-483f-31cb-ad4b-5ab0e20d6720">
 	>
 
@@ -36,6 +36,9 @@ definition
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Targeted disease or agent
 				value matches {
 					DV_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Vaccination status
@@ -51,15 +54,7 @@ definition
 					}
 				}
 				name matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0003,    -- Fully vaccinated
-							at0004,    -- Partially vaccinated
-							at0005,    -- Not vaccinated
-							at0006]    -- Unknown
-						}
-					}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 		}
@@ -80,22 +75,6 @@ ontology
 				["at0002"] = <
 					text = <"Vaccination status">
 					description = <"Vaccination status">
-				>
-				["at0003"] = <
-					text = <"Fully vaccinated">
-					description = <"">
-				>
-				["at0004"] = <
-					text = <"Partially vaccinated">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"Not vaccinated">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"Unknown">
-					description = <"">
 				>
 				["at0007"] = <
 					text = <"Fully vaccinated">
