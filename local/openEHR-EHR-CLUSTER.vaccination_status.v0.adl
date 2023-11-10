@@ -1,0 +1,118 @@
+archetype (adl_version=1.4; uid=0826a27a-e134-4d02-b742-f1005cfc5c74)
+	openEHR-EHR-CLUSTER.vaccination_status.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2023-11-10">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3a25e711c2ba86236d42bffad1b824e5">
+		["build_uid"] = <"efc86740-483f-31cb-ad4b-5ab0e20d6720">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Vaccination status
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Targeted disease or agent
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Vaccination status
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- Fully vaccinated
+							at0008,    -- Partially vaccinated
+							at0009,    -- Not vaccinated
+							at0010]    -- Unknown
+						}
+					}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0003,    -- Fully vaccinated
+							at0004,    -- Partially vaccinated
+							at0005,    -- Not vaccinated
+							at0006]    -- Unknown
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Vaccination status">
+					description = <"Vaccination status">
+				>
+				["at0001"] = <
+					text = <"Targeted disease or agent">
+					description = <"Targeted disease or agent">
+				>
+				["at0002"] = <
+					text = <"Vaccination status">
+					description = <"Vaccination status">
+				>
+				["at0003"] = <
+					text = <"Fully vaccinated">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Partially vaccinated">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Not vaccinated">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Fully vaccinated">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Partially vaccinated">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Not vaccinated">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+			>
+		>
+	>
