@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "e58415739d94ec36ef01ae1cb6215200",
+      "MD5-CAM-1.0.1" : "2df0acded56d585dddb51c80b2a9a6c5",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -507,56 +507,56 @@
                               "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "0..1",
                               "terminologyId" : {
-                                "value" : "local_terms"
+                                "value" : "SNOMED CT"
                               },
                               "constraint" : [ ],
-                              "selectedTerminologies" : [ "local_terms" ],
+                              "selectedTerminologies" : [ "SNOMED CT" ],
                               "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "397430003",
                                 "value" : "Diphtherie"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "76902006",
                                 "value" : "Tetanus"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "27836007",
                                 "value" : "Pertussis"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "709410003",
                                 "value" : "Haemophilus influenzae Typ B-Infektion"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "398102009",
                                 "value" : "Poliomyelitis"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "66071002",
                                 "value" : "Hepatitis B"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "16814004",
                                 "value" : "Pneumokokken-Infektionskrankheit"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "14189004",
                                 "value" : "Masern"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "36989005",
                                 "value" : "Mumps"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "36653000",
                                 "value" : "Röteln"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "38907003",
                                 "value" : "Varizellen"
                               }, {
-                                "terminologyId" : "local_terms",
+                                "terminologyId" : "SNOMED CT",
                                 "code" : "240532009",
                                 "value" : "Infektion mit dem humanen Papillomavirus"
                               } ]
@@ -655,6 +655,187 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002.2",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0034.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "397430003",
+                                "value" : "Diphtherie"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "76902006",
+                                "value" : "Tetanus"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "27836007",
+                                "value" : "Pertussis"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "709410003",
+                                "value" : "Haemophilus influenzae Typ B-Infektion"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "398102009",
+                                "value" : "Poliomyelitis"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "66071002",
+                                "value" : "Hepatitis B"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "16814004",
+                                "value" : "Pneumokokken-Infektionskrankheit"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "14189004",
+                                "value" : "Masern"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "36989005",
+                                "value" : "Mumps"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "36653000",
+                                "value" : "Röteln"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "38907003",
+                                "value" : "Varizellen"
+                              }, {
+                                "terminologyId" : "SNOMED CT",
+                                "code" : "240532009",
+                                "value" : "Infektion mit dem humanen Papillomavirus"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0028.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local_terms"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "local_terms" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "local_terms",
+                                "code" : "425457005",
+                                "value" : "Vollständig geimpft"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "385670004",
+                                "value" : "Teilweise geimpft"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "90351000119108",
+                                "value" : "Nicht geimpft"
+                              }, {
+                                "terminologyId" : "local_terms",
+                                "code" : "261665006",
+                                "value" : "Unbekannt"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_BOOLEAN",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0029.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0036.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0022.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -693,10 +874,57 @@
             "text" : "Vaccination status",
             "description" : "Is there a history of any symptoms or signs relevant for the screening purpose?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Any event (2)",
+            "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+          },
+          "at0034.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034.1",
+            "text" : "Vaccination",
+            "description" : "The context or reason for screening.",
+            "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: 'pre-admission screening' or the name of the actual questionnaire."
+          },
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Vaccination status",
+            "description" : "Is there a history of any symptoms or signs relevant for the screening purpose?",
+            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+          },
+          "at0029.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029.1",
+            "text" : "Last updated",
+            "description" : "Timing of the inital recognition of any symptom or sign relevant for the screening purpose.",
+            "comment" : "The 'Onset' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of symptoms or signs. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date the symptom started. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset."
+          },
+          "at0036.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0036.1",
+            "text" : "Comment",
+            "description" : "Narrative description about the history of any symptoms or signs relevant for the screening purpose."
           }
         },
-        "fi" : { },
-        "nb" : { },
+        "fi" : {
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "*Any event(en) (2)",
+            "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+          }
+        },
+        "nb" : {
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Uspesifisert hendelse (2)",
+            "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
+          }
+        },
         "de" : {
           "at0034.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -718,10 +946,51 @@
             "text" : "Status des Hauptkurses",
             "description" : "Gibt es eine Vorgeschichte von Symptomen oder Anzeichen im Zusammenhang mit dem Screening-Zweck?",
             "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.2",
+            "text" : "Beliebiges Ereignis (2)",
+            "description" : "Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann."
+          },
+          "at0034.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034.1",
+            "text" : "Impfung",
+            "description" : "Der Kontext oder Grund für das Screening.",
+            "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: \"Screening vor der Aufnahme\" oder der Name des eigentlichen Fragebogens."
+          },
+          "at0028.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Status des Hauptkurses",
+            "description" : "Gibt es eine Vorgeschichte von Symptomen oder Anzeichen im Zusammenhang mit dem Screening-Zweck?",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0029.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029.1",
+            "text" : "Zuletzt aktualisiert",
+            "description" : "Zeitpunkt der erstmaligen Erkennung eines für das Screening relevanten Symptoms oder Anzeichens.",
+            "comment" : "Das Datenelement „Auftreten“ wurde absichtlich locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden können, um zu erfassen, wann ein Symptom oder Anzeichen aufgetreten war. Die spezifische und beabsichtigte Semantik kann in einem Template weiter präzisiert werden.\r\n\r\nZum Beispiel: \r\nDatum/Uhrzeit für Beginn des Symptoms. Intervall von Datum/Uhrzeit für einen Zeitraum, z. B. zwischen 1940 und 1942. Text für Beschreibungen wie \"Unmittelbar nach der Operation\" oder \"Bis vor einer Woche\", \"Bis vor zwei Wochen\", \"Vor drei Wochen\". Dauer für das Alter der Person zu Beginn. Intervall der Dauer für das ungefähre Alter der Person zum Zeitpunkt des Beginns."
           }
         },
-        "it" : { },
-        "sv" : { }
+        "it" : {
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Qualsiasi evento (2)",
+            "description" : "Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione."
+          }
+        },
+        "sv" : {
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Ospecificerad händelse (2)",
+            "description" : "Ospecificerad standardhändelse vid en tidpunkt eller inom ett tidsintervall som explicit kan definieras i en mall eller genereras automatiskt av vissa IT-system."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
