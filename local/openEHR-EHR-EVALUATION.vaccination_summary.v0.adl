@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"73fbd6a43e81c79d3ee0e41241c990ee">
+		["MD5-CAM-1.0.1"] = <"5fca6d2401797157835856ebebbc2be3">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -353,14 +353,19 @@ definition
 		protocol matches {
 			ITEM_TREE[at0013] matches {    -- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Last updated
+					ELEMENT[at0116] occurrences matches {0..1} matches {    -- Comment
 						value matches {
-							DV_DATE_TIME matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0053] occurrences matches {0..1} matches {    -- Information source
 						value matches {
 							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
 						}
 					}
 					allow_archetype CLUSTER[at0050] occurrences matches {0..*} matches {    -- Extension
@@ -767,6 +772,10 @@ ontology
 					text = <"Vaccine series">
 					description = <"">
 				>
+				["at0116"] = <
+					text = <"Comment">
+					description = <"">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -1160,6 +1169,10 @@ ontology
 				>
 				["at0115"] = <
 					text = <"*Vaccine series (en)">
+					description = <"">
+				>
+				["at0116"] = <
+					text = <"*Comment (en)">
 					description = <"">
 				>
 			>
@@ -1557,6 +1570,10 @@ ontology
 					text = <"*Vaccine series (en)">
 					description = <"">
 				>
+				["at0116"] = <
+					text = <"*Comment (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -1950,6 +1967,10 @@ ontology
 				>
 				["at0115"] = <
 					text = <"Impfstopffserie">
+					description = <"">
+				>
+				["at0116"] = <
+					text = <"*Comment (en)">
 					description = <"">
 				>
 			>
