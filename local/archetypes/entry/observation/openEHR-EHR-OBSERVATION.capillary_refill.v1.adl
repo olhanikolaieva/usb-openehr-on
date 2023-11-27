@@ -1,8 +1,9 @@
-﻿archetype (adl_version=1.4; uid=14f30fd1-9cc6-40b9-a5cb-15e2e62e05d9)
+archetype (adl_version=1.4; uid=14f30fd1-9cc6-40b9-a5cb-15e2e62e05d9)
 	openEHR-EHR-OBSERVATION.capillary_refill.v1
 
 concept
-	[at0000]	-- Capillary refill time (CRT)
+	[at0000]
+
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -23,39 +24,37 @@ language
 			>
 		>
 	>
+
 description
 	original_author = <
+		["date"] = <"2020-04-26">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
-		["date"] = <"2020-04-26">
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Sudisa Consultancy Services, India","Mikkel Gaup Grønmo, Helse-Nord, FSE, Norway (openEHR Editor)","Anca Heyd, DIPS ASA, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia","Robert Madeley, Cambio Healthcare systems, Sweden","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","Svenne Naumann, Finnmarkssykehuset, Norway","Anoop Shah, University College London, United Kingdom","Trine Strand, Oslo Universitetssykehus (OUS), Norway","Roy Støle, OUS, Norway","Norwegian Review Summary, Nasjonal IKT HF, Norway","Nyree Taylor, Ocean Informatics, Australia","Jeremy Tong, NHS, United Kingdom","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	details = <
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"*To record findings related to the capillary refill time. (en)">
-			use = <"*Use to record findings related to the capillary refill time. (en)">
 			keywords = <"*return (en)", ...>
-			misuse = <"">
+			use = <"*Use to record findings related to the capillary refill time. (en)">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere funn knyttet til den kapillære fylningstiden (CRT).">
-			use = <"Bruk for å registrere funn knyttet til den kapillære fylningstiden (CRT).">
 			keywords = <"refyldningstid, CRT, Capillary refill time, kapillær refill", ...>
-			misuse = <"">
+			use = <"Bruk for å registrere funn knyttet til den kapillære fylningstiden (CRT).">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record findings related to the capillary refill time.">
-			use = <"Use to record findings related to the capillary refill time.">
 			keywords = <"return", ...>
-			misuse = <"">
 			copyright = <"© openEHR Foundation">
+			use = <"Use to record findings related to the capillary refill time.">
 		>
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Mikkel Gaup Grønmo, Helse-Nord, FSE, Norway (openEHR Editor)", "Anca Heyd, DIPS ASA, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia", "Robert Madeley, Cambio Healthcare systems, Sweden", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Svenne Naumann, Finnmarkssykehuset, Norway", "Anoop Shah, University College London, United Kingdom", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Roy Støle, OUS, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Informatics, Australia", "Jeremy Tong, NHS, United Kingdom", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -162,9 +161,8 @@ definition
 		}
 	}
 
-
 ontology
-	terminologies_available = <"SNOMED-CT", "LOINC">
+	terminologies_available = <"SNOMED-CT","LOINC">
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -413,7 +411,7 @@ ontology
 			>
 		>
 	>
-	term_bindings = <
+	term_binding = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0009"] = <[SNOMED-CT::15527001]>
