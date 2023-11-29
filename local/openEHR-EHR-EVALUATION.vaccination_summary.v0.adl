@@ -116,7 +116,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"22414fc8a4e6cbb81517fa0a06e160f7">
+		["MD5-CAM-1.0.1"] = <"9b0068239a8db295b9f166af187db3ea">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -195,20 +195,6 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0090] occurrences matches {0..1} matches {    -- Recommendation category
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0091,    -- Recommended basic vaccination
-									at0092,    -- Recommended supplementary vaccination
-									at0093,    -- Recommended vaccinations for risk groups
-									at0094]    -- Vaccinations without recommendations
-								}
-							}
-							DV_TEXT matches {*}
-						}
-					}
 					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
 						value matches {
 							DV_TEXT matches {*}
@@ -226,18 +212,6 @@ definition
 								}
 							}
 							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0098] occurrences matches {0..1} matches {    -- Serological examinations
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0099,    -- Yes
-									at0100,    -- No
-									at0101]    -- Not required
-								}
-							}
 						}
 					}
 					ELEMENT[at0047] occurrences matches {0..1} matches {    -- Total number of administrations
@@ -277,12 +251,6 @@ definition
 					CLUSTER[at0022] occurrences matches {0..*} matches {    -- Per vaccine administration
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0023] occurrences matches {0..*} matches {    -- Specific vaccine name
-								value matches {
-									DV_CODED_TEXT matches {*}
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0115] occurrences matches {0..1} matches {    -- Vaccine series
 								value matches {
 									DV_CODED_TEXT matches {*}
 									DV_TEXT matches {*}
@@ -672,26 +640,6 @@ ontology
 					text = <"VZV">
 					description = <"Impfung gegen Varizellen (Varizella-Zoster-Virus)">
 				>
-				["at0090"] = <
-					text = <"Recommendation category">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"Recommended basic vaccination">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"Recommended supplementary vaccination">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"Recommended vaccinations for risk groups">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"Vaccinations without recommendations">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"Frühsommer-Meningoenzephalitis">
 					description = <"">
@@ -699,22 +647,6 @@ ontology
 				["at0097"] = <
 					text = <"FSME-Impfung">
 					description = <"Impfung gegen Frühsommer-Meningoenzephalitis">
-				>
-				["at0098"] = <
-					text = <"Serological examinations">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"Yes">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"No">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"Not required">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"HAV">
@@ -766,10 +698,6 @@ ontology
 				>
 				["at0114"] = <
 					text = <"Covid-19-Erkrankung">
-					description = <"">
-				>
-				["at0115"] = <
-					text = <"Vaccine series">
 					description = <"">
 				>
 				["at0116"] = <
@@ -1071,26 +999,6 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
-				["at0090"] = <
-					text = <"*Recommendation category (en)">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"*Recommended basic vaccination (en)">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"*Recommended supplementary vaccination (en)">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"*Recommended vaccinations for risk groups (en)">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"*Vaccinations without recommendations (en)">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"*Frühsommer-Meningoenzephalitis (en)">
 					description = <"">
@@ -1098,22 +1006,6 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
-				>
-				["at0098"] = <
-					text = <"*Serological examinations (en)">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"*Yes (en)">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"*No (en)">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"*Not required (en)">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"*HAV (en)">
@@ -1165,10 +1057,6 @@ ontology
 				>
 				["at0114"] = <
 					text = <"*Covid-19-Erkrankung (en)">
-					description = <"">
-				>
-				["at0115"] = <
-					text = <"*Vaccine series (en)">
 					description = <"">
 				>
 				["at0116"] = <
@@ -1470,26 +1358,6 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
-				["at0090"] = <
-					text = <"*Recommendation category (en)">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"*Recommended basic vaccination (en)">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"*Recommended supplementary vaccination (en)">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"*Recommended vaccinations for risk groups (en)">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"*Vaccinations without recommendations (en)">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"*Frühsommer-Meningoenzephalitis (en)">
 					description = <"">
@@ -1497,22 +1365,6 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
-				>
-				["at0098"] = <
-					text = <"*Serological examinations (en)">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"*Yes (en)">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"*No (en)">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"*Not required (en)">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"*HAV (en)">
@@ -1564,10 +1416,6 @@ ontology
 				>
 				["at0114"] = <
 					text = <"*Covid-19-Erkrankung (en)">
-					description = <"">
-				>
-				["at0115"] = <
-					text = <"*Vaccine series (en)">
 					description = <"">
 				>
 				["at0116"] = <
@@ -1869,26 +1717,6 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
-				["at0090"] = <
-					text = <"Empfehlungskategorie">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"Empfohlene Basisimpfung">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"Empfohlene ergänzende Impfung">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"Empfohlene Impfungen für Risikogruppen">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"Impfungen ohne Empfehlungen">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"*Frühsommer-Meningoenzephalitis (en)">
 					description = <"">
@@ -1896,22 +1724,6 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
-				>
-				["at0098"] = <
-					text = <"Serologische Abklärungen">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"Ja">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"Nein">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"Nicht benötigt">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"*HAV (en)">
@@ -1963,10 +1775,6 @@ ontology
 				>
 				["at0114"] = <
 					text = <"*Covid-19-Erkrankung (en)">
-					description = <"">
-				>
-				["at0115"] = <
-					text = <"Impfstopffserie">
 					description = <"">
 				>
 				["at0116"] = <
