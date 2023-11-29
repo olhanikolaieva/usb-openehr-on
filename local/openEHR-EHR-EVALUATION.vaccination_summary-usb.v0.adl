@@ -118,7 +118,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f63b0deb303136b3e0d2fd52dd9c4155">
+		["MD5-CAM-1.0.1"] = <"761a796ab83cec5f92d749879006dce2">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -164,12 +164,6 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0023] occurrences matches {0..1} matches {    -- Specific vaccine name
-						value matches {
-							DV_CODED_TEXT matches {*}
-							DV_TEXT matches {*}
-						}
-					}
 					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Targeted disease or agent
 						value matches {
 							DV_TEXT matches {*}
@@ -203,34 +197,8 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0090] occurrences matches {0..1} matches {    -- Recommendation category
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0091,    -- Recommended basic vaccination
-									at0092,    -- Recommended supplementary vaccination
-									at0093,    -- Recommended vaccinations for risk groups
-									at0094]    -- Vaccinations without recommendations
-								}
-							}
-							DV_TEXT matches {*}
-						}
-					}
 					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Description
 						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0038] occurrences matches {0..1} matches {    -- Administration category
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0.3,    -- Primary course
-									at0.4]    -- Booster
-								}
-							}
 							DV_TEXT matches {*}
 						}
 					}
@@ -248,18 +216,6 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0098.1] occurrences matches {0..0} matches {    -- Serological examinations
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0099,    -- Yes
-									at0100,    -- No
-									at0101]    -- Not required
-								}
-							}
-						}
-					}
 					ELEMENT[at0047] occurrences matches {0..1} matches {    -- Total number of administrations
 						value matches {
 							DV_COUNT matches {
@@ -272,15 +228,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0031] occurrences matches {0..1} matches {    -- Sequence in series
-						value matches {
-							DV_COUNT matches {
-								magnitude matches {|>=1|}
-							}
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0024] occurrences matches {0..1} matches {    -- Date of administration
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -290,14 +238,16 @@ definition
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
+					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Next vaccination due
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0033] occurrences matches {0..1} matches {    -- Next vaccination due
+					allow_archetype CLUSTER[at0051] occurrences matches {0..1} matches {    -- Additional details
+					}
+					ELEMENT[at0049] occurrences matches {0..1} matches {    -- Comment
 						value matches {
-							DV_DATE_TIME matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0.1] occurrences matches {0..1} matches {    -- Valid from
@@ -310,22 +260,9 @@ definition
 							DV_DATE matches {*}
 						}
 					}
-					ELEMENT[at0049] occurrences matches {0..1} matches {    -- Comment
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					allow_archetype CLUSTER[at0051] occurrences matches {0..1} matches {    -- Additional details
-					}
 					CLUSTER[at0022.1] occurrences matches {0..*} matches {    -- Per vaccine administration
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0023] occurrences matches {0..*} matches {    -- Specific vaccine name
-								value matches {
-									DV_CODED_TEXT matches {*}
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0115] occurrences matches {0..1} matches {    -- Vaccine series
 								value matches {
 									DV_CODED_TEXT matches {*}
 									DV_TEXT matches {*}
@@ -424,6 +361,66 @@ ontology
 	term_definitions = <
 		["en"] = <
 			items = <
+				["at0090"] = <
+					text = <"Recommendation category">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Recommended basic vaccination">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Recommended supplementary vaccination">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Recommended vaccinations for risk groups">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Vaccinations without recommendations">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Serological examinations">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Not required">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"Vaccine series">
+					description = <"">
+				>
+				["at0000.1"] = <
+					text = <"Vaccination summary">
+					description = <"Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.">
+				>
+				["at0.1"] = <
+					text = <"Valid from">
+					description = <"">
+				>
+				["at0.2"] = <
+					text = <"Valid until">
+					description = <"">
+				>
+				["at0022.1"] = <
+					text = <"Per vaccine administration">
+					description = <"Details about a specific vaccine administration.">
+				>
+				["at0000"] = <
+					text = <"Vaccination summary">
+					description = <"Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -711,26 +708,6 @@ ontology
 					text = <"VZV">
 					description = <"Impfung gegen Varizellen (Varizella-Zoster-Virus)">
 				>
-				["at0090"] = <
-					text = <"Recommendation category">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"Recommended basic vaccination">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"Recommended supplementary vaccination">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"Recommended vaccinations for risk groups">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"Vaccinations without recommendations">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"Frühsommer-Meningoenzephalitis">
 					description = <"">
@@ -738,22 +715,6 @@ ontology
 				["at0097"] = <
 					text = <"FSME-Impfung">
 					description = <"Impfung gegen Frühsommer-Meningoenzephalitis">
-				>
-				["at0098"] = <
-					text = <"Serological examinations">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"Yes">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"No">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"Not required">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"HAV">
@@ -807,46 +768,74 @@ ontology
 					text = <"Covid-19-Erkrankung">
 					description = <"">
 				>
-				["at0115"] = <
-					text = <"Vaccine series">
-					description = <"">
-				>
 				["at0116"] = <
 					text = <"Comment">
 					description = <"">
-				>
-				["at0000.1"] = <
-					text = <"Vaccination summary">
-					description = <"Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.">
-				>
-				["at0098.1"] = <
-					text = <"Serological examinations">
-					description = <"">
-				>
-				["at0.1"] = <
-					text = <"Valid from">
-					description = <"">
-				>
-				["at0.2"] = <
-					text = <"Valid until">
-					description = <"">
-				>
-				["at0.3"] = <
-					text = <"Primary course">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"Booster">
-					description = <"">
-				>
-				["at0022.1"] = <
-					text = <"Per vaccine administration">
-					description = <"Details about a specific vaccine administration.">
 				>
 			>
 		>
 		["es-ar"] = <
 			items = <
+				["at0090"] = <
+					text = <"*Recommendation category (en)">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"*Recommended basic vaccination (en)">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"*Recommended supplementary vaccination (en)">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"*Recommended vaccinations for risk groups (en)">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"*Vaccinations without recommendations (en)">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"*Serological examinations (en)">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"*Not required (en)">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"*Vaccine series (en)">
+					description = <"">
+				>
+				["at0000.1"] = <
+					text = <"*Vaccination summary (en)">
+					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
+				>
+				["at0.1"] = <
+					text = <"*Valid from (en)">
+					description = <"">
+				>
+				["at0.2"] = <
+					text = <"*Valid until (en)">
+					description = <"">
+				>
+				["at0022.1"] = <
+					text = <"*Per vaccine administration (en)">
+					description = <"*Details about a specific vaccine administration. (en)">
+				>
+				["at0000"] = <
+					text = <"*Vaccination summary (en)">
+					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1134,26 +1123,6 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
-				["at0090"] = <
-					text = <"*Recommendation category (en)">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"*Recommended basic vaccination (en)">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"*Recommended supplementary vaccination (en)">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"*Recommended vaccinations for risk groups (en)">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"*Vaccinations without recommendations (en)">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"*Frühsommer-Meningoenzephalitis (en)">
 					description = <"">
@@ -1161,22 +1130,6 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
-				>
-				["at0098"] = <
-					text = <"*Serological examinations (en)">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"*Yes (en)">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"*No (en)">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"*Not required (en)">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"*HAV (en)">
@@ -1230,21 +1183,57 @@ ontology
 					text = <"*Covid-19-Erkrankung (en)">
 					description = <"">
 				>
-				["at0115"] = <
-					text = <"*Vaccine series (en)">
-					description = <"">
-				>
 				["at0116"] = <
 					text = <"*Comment (en)">
+					description = <"">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0090"] = <
+					text = <"*Recommendation category (en)">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"*Recommended basic vaccination (en)">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"*Recommended supplementary vaccination (en)">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"*Recommended vaccinations for risk groups (en)">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"*Vaccinations without recommendations (en)">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"*Serological examinations (en)">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"*Not required (en)">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"*Vaccine series (en)">
 					description = <"">
 				>
 				["at0000.1"] = <
 					text = <"*Vaccination summary (en)">
 					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
-				>
-				["at0098.1"] = <
-					text = <"*Serological examinations (en)">
-					description = <"">
 				>
 				["at0.1"] = <
 					text = <"*Valid from (en)">
@@ -1254,22 +1243,14 @@ ontology
 					text = <"*Valid until (en)">
 					description = <"">
 				>
-				["at0.3"] = <
-					text = <"Primary course">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"Booster">
-					description = <"">
-				>
 				["at0022.1"] = <
 					text = <"*Per vaccine administration (en)">
 					description = <"*Details about a specific vaccine administration. (en)">
 				>
-			>
-		>
-		["pt-br"] = <
-			items = <
+				["at0000"] = <
+					text = <"*Vaccination summary (en)">
+					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1557,26 +1538,6 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
-				["at0090"] = <
-					text = <"*Recommendation category (en)">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"*Recommended basic vaccination (en)">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"*Recommended supplementary vaccination (en)">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"*Recommended vaccinations for risk groups (en)">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"*Vaccinations without recommendations (en)">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"*Frühsommer-Meningoenzephalitis (en)">
 					description = <"">
@@ -1584,22 +1545,6 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
-				>
-				["at0098"] = <
-					text = <"*Serological examinations (en)">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"*Yes (en)">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"*No (en)">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"*Not required (en)">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"*HAV (en)">
@@ -1653,21 +1598,57 @@ ontology
 					text = <"*Covid-19-Erkrankung (en)">
 					description = <"">
 				>
-				["at0115"] = <
-					text = <"*Vaccine series (en)">
-					description = <"">
-				>
 				["at0116"] = <
 					text = <"*Comment (en)">
 					description = <"">
 				>
-				["at0000.1"] = <
-					text = <"*Vaccination summary (en)">
-					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
-				>
-				["at0098.1"] = <
-					text = <"*Serological examinations (en)">
+			>
+		>
+		["de"] = <
+			items = <
+				["at0090"] = <
+					text = <"Empfehlungskategorie">
 					description = <"">
+				>
+				["at0091"] = <
+					text = <"Empfohlene Basisimpfung">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Empfohlene ergänzende Impfung">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Empfohlene Impfungen für Risikogruppen">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Impfungen ohne Empfehlungen">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Serologische Abklärungen">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Nein">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Nicht benötigt">
+					description = <"">
+				>
+				["at0115"] = <
+					text = <"Impfstopffserie">
+					description = <"">
+				>
+				["at0000.1"] = <
+					text = <"Impfzusammenfassung">
+					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
 				>
 				["at0.1"] = <
 					text = <"*Valid from (en)">
@@ -1677,22 +1658,14 @@ ontology
 					text = <"*Valid until (en)">
 					description = <"">
 				>
-				["at0.3"] = <
-					text = <"*Primary course (en)">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"*Booster (en)">
-					description = <"">
-				>
 				["at0022.1"] = <
-					text = <"*Per vaccine administration (en)">
+					text = <"Pro Impfstoffverabreichung">
 					description = <"*Details about a specific vaccine administration. (en)">
 				>
-			>
-		>
-		["de"] = <
-			items = <
+				["at0000"] = <
+					text = <"Impfzusammenfassung">
+					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
+				>
 				["at0001"] = <
 					text = <"Tree">
 					description = <"@ internal @">
@@ -1980,26 +1953,6 @@ ontology
 					text = <"*VZV (en)">
 					description = <"*Impfung gegen Varizellen (Varizella-Zoster-Virus) (en)">
 				>
-				["at0090"] = <
-					text = <"Empfehlungskategorie">
-					description = <"">
-				>
-				["at0091"] = <
-					text = <"Empfohlene Basisimpfung">
-					description = <"">
-				>
-				["at0092"] = <
-					text = <"Empfohlene ergänzende Impfung">
-					description = <"">
-				>
-				["at0093"] = <
-					text = <"Empfohlene Impfungen für Risikogruppen">
-					description = <"">
-				>
-				["at0094"] = <
-					text = <"Impfungen ohne Empfehlungen">
-					description = <"">
-				>
 				["at0096"] = <
 					text = <"*Frühsommer-Meningoenzephalitis (en)">
 					description = <"">
@@ -2007,22 +1960,6 @@ ontology
 				["at0097"] = <
 					text = <"*FSME-Impfung (en)">
 					description = <"*Impfung gegen Frühsommer-Meningoenzephalitis (en)">
-				>
-				["at0098"] = <
-					text = <"Serologische Abklärungen">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"Ja">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"Nein">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"Nicht benötigt">
-					description = <"">
 				>
 				["at0102"] = <
 					text = <"*HAV (en)">
@@ -2076,41 +2013,9 @@ ontology
 					text = <"*Covid-19-Erkrankung (en)">
 					description = <"">
 				>
-				["at0115"] = <
-					text = <"Impfstopffserie">
-					description = <"">
-				>
 				["at0116"] = <
 					text = <"*Comment (en)">
 					description = <"">
-				>
-				["at0000.1"] = <
-					text = <"Impfzusammenfassung">
-					description = <"*Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine. (en)">
-				>
-				["at0098.1"] = <
-					text = <"Serologische Abklärungen">
-					description = <"">
-				>
-				["at0.1"] = <
-					text = <"*Valid from (en)">
-					description = <"">
-				>
-				["at0.2"] = <
-					text = <"*Valid until (en)">
-					description = <"">
-				>
-				["at0.3"] = <
-					text = <"Primär">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"Booster">
-					description = <"">
-				>
-				["at0022.1"] = <
-					text = <"Pro Impfstoffverabreichung">
-					description = <"*Details about a specific vaccine administration. (en)">
 				>
 			>
 		>
