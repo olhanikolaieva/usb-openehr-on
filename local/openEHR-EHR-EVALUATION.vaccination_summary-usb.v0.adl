@@ -118,7 +118,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"585484cc2f49d00d95f3126553288eac">
+		["MD5-CAM-1.0.1"] = <"16a1bca7671bcf225020e7843bf62209">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -230,7 +230,7 @@ definition
 					}
 					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
 						value matches {
-							DV_INTERVAL<DV_DATE_TIME> matches {*}
+							DV_DATE_TIME matches {*}
 						}
 					}
 					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Date of last vaccination
@@ -431,6 +431,21 @@ ontology
 					text = <"Per vaccine administration">
 					description = <"Details about a specific vaccine administration.">
 				>
+				["at0047"] = <
+					text = <"Total number of administrations">
+					description = <"Total number of vaccine doses administered over the lifetime of the individual.">
+					comment = <"May be manually calculated or extracted from EHR sources.
+
+">
+				>
+				["at0.3"] = <
+					text = <"Valid for">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"Life long validity">
+					description = <"">
+				>
 				["at0000"] = <
 					text = <"Vaccination summary">
 					description = <"Summary of vaccination administration for a single infectious disease or agent, or a group of infectious diseases or agents that are vaccinated simultaneously using a combination vaccine.">
@@ -551,13 +566,6 @@ ontology
 					text = <"Information source">
 					description = <"Identification of the source of the vaccine administration information.">
 					comment = <"For example: child health book, clinic record, or parent.">
-				>
-				["at0047"] = <
-					text = <"Total number of administrations">
-					description = <"Total number of vaccine doses administered over the lifetime of the individual.">
-					comment = <"May be manually calculated or extracted from EHR sources.
-
-">
 				>
 				["at0048"] = <
 					text = <"Unknown">
@@ -786,14 +794,6 @@ ontology
 					text = <"Comment">
 					description = <"">
 				>
-				["at0.3"] = <
-					text = <"Valid for">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"Life long validity">
-					description = <"">
-				>
 			>
 		>
 		["es-ar"] = <
@@ -853,6 +853,21 @@ ontology
 				["at0022.1"] = <
 					text = <"*Per vaccine administration (en)">
 					description = <"*Details about a specific vaccine administration. (en)">
+				>
+				["at0047"] = <
+					text = <"*Total number of administrations (en)">
+					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
+					comment = <"*May be manually calculated or extracted from EHR sources.
+
+ (en)">
+				>
+				["at0.3"] = <
+					text = <"*Valid for (en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Life long validity (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"*Vaccination summary (en)">
@@ -974,13 +989,6 @@ ontology
 					text = <"Information source">
 					description = <"*Identification of the source of the vaccine administration information. (en)">
 					comment = <"For example: child health book, clinic record, or parent.">
-				>
-				["at0047"] = <
-					text = <"*Total number of administrations (en)">
-					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
-					comment = <"*May be manually calculated or extracted from EHR sources.
-
- (en)">
 				>
 				["at0048"] = <
 					text = <"Unknown">
@@ -1209,14 +1217,6 @@ ontology
 					text = <"*Comment (en)">
 					description = <"">
 				>
-				["at0.3"] = <
-					text = <"*Valid for (en)">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"*Life long validity (en)">
-					description = <"">
-				>
 			>
 		>
 		["pt-br"] = <
@@ -1276,6 +1276,21 @@ ontology
 				["at0022.1"] = <
 					text = <"*Per vaccine administration (en)">
 					description = <"*Details about a specific vaccine administration. (en)">
+				>
+				["at0047"] = <
+					text = <"*Total number of administrations (en)">
+					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
+					comment = <"*May be manually calculated or extracted from EHR sources.
+
+ (en)">
+				>
+				["at0.3"] = <
+					text = <"*Valid for (en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Life long validity (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"*Vaccination summary (en)">
@@ -1397,13 +1412,6 @@ ontology
 					text = <"*Information source (en)">
 					description = <"*Identification of the source of the vaccine administration information. (en)">
 					comment = <"*For example: child health book, clinic record, or parent. (en)">
-				>
-				["at0047"] = <
-					text = <"*Total number of administrations (en)">
-					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
-					comment = <"*May be manually calculated or extracted from EHR sources.
-
- (en)">
 				>
 				["at0048"] = <
 					text = <"*Unknown (en)">
@@ -1632,14 +1640,6 @@ ontology
 					text = <"*Comment (en)">
 					description = <"">
 				>
-				["at0.3"] = <
-					text = <"*Valid for (en)">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"*Life long validity (en)">
-					description = <"">
-				>
 			>
 		>
 		["de"] = <
@@ -1699,6 +1699,21 @@ ontology
 				["at0022.1"] = <
 					text = <"Pro Impfstoffverabreichung">
 					description = <"*Details about a specific vaccine administration. (en)">
+				>
+				["at0047"] = <
+					text = <"Gesamtzahl der Dosen">
+					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
+					comment = <"*May be manually calculated or extracted from EHR sources.
+
+ (en)">
+				>
+				["at0.3"] = <
+					text = <"*Valid for (en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Life long validity (en)">
+					description = <"">
 				>
 				["at0000"] = <
 					text = <"Impfzusammenfassung">
@@ -1820,13 +1835,6 @@ ontology
 					text = <"Informationsquelle">
 					description = <"*Identification of the source of the vaccine administration information. (en)">
 					comment = <"*For example: child health book, clinic record, or parent. (en)">
-				>
-				["at0047"] = <
-					text = <"Gesamtzahl der Dosen">
-					description = <"*Total number of vaccine doses administered over the lifetime of the individual. (en)">
-					comment = <"*May be manually calculated or extracted from EHR sources.
-
- (en)">
 				>
 				["at0048"] = <
 					text = <"*Unknown (en)">
@@ -2053,14 +2061,6 @@ ontology
 				>
 				["at0116"] = <
 					text = <"*Comment (en)">
-					description = <"">
-				>
-				["at0.3"] = <
-					text = <"*Valid for (en)">
-					description = <"">
-				>
-				["at0.4"] = <
-					text = <"*Life long validity (en)">
 					description = <"">
 				>
 			>
