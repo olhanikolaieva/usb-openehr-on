@@ -118,7 +118,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e028f54a5cf94be51ead83b4a4b7a5f7">
+		["MD5-CAM-1.0.1"] = <"d02c21719d8d49619e50a935ca651c5d">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -329,7 +329,9 @@ definition
 					}
 					ELEMENT[at0.3] occurrences matches {0..1} matches {    -- Valid for
 						value matches {
-							DV_DURATION matches {*}
+							DV_DURATION matches {
+								value matches {PYMWD}
+							}
 						}
 					}
 					ELEMENT[at0.4] occurrences matches {0..1} matches {    -- Life long validity
