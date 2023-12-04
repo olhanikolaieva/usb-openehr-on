@@ -118,7 +118,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"761a796ab83cec5f92d749879006dce2">
+		["MD5-CAM-1.0.1"] = <"e028f54a5cf94be51ead83b4a4b7a5f7">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -250,16 +250,6 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0.1] occurrences matches {0..1} matches {    -- Valid from
-						value matches {
-							DV_DATE matches {*}
-						}
-					}
-					ELEMENT[at0.2] occurrences matches {0..1} matches {    -- Valid until
-						value matches {
-							DV_DATE matches {*}
-						}
-					}
 					CLUSTER[at0022.1] occurrences matches {0..*} matches {    -- Per vaccine administration
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0023] occurrences matches {0..*} matches {    -- Specific vaccine name
@@ -324,6 +314,28 @@ definition
 								value matches {
 									DV_TEXT matches {*}
 								}
+							}
+						}
+					}
+					ELEMENT[at0.1] occurrences matches {0..1} matches {    -- Valid from
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0.2] occurrences matches {0..1} matches {    -- Valid until
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0.3] occurrences matches {0..1} matches {    -- Valid for
+						value matches {
+							DV_DURATION matches {*}
+						}
+					}
+					ELEMENT[at0.4] occurrences matches {0..1} matches {    -- Life long validity
+						value matches {
+							DV_BOOLEAN matches {
+								value matches {true}
 							}
 						}
 					}
@@ -772,6 +784,14 @@ ontology
 					text = <"Comment">
 					description = <"">
 				>
+				["at0.3"] = <
+					text = <"Valid for">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"Life long validity">
+					description = <"">
+				>
 			>
 		>
 		["es-ar"] = <
@@ -1185,6 +1205,14 @@ ontology
 				>
 				["at0116"] = <
 					text = <"*Comment (en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Valid for (en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Life long validity (en)">
 					description = <"">
 				>
 			>
@@ -1602,6 +1630,14 @@ ontology
 					text = <"*Comment (en)">
 					description = <"">
 				>
+				["at0.3"] = <
+					text = <"*Valid for (en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Life long validity (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -2015,6 +2051,14 @@ ontology
 				>
 				["at0116"] = <
 					text = <"*Comment (en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Valid for (en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Life long validity (en)">
 					description = <"">
 				>
 			>
