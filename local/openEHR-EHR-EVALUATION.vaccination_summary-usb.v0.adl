@@ -118,7 +118,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c79b81aaccf525f49a702b90d8aaea94">
+		["MD5-CAM-1.0.1"] = <"b3c695ac3c0dc0a49053a77dddd0955f">
 		["build_uid"] = <"ecde46ce-cbc4-463b-82e9-8c6f763d86d2">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -228,12 +228,12 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Date of last vaccination
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Date course completed
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Date of last vaccination
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
