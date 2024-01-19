@@ -1,0 +1,100 @@
+archetype (adl_version=1.4; uid=5c29a96b-51fa-470b-a5c1-e5d1e83dad07)
+	openEHR-EHR-OBSERVATION.language_test_sv.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::sv]>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2024-01-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"37862bf68599cd4a6bae5fb6840364b6">
+		["build_uid"] = <"3694fdab-4d7f-3786-9e8b-b04d3082ef97">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Language_Test_SV
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Kroppsmasseindex (SV)
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Klinisk tolkning (SV)
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Kommentar (SV)
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["sv"] = <
+			items = <
+				["at0000"] = <
+					text = <"Language_Test_SV">
+					description = <"Language_Test_SV">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Kroppsmasseindex (SV)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Kommentar (SV)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Klinisk tolkning (SV)">
+					description = <"">
+				>
+			>
+		>
+	>
