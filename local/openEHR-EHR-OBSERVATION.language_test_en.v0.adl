@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-01-19">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1fd8c7111df79798b2f83db39647c5e0">
+		["MD5-CAM-1.0.1"] = <"baf4ed782cddb3dc448d58c766b0b77a">
 		["build_uid"] = <"bd78079f-d50b-32c3-ae7f-68a6483eca60">
 	>
 
@@ -39,12 +39,12 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Weight
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Weight (EN)
 										value matches {
 											DV_QUANTITY matches {*}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comment
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comment (EN)
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -79,11 +79,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Weight">
+					text = <"Weight (EN)">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Comment">
+					text = <"Comment (EN)">
 					description = <"">
 				>
 			>
