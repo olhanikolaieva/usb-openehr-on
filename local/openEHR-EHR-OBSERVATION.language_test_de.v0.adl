@@ -6,18 +6,29 @@ concept
 
 language
 	original_language = <[ISO_639-1::de]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-01-19">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -26,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"324df0b31a11c8df25924cd452f6a94a">
+		["MD5-CAM-1.0.1"] = <"6b4c52354979cfe5e4c9f7e5de9c9617">
 		["build_uid"] = <"2b6a718c-6271-3dd1-9b81-f26a5b1d0dd9">
 	>
 
@@ -102,6 +113,42 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Kommentar (DE)">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Language_Test_DE (de)">
+					description = <"*Language_Test_DE (de)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Systolic">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Diastolic">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*Klinische Interpretation (DE) (de)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Kommentar (DE) (de)">
 					description = <"">
 				>
 			>
