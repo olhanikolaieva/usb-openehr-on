@@ -16,10 +16,10 @@ language
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-01-23">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -37,9 +37,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"74d15f53e62f3d077baf5958fb5910e0">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["MD5-CAM-1.0.1"] = <"f827a064c646f9f42d1d5ef98e2b7d85">
 	>
 
 definition
@@ -110,12 +110,32 @@ definition
 								}
 							}
 						}
+						state matches {
+							ITEM_TREE[at0036] matches {*}    -- Item tree
+						}
 					}
 				}
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0007] matches {*}    -- Item tree
+			ITEM_TREE[at0007] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0033] occurrences matches {0..*} matches {    -- Extention
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0034] occurrences matches {0..1} matches {    -- Kommentar
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Datum
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -240,6 +260,22 @@ ontology
 					text = <"Hohes Risiko">
 					description = <"">
 				>
+				["at0033"] = <
+					text = <"Extention">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Kommentar">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Datum">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
 			>
 		>
 		["en"] = <
@@ -359,6 +395,22 @@ ontology
 				["at0029"] = <
 					text = <"*Hohes Risiko (de)">
 					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Extention (de)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Kommentar (de)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Datum (de)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Item tree (de)">
+					description = <"@ internal @">
 				>
 			>
 		>
