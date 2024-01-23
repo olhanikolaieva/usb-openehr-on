@@ -1,0 +1,556 @@
+archetype (adl_version=1.4; uid=d3b36d3a-f4d4-47b7-936a-dd96df556fea)
+	openEHR-EHR-OBSERVATION.duke_activity_status_index.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2024-01-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["MD5-CAM-1.0.1"] = <"3152399eaefa0968fa64a6717873788c">
+		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Duke Activity Status Index
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Take care of self
+										value matches {
+											1|[local::at0008],
+											0|[local::at0009]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Walk indoors
+										value matches {
+											1|[local::at0048],
+											0|[local::at0049]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Walk 1-2 blocks on level ground
+										value matches {
+											1|[local::at0011],
+											0|[local::at0012]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Climb a flight of stairs or walk up a hill
+										value matches {
+											1|[local::at0014],
+											0|[local::at0015]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Run a short distance
+										value matches {
+											1|[local::at0017],
+											0|[local::at0018]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Do light work around the house
+										value matches {
+											1|[local::at0020],
+											0|[local::at0021]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Do moderate work around the house
+										value matches {
+											1|[local::at0023],
+											0|[local::at0024]
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Do heavy work around the house
+										value matches {
+											1|[local::at0026],
+											0|[local::at0027]
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Do yard work
+										value matches {
+											1|[local::at0029],
+											0|[local::at0030]
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Have sexual relations
+										value matches {
+											1|[local::at0032],
+											0|[local::at0033]
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Participate in moderate recreational activities
+										value matches {
+											1|[local::at0035],
+											0|[local::at0036]
+										}
+									}
+									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Participate in strenuous sports
+										value matches {
+											1|[local::at0038],
+											0|[local::at0039]
+										}
+									}
+									ELEMENT[at0040] occurrences matches {0..1} matches {    -- DASI
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0041] occurrences matches {0..1} matches {    -- VO2 max
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0043] occurrences matches {0..1} matches {    -- MET
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0044] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0045] occurrences matches {0..*} matches {    -- Extention
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0046] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0047] occurrences matches {0..1} matches {    -- Date and time
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Duke Activity Status Index">
+					description = <"The Duke Activity Status Index is a patient-reported estimate of functional capacity, maximal oxygen consumption (VO2 max) and maximum metabolic equivalent of tasks (METs). The DASI questionnaire produces a score between 0 and 58.2 points, which is linearly correlated with a patient’s VO2 max and METs, as measured from cardiopulmonary exercise testing (CPET).">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Take care of self">
+					description = <"Take care of self (e.g. eating, dressing, bathing, using the toilet)?">
+				>
+				["at0006"] = <
+					text = <"Walk indoors">
+					description = <"Walk indoors (such as around your house)?">
+				>
+				["at0008"] = <
+					text = <"Yes">
+					description = <"Yes (+ 2.75)">
+				>
+				["at0009"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0010"] = <
+					text = <"Walk 1-2 blocks on level ground">
+					description = <"Walk 1-2 blocks on level ground?">
+				>
+				["at0011"] = <
+					text = <"Yes">
+					description = <"Yes (+ 2.75)">
+				>
+				["at0012"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0013"] = <
+					text = <"Climb a flight of stairs or walk up a hill">
+					description = <"Climb a flight of stairs or walk up a hill?">
+				>
+				["at0014"] = <
+					text = <"Yes">
+					description = <"Yes (+ 5.50)">
+				>
+				["at0015"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0016"] = <
+					text = <"Run a short distance">
+					description = <"Run a short distance?">
+				>
+				["at0017"] = <
+					text = <"Yes">
+					description = <"Yes (+ 8.00)">
+				>
+				["at0018"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0019"] = <
+					text = <"Do light work around the house">
+					description = <"Do light work around the house (e.g. dusting, washing dishes)?">
+				>
+				["at0020"] = <
+					text = <"Yes">
+					description = <"Yes (+ 2.70)">
+				>
+				["at0021"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0022"] = <
+					text = <"Do moderate work around the house">
+					description = <"Do moderate work around the house (e.g. vacuuming, sweeping floors carrying in groceries)?">
+				>
+				["at0023"] = <
+					text = <"Yes">
+					description = <"Yes (+ 3.50)">
+				>
+				["at0024"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0025"] = <
+					text = <"Do heavy work around the house">
+					description = <"Do heavy work around the house (e.g. scrubbing floors, lifting or moving heavy furniture)?">
+				>
+				["at0026"] = <
+					text = <"Yes">
+					description = <"Yes (+ 8.00)">
+				>
+				["at0027"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0028"] = <
+					text = <"Do yard work">
+					description = <"Do yard work (e.g. raking leaves, weeding, pushing a power mower)?">
+				>
+				["at0029"] = <
+					text = <"Yes">
+					description = <"Yes (+ 4.50)">
+				>
+				["at0030"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0031"] = <
+					text = <"Have sexual relations">
+					description = <"Have sexual relations?">
+				>
+				["at0032"] = <
+					text = <"Yes">
+					description = <"Yes (+ 5.25)">
+				>
+				["at0033"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0034"] = <
+					text = <"Participate in moderate recreational activities">
+					description = <"Participate in moderate recreational activities (e.g. golf, bowling, dancing, double tennis, throwing a baseball or football)?">
+				>
+				["at0035"] = <
+					text = <"Yes">
+					description = <"Yes (+ 6.00)">
+				>
+				["at0036"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0037"] = <
+					text = <"Participate in strenuous sports">
+					description = <"Participate in strenuous sports (e.g. swimming, singles tennis, football, basketball, skiing)?">
+				>
+				["at0038"] = <
+					text = <"Yes">
+					description = <"Yes (+ 7.50)">
+				>
+				["at0039"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+				["at0040"] = <
+					text = <"DASI">
+					description = <"Sum of questionnaire responses.">
+				>
+				["at0041"] = <
+					text = <"VO2 max">
+					description = <"VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6">
+				>
+				["at0043"] = <
+					text = <"MET">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0045"] = <
+					text = <"Extention">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Date and time">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Yes">
+					description = <"Yes (+ 1.75)">
+				>
+				["at0049"] = <
+					text = <"No">
+					description = <"No (+ 0.0)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Duke Activity Status Index (en)">
+					description = <"*The Duke Activity Status Index is a patient-reported estimate of functional capacity, maximal oxygen consumption (VO2 max) and maximum metabolic equivalent of tasks (METs). The DASI questionnaire produces a score between 0 and 58.2 points, which is linearly correlated with a patient’s VO2 max and METs, as measured from cardiopulmonary exercise testing (CPET). (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Take care of self (en)">
+					description = <"*Take care of self (e.g. eating, dressing, bathing, using the toilet)? (en)">
+				>
+				["at0006"] = <
+					text = <"*Walk indoors (en)">
+					description = <"*Walk indoors (such as around your house)? (en)">
+				>
+				["at0008"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 2.75) (en)">
+				>
+				["at0009"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0010"] = <
+					text = <"*Walk 1-2 blocks on level ground (en)">
+					description = <"*Walk 1-2 blocks on level ground? (en)">
+				>
+				["at0011"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 2.75) (en)">
+				>
+				["at0012"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0013"] = <
+					text = <"*Climb a flight of stairs or walk up a hill (en)">
+					description = <"*Climb a flight of stairs or walk up a hill? (en)">
+				>
+				["at0014"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 5.50) (en)">
+				>
+				["at0015"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0016"] = <
+					text = <"*Run a short distance (en)">
+					description = <"*Run a short distance? (en)">
+				>
+				["at0017"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 8.00) (en)">
+				>
+				["at0018"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0019"] = <
+					text = <"*Do light work around the house (en)">
+					description = <"*Do light work around the house (e.g. dusting, washing dishes)? (en)">
+				>
+				["at0020"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 2.70) (en)">
+				>
+				["at0021"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0022"] = <
+					text = <"*Do moderate work around the house (en)">
+					description = <"*Do moderate work around the house (e.g. vacuuming, sweeping floors carrying in groceries)? (en)">
+				>
+				["at0023"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 3.50) (en)">
+				>
+				["at0024"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0025"] = <
+					text = <"*Do heavy work around the house (en)">
+					description = <"*Do heavy work around the house (e.g. scrubbing floors, lifting or moving heavy furniture)? (en)">
+				>
+				["at0026"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 8.00) (en)">
+				>
+				["at0027"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0028"] = <
+					text = <"*Do yard work (en)">
+					description = <"*Do yard work (e.g. raking leaves, weeding, pushing a power mower)? (en)">
+				>
+				["at0029"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 4.50) (en)">
+				>
+				["at0030"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0031"] = <
+					text = <"*Have sexual relations (en)">
+					description = <"*Have sexual relations? (en)">
+				>
+				["at0032"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 5.25) (en)">
+				>
+				["at0033"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0034"] = <
+					text = <"*Participate in moderate recreational activities (en)">
+					description = <"*Participate in moderate recreational activities (e.g. golf, bowling, dancing, double tennis, throwing a baseball or football)? (en)">
+				>
+				["at0035"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 6.00) (en)">
+				>
+				["at0036"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0037"] = <
+					text = <"*Participate in strenuous sports (en)">
+					description = <"*Participate in strenuous sports (e.g. swimming, singles tennis, football, basketball, skiing)? (en)">
+				>
+				["at0038"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 7.50) (en)">
+				>
+				["at0039"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+				["at0040"] = <
+					text = <"*DASI (en)">
+					description = <"*Sum of questionnaire responses. (en)">
+				>
+				["at0041"] = <
+					text = <"*VO2 max (en)">
+					description = <"*VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6 (en)">
+				>
+				["at0043"] = <
+					text = <"*MET (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0045"] = <
+					text = <"*Extention (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*Comment (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Date and time (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (+ 1.75) (en)">
+				>
+				["at0049"] = <
+					text = <"*No (en)">
+					description = <"*No (+ 0.0) (en)">
+				>
+			>
+		>
+	>
