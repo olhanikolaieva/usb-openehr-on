@@ -1,0 +1,373 @@
+archetype (adl_version=1.4; uid=c11dbca3-a723-4e5c-b5b0-f23020089ac4)
+	openEHR-EHR-OBSERVATION.revised_cardiac_risk_index.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::de]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2024-01-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["MD5-CAM-1.0.1"] = <"74d15f53e62f3d077baf5958fb5910e0">
+		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Revised Cardiac Risk Index
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Koronare Herzkrankheit
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Dekompensierte Herzkrankheit
+										value matches {
+											0|[local::at0009],
+											1|[local::at0010]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Zerebrovaskuläre Verschlusskrankheit
+										value matches {
+											0|[local::at0012],
+											1|[local::at0013]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Insulinabhängiger Diabetes mellitus
+										value matches {
+											0|[local::at0015],
+											1|[local::at0016]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Niereninsuffizienz, Kreatinin >177 µmoll/L
+										value matches {
+											0|[local::at0018],
+											1|[local::at0019]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Hoch-Risiko Chirurgie
+										value matches {
+											0|[local::at0021],
+											1|[local::at0022]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Summe
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..6|}
+											}
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Risiko einer schweren kardialen Komplikation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0026,    -- Sehr geringes Risiko
+													at0027,    -- Geringes Risiko
+													at0028,    -- Moderates Risiko
+													at0029]    -- Hohes Risiko
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0007] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Revised Cardiac Risk Index">
+					description = <"Revised Cardiac Risk Index">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Koronare Herzkrankheit">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Dekompensierte Herzkrankheit">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Zerebrovaskuläre Verschlusskrankheit">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Insulinabhängiger Diabetes mellitus">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Niereninsuffizienz, Kreatinin >177 µmoll/L">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Hoch-Risiko Chirurgie">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Summe">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Risiko einer schweren kardialen Komplikation">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Sehr geringes Risiko">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Geringes Risiko">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Moderates Risiko">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Hohes Risiko">
+					description = <"">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Revised Cardiac Risk Index (de)">
+					description = <"*Revised Cardiac Risk Index (de)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Koronare Herzkrankheit (de)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Absent (de)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Present (de)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*Item tree (de)">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"*Dekompensierte Herzkrankheit (de)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Absent (de)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Present (de)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Zerebrovaskuläre Verschlusskrankheit (de)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Absent (de)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Present (de)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Insulinabhängiger Diabetes mellitus (de)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Absent (de)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Present (de)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Niereninsuffizienz, Kreatinin >177 µmoll/L (de)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Absent (de)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Present (de)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Hoch-Risiko Chirurgie (de)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Absent (de)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Present (de)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Summe (de)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Risiko einer schweren kardialen Komplikation (de)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Sehr geringes Risiko (de)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Geringes Risiko (de)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Moderates Risiko (de)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Hohes Risiko (de)">
+					description = <"">
+				>
+			>
+		>
+	>
+	term_binding = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::448236008]>
+				["at0023"] = <[SNOMED-CT::448236008]>
+			>
+		>
+	>
