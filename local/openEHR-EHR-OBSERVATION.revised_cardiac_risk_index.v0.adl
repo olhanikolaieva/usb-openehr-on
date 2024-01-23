@@ -37,9 +37,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f73393ac3f46d92472a36ae5c1de2bbf">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"f827a064c646f9f42d1d5ef98e2b7d85">
 	>
 
 definition
@@ -281,7 +281,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Revised Cardiac Risk Index (de)">
+					text = <"Revised Cardiac Risk Index">
 					description = <"*Revised Cardiac Risk Index (de)">
 				>
 				["at0001"] = <
@@ -297,7 +297,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Koronare Herzkrankheit (de)">
+					text = <"Coronary Artery Disease">
 					description = <"">
 				>
 				["at0005"] = <
@@ -313,7 +313,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0008"] = <
-					text = <"*Dekompensierte Herzkrankheit (de)">
+					text = <"Congestive Heart Failure">
 					description = <"">
 				>
 				["at0009"] = <
@@ -325,7 +325,7 @@ ontology
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Zerebrovaskuläre Verschlusskrankheit (de)">
+					text = <"Cerebrovascular Disease">
 					description = <"">
 				>
 				["at0012"] = <
@@ -337,7 +337,7 @@ ontology
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"*Insulinabhängiger Diabetes mellitus (de)">
+					text = <"Diabetes Mellitus on Insulin">
 					description = <"">
 				>
 				["at0015"] = <
@@ -349,7 +349,7 @@ ontology
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*Niereninsuffizienz, Kreatinin >177 µmoll/L (de)">
+					text = <"Serum Creatinine >2 mg/dl or >177 μmol/L">
 					description = <"">
 				>
 				["at0018"] = <
@@ -361,7 +361,7 @@ ontology
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*Hoch-Risiko Chirurgie (de)">
+					text = <"High Risk Surgery">
 					description = <"">
 				>
 				["at0021"] = <
@@ -373,11 +373,11 @@ ontology
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Summe (de)">
+					text = <"Summe">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*Risiko einer schweren kardialen Komplikation (de)">
+					text = <"Estimated Risk of Adverse Outcome with Non-cardiac Surgery">
 					description = <"">
 				>
 				["at0026"] = <
@@ -397,15 +397,15 @@ ontology
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Extention (de)">
+					text = <"Extention">
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*Kommentar (de)">
+					text = <"Comment">
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"*Datum (de)">
+					text = <"Date">
 					description = <"">
 				>
 				["at0036"] = <
