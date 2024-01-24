@@ -38,7 +38,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"3152399eaefa0968fa64a6717873788c">
+		["MD5-CAM-1.0.1"] = <"92472c6d8e570336f89bb42a699468b9">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 	>
 
@@ -55,6 +55,23 @@ definition
 										value matches {
 											1|[local::at0008],
 											0|[local::at0009]
+										}
+									}
+									ELEMENT[at0050] occurrences matches {0..1} matches {    -- DV_CODED_TEXT
+										value matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..1} matches {    -- DV_QUANTITY
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0052] occurrences matches {0..1} matches {    -- DV_COUNT
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..2|}
+											}
 										}
 									}
 									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Walk indoors
@@ -359,6 +376,18 @@ ontology
 					text = <"No">
 					description = <"No (+ 0.0)">
 				>
+				["at0050"] = <
+					text = <"DV_CODED_TEXT">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"DV_QUANTITY">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -550,6 +579,18 @@ ontology
 				["at0049"] = <
 					text = <"*No (en)">
 					description = <"*No (+ 0.0) (en)">
+				>
+				["at0050"] = <
+					text = <"*DV_CODED_TEXT (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*DV_QUANTITY (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*DV_COUNT (en)">
+					description = <"">
 				>
 			>
 		>
