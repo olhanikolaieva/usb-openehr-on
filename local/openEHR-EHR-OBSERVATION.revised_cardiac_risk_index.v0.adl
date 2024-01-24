@@ -37,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f73393ac3f46d92472a36ae5c1de2bbf">
+		["MD5-CAM-1.0.1"] = <"e0be5e905fd5e014aa80e6163eeddd77">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -165,11 +165,11 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Absent">
+					text = <"Nicht vorhanden">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"Present">
+					text = <"Vorhanden">
 					description = <"">
 				>
 				["at0007"] = <
@@ -181,11 +181,11 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"Absent">
+					text = <"Nicht vorhanden">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"Present">
+					text = <"Vorhanden">
 					description = <"">
 				>
 				["at0011"] = <
@@ -193,11 +193,11 @@ ontology
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"Absent">
+					text = <"Nicht vorhanden">
 					description = <"">
 				>
 				["at0013"] = <
-					text = <"Present">
+					text = <"Vorhanden">
 					description = <"">
 				>
 				["at0014"] = <
@@ -205,11 +205,11 @@ ontology
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"Absent">
+					text = <"Nicht vorhanden">
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"Present">
+					text = <"Vorhanden">
 					description = <"">
 				>
 				["at0017"] = <
@@ -217,11 +217,11 @@ ontology
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"Absent">
+					text = <"Nicht vorhanden">
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"Present">
+					text = <"Vorhanden">
 					description = <"">
 				>
 				["at0020"] = <
@@ -229,11 +229,11 @@ ontology
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"Absent">
+					text = <"Nicht vorhanden">
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"Present">
+					text = <"Vorhanden">
 					description = <"">
 				>
 				["at0023"] = <
@@ -301,11 +301,11 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"*Absent (de)">
+					text = <"Absent">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*Present (de)">
+					text = <"Present">
 					description = <"">
 				>
 				["at0007"] = <
@@ -317,11 +317,11 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Absent (de)">
+					text = <"Absent">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Present (de)">
+					text = <"Present">
 					description = <"">
 				>
 				["at0011"] = <
@@ -329,11 +329,11 @@ ontology
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"*Absent (de)">
+					text = <"Absent">
 					description = <"">
 				>
 				["at0013"] = <
-					text = <"*Present (de)">
+					text = <"Present">
 					description = <"">
 				>
 				["at0014"] = <
@@ -341,11 +341,11 @@ ontology
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"*Absent (de)">
+					text = <"Absent">
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*Present (de)">
+					text = <"Present">
 					description = <"">
 				>
 				["at0017"] = <
@@ -353,11 +353,11 @@ ontology
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"*Absent (de)">
+					text = <"Absent">
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"*Present (de)">
+					text = <"Present">
 					description = <"">
 				>
 				["at0020"] = <
@@ -365,15 +365,15 @@ ontology
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*Absent (de)">
+					text = <"Absent">
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"*Present (de)">
+					text = <"Present">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"Summe">
+					text = <"Total score">
 					description = <"">
 				>
 				["at0025"] = <
@@ -381,19 +381,19 @@ ontology
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Sehr geringes Risiko (de)">
+					text = <"Very low risk">
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"*Geringes Risiko (de)">
+					text = <"Low risk">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Moderates Risiko (de)">
+					text = <"Moderate risk">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"*Hohes Risiko (de)">
+					text = <"High risk">
 					description = <"">
 				>
 				["at0033"] = <
