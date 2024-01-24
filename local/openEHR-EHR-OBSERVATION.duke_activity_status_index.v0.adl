@@ -16,10 +16,10 @@ language
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-01-23">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -37,9 +37,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"9f27dcae8bc266e21907072738084e86">
+		["MD5-CAM-1.0.1"] = <"5a3d16de7b42da257be1fb87d4c218f3">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
@@ -126,11 +126,6 @@ definition
 									ELEMENT[at0051] occurrences matches {0..1} matches {    -- Total score
 										value matches {
 											DV_QUANTITY matches {*}
-										}
-									}
-									ELEMENT[at0040] occurrences matches {0..1} matches {    -- DASI
-										value matches {
-											DV_COUNT matches {*}
 										}
 									}
 									ELEMENT[at0041] occurrences matches {0..1} matches {    -- VO2 max
@@ -328,10 +323,6 @@ ontology
 					text = <"No">
 					description = <"No (+ 0.0)">
 				>
-				["at0040"] = <
-					text = <"DASI">
-					description = <"Sum of questionnaire responses.">
-				>
 				["at0041"] = <
 					text = <"VO2 max">
 					description = <"VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6">
@@ -523,10 +514,6 @@ ontology
 				["at0039"] = <
 					text = <"*No (en)">
 					description = <"*No (+ 0.0) (en)">
-				>
-				["at0040"] = <
-					text = <"*DASI (en)">
-					description = <"*Sum of questionnaire responses. (en)">
 				>
 				["at0041"] = <
 					text = <"*VO2 max (en)">
