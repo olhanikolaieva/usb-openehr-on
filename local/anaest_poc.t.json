@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "21.0.0",
+      "sem_ver" : "22.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "a605af26a51534083b4ae1b03bf92ae3",
+      "MD5-CAM-1.0.1" : "72e996e6a690dc71464f780f7ee38d63",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -3321,6 +3321,7 @@
                             "rmAttributeName" : "property",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
                               "terminologyId" : {
                                 "value" : "openehr"
                               },
@@ -3331,11 +3332,11 @@
                             "@type" : "C_ATTRIBUTE_TUPLE",
                             "members" : [ {
                               "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "magnitude",
+                              "rmAttributeName" : "units",
                               "children" : [ ]
                             }, {
                               "@type" : "C_ATTRIBUTE",
-                              "rmAttributeName" : "units",
+                              "rmAttributeName" : "magnitude",
                               "children" : [ ]
                             }, {
                               "@type" : "C_ATTRIBUTE",
@@ -3345,20 +3346,23 @@
                             "tuples" : [ {
                               "@type" : "C_PRIMITIVE_TUPLE",
                               "members" : [ {
+                                "@type" : "C_STRING",
+                                "rmTypeName" : "STRING",
+                                "constraint" : [ "mm[Hg]" ]
+                              }, {
                                 "@type" : "C_REAL",
+                                "rmTypeName" : "REAL",
                                 "constraint" : [ {
                                   "lower" : 0.0,
-                                  "upper" : 1000.0,
+                                  "upper" : 350.0,
                                   "lowerIncluded" : true,
                                   "upperIncluded" : false,
                                   "lowerUnbounded" : false,
                                   "upperUnbounded" : false
                                 } ]
                               }, {
-                                "@type" : "C_STRING",
-                                "constraint" : [ "mm[Hg]" ]
-                              }, {
                                 "@type" : "C_INTEGER",
+                                "rmTypeName" : "INTEGER",
                                 "constraint" : [ {
                                   "lower" : 0,
                                   "upper" : 0,
