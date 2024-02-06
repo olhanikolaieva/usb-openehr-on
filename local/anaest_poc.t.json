@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "30.0.0",
+      "sem_ver" : "31.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "fd076ce13c9c327ea87af69c38598934",
+      "MD5-CAM-1.0.1" : "df90594e9a6a091e20e32ac4b9f995ac",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -24069,7 +24069,15 @@
                 "value" : "Leber/Niere i. O.",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Leber/Niere i. O." ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -27123,7 +27131,15 @@
                 "value" : "Magen/Darm i. O.",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Magen/Darm i. O." ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -28348,7 +28364,15 @@
                 "value" : "Stoffwechsel/Endo i. O.",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Stoffwechsel/Endo i. O." ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
