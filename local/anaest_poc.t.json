@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "24.0.0",
+      "sem_ver" : "25.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "7231487c4f71f7c5c6be25fc11fbaa9a",
+      "MD5-CAM-1.0.1" : "40f7d484190808e4aebb1bbd21898fd5",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -9071,35 +9071,7 @@
               "rmTypeName" : "DV_QUANTITY",
               "occurrences" : "1..1",
               "attributes" : [ ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
-                  "children" : [ ]
-                } ],
-                "tuples" : [ {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "umol/L" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                } ]
-              } ]
+              "attributeTuples" : [ ]
             } ]
           } ],
           "attributeTuples" : [ ]
