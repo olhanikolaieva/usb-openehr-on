@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "28.0.0",
+      "sem_ver" : "29.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "17c988ed7e478704d148772b46934905",
+      "MD5-CAM-1.0.1" : "5f9ab85c1ff8831e2a2d177d02b1e22d",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -27042,7 +27042,15 @@
                 "value" : "Nicht nüchtern",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Nicht nüchtern" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
