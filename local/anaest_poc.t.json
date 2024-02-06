@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "33.0.0",
+      "sem_ver" : "34.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "6e99d458eac006ab51af0e32630be167",
+      "MD5-CAM-1.0.1" : "359da1f42ef5e81b7b67d0feb42f4949",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -6066,7 +6066,15 @@
                 "value" : "Haemoglobin",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Haemoglobin" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -6806,7 +6814,15 @@
                 "value" : "Q",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Q" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -8346,7 +8362,15 @@
                 "value" : "Potassium",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Potassium" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -9104,7 +9128,15 @@
                 "value" : "Creatinine",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Creatinine" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -9862,7 +9894,15 @@
                 "value" : "Troponin T",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Troponin T" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -10620,7 +10660,15 @@
                 "value" : "T&S",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "T&S" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -12055,7 +12103,24 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "nodeId" : "at0121.2",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_STRING",
+                          "rmTypeName" : "STRING",
+                          "constraint" : [ "PreOp" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -12067,6 +12132,7 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0135.2",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
@@ -12424,13 +12490,6 @@
             "text" : "Anästhesieplan",
             "description" : "Current Activity."
           },
-          "at0135.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0135.2",
-            "text" : "Prämediziert durch",
-            "description" : "Narrative description about the service requested.",
-            "comment" : "This data point should be used to describe the named service in more detail, including how it should be delivered, patient concerns and issues that might be encountered in delivering the service."
-          },
           "at0153.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0153.2",
@@ -12479,6 +12538,13 @@
             "text" : "Postop",
             "description" : "Additional details and instructions about how the services are to be delivered.",
             "comment" : "Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences. "
+          },
+          "at0121.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0121.2",
+            "text" : "Prämediziert durch",
+            "description" : "The name of the single service or activity requested.",
+            "comment" : "Coding of the 'Service name' with a coding system is desirable, if available. For example: 'referral' to an endocrinologist for diabetes management."
           }
         },
         "nb" : {
@@ -14632,7 +14698,15 @@
                                 "value" : "Epilepsie",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Epilepsie" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -15114,7 +15188,15 @@
                                 "value" : "Periph./zentrales neurologisches Defizit vorbestehend",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Periph./zentrales neurologisches Defizit vorbestehend" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -16651,7 +16733,15 @@
                 "value" : "Luftwege i. O",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Luftwege i. O" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -16921,7 +17011,15 @@
                                 "value" : "Status nach CVI/TIA",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Status nach CVI/TIA" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -17349,7 +17447,15 @@
                                 "value" : "OSAS",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "OSAS" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -17756,7 +17862,15 @@
                                 "value" : "Obstruktive Lungenkrankheit",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Obstruktive Lungenkrankheit" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -18184,7 +18298,15 @@
                                 "value" : "Restriktive Lungenkrankheit",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Restriktive Lungenkrankheit" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -19352,7 +19474,15 @@
                                 "value" : "Leistungsfähig (> 3 Treppen)",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Leistungsfähig (> 3 Treppen)" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -19837,7 +19967,15 @@
                                 "value" : "Hypertonie",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Hypertonie" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -20279,7 +20417,15 @@
                                 "value" : "KHK",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "KHK" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -20742,7 +20888,15 @@
                                 "value" : "Stent",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Stent" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -21205,7 +21359,15 @@
                                 "value" : "PAVK",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "PAVK" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -21633,7 +21795,15 @@
                                 "value" : "Herzinsuffizienz",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Herzinsuffizienz" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -22061,7 +22231,15 @@
                                 "value" : "Rhythmusstörung, EKG pathologisch",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Rhythmusstörung, EKG pathologisch" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -22489,7 +22667,15 @@
                                 "value" : "PM/ICD",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "PM/ICD" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -24070,7 +24256,15 @@
                 "value" : "Leber/Niere i. O.",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Leber/Niere i. O." ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -24340,7 +24534,15 @@
                                 "value" : "Hepatopathie",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Hepatopathie" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -24747,7 +24949,15 @@
                                 "value" : "Niereninsuffizienz",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Niereninsuffizienz" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -25156,7 +25366,15 @@
                     "value" : "Noxen",
                     "@type" : "DV_TEXT"
                   },
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "Noxen" ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -27124,7 +27342,15 @@
                 "value" : "Magen/Darm i. O.",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Magen/Darm i. O." ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -28349,7 +28575,15 @@
                 "value" : "Stoffwechsel/Endo i. O.",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Stoffwechsel/Endo i. O." ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -28619,7 +28853,15 @@
                                 "value" : "Schilddrüsenkrankheit",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Schilddrüsenkrankheit" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -29026,7 +29268,15 @@
                                 "value" : "Diabetes mit Insulin",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Diabetes mit Insulin" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -29454,7 +29704,15 @@
                                 "value" : "Diabetes ohne Insulin",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Diabetes ohne Insulin" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -31707,7 +31965,15 @@
                 "value" : "Probleme vorherige Anästhesien",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Probleme vorherige Anästhesien" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -31994,7 +32260,15 @@
                                 "value" : "Tumorleiden",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Tumorleiden" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -32401,7 +32675,15 @@
                                 "value" : "Gravidität",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Gravidität" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -32829,7 +33111,15 @@
                                 "value" : "Neuromuskuläre Erkrankungen",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Neuromuskuläre Erkrankungen" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -33257,7 +33547,15 @@
                                 "value" : "Maligne Hyperthermie",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "Maligne Hyperthermie" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -34656,7 +34954,15 @@
                 "value" : "Isolation",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Isolation" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -34849,7 +35155,15 @@
                 "value" : "Unkooperativer Patient",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Unkooperativer Patient" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -35619,7 +35933,15 @@
                                 "value" : "GCS <14",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "GCS <14" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -36163,7 +36485,15 @@
                                 "value" : "AZ normal",
                                 "@type" : "DV_TEXT"
                               },
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_STRING",
+                                  "rmTypeName" : "STRING",
+                                  "constraint" : [ "AZ normal" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ ]
                             } ]
                           } ],
@@ -36547,7 +36877,15 @@
                 "value" : "Aspirationsgefahr (Reflux, Ileus)",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Aspirationsgefahr (Reflux, Ileus)" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
