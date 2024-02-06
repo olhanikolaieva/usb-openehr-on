@@ -37,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e4946f85bb9907f6ea8b8564cbb0ce8b">
+		["MD5-CAM-1.0.1"] = <"ad11d78cb438aba402009684bc4bef0d">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -139,10 +139,10 @@ definition
 									ELEMENT[at0041] occurrences matches {0..1} matches {    -- VO2 max
 										value matches {
 											C_DV_QUANTITY <
-												property = <[openehr::507]>
+												property = <[openehr::126]>
 												list = <
 													["1"] = <
-														units = <"1">
+														units = <"ml/min">
 														precision = <|2|>
 													>
 												>
