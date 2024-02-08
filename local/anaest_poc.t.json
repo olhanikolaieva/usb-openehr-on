@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "40.0.0",
+      "sem_ver" : "40.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "25ce4f3a103cca3a617815e2ae5ee0ea",
+      "MD5-CAM-1.0.1" : "01504740a932b32018d56989c53fe792",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -36519,7 +36519,7 @@
                       "terminologyId" : {
                         "value" : "local"
                       },
-                      "constraint" : [ "ac0.66" ],
+                      "constraint" : [ "ac0.76" ],
                       "selectedTerminologies" : [ ]
                     } ]
                   } ],
@@ -36552,34 +36552,58 @@
             "text" : "Luftwege i. O.",
             "description" : "A statement of exclusion of a specific Problem/diagnosis, Family history, Medication, Procedure, Adverse reaction or other clinical item that is either not currently present, or have not been present in the past."
           },
-          "ac0.66" : {
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Problem/diagnosis",
+            "description" : "The problem or diagnosis to which the 'Exclusion statement' applies. For example: 'Diabetes', 'COPD' or 'Asthma'."
+          },
+          "ac0.76" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.66",
+            "code" : "ac0.76",
             "description" : ""
           }
         },
         "nb" : {
-          "ac0.66" : {
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Problem/diagnose",
+            "description" : "Problemet eller diagnoses som \"Eksklusjonsutsagn\" omhandler. For eksempel: \"Diabetes\", \"KOLS\" eller \"Astma\"."
+          },
+          "ac0.76" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.66",
+            "code" : "ac0.76",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.66" : {
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Problem/Diagnose",
+            "description" : "Das Problem oder die Diagnose, auf die sich die Ausschlussaussage bezieht. Zum Beispiel: \"Diabetes\", \"COPD\" oder \"Asthma\"."
+          },
+          "ac0.76" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.66",
+            "code" : "ac0.76",
             "description" : ""
           }
         },
         "sv" : {
-          "ac0.66" : {
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Problem/diagnos",
+            "description" : "Det problem eller den diagnos som åsyftas i \"Specificering av uteslutande\"."
+          },
+          "ac0.76" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.66",
+            "code" : "ac0.76",
             "description" : ""
           }
         }
@@ -36916,6 +36940,56 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.66",
           "members" : [ "at0008", "at0005", "at0006", "at0004", "at0007" ]
+        },
+        "ac0.67" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.67",
+          "members" : [ "at0005", "at0006", "at0004", "at0007" ]
+        },
+        "ac0.68" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.68",
+          "members" : [ "at0005", "at0006", "at0004", "at0007" ]
+        },
+        "ac0.69" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.69",
+          "members" : [ "at0006", "at0004", "at0007" ]
+        },
+        "ac0.70" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.70",
+          "members" : [ "at0006", "at0004", "at0007" ]
+        },
+        "ac0.71" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.71",
+          "members" : [ "at0004", "at0007" ]
+        },
+        "ac0.72" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.72",
+          "members" : [ "at0004", "at0007" ]
+        },
+        "ac0.73" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.73",
+          "members" : [ "at0004" ]
+        },
+        "ac0.74" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.74",
+          "members" : [ "at0004" ]
+        },
+        "ac0.75" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.75",
+          "members" : [ "at0004" ]
+        },
+        "ac0.76" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.76",
+          "members" : [ "at0004" ]
         }
       }
     },
