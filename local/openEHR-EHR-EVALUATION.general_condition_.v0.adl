@@ -38,7 +38,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"ca838c904222f8afe50046705ed07eb6">
+		["MD5-CAM-1.0.1"] = <"1096d44b3bd33222129120c76326bb5b">
 		["build_uid"] = <"dda6d569-662d-32c3-809e-8f6e9ebff8d7">
 	>
 
@@ -165,7 +165,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Allgemeinzustand">
+					text = <"*General condition (en)">
 					description = <"*General condition  (en)">
 				>
 				["at0001"] = <
