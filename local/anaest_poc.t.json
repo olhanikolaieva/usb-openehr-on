@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "40.1.0",
+      "sem_ver" : "41.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "01504740a932b32018d56989c53fe792",
+      "MD5-CAM-1.0.1" : "f76dccb5123f40fac2071d2955aa1e63",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -11901,7 +11901,28 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "nodeId" : "at0121.1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "value" : "Geplanter Eingriff",
+                        "@type" : "DV_TEXT"
+                      },
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_STRING",
+                          "rmTypeName" : "STRING",
+                          "constraint" : [ "Geplanter Eingriff" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -11913,7 +11934,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0135.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
@@ -12027,6 +12047,32 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0147.2",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_BOOLEAN",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_BOOLEAN",
+                          "rmTypeName" : "BOOLEAN",
+                          "occurrences" : "1..1",
+                          "constraint" : [ true ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0076.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -12086,7 +12132,28 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "nodeId" : "at0121.2",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "value" : "Anästhesieplan",
+                        "@type" : "DV_TEXT"
+                      },
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_STRING",
+                          "rmTypeName" : "STRING",
+                          "constraint" : [ "Anästhesieplan" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -12098,7 +12165,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0135.2",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
@@ -12218,7 +12284,7 @@
                           "terminologyId" : {
                             "value" : "local"
                           },
-                          "constraint" : [ "ac0.2" ],
+                          "constraint" : [ "ac0.6" ],
                           "selectedTerminologies" : [ ]
                         } ]
                       } ],
@@ -12339,6 +12405,262 @@
             } ]
           } ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ACTIVITY",
+          "nodeId" : "at0001.3",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "description",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ITEM_TREE",
+              "nodeId" : "at0009",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0121.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "defaultValue" : {
+                        "value" : "T&S ist nötig",
+                        "@type" : "DV_TEXT"
+                      },
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_STRING",
+                          "rmTypeName" : "STRING",
+                          "constraint" : [ "T&S ist nötig" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0148.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0135.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0153.5",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0153.6",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0153.7",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0062.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0064.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0152.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0065.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0068.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "ac0.4" ],
+                          "selectedTerminologies" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0040.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0145.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0144.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0147.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_BOOLEAN",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_BOOLEAN",
+                          "rmTypeName" : "BOOLEAN",
+                          "occurrences" : "1..1",
+                          "constraint" : [ true ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0076.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_BOOLEAN",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_BOOLEAN",
+                          "rmTypeName" : "BOOLEAN",
+                          "occurrences" : "1..1",
+                          "constraint" : [ true ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0078.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0150.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
         } ]
       }, {
         "@type" : "C_ATTRIBUTE",
@@ -12417,26 +12739,12 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "at0121.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0121.1",
-            "text" : "Geplanter Eingriff",
-            "description" : "The name of the single service or activity requested.",
-            "comment" : "Coding of the 'Service name' with a coding system is desirable, if available. For example: 'referral' to an endocrinologist for diabetes management."
-          },
           "at0145.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0145.1",
             "text" : "Datum",
             "description" : "The date/time that marks the beginning of the valid period of time for delivery of this service.",
             "comment" : "This date/time is the equivalent to the earliest possible date for service delivery. For example: sometimes a certain amount of time must pass before a service can be performed, for example some procedures can only be performed once the patient has stopped taking medications for a specific amount of time."
-          },
-          "at0076.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0076.1",
-            "text" : "T&S ist nötig",
-            "description" : "Supplementary information will be following request.",
-            "comment" : "Record as TRUE if additional information has been identified and will be forwarded when available. For example: pending test results."
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -12505,12 +12813,72 @@
             "description" : "Additional details and instructions about how the services are to be delivered.",
             "comment" : "Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences. "
           },
-          "at0121.2" : {
+          "at0135.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0121.2",
+            "code" : "at0135.2",
             "text" : "Prämediziert durch",
-            "description" : "The name of the single service or activity requested.",
-            "comment" : "Coding of the 'Service name' with a coding system is desirable, if available. For example: 'referral' to an endocrinologist for diabetes management."
+            "description" : "Narrative description about the service requested.",
+            "comment" : "This data point should be used to describe the named service in more detail, including how it should be delivered, patient concerns and issues that might be encountered in delivering the service."
+          },
+          "at0135.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0135.1",
+            "text" : "Geplanter Eingriff",
+            "description" : "Narrative description about the service requested.",
+            "comment" : "This data point should be used to describe the named service in more detail, including how it should be delivered, patient concerns and issues that might be encountered in delivering the service."
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.3",
+            "text" : "T&S ist nötig",
+            "description" : "Current Activity."
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153.3",
+            "text" : "Monitoring",
+            "description" : "Additional details and instructions about how the services are to be delivered.",
+            "comment" : "Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences. "
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153.4",
+            "text" : "Postop",
+            "description" : "Additional details and instructions about how the services are to be delivered.",
+            "comment" : "Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences. "
+          },
+          "at0145.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0145.1",
+            "text" : "Datum",
+            "description" : "The date/time that marks the beginning of the valid period of time for delivery of this service.",
+            "comment" : "This date/time is the equivalent to the earliest possible date for service delivery. For example: sometimes a certain amount of time must pass before a service can be performed, for example some procedures can only be performed once the patient has stopped taking medications for a specific amount of time."
+          },
+          "at0147.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0147.1",
+            "text" : "Consent",
+            "description" : "The valid period for this request is open ended and has no date of expiry.",
+            "comment" : "Record as TRUE to record explicity that the request has no expiry date. For example: commonly required for a referral to a specialist for long-term or lifelong care."
+          },
+          "at0076.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0076.3",
+            "text" : "T&S ist nötig",
+            "description" : "Supplementary information will be following request.",
+            "comment" : "Record as TRUE if additional information has been identified and will be forwarded when available. For example: pending test results."
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         },
         "nb" : {
@@ -12539,6 +12907,38 @@
             "text" : "Ordredetaljer (3)",
             "description" : "Tilleggsbeskrivelse og instrukser om hvordan tjenesten skal utføres.",
             "comment" : "Koding av ordredetaljer med et kodeverk er ønskelig, dersom tilgjengelig. Dette dataelementet tillater flere forekomster."
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Forespørsel (3)",
+            "description" : "Beskrivelse av tjenesten som forespørres."
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "Ordredetaljer (2)",
+            "description" : "Tilleggsbeskrivelse og instrukser om hvordan tjenesten skal utføres.",
+            "comment" : "Koding av ordredetaljer med et kodeverk er ønskelig, dersom tilgjengelig. Dette dataelementet tillater flere forekomster."
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "Ordredetaljer (3)",
+            "description" : "Tilleggsbeskrivelse og instrukser om hvordan tjenesten skal utføres.",
+            "comment" : "Koding av ordredetaljer med et kodeverk er ønskelig, dersom tilgjengelig. Dette dataelementet tillater flere forekomster."
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         },
         "it" : {
@@ -12567,6 +12967,38 @@
             "text" : "*Order detail (en) (3)",
             "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
             "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Attività corrente (3)",
+            "description" : "Attività corrente."
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (2)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (3)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         },
         "de" : {
@@ -12595,6 +13027,38 @@
             "text" : "Auftragsdetail (3)",
             "description" : "Zusätzliche Details und Anweisungen darüber, wie die Dienstleistungen zu erbringen sind.",
             "comment" : "Eine Codierung des Auftragsdetails mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement darf mehrfach vorkommen."
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Aktuelle Aktivität (3)",
+            "description" : "Aktuelle Aktivität"
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "Auftragsdetail (2)",
+            "description" : "Zusätzliche Details und Anweisungen darüber, wie die Dienstleistungen zu erbringen sind.",
+            "comment" : "Eine Codierung des Auftragsdetails mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement darf mehrfach vorkommen."
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "Auftragsdetail (3)",
+            "description" : "Zusätzliche Details und Anweisungen darüber, wie die Dienstleistungen zu erbringen sind.",
+            "comment" : "Eine Codierung des Auftragsdetails mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement darf mehrfach vorkommen."
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         },
         "sv" : {
@@ -12623,6 +13087,38 @@
             "text" : "*Order detail (en) (3)",
             "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
             "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Nuvarande aktivitet (3)",
+            "description" : "Nuvarande aktivitet"
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (2)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (3)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         },
         "pt-br" : {
@@ -12651,6 +13147,38 @@
             "text" : "*Order detail (en) (3)",
             "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
             "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Atividade atual (3)",
+            "description" : "Atividade atual."
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (2)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (3)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         },
         "nl" : {
@@ -12679,6 +13207,38 @@
             "text" : "*Order detail (en) (3)",
             "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
             "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0001.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Huidige Activity (3)",
+            "description" : "Huidige Activity"
+          },
+          "at0153.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (2)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "at0153.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153",
+            "text" : "*Order detail (en) (3)",
+            "description" : "*Additional details and instructions about how the services are to be delivered. (en)",
+            "comment" : "*Coding of the order detail with a terminology is preferred, where possible. This data element allows multiple occurrences.  (en)"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
           }
         }
       },
@@ -12693,6 +13253,26 @@
         "ac0.2" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.2",
+          "members" : [ "at0136", "at0138" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0136", "at0138" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0136", "at0138" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0136", "at0138" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
           "members" : [ "at0136", "at0138" ]
         }
       }
