@@ -41,6 +41,11 @@ language
 				["email"] = <"danielembacelar@gmail.com">
 			>
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -53,6 +58,10 @@ description
 	lifecycle_state = <"published">
 	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Sudisa Consultancy Services, India","Lars Bitsch-Larsen, Haukeland University Hospital, Bergen, Norway","paul cooper, NHS Orkney, United Kingdom","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Torsten Eken, Oslo universitetssykehus HF, Ullevål, Norway","Grant Forrest, Lunaria Ltd, United Kingdom","Heather Grain, Llewelyn Grain Informatics, Australia","Martin Grundberg, Cambio Healthcare Systems, Sweden","Kristian Heldal, Telemark Hospital Trust, Norway","Evelyn Hovenga, EJSH Consulting, Australia","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Rikard Lovstrom, Swedish Medical Association, Sweden","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Terje Meling, Stavanger University Hospital, Norway","Mette Monsen, Helse Bergen HF, Norway","Lars Morgan Karlsen, DIPS ASA, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden (openEHR Editor)","Bjørn Næss, DIPS ASA, Norway","Åsa Skagerhult, Region Östergötland, Sweden (openEHR Translation Editor)","Niclas Skyttberg, Karolinska Institutet, Sweden","Erik Sundvall, Karolinska University Hospital, Region Stockholm + Linköping University, Sweden","Rowan Thomas, St. Vincent's Hospital Melbourne, Australia","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)","Ørjan Vermeer, Haukeland Universitetssjukehus, Kvinneklinikken, Norway","Nils Widnes, Helse-Bergen, Norway">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"*To record the classification system adopted by the American Society of Anesthesiologists (ASA) as part of a pre-surgical risk assessment. (en)">
@@ -61,8 +70,8 @@ description
 
 The ASA (2020) reference defines each classification and provides some adult, paediatric and obstetric examples to guide clinicians to assign a physical status classification level. However, because these examples are numerous and can further be refined or described at the institution level, specific examples are not included in this archetype. (en)">
 		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
 			purpose = <"*To record the classification system adopted by the American Society of Anesthesiologists (ASA) as part of a pre-surgical risk assessment. (en)">
 			keywords = <"*ASA (en)","*pre-operative (en)","*surgery (en)","*anaesthesiology (en)","*anesthesia (en)","*anaesthesia (en)","*anesthesiology (en)">
 			copyright = <"*© openEHR Foundation, Nasjonal IKT HF (en)">
@@ -70,8 +79,8 @@ The ASA (2020) reference defines each classification and provides some adult, pa
 
 The ASA (2020) reference defines each classification and provides some adult, paediatric and obstetric examples to guide clinicians to assign a physical status classification level. However, because these examples are numerous and can further be refined or described at the institution level, specific examples are not included in this archetype. (en)">
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
 			purpose = <"*To record the classification system adopted by the American Society of Anesthesiologists (ASA) as part of a pre-surgical risk assessment. (en)">
 			keywords = <"*ASA (en)","*pre-operative (en)","*surgery (en)","*anaesthesiology (en)","*anesthesia (en)","*anaesthesia (en)","*anesthesiology (en)">
 			copyright = <"*© openEHR Foundation, Nasjonal IKT HF (en)">
@@ -112,7 +121,7 @@ Derived from: ASA-klassifikasjon, Publisert arketype [Internet]. Nasjonal IKT, N
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"92CC090128B136009060F7DFA7953E8E">
+		["MD5-CAM-1.0.1"] = <"955714abddac63efd241ae9516c8d2ae">
 		["build_uid"] = <"e92dde61-d053-45f1-9f2a-6a6c045ca80b">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.0">
@@ -475,6 +484,69 @@ ontology
 				>
 				["at0008"] = <
 					text = <"*ASA VI (en)">
+					description = <"*A declared brain-dead patient whose organs are being removed for donor purposes. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*ASA physical status classification system (en)">
+					description = <"*Classification system adopted by the American Society of Anesthesiologists (ASA) as part of a pre-surgical risk assessment. (en)">
+				>
+				["at0001"] = <
+					text = <"*Classification (en)">
+					description = <"*Assessed classification of a patient. (en)">
+					comment = <"*Examples for each class can be found in the ASA (2020) reference. (en)">
+				>
+				["at0015"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0016"] = <
+					text = <"*Any point in time event (en)">
+					description = <"*Unspecified point in time event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0017"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"ItemTree">
+					description = <"@ internal @">
+				>
+				["at0019"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+				["at0020"] = <
+					text = <"*Emergency (E) (en)">
+					description = <"*Record as True if the surgery was carried out in an emergency situation. (en)">
+					comment = <"*Represented by the suffix 'E' added to the class. For example: '3E'. Class 5 is usually an emergency and is therefore almost always only designated as '5E'. The class '6E' is not valid and is simply recorded as class '6', as all organ retrieval in brain-dead patients is done urgently. Definition of an emergency can be found in the ASA (2020) reference. (en)">
+				>
+				["at0003"] = <
+					text = <"*ASA 1 (en)">
+					description = <"*A normal healthy patient. (en)">
+				>
+				["at0004"] = <
+					text = <"*ASA 2 (en)">
+					description = <"*A patient with mild systemic disease. (en)">
+				>
+				["at0005"] = <
+					text = <"*ASA 3 (en)">
+					description = <"*A patient with severe systemic disease. (en)">
+				>
+				["at0006"] = <
+					text = <"*ASA 4 (en)">
+					description = <"*A patient with severe systemic disease that is a constant threat to life. (en)">
+				>
+				["at0007"] = <
+					text = <"*ASA 5 (en)">
+					description = <"*A moribund patient who is not expected to survive without the operation. (en)">
+				>
+				["at0008"] = <
+					text = <"*ASA 6 (en)">
 					description = <"*A declared brain-dead patient whose organs are being removed for donor purposes. (en)">
 				>
 			>
