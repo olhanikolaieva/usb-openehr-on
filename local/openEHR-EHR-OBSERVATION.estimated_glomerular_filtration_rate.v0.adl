@@ -32,6 +32,11 @@ language
 				["name"] = <"?">
 			>
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -44,6 +49,10 @@ description
 	lifecycle_state = <"in_development">
 	other_contributors = <"Rong Chen, Cambio Healthcare Systems, Sweden","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","José Hilário Patriarca de Almeida, Faculty of Medicine of Porto University, Portugal","Ricardo Cruz-Correia, Faculty of Medicine of Porto University, Portugal","Heather Leslie, Atomica Informatics, Australia">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"*To record the estimated glomerular filtration rate (eGFR) of an individual. (en)">
@@ -125,7 +134,7 @@ Colin C. Geddes, Yook Mun Woo, Stefan Brady, Glomerular filtration rate—what i
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"783378739686DE258C9E187CEE934050">
+		["MD5-CAM-1.0.1"] = <"80fe2f7f10d88813d097349bc2ff5e37">
 		["build_uid"] = <"e267f265-ed9a-4c62-8231-0174d25b6c42">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -642,6 +651,94 @@ ontology
 				>
 				["at0022"] = <
 					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0024"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*CKD-EPI Cystatin C (en)">
+					description = <"*Chronic Kidney Disease Epidemiology Collaboration formula using cystatin C. (en)">
+				>
+				["at0026"] = <
+					text = <"*CKD-EPI Creatinine-Cystatin C (en)">
+					description = <"*Chronic Kidney Disease Epidemiology Collaboration formula using creatinine and cystatin C. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Estimated glomerular filtration rate (eGFR) (en)">
+					description = <"*Calculated estimate of glomerular filtration rate as an indicator of renal function. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*Any timed recording of Body Mass Index. (en)">
+				>
+				["at0003"] = <
+					text = <"Single">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Relative eGFR (en)">
+					description = <"*Estimation of glomerular filtration rate normalised to a body surface area of 1.73m² (mL/min/1.73m²). (en)">
+				>
+				["at0006"] = <
+					text = <"*Method (en)">
+					description = <"*The method of entering the Estimated Glomerular Filtration Rate. (en)">
+				>
+				["at0007"] = <
+					text = <"*Automatic entry (en)">
+					description = <"*Calculated and entered automatically by the clinical system. (en)">
+				>
+				["at0008"] = <
+					text = <"*Direct entry (en)">
+					description = <"*Calculated and entered directly by user. (en)">
+				>
+				["at0010"] = <
+					text = <"*Formula (en)">
+					description = <"*Formula used to calculate the Estimated Glomerular Filtration Rate. (en)">
+				>
+				["at0013"] = <
+					text = <"*MDRD formula - non-IDMS-normalized serum Cr (en)">
+					description = <"*Modification of Diet in Renal Disease study formula using standard creatinine measurement. (en)">
+				>
+				["at0014"] = <
+					text = <"*MDRD formula - IDMS-normalized serum Cr (en)">
+					description = <"*Modification of Diet in Renal Disease study formula using creatinine measured by an IDMS-calibrated assay. (en)">
+				>
+				["at0015"] = <
+					text = <"*CKD-EPI Creatinine (en)">
+					description = <"*Chronic Kidney Disease Epidemiology Collaboration formula using creatinine. (en)">
+				>
+				["at0016"] = <
+					text = <"*Cockcroft-Gault formula (en)">
+					description = <"*Estimated creatinine clearance rate (eCCr) using Cockcroft-Gault formula. (en)">
+				>
+				["at0017"] = <
+					text = <"*Bedside Schwartz equation (en)">
+					description = <"*Bedside IDMS-traceable Schwartz GFR Calculator for Children. (en)">
+				>
+				["at0018"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the eGFR, not captured in other fields. (en)">
+				>
+				["at0020"] = <
+					text = <"*Absolute eGFR (en)">
+					description = <"*Estimation of glomerular filtration rate calculated using the relative eGFR, weight and height. (en)">
+				>
+				["at0021"] = <
+					text = <"*LM Revised (en)">
+					description = <"*Revised Lund-Malmö Study equation. (en)">
+				>
+				["at0022"] = <
+					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0024"] = <
