@@ -25,10 +25,18 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"Der Zweck des Überarbeiteten Herzrisikoindex (RCRI) besteht darin, das Risiko perioperativer kardialer Ereignisse wie Myokardinfarkt (MI) oder Herzstillstand bei Patienten, die sich einer chirurgischen Eingriffen unterziehen, zu bewerten. Er hilft Gesundheitsfachkräften dabei, Personen zu identifizieren, die ein höheres Risiko für diese Komplikationen aufweisen könnten, damit entsprechende präventive Maßnahmen ergriffen werden können, um die Patientenversorgung und -ergebnisse zu optimieren.">
+			keywords = <"Revised Cardiac Risk Index, RCRI, Überarbeiteter Herzrisikoindex, perioperatives Risiko, Myokardinfarkt, MI, Herzstillstand.", ...>
+			use = <"Um das Risiko perioperativer kardialer Ereignisse mit dem RCRI bei Patienten zu bewerten, die sich einer chirurgischen Eingriffen unterziehen.">
+			misuse = <"Um jedes andere Risiko oder jede andere Punktzahl außer dem RCRI zu bewerten.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"The purpose of the Revised Cardiac Risk Index (RCRI) is to assess the risk of perioperative cardiac events, such as myocardial infarction (MI) or cardiac arrest, in patients undergoing surgical procedures. It helps healthcare professionals identify individuals who may be at a higher risk for these complications so that appropriate preventive measures can be taken to optimize patient care and outcomes.">
+			keywords = <"Revised Cardiac Risk Index, RCRI, perioperative risk, myocardial infarction, MI, cardiac arrest.", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"To assess the risk of perioperative cardiac events with RCRI in patients undergoing surgical procedures. ">
+			misuse = <"To assess any other risk or score except RCRI.">
 		>
 	>
 	other_details = <
@@ -37,9 +45,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e0be5e905fd5e014aa80e6163eeddd77">
+		["MD5-CAM-1.0.1"] = <"e45a2368e1a32aaec557fd746219de4d">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["references"] = <"Thomas H. Lee, MD, SM; Edward R. Marcantonio, MD, SM; Carol M. Mangione, MD, SM; Eric J. Thomas, MD, SM; Carisi A. Polanczyk, MD; E. Francis Cook, ScD; David J. Sugarbaker, MD; Magruder C. Donaldson, MD; Robert Poss, MD; Kalon K. L. Ho, MD, SM; Lynn E. Ludwig, MS, RN; Alex Pedan, PhD; Lee Goldman, MD, MPH. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation 1999 September 7, 100 (10): 1043-9
+
+Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Chaikof, Kirsten E. Fleischmann, William K. Freeman, James B. Froehlich, Edward K. Kasper, Judy R. Kersten, Barbara Riegel and John F. Robb.
+2009 ACCF/AHA focused update on perioperative beta blockade incorporated into the ACC/AHA 2007 guidelines on perioperative cardiovascular evaluation and care for noncardiac surgery: a report of the American college of cardiology foundation/American heart association task force on practice guidelines. Circulation 2009 November 24, 120 (21): e169-276">
 	>
 
 definition
@@ -146,7 +158,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Revised Cardiac Risk Index">
-					description = <"Revised Cardiac Risk Index">
+					description = <"Der Überarbeitete Herzrisikoindex (RCRI) dient als häufig genutztes Instrument in perioperativen Einstellungen und unterstützt bei der Identifizierung von Patienten mit erhöhtem Risiko für perioperativen Myokardinfarkt oder Herzstillstand.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -282,7 +294,8 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Revised Cardiac Risk Index">
-					description = <"*Revised Cardiac Risk Index (de)">
+					description = <"The Revised Cardiac Risk Index (RCRI) serves as a commonly utilized tool in perioperative settings, aiding in the identification of patients at elevated risk for perioperative myocardial infarction or cardiac arrest.">
+					comment = <"Der Überarbeitete Herzrisikoindex (RCRI) dient als häufig genutztes Instrument in perioperativen Einstellungen und unterstützt bei der Identifizierung von Patienten mit erhöhtem Risiko für perioperativen Myokardinfarkt oder Herzstillstand.">
 				>
 				["at0001"] = <
 					text = <"History">
