@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "45.0.0",
+      "sem_ver" : "45.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "fbe48be3190df36bdb3ddfdc3f48b9d6",
+      "MD5-CAM-1.0.1" : "8c0d7bacdc494b3db9c4d8263bc9217d",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -34163,7 +34163,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0011.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -34185,6 +34184,12 @@
             "code" : "at0000.1",
             "text" : "AZ",
             "description" : "*General condition  (en)"
+          },
+          "at0011.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0011.1",
+            "text" : "Freitext Neuro",
+            "description" : ""
           }
         }
       },
