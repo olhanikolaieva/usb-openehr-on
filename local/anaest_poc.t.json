@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "43.1.0",
+      "sem_ver" : "44.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "159b6e07896d1c3cb9e5ca58dfd086c3",
+      "MD5-CAM-1.0.1" : "dc17d62e629cc3684255081fcac07fbe",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -1097,6 +1097,75 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_QUANTITY",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "property",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "openehr"
+                              },
+                              "constraint" : [ "122" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ {
+                            "@type" : "C_ATTRIBUTE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "magnitude",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "units",
+                              "children" : [ ]
+                            } ],
+                            "tuples" : [ {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 1000.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "cm" ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 250.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "[in_i]" ]
+                              } ]
+                            } ]
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0018.1",
                       "attributes" : [ ],
@@ -1225,6 +1294,19 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Grösse",
+            "description" : "Größe bzw. Körperlänge wird vom Scheitel bis zur Fußsohle gemessen.",
+            "comment" : "Die Größe wird bei der Person in stehender Position und die Körperlänge in liegender Position gemessen."
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Grösse",
+            "description" : "Die Länge des Körpers vom Scheitel bis zur Fußsohle."
           }
         },
         "pt-br" : {
@@ -1308,7 +1390,11 @@
           }
         }
       },
-      "termBindings" : { },
+      "termBindings" : {
+        "LOINC" : {
+          "at0004.1" : "term:LOINC::8302-2"
+        }
+      },
       "terminologyExtracts" : { },
       "valueSets" : {
         "ac0.1" : {
@@ -2429,6 +2515,99 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_QUANTITY",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "property",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "openehr"
+                              },
+                              "constraint" : [ "349" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ {
+                            "@type" : "C_ATTRIBUTE_TUPLE",
+                            "members" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "magnitude",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "units",
+                              "children" : [ ]
+                            }, {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "precision",
+                              "children" : [ ]
+                            } ],
+                            "tuples" : [ {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 1000.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : false,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "kg/m2" ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 1,
+                                  "upper" : 1,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            }, {
+                              "@type" : "C_PRIMITIVE_TUPLE",
+                              "members" : [ {
+                                "@type" : "C_REAL",
+                                "constraint" : [ {
+                                  "lower" : 0.0,
+                                  "upper" : 1000.0,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : false,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              }, {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "[lb_av]/[in_i]2" ]
+                              }, {
+                                "@type" : "C_INTEGER",
+                                "constraint" : [ {
+                                  "lower" : 1,
+                                  "upper" : 1,
+                                  "lowerIncluded" : true,
+                                  "upperIncluded" : true,
+                                  "lowerUnbounded" : false,
+                                  "upperUnbounded" : false
+                                } ]
+                              } ]
+                            } ]
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0013.1",
                       "attributes" : [ ],
@@ -2622,10 +2801,23 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "BMI",
+            "description" : "Der Index beschreibt das Verhältnis von Gewicht zu Körpergröße."
           }
         }
       },
-      "termBindings" : { },
+      "termBindings" : {
+        "SNOMED-CT" : {
+          "at0004.1" : "term:SNOMED-CT::60621009"
+        },
+        "LOINC" : {
+          "at0004.1" : "term:LOINC::39156-5"
+        }
+      },
       "terminologyExtracts" : { },
       "valueSets" : {
         "ac0.1" : {
@@ -2972,7 +3164,14 @@
             "description" : "Duration of time since birth."
           }
         },
-        "de" : { },
+        "de" : {
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Alter",
+            "description" : "Zeitdauer seit der Geburt."
+          }
+        },
         "nb" : { }
       },
       "termBindings" : { },
@@ -4119,6 +4318,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Systolisch Blutdruck",
+            "description" : "Der höchste arterielle Blutdruck eines Zyklus - gemessen in der systolischen oder Kontraktionsphase des Herzens."
           }
         },
         "zh-cn" : {
@@ -6046,7 +6251,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
               "defaultValue" : {
-                "value" : "Haemoglobin",
+                "value" : "Hämoglobin",
                 "@type" : "DV_TEXT"
               },
               "attributes" : [ {
@@ -6055,7 +6260,7 @@
                 "children" : [ {
                   "@type" : "C_STRING",
                   "rmTypeName" : "STRING",
-                  "constraint" : [ "Haemoglobin" ]
+                  "constraint" : [ "Hämoglobin" ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -6412,6 +6617,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Hämoglobin",
+            "description" : "(Mess-)Wert des Analyt-Ergebnisses.",
+            "comment" : "Z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "nl" : {
@@ -7178,6 +7392,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Q",
+            "description" : "(Mess-)Wert des Analyt-Ergebnisses.",
+            "comment" : "Z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "nl" : {
@@ -7572,10 +7795,18 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
               "defaultValue" : {
-                "value" : "Thrombocytes ",
+                "value" : "Thrombozyten",
                 "@type" : "DV_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Thrombozyten" ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -7948,6 +8179,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Thrombozyten",
+            "description" : "(Mess-)Wert des Analyt-Ergebnisses.",
+            "comment" : "Z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "nl" : {
@@ -8342,7 +8582,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
               "defaultValue" : {
-                "value" : "Potassium",
+                "value" : "Kalium",
                 "@type" : "DV_TEXT"
               },
               "attributes" : [ {
@@ -8351,7 +8591,7 @@
                 "children" : [ {
                   "@type" : "C_STRING",
                   "rmTypeName" : "STRING",
-                  "constraint" : [ "Potassium" ]
+                  "constraint" : [ "Kalium" ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -8714,6 +8954,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Kalium",
+            "description" : "(Mess-)Wert des Analyt-Ergebnisses.",
+            "comment" : "Z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "nl" : {
@@ -9108,7 +9357,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
               "defaultValue" : {
-                "value" : "Creatinine",
+                "value" : "Kreatinin",
                 "@type" : "DV_TEXT"
               },
               "attributes" : [ {
@@ -9117,7 +9366,7 @@
                 "children" : [ {
                   "@type" : "C_STRING",
                   "rmTypeName" : "STRING",
-                  "constraint" : [ "Creatinine" ]
+                  "constraint" : [ "Kreatinin" ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -9480,6 +9729,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Kreatinin",
+            "description" : "(Mess-)Wert des Analyt-Ergebnisses.",
+            "comment" : "Z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "nl" : {
@@ -11095,37 +11353,37 @@
           },
           "at0.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*0 (en)",
+            "text" : "0",
             "code" : "at0.1",
             "description" : ""
           },
           "at0.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*A (en)",
+            "text" : "A",
             "code" : "at0.2",
             "description" : ""
           },
           "at0.3" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*B (en)",
+            "text" : "B",
             "code" : "at0.3",
             "description" : ""
           },
           "at0.4" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*AB (en)",
+            "text" : "AB",
             "code" : "at0.4",
             "description" : ""
           },
           "at0.5" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*Negative (en)",
+            "text" : "Negativ",
             "code" : "at0.5",
             "description" : ""
           },
           "at0.6" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "*Positive (en)",
+            "text" : "Positiv",
             "code" : "at0.6",
             "description" : ""
           }
@@ -11992,7 +12250,7 @@
                           "terminologyId" : {
                             "value" : "local"
                           },
-                          "constraint" : [ "ac0.1" ],
+                          "constraint" : [ "ac0.7" ],
                           "selectedTerminologies" : [ ]
                         } ]
                       } ],
@@ -12737,12 +12995,6 @@
             "description" : "The date/time that marks the beginning of the valid period of time for delivery of this service.",
             "comment" : "This date/time is the equivalent to the earliest possible date for service delivery. For example: sometimes a certain amount of time must pass before a service can be performed, for example some procedures can only be performed once the patient has stopped taking medications for a specific amount of time."
           },
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -12870,15 +13122,15 @@
             "text" : "(Synthesized)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
         "nb" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -12930,15 +13182,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
         "it" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -12990,15 +13242,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
         "de" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -13007,15 +13259,15 @@
           },
           "at0153.3" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0153",
-            "text" : "Auftragsdetail (2)",
+            "code" : "at0153.3",
+            "text" : "Monitoring",
             "description" : "Zusätzliche Details und Anweisungen darüber, wie die Dienstleistungen zu erbringen sind.",
             "comment" : "Eine Codierung des Auftragsdetails mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement darf mehrfach vorkommen."
           },
           "at0153.4" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0153",
-            "text" : "Auftragsdetail (3)",
+            "code" : "at0153.4",
+            "text" : "Postop",
             "description" : "Zusätzliche Details und Anweisungen darüber, wie die Dienstleistungen zu erbringen sind.",
             "comment" : "Eine Codierung des Auftragsdetails mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement darf mehrfach vorkommen."
           },
@@ -13050,15 +13302,36 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "at0153.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0153.2",
+            "text" : "Technik",
+            "description" : "Zusätzliche Details und Anweisungen darüber, wie die Dienstleistungen zu erbringen sind.",
+            "comment" : "Eine Codierung des Auftragsdetails mit einer Terminologie wird nach Möglichkeit bevorzugt. Dieses Datenelement darf mehrfach vorkommen."
+          },
+          "at0135.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0135.2",
+            "text" : "Anästhesieplan",
+            "description" : "Narrative Beschreibung der gewünschten Dienstleistung.",
+            "comment" : "Dieser Datenpunkt sollte verwendet werden, um die genannte Dienstleistung näher zu beschreiben, einschließlich der Art und Weise, wie sie erbracht werden sollte, der Bedenken der Patienten und der Probleme, die bei der Erbringung der Dienstleistung auftreten könnten."
+          },
+          "at0135.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0135.1",
+            "text" : "Geplanter Eingriff",
+            "description" : "Narrative Beschreibung der gewünschten Dienstleistung.",
+            "comment" : "Dieser Datenpunkt sollte verwendet werden, um die genannte Dienstleistung näher zu beschreiben, einschließlich der Art und Weise, wie sie erbracht werden sollte, der Bedenken der Patienten und der Probleme, die bei der Erbringung der Dienstleistung auftreten könnten."
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
         "sv" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -13110,15 +13383,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
         "pt-br" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -13170,15 +13443,15 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         },
         "nl" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
           "at0001.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
@@ -13230,6 +13503,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
           }
         }
       },
@@ -13265,6 +13544,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.6",
           "members" : [ "at0136", "at0138" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0136", "at0137", "at0138" ]
         }
       }
     },
@@ -16220,7 +16504,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ED43DFEDD3AC0680B6AFCA141817D36D"
+        "PARENT:MD5-CAM-1.0.1" : "516d860b0bfa5f1f136cdc17372e0692"
       },
       "details" : {
         "nb" : {
@@ -16250,6 +16534,19 @@
           "keywords" : [ "mallampati", "anaesthetic", "intubation", "airway" ],
           "use" : "To be used as a part of the assesment level of intubation difficulty before a planned anesthesia. The examination is done while the patient is sitting, upright with the head in a neutral position, with an open mouth, tongue protuded and without phonation.",
           "copyright" : "© Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -16314,7 +16611,8 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : { },
-        "en" : { }
+        "en" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -16344,6 +16642,16 @@
         "name" : "John Tore Valand",
         "organisation" : "Helse Bergen HF, Norway"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
@@ -22230,7 +22538,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "783378739686DE258C9E187CEE934050"
+        "PARENT:MD5-CAM-1.0.1" : "80fe2f7f10d88813d097349bc2ff5e37"
       },
       "details" : {
         "sv" : {
@@ -22309,6 +22617,19 @@
           "keywords" : [ "*kidney function(en)", "*glomerular filtration rate(en)", "*GFR(en)", "*creatinine(en)", "*kidney(en)", "*chronic kidney disease(en)", "*CKD-EPI formula(en)", "*MDRD formula(en)", "*Schwartz equation(en)" ],
           "use" : "*Use to record the estimated glomerular filtration rate (eGFR) of an individual.\r\n\r\nThere are multiple formulas used to calculate the eGFR. The formula used to calculate the eGFR can be recorded in the Protocol.\r\n\r\nIt is also possible to record the method of recording - either calculated and directly entered by the clinician or calculated and entered by the clinical software system. (en)",
           "misuse" : "*Not to be used to record values of formula components, such as creatinine. These should be recorded using archetypes designed for this purpose, such as OBSERVATION.laboratory_test_result. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -22581,6 +22902,20 @@
             "code" : "ac0.2",
             "description" : ""
           }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -22658,6 +22993,16 @@
       "author" : {
         "name" : "?"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
@@ -23585,7 +23930,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4751813D85A87CDCDDAA63FE44C4CA17"
+        "PARENT:MD5-CAM-1.0.1" : "b615a94c27337bc9a4d70899cabccadb"
       },
       "details" : {
         "nb" : {
@@ -23631,6 +23976,19 @@
           "keywords" : [ "قضية/مشكلة" ],
           "use" : "لتسجيل القضايا/المشكلات كما يتم عرضها إلى الطبيب السريري بواسطة المريض أو من ينوب عنه. \r\nو تم تصميم هذا النموذج لتكميل المعلومات التي يتم التقاطها حول سبب زيارة الطبيب السريري فيما عدا معلومات الأعراض أو المعلومات حول واقعة معينة.\r\n",
           "misuse" : "لا تستخدم لتسجيل الأعراض أو الوقائع - استخدم النماذج المحددة لهذا الغرض.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -23713,7 +24071,8 @@
           }
         },
         "ar-sy" : { },
-        "nb" : { }
+        "nb" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -23757,6 +24116,16 @@
         "name" : "Mona Saleh"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -23769,7 +24138,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4751813D85A87CDCDDAA63FE44C4CA17"
+        "PARENT:MD5-CAM-1.0.1" : "b615a94c27337bc9a4d70899cabccadb"
       },
       "details" : {
         "nb" : {
@@ -23815,6 +24184,19 @@
           "keywords" : [ "قضية/مشكلة" ],
           "use" : "لتسجيل القضايا/المشكلات كما يتم عرضها إلى الطبيب السريري بواسطة المريض أو من ينوب عنه. \r\nو تم تصميم هذا النموذج لتكميل المعلومات التي يتم التقاطها حول سبب زيارة الطبيب السريري فيما عدا معلومات الأعراض أو المعلومات حول واقعة معينة.\r\n",
           "misuse" : "لا تستخدم لتسجيل الأعراض أو الوقائع - استخدم النماذج المحددة لهذا الغرض.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -23911,7 +24293,8 @@
             "text" : "Issue (2)",
             "description" : "Et helserelatert problem eller bekymring som individet har."
           }
-        }
+        },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -23954,6 +24337,16 @@
       "author" : {
         "name" : "Mona Saleh"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
@@ -25611,7 +26004,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "92CC090128B136009060F7DFA7953E8E"
+        "PARENT:MD5-CAM-1.0.1" : "955714abddac63efd241ae9516c8d2ae"
       },
       "details" : {
         "sv" : {
@@ -25685,6 +26078,19 @@
           "keywords" : [ "ASA", "pre-operative", "surgery", "anaesthesiology", "anesthesia", "anaesthesia", "anesthesiology" ],
           "use" : "To record the classification system adopted by the American Society of Anesthesiologists (ASA) as part of a pre-surgical risk assessment.\r\n\r\nThe ASA (2020) reference defines each classification and provides some adult, paediatric and obstetric examples to guide clinicians to assign a physical status classification level. However, because these examples are numerous and can further be refined or described at the institution level, specific examples are not included in this archetype.",
           "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -25784,7 +26190,8 @@
         "pt-br" : { },
         "nb" : { },
         "es-ar" : { },
-        "sv" : { }
+        "sv" : { },
+        "de" : { }
       },
       "termBindings" : {
         "SNOMED-CT" : {
@@ -25863,6 +26270,16 @@
         "danielembacelar@gmail.com" : "danielembacelar@gmail.com",
         "email" : "danielembacelar@gmail.com"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
@@ -27012,7 +27429,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4751813D85A87CDCDDAA63FE44C4CA17"
+        "PARENT:MD5-CAM-1.0.1" : "b615a94c27337bc9a4d70899cabccadb"
       },
       "details" : {
         "nb" : {
@@ -27058,6 +27475,19 @@
           "keywords" : [ "قضية/مشكلة" ],
           "use" : "لتسجيل القضايا/المشكلات كما يتم عرضها إلى الطبيب السريري بواسطة المريض أو من ينوب عنه. \r\nو تم تصميم هذا النموذج لتكميل المعلومات التي يتم التقاطها حول سبب زيارة الطبيب السريري فيما عدا معلومات الأعراض أو المعلومات حول واقعة معينة.\r\n",
           "misuse" : "لا تستخدم لتسجيل الأعراض أو الوقائع - استخدم النماذج المحددة لهذا الغرض.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -27157,7 +27587,8 @@
           }
         },
         "ar-sy" : { },
-        "nb" : { }
+        "nb" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -27200,6 +27631,16 @@
       "author" : {
         "name" : "Mona Saleh"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
@@ -29162,7 +29603,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4751813D85A87CDCDDAA63FE44C4CA17"
+        "PARENT:MD5-CAM-1.0.1" : "b615a94c27337bc9a4d70899cabccadb"
       },
       "details" : {
         "nb" : {
@@ -29208,6 +29649,19 @@
           "keywords" : [ "قضية/مشكلة" ],
           "use" : "لتسجيل القضايا/المشكلات كما يتم عرضها إلى الطبيب السريري بواسطة المريض أو من ينوب عنه. \r\nو تم تصميم هذا النموذج لتكميل المعلومات التي يتم التقاطها حول سبب زيارة الطبيب السريري فيما عدا معلومات الأعراض أو المعلومات حول واقعة معينة.\r\n",
           "misuse" : "لا تستخدم لتسجيل الأعراض أو الوقائع - استخدم النماذج المحددة لهذا الغرض.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -29307,7 +29761,8 @@
           }
         },
         "ar-sy" : { },
-        "nb" : { }
+        "nb" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -29351,6 +29806,16 @@
         "name" : "Mona Saleh"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -29363,7 +29828,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4751813D85A87CDCDDAA63FE44C4CA17"
+        "PARENT:MD5-CAM-1.0.1" : "b615a94c27337bc9a4d70899cabccadb"
       },
       "details" : {
         "nb" : {
@@ -29409,6 +29874,19 @@
           "keywords" : [ "قضية/مشكلة" ],
           "use" : "لتسجيل القضايا/المشكلات كما يتم عرضها إلى الطبيب السريري بواسطة المريض أو من ينوب عنه. \r\nو تم تصميم هذا النموذج لتكميل المعلومات التي يتم التقاطها حول سبب زيارة الطبيب السريري فيما عدا معلومات الأعراض أو المعلومات حول واقعة معينة.\r\n",
           "misuse" : "لا تستخدم لتسجيل الأعراض أو الوقائع - استخدم النماذج المحددة لهذا الغرض.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -29505,7 +29983,8 @@
             "text" : "Issue (2)",
             "description" : "Et helserelatert problem eller bekymring som individet har."
           }
-        }
+        },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -29548,6 +30027,16 @@
       "author" : {
         "name" : "Mona Saleh"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
@@ -30533,7 +31022,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4751813D85A87CDCDDAA63FE44C4CA17"
+        "PARENT:MD5-CAM-1.0.1" : "b615a94c27337bc9a4d70899cabccadb"
       },
       "details" : {
         "nb" : {
@@ -30579,6 +31068,19 @@
           "keywords" : [ "قضية/مشكلة" ],
           "use" : "لتسجيل القضايا/المشكلات كما يتم عرضها إلى الطبيب السريري بواسطة المريض أو من ينوب عنه. \r\nو تم تصميم هذا النموذج لتكميل المعلومات التي يتم التقاطها حول سبب زيارة الطبيب السريري فيما عدا معلومات الأعراض أو المعلومات حول واقعة معينة.\r\n",
           "misuse" : "لا تستخدم لتسجيل الأعراض أو الوقائع - استخدم النماذج المحددة لهذا الغرض.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
@@ -30692,7 +31194,8 @@
             "text" : "Issue (3)",
             "description" : "Et helserelatert problem eller bekymring som individet har."
           }
-        }
+        },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -30735,6 +31238,16 @@
       "author" : {
         "name" : "Mona Saleh"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
       "otherDetails" : { }
     } ]
   }, {
