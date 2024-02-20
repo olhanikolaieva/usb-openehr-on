@@ -11,8 +11,8 @@ language
 			language = <[ISO_639-1::en]>
 			author = <
 				["name"] = <"Olha Nikolaieva">
-				["email"] = <"olha.nikolaieva@usb.ch">
 				["organisation"] = <"University Hospital Basel, Switzerland ">
+				["email"] = <"olha.nikolaieva@usb.ch">
 			>
 		>
 	>
@@ -53,7 +53,7 @@ Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Ch
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3ba47e52f68e9d871156d263cdf51f93">
+		["MD5-CAM-1.0.1"] = <"c45be3f199f8e26afee98f6283c84198">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -242,7 +242,8 @@ Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 				["at0020"] = <
 					text = <"Hoch-Risiko Chirurgie">
 					description = <"Chirurgische Eingriffe, die aufgrund von Faktoren wie der Komplexität des Verfahrens, dem allgemeinen Gesundheitszustand des Patienten oder der Invasivität des Eingriffs ein signifikantes Risiko für Komplikationen oder unerwünschte Ereignisse bergen, mit Ausnahme von Herzchirurgie. Diese Operationen betreffen oft wichtige Organe oder lebenswichtige Strukturen und erfordern möglicherweise eine umfangreiche präoperative Bewertung und postoperative Überwachung. 
-Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neurochirurgie, komplexe Wirbelsäulenchirurgie), große Gefäßchirurgie (z. B. chirurgische Reparatur thorakoabdomineller Aortenaneurysmen), große orthopädische Operationen mit Gelenkersatz, Lebertransplantation, Pankreaschirurgie, bariatrische Chirurgie, Ösophagektomie, Lungenresektionschirurgie und Operationen bei älteren oder medizinisch fragilen Patienten.">
+">
+					comment = <"Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neurochirurgie, komplexe Wirbelsäulenchirurgie), große Gefäßchirurgie (z. B. chirurgische Reparatur thorakoabdomineller Aortenaneurysmen), große orthopädische Operationen mit Gelenkersatz, Lebertransplantation, Pankreaschirurgie, bariatrische Chirurgie, Ösophagektomie, Lungenresektionschirurgie und Operationen bei älteren oder medizinisch fragilen Patienten.">
 				>
 				["at0021"] = <
 					text = <"Nicht vorhanden">
@@ -279,6 +280,7 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				["at0033"] = <
 					text = <"Extention">
 					description = <"Zusätzliche Informationen, die erforderlich sind, um das Modell um lokale Inhalte zu erweitern oder mit anderen Referenzmodellen oder Formalismen abzugleichen.">
+					comment = <"Zum Beispiel: lokale Informationsanforderungen; oder zusätzliche Metadaten zur Anpassung an FHIR.">
 				>
 				["at0036"] = <
 					text = <"Item tree">
@@ -295,7 +297,6 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				["at0000"] = <
 					text = <"Revised Cardiac Risk Index">
 					description = <"The Revised Cardiac Risk Index (RCRI) serves as a commonly utilized tool in perioperative settings, aiding in the identification of patients at elevated risk for perioperative myocardial infarction or cardiac arrest.">
-					comment = <"Der Überarbeitete Herzrisikoindex (RCRI) dient als häufig genutztes Instrument in perioperativen Einstellungen und unterstützt bei der Identifizierung von Patienten mit erhöhtem Risiko für perioperativen Myokardinfarkt oder Herzstillstand.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -319,10 +320,12 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				>
 				["at0006"] = <
 					text = <"Present">
-					description = <"*Geschichte eines definitiven oder wahrscheinlichen Myokardinfarkts (EKG-Veränderungen und/oder Enzymveränderungen). (de)">
+					description = <"History of definite or probable Myocardial infarction (EKG changes and/or enzyme changes).
+
+">
 				>
 				["at0007"] = <
-					text = <"*Item tree (de)">
+					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0008"] = <
@@ -335,7 +338,7 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				>
 				["at0010"] = <
 					text = <"Present">
-					description = <"*Exertionelle oder paroxysmale nächtliche Dyspnoe und hat symptomatisch (oder bei körperlicher Untersuchung) auf Digitalis, Diuretika oder Nachlast-reduzierende Mittel angesprochen. (de)">
+					description = <"Exertional or paroxysmal nocturnal dyspnea and has responded to symptomatically (or on physical examination) to digitalis, diuretics, or afterload reducing agents.">
 				>
 				["at0011"] = <
 					text = <"Cerebrovascular Disease">
@@ -347,7 +350,7 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				>
 				["at0013"] = <
 					text = <"Present">
-					description = <"*Vorgeschichte eines zerebrovaskulären Unfalls (CVA) mit geringen oder keinen Residuen und transitorischen ischämischen Attacken (TIA). (de)">
+					description = <"History of a cerebrovascular accident (CVA) with minor or no residua and transient ischemic attacks (TIA).">
 				>
 				["at0014"] = <
 					text = <"Diabetes Mellitus on Insulin">
@@ -359,11 +362,11 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				>
 				["at0016"] = <
 					text = <"Present">
-					description = <"*Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika. (de)">
+					description = <"Diabetes treated with insulin, but not with oral hypoglycemics.">
 				>
 				["at0017"] = <
 					text = <"Serum Creatinine >2 mg/dl or >177 μmol/L">
-					description = <"Serum Creatinine >2 mg/dl or >177 μmol/L.">
+					description = <"Renal insufficiency, serum Creatinine >2 mg/dl or >177 μmol/L.">
 				>
 				["at0018"] = <
 					text = <"Absent">
@@ -371,12 +374,13 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				>
 				["at0019"] = <
 					text = <"Present">
-					description = <"*Niereninsuffizienz, Kreatinin >177 µmoll/L (de)">
+					description = <"Renal insufficiency, serum Creatinine >2 mg/dl or >177 μmol/L.">
 				>
 				["at0020"] = <
 					text = <"High Risk Surgery">
 					description = <"Surgical procedures that carry a significant risk of complications or adverse events due to factors such as the complexity of the procedure, the patient's overall health status, or the invasiveness of the surgery, except cardiac surgery. These surgeries often involve major organs or vital structures and may require extensive preoperative assessment and postoperative monitoring. 
-Examples of high-risk surgeries include neurosurgery (intracranial neurosurgery, complex spine surgery), major vascular surgery (e.g., surgical repair of thoracoabdominal aortic aneurysms), major orthopedic surgeries involving joint replacement, liver transplantation, pancreatic surgery, bariatric surgery, esophagectomy, lung resection surgery and surgeries in elderly or medically fragile patients.">
+">
+					comment = <"Examples of high-risk surgeries include neurosurgery (intracranial neurosurgery, complex spine surgery), major vascular surgery (e.g., surgical repair of thoracoabdominal aortic aneurysms), major orthopedic surgeries involving joint replacement, liver transplantation, pancreatic surgery, bariatric surgery, esophagectomy, lung resection surgery and surgeries in elderly or medically fragile patients.">
 				>
 				["at0021"] = <
 					text = <"Absent">
@@ -384,7 +388,7 @@ Examples of high-risk surgeries include neurosurgery (intracranial neurosurgery,
 				>
 				["at0022"] = <
 					text = <"Present">
-					description = <"*Chirurgische Eingriffe, die aufgrund von Faktoren wie der Komplexität des Verfahrens, dem allgemeinen Gesundheitszustand des Patienten oder der Invasivität des Eingriffs ein signifikantes Risiko für Komplikationen oder unerwünschte Ereignisse bergen, mit Ausnahme von Herzchirurgie. (de)">
+					description = <"Surgical procedures that carry a significant risk of complications or adverse events due to factors such as the complexity of the procedure, the patient's overall health status, or the invasiveness of the surgery, except cardiac surgery.">
 				>
 				["at0023"] = <
 					text = <"Total score">
@@ -413,9 +417,10 @@ Examples of high-risk surgeries include neurosurgery (intracranial neurosurgery,
 				["at0033"] = <
 					text = <"Extention">
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 				["at0036"] = <
-					text = <"*Item tree (de)">
+					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0038"] = <
