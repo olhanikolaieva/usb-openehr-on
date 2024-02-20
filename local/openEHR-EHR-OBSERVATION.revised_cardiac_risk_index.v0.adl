@@ -25,7 +25,7 @@ description
 		["email"] = <"olha.nikolaieva@usb.ch">
 	>
 	lifecycle_state = <"unmanaged">
-	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland">
+	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland","Jan Steiner Tobias, Standardmäßiger, University Hospital Basel, Switzerland">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -53,7 +53,7 @@ Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Ch
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2265ac04354d27abe06d89afcf4e8b19">
+		["MD5-CAM-1.0.1"] = <"3ba47e52f68e9d871156d263cdf51f93">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -63,7 +63,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -168,7 +168,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"@ internal @">
+					description = <"Standardmäßiger, nicht näher beschriebener Zeitpunkt oder Intervall Ereignis welches in einem Template oder bei der Anwendung genauer definiert werden kann.">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -303,7 +303,7 @@ Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neuroch
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"@ internal @">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
 				>
 				["at0003"] = <
 					text = <"Tree">
