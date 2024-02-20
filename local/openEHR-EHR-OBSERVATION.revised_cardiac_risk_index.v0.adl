@@ -25,7 +25,7 @@ description
 		["email"] = <"olha.nikolaieva@usb.ch">
 	>
 	lifecycle_state = <"unmanaged">
-	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland","Jan Steiner Tobias, Standardmäßiger, University Hospital Basel, Switzerland">
+	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland","Jan Steiner, University Hospital Basel, Switzerland">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
