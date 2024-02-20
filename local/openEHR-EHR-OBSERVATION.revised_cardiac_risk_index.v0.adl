@@ -53,7 +53,7 @@ Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Ch
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"94f063252c976bad7a71e0ba15a8c3c9">
+		["MD5-CAM-1.0.1"] = <"8878475c3c88a9e23e4818b71477b9ad">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -127,7 +127,15 @@ definition
 							}
 						}
 						state matches {
-							ITEM_TREE[at0036] matches {*}    -- Item tree
+							ITEM_TREE[at0036] matches {    -- Item tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0038] occurrences matches {0..1} matches {    -- Störfaktoren
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -139,16 +147,6 @@ definition
 					allow_archetype CLUSTER[at0033] occurrences matches {0..*} matches {    -- Extention
 						include
 							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[at0034] occurrences matches {0..1} matches {    -- Kommentar
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0035] occurrences matches {0..1} matches {    -- Datum
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
 					}
 				}
 			}
@@ -194,7 +192,7 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Dekompensierte Herzkrankheit">
-					description = <"">
+					description = <"Exertionelle oder paroxysmale nächtliche Dyspnoe und hat symptomatisch (oder bei körperlicher Untersuchung) auf Digitalis, Diuretika oder Nachlast-reduzierende Mittel angesprochen.">
 				>
 				["at0009"] = <
 					text = <"Nicht vorhanden">
@@ -206,7 +204,7 @@ ontology
 				>
 				["at0011"] = <
 					text = <"Zerebrovaskuläre Verschlusskrankheit">
-					description = <"">
+					description = <"Vorgeschichte eines zerebrovaskulären Unfalls (CVA) mit geringen oder keinen Residuen und transitorischen ischämischen Attacken (TIA).">
 				>
 				["at0012"] = <
 					text = <"Nicht vorhanden">
@@ -218,7 +216,8 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Insulinabhängiger Diabetes mellitus">
-					description = <"">
+					description = <"
+Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 				>
 				["at0015"] = <
 					text = <"Nicht vorhanden">
@@ -230,7 +229,7 @@ ontology
 				>
 				["at0017"] = <
 					text = <"Niereninsuffizienz, Kreatinin >177 µmoll/L">
-					description = <"">
+					description = <"Niereninsuffizienz, Kreatinin >177 µmoll/L.">
 				>
 				["at0018"] = <
 					text = <"Nicht vorhanden">
@@ -242,7 +241,8 @@ ontology
 				>
 				["at0020"] = <
 					text = <"Hoch-Risiko Chirurgie">
-					description = <"">
+					description = <"Chirurgische Eingriffe, die aufgrund von Faktoren wie der Komplexität des Verfahrens, dem allgemeinen Gesundheitszustand des Patienten oder der Invasivität des Eingriffs ein signifikantes Risiko für Komplikationen oder unerwünschte Ereignisse bergen, mit Ausnahme von Herzchirurgie. Diese Operationen betreffen oft wichtige Organe oder lebenswichtige Strukturen und erfordern möglicherweise eine umfangreiche präoperative Bewertung und postoperative Überwachung. 
+Beispiele für Hochrisikooperationen sind Neurochirurgie (intrakranielle Neurochirurgie, komplexe Wirbelsäulenchirurgie), große Gefäßchirurgie (z. B. chirurgische Reparatur thorakoabdomineller Aortenaneurysmen), große orthopädische Operationen mit Gelenkersatz, Lebertransplantation, Pankreaschirurgie, bariatrische Chirurgie, Ösophagektomie, Lungenresektionschirurgie und Operationen bei älteren oder medizinisch fragilen Patienten.">
 				>
 				["at0021"] = <
 					text = <"Nicht vorhanden">
@@ -254,11 +254,11 @@ ontology
 				>
 				["at0023"] = <
 					text = <"Summe">
-					description = <"">
+					description = <"Die Gesamtsumme jeder Komponentenvariable für den Überarbeiteten Herzrisikoindex.">
 				>
 				["at0025"] = <
 					text = <"Risiko einer schweren kardialen Komplikation">
-					description = <"">
+					description = <"Wahrscheinlichkeit, nach einem chirurgischen Eingriff, der nicht das Herz betrifft, ein ungünstiges Ergebnis zu erleben.">
 				>
 				["at0026"] = <
 					text = <"Sehr geringes Risiko">
@@ -278,19 +278,15 @@ ontology
 				>
 				["at0033"] = <
 					text = <"Extention">
-					description = <"">
-				>
-				["at0034"] = <
-					text = <"Kommentar">
-					description = <"">
-				>
-				["at0035"] = <
-					text = <"Datum">
-					description = <"">
+					description = <"Zusätzliche Informationen, die erforderlich sind, um das Modell um lokale Inhalte zu erweitern oder mit anderen Referenzmodellen oder Formalismen abzugleichen.">
 				>
 				["at0036"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Störfaktoren">
+					description = <"Beschreibung der Probleme oder Faktoren, die sich auf die Berechnung auswirken können.">
 				>
 			>
 		>
@@ -355,7 +351,7 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Diabetes Mellitus on Insulin">
-					description = <"Diabetes treated with insulin or oral hypoglycemics, but not diet alone.">
+					description = <"Diabetes treated with insulin, but not with oral hypoglycemics.">
 				>
 				["at0015"] = <
 					text = <"Absent">
@@ -379,8 +375,8 @@ ontology
 				>
 				["at0020"] = <
 					text = <"High Risk Surgery">
-					description = <"Surgical procedures that carry a significant risk of complications or adverse events due to factors such as the complexity of the procedure, the patient's overall health status, or the invasiveness of the surgery. These surgeries often involve major organs or vital structures and may require extensive preoperative assessment and postoperative monitoring. 
-Examples of high-risk surgeries include cardiac surgery, neurosurgery (intracranial neurosurgery, complex spine surgery), major vascular surgery (e.g., surgical repair of thoracoabdominal aortic aneurysms), major orthopedic surgeries involving joint replacement, liver transplantation, pancreatic surgery, bariatric surgery, esophagectomy, lung resection surgery and surgeries in elderly or medically fragile patients.">
+					description = <"Surgical procedures that carry a significant risk of complications or adverse events due to factors such as the complexity of the procedure, the patient's overall health status, or the invasiveness of the surgery, except cardiac surgery. These surgeries often involve major organs or vital structures and may require extensive preoperative assessment and postoperative monitoring. 
+Examples of high-risk surgeries include neurosurgery (intracranial neurosurgery, complex spine surgery), major vascular surgery (e.g., surgical repair of thoracoabdominal aortic aneurysms), major orthopedic surgeries involving joint replacement, liver transplantation, pancreatic surgery, bariatric surgery, esophagectomy, lung resection surgery and surgeries in elderly or medically fragile patients.">
 				>
 				["at0021"] = <
 					text = <"Absent">
@@ -392,11 +388,11 @@ Examples of high-risk surgeries include cardiac surgery, neurosurgery (intracran
 				>
 				["at0023"] = <
 					text = <"Total score">
-					description = <"">
+					description = <"The total sum of each component variable for the Revised Cardiac Risk Index. ">
 				>
 				["at0025"] = <
 					text = <"Estimated Risk of Adverse Outcome with Non-cardiac Surgery">
-					description = <"">
+					description = <"Probability of experiencing a negative outcome after a surgical procedure that does not involve the heart. ">
 				>
 				["at0026"] = <
 					text = <"Very low risk">
@@ -416,19 +412,15 @@ Examples of high-risk surgeries include cardiac surgery, neurosurgery (intracran
 				>
 				["at0033"] = <
 					text = <"Extention">
-					description = <"">
-				>
-				["at0034"] = <
-					text = <"Comment">
-					description = <"">
-				>
-				["at0035"] = <
-					text = <"Date">
-					description = <"">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 				>
 				["at0036"] = <
 					text = <"*Item tree (de)">
 					description = <"@ internal @">
+				>
+				["at0038"] = <
+					text = <"Confounding factors">
+					description = <"Narrative description of any issues or factors that may impact on the calculation.">
 				>
 			>
 		>
