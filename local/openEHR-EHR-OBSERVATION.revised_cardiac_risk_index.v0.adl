@@ -10,6 +10,9 @@ language
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			author = <
+				["name"] = <"Olha Nikolaieva">
+				["email"] = <"olha.nikolaieva@usb.ch">
+				["organisation"] = <"University Hospital Basel, Switzerland ">
 			>
 		>
 	>
@@ -19,9 +22,10 @@ description
 		["date"] = <"2024-01-23">
 		["name"] = <"Olha Nikolaieva">
 		["organisation"] = <"University Hospital Basel">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["email"] = <"olha.nikolaieva@usb.ch">
 	>
 	lifecycle_state = <"unmanaged">
+	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -32,8 +36,8 @@ description
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"The purpose of the Revised Cardiac Risk Index (RCRI) is to assess the risk of perioperative cardiac events, such as myocardial infarction (MI) or cardiac arrest, in patients undergoing surgical procedures. It helps healthcare professionals identify individuals who may be at a higher risk for these complications so that appropriate preventive measures can be taken to optimize patient care and outcomes.">
-			keywords = <"Revised Cardiac Risk Index, RCRI, perioperative risk, myocardial infarction, MI, cardiac arrest.", ...>
+			purpose = <"To assess the risk of perioperative cardiac events, such as myocardial infarction (MI) or cardiac arrest, in patients undergoing surgical procedures. It helps healthcare professionals identify individuals who may be at a higher risk for these complications so that appropriate preventive measures can be taken to optimize patient care and outcomes.">
+			keywords = <"Revised Cardiac Risk Index, RCRI, perioperative risk, myocardial infarction, MI, cardiac arrest, risk", ...>
 			copyright = <"© openEHR Foundation">
 			use = <"To assess the risk of perioperative cardiac events with RCRI in patients undergoing surgical procedures. ">
 			misuse = <"To assess any other risk or score except RCRI.">
@@ -42,16 +46,16 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e45a2368e1a32aaec557fd746219de4d">
-		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
-		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["references"] = <"Thomas H. Lee, MD, SM; Edward R. Marcantonio, MD, SM; Carol M. Mangione, MD, SM; Eric J. Thomas, MD, SM; Carisi A. Polanczyk, MD; E. Francis Cook, ScD; David J. Sugarbaker, MD; Magruder C. Donaldson, MD; Robert Poss, MD; Kalon K. L. Ho, MD, SM; Lynn E. Ludwig, MS, RN; Alex Pedan, PhD; Lee Goldman, MD, MPH. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation 1999 September 7, 100 (10): 1043-9
 
 Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Chaikof, Kirsten E. Fleischmann, William K. Freeman, James B. Froehlich, Edward K. Kasper, Judy R. Kersten, Barbara Riegel and John F. Robb.
 2009 ACCF/AHA focused update on perioperative beta blockade incorporated into the ACC/AHA 2007 guidelines on perioperative cardiovascular evaluation and care for noncardiac surgery: a report of the American college of cardiology foundation/American heart association task force on practice guidelines. Circulation 2009 November 24, 120 (21): e169-276">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"94f063252c976bad7a71e0ba15a8c3c9">
+		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
@@ -174,7 +178,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Koronare Herzkrankheit">
-					description = <"">
+					description = <"Geschichte eines definitiven oder wahrscheinlichen Myokardinfarkts (EKG-Veränderungen und/oder Enzymveränderungen).">
 				>
 				["at0005"] = <
 					text = <"Nicht vorhanden">
@@ -311,7 +315,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Coronary Artery Disease">
-					description = <"">
+					description = <"History of definite or probable Myocardial infarction (EKG changes and/or enzyme changes).">
 				>
 				["at0005"] = <
 					text = <"Absent">
@@ -327,7 +331,7 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Congestive Heart Failure">
-					description = <"">
+					description = <"Exertional or paroxysmal nocturnal dyspnea and has responded to symptomatically (or on physical examination) to digitalis, diuretics, or afterload reducing agents.">
 				>
 				["at0009"] = <
 					text = <"Absent">
@@ -339,7 +343,7 @@ ontology
 				>
 				["at0011"] = <
 					text = <"Cerebrovascular Disease">
-					description = <"">
+					description = <"History of a cerebrovascular accident (CVA) with minor or no residua and transient ischemic attacks (TIA).">
 				>
 				["at0012"] = <
 					text = <"Absent">
@@ -351,7 +355,7 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Diabetes Mellitus on Insulin">
-					description = <"">
+					description = <"Diabetes treated with insulin or oral hypoglycemics, but not diet alone.">
 				>
 				["at0015"] = <
 					text = <"Absent">
@@ -363,7 +367,7 @@ ontology
 				>
 				["at0017"] = <
 					text = <"Serum Creatinine >2 mg/dl or >177 μmol/L">
-					description = <"">
+					description = <"Serum Creatinine >2 mg/dl or >177 μmol/L.">
 				>
 				["at0018"] = <
 					text = <"Absent">
@@ -375,7 +379,8 @@ ontology
 				>
 				["at0020"] = <
 					text = <"High Risk Surgery">
-					description = <"">
+					description = <"Surgical procedures that carry a significant risk of complications or adverse events due to factors such as the complexity of the procedure, the patient's overall health status, or the invasiveness of the surgery. These surgeries often involve major organs or vital structures and may require extensive preoperative assessment and postoperative monitoring. 
+Examples of high-risk surgeries include cardiac surgery, neurosurgery (intracranial neurosurgery, complex spine surgery), major vascular surgery (e.g., surgical repair of thoracoabdominal aortic aneurysms), major orthopedic surgeries involving joint replacement, liver transplantation, pancreatic surgery, bariatric surgery, esophagectomy, lung resection surgery and surgeries in elderly or medically fragile patients.">
 				>
 				["at0021"] = <
 					text = <"Absent">
