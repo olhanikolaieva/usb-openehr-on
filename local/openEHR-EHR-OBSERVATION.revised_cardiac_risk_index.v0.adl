@@ -53,7 +53,7 @@ Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Ch
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1f2492bb2fab4a2316ae0ff6391ffe4b">
+		["MD5-CAM-1.0.1"] = <"b363b783a0fc81af134644c06a6fe4fc">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -447,6 +447,11 @@ Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 				["at0016"] = <[SNOMED-CT::52101004]>
 				["at0019"] = <[SNOMED-CT::52101004]>
 				["at0022"] = <[SNOMED-CT::52101004]>
+				["at0004"] = <[SNOMED-CT::53741008]>
+				["at0008"] = <[SNOMED-CT::42343007]>
+				["at0011"] = <[SNOMED-CT::62914000]>
+				["at0014"] = <[SNOMED-CT::46635009]>
+				["at0017"] = <[SNOMED-CT::723188008]>
 			>
 		>
 	>
