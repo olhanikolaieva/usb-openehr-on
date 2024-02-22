@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "8.1.0",
+      "sem_ver" : "8.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "266f89d4aaa41d5dae00532f1a7895fa",
+      "MD5-CAM-1.0.1" : "a8bcb33a02af3a468f6d8d7390821572",
       "PARENT:MD5-CAM-1.0.1" : "41914AB89EC39C22523B4461C349BB17"
     },
     "details" : {
@@ -110,7 +110,7 @@
       "children" : [ {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "EVALUATION",
-        "occurrences" : "0..1",
+        "occurrences" : "0..*",
         "nodeId" : "at0.6",
         "attributes" : [ ],
         "attributeTuples" : [ ],
@@ -358,6 +358,7 @@
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "defining_code",
