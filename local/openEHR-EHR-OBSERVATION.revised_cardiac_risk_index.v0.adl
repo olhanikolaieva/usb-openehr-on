@@ -30,17 +30,17 @@ description
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Der Zweck des Überarbeiteten Herzrisikoindex (RCRI) besteht darin, das Risiko perioperativer kardialer Ereignisse wie Myokardinfarkt (MI) oder Herzstillstand bei Patienten, die sich einer chirurgischen Eingriffen unterziehen, zu bewerten. Er hilft Gesundheitsfachkräften dabei, Personen zu identifizieren, die ein höheres Risiko für diese Komplikationen aufweisen könnten, damit entsprechende präventive Maßnahmen ergriffen werden können, um die Patientenversorgung und -ergebnisse zu optimieren.">
-			keywords = <"Revised Cardiac Risk Index, RCRI, Überarbeiteter Herzrisikoindex, perioperatives Risiko, Myokardinfarkt, MI, Herzstillstand.", ...>
+			keywords = <"Revised cardiac risk index, RCRI, Überarbeiteter Herzrisikoindex, perioperatives Risiko, Myokardinfarkt, MI, Herzstillstand.", ...>
 			use = <"Um das Risiko perioperativer kardialer Ereignisse mit dem RCRI bei Patienten zu bewerten, die sich einer chirurgischen Eingriffen unterziehen.">
 			misuse = <"Um jedes andere Risiko oder jede andere Punktzahl außer dem RCRI zu bewerten.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To assess the risk of perioperative cardiac events, such as myocardial infarction (MI) or cardiac arrest, in patients undergoing surgical procedures. It helps healthcare professionals identify individuals who may be at a higher risk for these complications so that appropriate preventive measures can be taken to optimize patient care and outcomes.">
-			keywords = <"Revised Cardiac Risk Index, RCRI, perioperative risk, myocardial infarction, MI, cardiac arrest, risk", ...>
+			purpose = <"To record an assessment of the risk of perioperative cardiac events, such as myocardial infarction (MI) or cardiac arrest, in patients undergoing surgical procedures. It helps healthcare professionals identify individuals who may be at a higher risk for these complications so that appropriate preventive measures can be taken to optimize patient care and outcomes.">
+			keywords = <"Revised cardiac risk index, RCRI, perioperative risk, myocardial infarction, MI, cardiac arrest, risk", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"To assess the risk of perioperative cardiac events with RCRI in patients undergoing surgical procedures. ">
-			misuse = <"To assess any other risk or score except RCRI.">
+			use = <"Use to record an assessment of the risk of perioperative cardiac events with RCRI in patients undergoing surgical procedures. ">
+			misuse = <"Not to be used to assess any other risk or score except RCRI.">
 		>
 	>
 	other_details = <
@@ -53,13 +53,13 @@ Lee A. Fleisher, Joshua A. Beckman, Kenneth A. Brown, Hugh Calkins, Elliot L. Ch
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8e84a8c111baead8565c18f848eae955">
+		["MD5-CAM-1.0.1"] = <"8555ad1ea7ff9d18d4df08a1a7f54e46">
 		["build_uid"] = <"4a1dcf9b-d94c-3684-be82-1fed349f27bd">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Revised Cardiac Risk Index
+	OBSERVATION[at0000] matches {    -- Revised cardiac risk index
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -110,7 +110,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Geschätztes Risiko
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Revised cardiac risk index
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
@@ -127,15 +127,7 @@ definition
 							}
 						}
 						state matches {
-							ITEM_TREE[at0036] matches {    -- Item tree
-								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0038] occurrences matches {0..1} matches {    -- Störfaktoren
-										value matches {
-											DV_TEXT matches {*}
-										}
-									}
-								}
-							}
+							ITEM_TREE[at0036] matches {*}    -- Item tree
 						}
 					}
 				}
@@ -159,7 +151,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Revised Cardiac Risk Index">
+					text = <"Revised cardiac risk index">
 					description = <"Der Überarbeitete Herzrisikoindex (RCRI) dient als häufig genutztes Instrument in perioperativen Einstellungen und unterstützt bei der Identifizierung von Patienten mit erhöhtem Risiko für perioperativen Myokardinfarkt oder Herzstillstand.">
 				>
 				["at0001"] = <
@@ -258,7 +250,7 @@ Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 					description = <"Die Gesamtsumme jeder Komponentenvariable für den Überarbeiteten Herzrisikoindex.">
 				>
 				["at0025"] = <
-					text = <"Geschätztes Risiko">
+					text = <"Revised cardiac risk index">
 					description = <"Geschätztes Risiko eines ungünstigen Ergebnisses bei nicht-kardialer Chirurgie - die Wahrscheinlichkeit, nach einem chirurgischen Eingriff, der nicht das Herz betrifft, ein ungünstiges Ergebnis zu erleben.">
 				>
 				["at0026"] = <
@@ -286,17 +278,13 @@ Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0038"] = <
-					text = <"Störfaktoren">
-					description = <"Beschreibung der Probleme oder Faktoren, die sich auf die Berechnung auswirken können.">
-				>
 			>
 		>
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Revised Cardiac Risk Index">
-					description = <"The Revised Cardiac Risk Index (RCRI) serves as a commonly utilized tool in perioperative settings, aiding in the identification of patients at elevated risk for perioperative myocardial infarction or cardiac arrest.">
+					text = <"Revised cardiac risk index">
+					description = <"The revised cardiac risk index (RCRI) serves as a commonly utilized tool in perioperative settings, aiding in the identification of patients at elevated risk for perioperative myocardial infarction or cardiac arrest.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -395,8 +383,8 @@ Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 					description = <"The total sum of each component variable for the Revised Cardiac Risk Index. ">
 				>
 				["at0025"] = <
-					text = <"Estimated Risk">
-					description = <"Estimated risk of adverse outcome with non-cardiac surgery - the probability of experiencing a negative outcome after a surgical procedure that does not involve the heart. ">
+					text = <"*Revised cardiac risk index(de)">
+					description = <"*Estimated risk of adverse outcome with non-cardiac surgery - the probability of experiencing a negative outcome after a surgical procedure that does not involve the heart. ">
 				>
 				["at0026"] = <
 					text = <"Very low risk (0.4%)">
@@ -422,10 +410,6 @@ Diabetes, behandelt mit Insulin, jedoch nicht mit oralen Antidiabetika.">
 				["at0036"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
-				>
-				["at0038"] = <
-					text = <"Confounding factors">
-					description = <"Narrative description of any issues or factors that may impact on the calculation.">
 				>
 			>
 		>
