@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e8c1ab4607aa1fed77819d5894bc5c9a">
+		["MD5-CAM-1.0.1"] = <"9817ce763b68188801c2f2dbf24c3d1d">
 		["build_uid"] = <"fe0cdfa9-dbfb-37d7-a4bb-1d47686cc5f0">
 	>
 
@@ -104,20 +104,6 @@ definition
 											5|[local::at0080]
 										}
 									}
-									ELEMENT[at0084] occurrences matches {0..1} matches {    -- Quality of life score
-										value matches {
-											DV_COUNT matches {
-												magnitude matches {|0..100|}
-											}
-										}
-									}
-									ELEMENT[at0085] occurrences matches {0..1} matches {    -- Overall summary score
-										value matches {
-											DV_COUNT matches {
-												magnitude matches {|0..100|}
-											}
-										}
-									}
 									ELEMENT[at0081] occurrences matches {0..1} matches {    -- Physical limitation score
 										value matches {
 											DV_COUNT matches {
@@ -126,6 +112,20 @@ definition
 										}
 									}
 									ELEMENT[at0082] occurrences matches {0..1} matches {    -- Angina frequency score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
+											}
+										}
+									}
+									ELEMENT[at0084] occurrences matches {0..1} matches {    -- Quality of life score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
+											}
+										}
+									}
+									ELEMENT[at0085] occurrences matches {0..1} matches {    -- Overall summary score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..100|}
