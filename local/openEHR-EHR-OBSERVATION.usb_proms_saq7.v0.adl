@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9817ce763b68188801c2f2dbf24c3d1d">
+		["MD5-CAM-1.0.1"] = <"b3dbc22518dcef8f2ce4d5c6089e2a7d">
 		["build_uid"] = <"fe0cdfa9-dbfb-37d7-a4bb-1d47686cc5f0">
 	>
 
@@ -56,7 +56,7 @@ definition
 											6|[local::at0018]
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {    -- 1c. Liftingor moving heavy objects
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- 1c. Liftingor moving heavy objects (e.g. furniture, children)
 										value matches {
 											1|[local::at0020],
 											2|[local::at0021],
@@ -174,7 +174,7 @@ The Seattle Angina Questionnaire (SAQ-7) quantifies the impact of angina on pati
 				>
 				["at0005"] = <
 					text = <"1a. Walking indoors on level ground">
-					description = <"1a. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited your walking indoors on level ground?">
+					description = <"1. The following is a list of activities that people often do during the week. Although for some people with several medical problems it is difficult to determine what it is that limits them, please go over the activities listed below and indicate how much limitation you have had due to chest pain, chest tightness or angina over the past 4 weeks.">
 				>
 				["at0006"] = <
 					text = <"Extremely limited">
@@ -202,7 +202,7 @@ The Seattle Angina Questionnaire (SAQ-7) quantifies the impact of angina on pati
 				>
 				["at0012"] = <
 					text = <"2b. Gardening, vacuuming or carrying groceries">
-					description = <"2b. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited your gardening, vacuuming or carrying groceries?">
+					description = <"1. The following is a list of activities that people often do during the week. Although for some people with several medical problems it is difficult to determine what it is that limits them, please go over the activities listed below and indicate how much limitation you have had due to chest pain, chest tightness or angina over the past 4 weeks.">
 				>
 				["at0013"] = <
 					text = <"Extremely limited">
@@ -229,8 +229,8 @@ The Seattle Angina Questionnaire (SAQ-7) quantifies the impact of angina on pati
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"1c. Liftingor moving heavy objects">
-					description = <"1c. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited you in lifting or moving heavy objects (e.g. furniture, children)?">
+					text = <"1c. Liftingor moving heavy objects (e.g. furniture, children)">
+					description = <"1. The following is a list of activities that people often do during the week. Although for some people with several medical problems it is difficult to determine what it is that limits them, please go over the activities listed below and indicate how much limitation you have had due to chest pain, chest tightness or angina over the past 4 weeks.">
 				>
 				["at0020"] = <
 					text = <"Extremely limited">
