@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"31e2d6e97ec94ff58b7da5286e9cc815">
+		["MD5-CAM-1.0.1"] = <"4b29a96295c619c22051dd509eadd863">
 		["build_uid"] = <"fe0cdfa9-dbfb-37d7-a4bb-1d47686cc5f0">
 	>
 
@@ -36,91 +36,76 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									CLUSTER[at0004] occurrences matches {0..1} matches {    -- 1. Activity limitation due to chest pain, chest tightness or angina over the past 4 weeks
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0005] occurrences matches {0..1} matches {    -- a. Walking
-												value matches {
-													1|[local::at0006],
-													2|[local::at0007],
-													3|[local::at0008],
-													4|[local::at0009],
-													5|[local::at0010],
-													6|[local::at0011]
-												}
-											}
-											ELEMENT[at0012] occurrences matches {0..1} matches {    -- b. Gardening/vacuuming/groceries
-												value matches {
-													1|[local::at0013],
-													2|[local::at0014],
-													3|[local::at0015],
-													4|[local::at0016],
-													5|[local::at0017],
-													6|[local::at0018]
-												}
-											}
-											ELEMENT[at0019] occurrences matches {0..1} matches {    -- c. Lifting/moving objects
-												value matches {
-													1|[local::at0020],
-													2|[local::at0021],
-													3|[local::at0022],
-													4|[local::at0023],
-													5|[local::at0024],
-													6|[local::at0025]
-												}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- 1a. Walking
+										value matches {
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- 2b. Gardening/vacuuming/groceries
+										value matches {
+											1|[local::at0013],
+											2|[local::at0014],
+											3|[local::at0015],
+											4|[local::at0016],
+											5|[local::at0017],
+											6|[local::at0018]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- 1c. Lifting/moving objects
+										value matches {
+											1|[local::at0020],
+											2|[local::at0021],
+											3|[local::at0022],
+											4|[local::at0023],
+											5|[local::at0024],
+											6|[local::at0025]
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- 2. Chest pain, chest tightness or angina
+										value matches {
+											1|[local::at0028],
+											2|[local::at0029],
+											3|[local::at0030],
+											4|[local::at0031],
+											5|[local::at0032],
+											6|[local::at0033]
+										}
+									}
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- 3. Nitroglycerin use
+										value matches {
+											1|[local::at0050],
+											2|[local::at0051],
+											3|[local::at0052],
+											4|[local::at0053],
+											5|[local::at0054],
+											6|[local::at0055]
+										}
+									}
+									ELEMENT[at0057] occurrences matches {0..1} matches {    -- 4. Limitation due to chest pain
+										value matches {
+											1|[local::at0064],
+											2|[local::at0065],
+											3|[local::at0066],
+											4|[local::at0067],
+											5|[local::at0068]
+										}
+									}
+									ELEMENT[at0084] occurrences matches {0..1} matches {    -- Quality of life score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
 											}
 										}
 									}
-									CLUSTER[at0026] occurrences matches {0..1} matches {    -- 2. Chest pain, chest tightness or angina on average over the past 4 weeks
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0027] occurrences matches {0..1} matches {    -- Frequency of symptoms
-												value matches {
-													1|[local::at0028],
-													2|[local::at0029],
-													3|[local::at0030],
-													4|[local::at0031],
-													5|[local::at0032],
-													6|[local::at0033]
-												}
-											}
-										}
-									}
-									CLUSTER[at0048] occurrences matches {0..1} matches {    -- 3. Nitroglycerin use due to chest pain, chest tightness or angina on average over the past 4 weeks
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0049] occurrences matches {0..1} matches {    -- Frequency of nitroglycerin use
-												value matches {
-													1|[local::at0050],
-													2|[local::at0051],
-													3|[local::at0052],
-													4|[local::at0053],
-													5|[local::at0054],
-													6|[local::at0055]
-												}
-											}
-										}
-									}
-									CLUSTER[at0056] occurrences matches {0..1} matches {    -- 4. Limitation due to chest pain, chest tightness or angina over the past 4 weeks
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0057] occurrences matches {0..1} matches {    -- Limitation of enjoyment
-												value matches {
-													1|[local::at0064],
-													2|[local::at0065],
-													3|[local::at0066],
-													4|[local::at0067],
-													5|[local::at0068]
-												}
-											}
-										}
-									}
-									CLUSTER[at0069] occurrences matches {0..1} matches {    -- 5. Satisfaction with symptoms
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0070] occurrences matches {0..1} matches {    -- Satisfaction
-												value matches {
-													1|[local::at0076],
-													2|[local::at0077],
-													3|[local::at0078],
-													4|[local::at0079],
-													5|[local::at0080]
-												}
+									ELEMENT[at0085] occurrences matches {0..1} matches {    -- Overall summary score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..100|}
 											}
 										}
 									}
@@ -138,18 +123,13 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0084] occurrences matches {0..1} matches {    -- Quality of life score
+									ELEMENT[at0070] occurrences matches {0..1} matches {    -- 5. Satisfaction with symptoms
 										value matches {
-											DV_COUNT matches {
-												magnitude matches {|0..100|}
-											}
-										}
-									}
-									ELEMENT[at0085] occurrences matches {0..1} matches {    -- Overall summary score
-										value matches {
-											DV_COUNT matches {
-												magnitude matches {|0..100|}
-											}
+											1|[local::at0076],
+											2|[local::at0077],
+											3|[local::at0078],
+											4|[local::at0079],
+											5|[local::at0080]
 										}
 									}
 								}
@@ -184,13 +164,9 @@ ontology
 					text = <"Tree">
 					description = <"@ internal @">
 				>
-				["at0004"] = <
-					text = <"1. Activity limitation due to chest pain, chest tightness or angina over the past 4 weeks">
-					description = <"1. The following is a list of activities that people often do during the week. Although for some people with several medical problems it is difficult to determine what it is that limits them, please go over the activities listed below and indicate how much limitation you have had due to chest pain, chest tightness or angina over the past 4 weeks.">
-				>
 				["at0005"] = <
-					text = <"a. Walking">
-					description = <"a. Walking indoors on level ground">
+					text = <"1a. Walking">
+					description = <"1a. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited your walking indoors on level ground?">
 				>
 				["at0006"] = <
 					text = <"Extremely limited">
@@ -217,8 +193,8 @@ ontology
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"b. Gardening/vacuuming/groceries">
-					description = <"b. Gardening, vacuuming or carrying groceries">
+					text = <"2b. Gardening/vacuuming/groceries">
+					description = <"2b. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited your gardening, vacuuming or carrying groceries?">
 				>
 				["at0013"] = <
 					text = <"Extremely limited">
@@ -245,8 +221,8 @@ ontology
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"c. Lifting/moving objects">
-					description = <"c. Lifting or moving heavy objects (e.g. furniture, children)">
+					text = <"1c. Lifting/moving objects">
+					description = <"1c. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited you in lifting or moving heavy objects (e.g. furniture, children)?">
 				>
 				["at0020"] = <
 					text = <"Extremely limited">
@@ -272,13 +248,9 @@ ontology
 					text = <"Limited for other reasons or did not do the activity">
 					description = <"">
 				>
-				["at0026"] = <
-					text = <"2. Chest pain, chest tightness or angina on average over the past 4 weeks">
-					description = <"2. Over the past 4 weeks, on average, how many times have you had chest pain, chest tightness or angina?">
-				>
 				["at0027"] = <
-					text = <"Frequency of symptoms">
-					description = <"I have had chest pain, chest tightness or angina...">
+					text = <"2. Chest pain, chest tightness or angina">
+					description = <"2. Over the past 4 weeks, on average, how many times have you had chest pain, chest tightness or angina?">
 				>
 				["at0028"] = <
 					text = <"4 or more times per day">
@@ -304,13 +276,9 @@ ontology
 					text = <"None over the past 4 weeks">
 					description = <"">
 				>
-				["at0048"] = <
-					text = <"3. Nitroglycerin use due to chest pain, chest tightness or angina on average over the past 4 weeks">
-					description = <"3. Over the past 4 weeks, on average, how many times have you had to take nitroglycerin (nitroglycerin tablets or spray) for your chest pain, chest tightness or angina?">
-				>
 				["at0049"] = <
-					text = <"Frequency of nitroglycerin use">
-					description = <"I have taken nitroglycerin...">
+					text = <"3. Nitroglycerin use">
+					description = <"3. Over the past 4 weeks, on average, how many times have you had to take nitroglycerin (nitroglycerin tablets or spray) for your chest pain, chest tightness or angina?">
 				>
 				["at0050"] = <
 					text = <"4 or more times per day">
@@ -336,13 +304,9 @@ ontology
 					text = <"None over the past 4 weeks">
 					description = <"">
 				>
-				["at0056"] = <
-					text = <"4. Limitation due to chest pain, chest tightness or angina over the past 4 weeks">
-					description = <"4. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited your enjoyment of life?">
-				>
 				["at0057"] = <
-					text = <"Limitation of enjoyment">
-					description = <"">
+					text = <"4. Limitation due to chest pain">
+					description = <"4. Over the past 4 weeks, how much has your chest pain, chest tightness or angina limited your enjoyment of life?">
 				>
 				["at0064"] = <
 					text = <"It has extremely limited my enjoyment of life">
@@ -364,13 +328,9 @@ ontology
 					text = <"It has not limited my enjoyment of life at all">
 					description = <"">
 				>
-				["at0069"] = <
+				["at0070"] = <
 					text = <"5. Satisfaction with symptoms">
 					description = <"5. If you had to spend the rest of your life with your chest pain, chest tightness or angina the way it is right now, how would you feel about this?">
-				>
-				["at0070"] = <
-					text = <"Satisfaction">
-					description = <"">
 				>
 				["at0076"] = <
 					text = <"Not satisfied at all">
