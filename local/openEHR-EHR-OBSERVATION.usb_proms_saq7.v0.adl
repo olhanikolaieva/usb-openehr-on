@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"67349fc3e05462f17f96d1c3fcbffe31">
+		["MD5-CAM-1.0.1"] = <"b3dbc22518dcef8f2ce4d5c6089e2a7d">
 		["build_uid"] = <"fe0cdfa9-dbfb-37d7-a4bb-1d47686cc5f0">
 	>
 
@@ -109,11 +109,6 @@ definition
 											DV_COUNT matches {
 												magnitude matches {|0..100|}
 											}
-										}
-									}
-									ELEMENT[at0088] occurrences matches {0..1} matches {    -- Physical limitation score
-										value matches {
-											DV_PROPORTION matches {*}
 										}
 									}
 									ELEMENT[at0082] occurrences matches {0..1} matches {    -- Angina frequency score
@@ -387,10 +382,6 @@ The Seattle Angina Questionnaire (SAQ-7) quantifies the impact of angina on pati
 				>
 				["at0087"] = <
 					text = <"Extention">
-					description = <"">
-				>
-				["at0088"] = <
-					text = <"Physical limitation score">
 					description = <"">
 				>
 			>
