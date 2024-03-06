@@ -16,19 +16,23 @@ language
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-02-08">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			keywords = <"Allgemeinzustand, funktionaler Status, Gesundheitszustand, Leistungsstatus, körperliche Gesundheit, psychische Gesundheit, Lebensqualität, Aktivitäten des täglichen Lebens, ADL, Bewertung, Auswertung.", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Use to assess the general condition of a patient. (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"General condition, functional status, health status, performance status, physical health, mental health, quality of life, activities of daily living, ADL assessment, evaluation.", ...>
+			use = <"Use to assess the general condition of a patient.">
 		>
 	>
 	other_details = <
@@ -37,9 +41,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"1096d44b3bd33222129120c76326bb5b">
+		["MD5-CAM-1.0.1"] = <"6967e65b0edfed945546360ed179715b">
 		["build_uid"] = <"dda6d569-662d-32c3-809e-8f6e9ebff8d7">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
@@ -52,12 +56,12 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0019,    -- Undetermined
-									at0020,    -- Good
-									at0021,    -- Fair
-									at0022,    -- Serious
-									at0023,    -- Critical
-									at0024]    -- Dead
+									at0025,    -- Excellent
+									at0026,    -- Good
+									at0027,    -- Fair
+									at0028,    -- Redused
+									at0029,    -- Poor
+									at0030]    -- Critical
 								}
 							}
 							DV_TEXT matches {*}
@@ -70,6 +74,8 @@ definition
 						}
 					}
 					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {    -- Additional details
+						include
+							archetype_id/value matches {/openEHR-DEMOGRAPHIC-CLUSTER\.person_death_data_iso\.v0|openEHR-EHR-CLUSTER\.death_details_parent\.v1|openEHR-EHR-CLUSTER\.birth_detail\.v0|openEHR-DEMOGRAPHIC-CLUSTER\.person_birth_data_iso\.v0/}
 					}
 				}
 			}
@@ -102,7 +108,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"General condition">
-					description = <"General condition ">
+					description = <"General condition describes the general physical, mental and emotional condition of a patient and its impact on their everyday life. Assessing the general condition of a patient involves evaluating their ability to perform activities of daily living, their level of independence, and their overall quality of life. ">
 				>
 				["at0001"] = <
 					text = <"Item tree">
@@ -136,37 +142,37 @@ ontology
 					text = <"Additional details">
 					description = <"">
 				>
-				["at0019"] = <
-					text = <"Undetermined">
-					description = <"Patient awaiting physician and/or assessment.">
+				["at0025"] = <
+					text = <"Excellent">
+					description = <"Patient exhibits few or no symptoms; has normal vital signs; is able to perform daily activities without any limitations.">
 				>
-				["at0020"] = <
+				["at0026"] = <
 					text = <"Good">
-					description = <"Vital signs are stable and within normal limits. Patient is conscious and comfortable. Indicators are excellent.">
+					description = <"Patient has minor symptoms or health concerns; vital signs are within normal ranges; can carry out most daily activities without significant limitations.">
 				>
-				["at0021"] = <
+				["at0027"] = <
 					text = <"Fair">
-					description = <"Vital signs are stable and within normal limits. Patient is conscious, but may be uncomfortable. Indicators are favorable.">
+					description = <"Patient experiences noticeable symptoms or health issues that require monitoring and management; vital signs may be slightly abnormal; patient has some limitations in performing daily activities.">
 				>
-				["at0022"] = <
-					text = <"Serious">
-					description = <"Vital signs may be unstable and not within normal limits. Patient is seriously ill. Indicators are questionable.">
+				["at0028"] = <
+					text = <"Redused">
+					description = <"Patient experiences significant symptoms or health problems that impact their daily functioning; vital signs may be abnormal; patient requires medical intervention or treatment to improve their condition.">
 				>
-				["at0023"] = <
+				["at0029"] = <
+					text = <"Poor">
+					description = <"Patient experiences severe symptoms or health complications that significantly affect their quality of life; vital signs are abnormal; patient may be unable to perform most daily activities without assistance.">
+				>
+				["at0030"] = <
 					text = <"Critical">
-					description = <"Vital signs are unstable and not within normal limits. Patient may be unconscious. Indicators are unfavorable.">
-				>
-				["at0024"] = <
-					text = <"Dead">
-					description = <"Vital signs have ceased. Patient has died.">
+					description = <"Patient is in a state of medical emergency, requiring immediate and intensive medical intervention to stabilize their condition; vital signs are unstable.">
 				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*General condition (en)">
-					description = <"*General condition  (en)">
+					text = <"Allgemeinzustand">
+					description = <"Der Allgemeinzustand beschreibt den allgemeinen körperlichen, geistigen und emotionalen Zustand eines Patienten sowie dessen Auswirkungen auf das tägliche Leben. Die Bewertung des Allgemeinzustands eines Patienten umfasst die Bewertung seiner Fähigkeit, alltägliche Aktivitäten auszuführen, sein Maß an Unabhängigkeit und seine allgemeine Lebensqualität.">
 				>
 				["at0001"] = <
 					text = <"Item tree">
@@ -178,7 +184,7 @@ ontology
 				>
 				["at0005"] = <
 					text = <"Allgemeinzustand">
-					description = <"Allgemeinzustand werden die allgemeine körperliche, geistige und seelische Verfassung eines Patienten und die Auswirkung auf seinen Alltag beschrieben. ">
+					description = <"Der Allgemeinzustand beschreibt den allgemeinen körperlichen, geistigen und emotionalen Zustand eines Patienten sowie dessen Auswirkungen auf das tägliche Leben.">
 				>
 				["at0011"] = <
 					text = <"Kommentar">
@@ -200,29 +206,29 @@ ontology
 					text = <"Zusätzliche Angaben">
 					description = <"">
 				>
-				["at0019"] = <
-					text = <"Unbestimmt">
-					description = <"Der Patient wartet auf einen Arzt und/oder eine Beurteilung.">
+				["at0025"] = <
+					text = <"Exzellent">
+					description = <"Der Patient zeigt wenige oder keine Symptome; hat normale Vitalwerte; kann tägliche Aktivitäten ohne Einschränkungen durchführen.">
 				>
-				["at0020"] = <
+				["at0026"] = <
 					text = <"Gut">
-					description = <"Die Vitalfunktionen sind stabil und liegen im Normbereich. Der Patient ist bei Bewusstsein und fühlt sich wohl. Die Indikatoren sind ausgezeichnet.">
+					description = <"Der Patient hat geringfügige Symptome oder Gesundheitsprobleme; die Vitalwerte liegen im normalen Bereich; kann die meisten täglichen Aktivitäten ohne wesentliche Einschränkungen durchführen.">
 				>
-				["at0021"] = <
-					text = <"Gerecht">
-					description = <"Die Vitalfunktionen sind stabil und liegen im Normbereich. Der Patient ist bei Bewusstsein, kann sich aber unwohl fühlen. Die Indikatoren sind günstig.">
+				["at0027"] = <
+					text = <"Ordentlich">
+					description = <"Der Patient hat bemerkbare Symptome oder Gesundheitsprobleme, die Überwachung und Management erfordern; die Vitalwerte können leicht abweichen; der Patient hat einige Einschränkungen bei der Durchführung täglicher Aktivitäten.">
 				>
-				["at0022"] = <
-					text = <"Ernst">
-					description = <"Die Vitalfunktionen sind möglicherweise instabil und liegen nicht im Normbereich. Patient ist schwer erkrankt. Indikatoren sind fraglich.">
+				["at0028"] = <
+					text = <"Vermindert">
+					description = <"Der Patient hat signifikante Symptome oder Gesundheitsprobleme, die sich auf seine tägliche Funktionsfähigkeit auswirken; die Vitalwerte können abnorm sein; der Patient benötigt medizinische Intervention oder Behandlung, um seinen Zustand zu verbessern.">
 				>
-				["at0023"] = <
+				["at0029"] = <
+					text = <"Schlecht">
+					description = <"Der Patient hat schwere Symptome oder Gesundheitskomplikationen, die seine Lebensqualität erheblich beeinträchtigen; die Vitalwerte sind abnorm; der Patient ist möglicherweise nicht in der Lage, die meisten täglichen Aktivitäten ohne Hilfe durchzuführen.">
+				>
+				["at0030"] = <
 					text = <"Kritisch">
-					description = <"Die Vitalfunktionen sind instabil und liegen nicht im Normbereich. Der Patient ist möglicherweise bewusstlos. Die Indikatoren sind ungünstig.">
-				>
-				["at0024"] = <
-					text = <"Tot">
-					description = <"Die Vitalfunktionen haben aufgehört. Patient ist gestorben.">
+					description = <"Der Patient befindet sich in einem medizinischen Notfall, der sofortige und intensive medizinische Intervention erfordert, um seinen Zustand zu stabilisieren; die Vitalwerte sind instabil.">
 				>
 			>
 		>
