@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"43ce2af54af85e485779806de92a4490">
+		["MD5-CAM-1.0.1"] = <"716e5b23a509c31a27f89a26712ba647">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -57,6 +57,11 @@ definition
 									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Other method
 										value matches {
 											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0130] occurrences matches {0..1} matches {    -- Study date
+										value matches {
+											DV_DATE_TIME matches {*}
 										}
 									}
 									CLUSTER[at0012] occurrences matches {0..5} matches {    -- Tumor target lesion
@@ -483,7 +488,110 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0045] matches {*}    -- Item tree
+			ITEM_TREE[at0045] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0107] occurrences matches {0..1} matches {    -- Study instance identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0111] occurrences matches {0..1} matches {    -- Study description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0112] occurrences matches {0..1} matches {    -- Report identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0113] occurrences matches {0..1} matches {    -- Study status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0114,    -- Registered
+									at0115,    -- Available
+									at0116,    -- Cancelled
+									at0117]    -- Unknown
+								}
+							}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0118] occurrences matches {0..1} matches {    -- Study end point
+						value matches {
+							DV_TEXT matches {*}
+							DV_URI matches {*}
+						}
+					}
+					CLUSTER[at0119] occurrences matches {0..1} matches {    -- Comparison study details
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0120] occurrences matches {0..1} matches {    -- Study name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0121] occurrences matches {0..1} matches {    -- Study identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0122] occurrences matches {0..1} matches {    -- Study date
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0123] occurrences matches {0..*} matches {    -- Study end point
+								value matches {
+									DV_TEXT matches {*}
+									DV_URI matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0124] occurrences matches {0..*} matches {    -- Comparison series details
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.imaging_series(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.imaging_series(-[a-zA-Z0-9_]+)*\.v1/}
+							}
+						}
+					}
+					CLUSTER[at0125] occurrences matches {0..1} matches {    -- Examination request details
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0126] occurrences matches {0..1} matches {    -- Receiver order identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0127] occurrences matches {0..1} matches {    -- Requester order identifier
+								value matches {
+									DV_IDENTIFIER matches {*}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0128] occurrences matches {0..*} matches {    -- Examination requested name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0129] occurrences matches {0..*} matches {    -- Requester
+								include
+									archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.person(-[a-zA-Z0-9_]+)*\.v1/}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0131] occurrences matches {0..1} matches {    -- Distribution list
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.person(-[a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[at0132] occurrences matches {0..1} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
 		}
 	}
 
@@ -882,6 +990,111 @@ ontology
 				["at0105"] = <
 					text = <"Progressive disease (PD)">
 					description = <"">
+				>
+				["at0107"] = <
+					text = <"Study instance identifier">
+					description = <"Unique identifier for the imaging study assigned by the imaging device.">
+					comment = <"Equivalent to Study Instance UID (0020,000D) in DICOM and ImagingStudy.identifier in FHIR.">
+				>
+				["at0111"] = <
+					text = <"Study description">
+					description = <"Radiology service-generated description or classification of the study.">
+					comment = <"Equivalent to ImagingStudy.description in FHIR and Study description (0008, 1030) in DICOM. Possible DICOM examples: MR BREAS, UNIT; NEURO^HEAD; or MR BREASTUNI UE.">
+				>
+				["at0112"] = <
+					text = <"Report identifier">
+					description = <"Unique identifier for the imaging report assigned by the radiology service.">
+					comment = <"As one instance of this archetype is used per study, this identifier can be used to connect more than one imaging study within a single combined report. Equivalent to DiagnosticReport.identifier in FHIR. ">
+				>
+				["at0113"] = <
+					text = <"Study status">
+					description = <"The current state of the imaging study.">
+					comment = <"Equivalent to ImagingStudy.status in FHIR.">
+				>
+				["at0114"] = <
+					text = <"Registered">
+					description = <"The existence of the imaging study is registered, but there is nothing yet available.">
+				>
+				["at0115"] = <
+					text = <"Available">
+					description = <"At least one instance has been associated with this imaging study.">
+				>
+				["at0116"] = <
+					text = <"Cancelled">
+					description = <"The imaging study is unavailable because the study was not started or not completed.">
+				>
+				["at0117"] = <
+					text = <"Unknown">
+					description = <"The status is not known by the radiology source system.">
+				>
+				["at0118"] = <
+					text = <"Study end point">
+					description = <"Digital location of the imaging content and metadata.">
+					comment = <"This location identifies the network service providing access (for storage, viewing, querying, or retrieval) for the study. Equivalent to ImagingStudy.endpoint in FHIR.">
+				>
+				["at0119"] = <
+					text = <"Comparison study details">
+					description = <"Details about images from a prior study used for comparison to the reported study.">
+				>
+				["at0120"] = <
+					text = <"Study name">
+					description = <"The name of the comparison imaging examination performed.">
+				>
+				["at0121"] = <
+					text = <"Study identifier">
+					description = <"Unique identifier for the comparison imaging study.">
+				>
+				["at0122"] = <
+					text = <"Study date">
+					description = <"Date and time the comparison examination started.">
+				>
+				["at0123"] = <
+					text = <"Study end point">
+					description = <"Digital location of the comparison imaging content and metadata.">
+					comment = <"This location identifies the network service providing access (for storage, viewing, querying, or retrieval) for the study. Equivalent to ImagingStudy.endpoint in FHIR.">
+				>
+				["at0124"] = <
+					text = <"Comparison series details">
+					description = <"Details about an imaging series being compared to the reported study.">
+				>
+				["at0125"] = <
+					text = <"Examination request details">
+					description = <"Details about a single imaging examination requested.">
+				>
+				["at0126"] = <
+					text = <"Receiver order identifier">
+					description = <"Unique identifier for the imaging examination order assigned by the radiology service.">
+					comment = <"Equivalent to the HL7 Filler Order Identifier or DICOM Accession number attribute (0008,0050).">
+				>
+				["at0127"] = <
+					text = <"Requester order identifier">
+					description = <"Unique identifier for the imaging examination order assigned by the requester.">
+					comment = <"Equivalent to the HL7 Placer Order Identifier.">
+				>
+				["at0128"] = <
+					text = <"Examination requested name">
+					description = <"Identification of imaging examination requested.">
+					comment = <"This can be useful in situations where the examination requested differs from the examination performed.">
+				>
+				["at0129"] = <
+					text = <"Requester">
+					description = <"Details about the clinician and/or organisation requesting the imaging examination.">
+					comment = <"Equivalent to DICOM Referring Physician's Name (0008,0090)">
+				>
+				["at0130"] = <
+					text = <"Study date">
+					description = <"Date/time when the imaging started.">
+					comment = <"Equivalent to ImagingStudy.started in FHIR.">
+				>
+				["at0131"] = <
+					text = <"Distribution list">
+					description = <"Details of additional clinicians or organisations who require a copy of the examination result.">
+					comment = <"The 'Distribution list' is for information-only, and that the primary recipient of the report is the person intended to act on the information.">
+				>
+				["at0132"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 			>
 		>
