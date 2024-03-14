@@ -1,0 +1,888 @@
+archetype (adl_version=1.4; uid=4961561b-3ec8-4627-8d0b-54d3228e933b)
+	openEHR-EHR-OBSERVATION.recist_1_1.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2024-03-14">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"43ce2af54af85e485779806de92a4490">
+		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- RECIST_1_1
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Method
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- Clinical examination
+													at0006,    -- X-ray
+													at0007,    -- CT
+													at0008,    -- MRI
+													at0009,    -- Radionuclides
+													at0010]    -- Other
+												}
+											}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Other method
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									CLUSTER[at0012] occurrences matches {0..5} matches {    -- Tumor target lesion
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0013] occurrences matches {0..1} matches {    -- Body structure
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0071] occurrences matches {0..1} matches {    -- Structured body site
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+											}
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Measurements
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Description of lesion
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- Prior radiotherapy
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0041,    -- No radiotherapy/lesion outside previously irradiated field
+															at0042,    -- New lesion within previously irradiated field
+															at0043]    -- Lesion with documented PD, previously irradiated
+														}
+													}
+												}
+											}
+											ELEMENT[at0078] occurrences matches {0..1} matches {    -- Sum of lesion diameters at baseline
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0079] occurrences matches {0..1} matches {    -- Sum of lesion diameters at nadir
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0080] occurrences matches {0..1} matches {    -- Sum of lesion diameters currently
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0081] occurrences matches {0..1} matches {    -- Percent of change baseline to current
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"%">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0082] occurrences matches {0..1} matches {    -- Percent of change nadir to current
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"%">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0017] occurrences matches {0..2} matches {    -- Lymph node target lesion
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Body site
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {    -- Structured body site
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {    -- Measurements
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..1} matches {    -- Description of lesion
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0084] occurrences matches {0..1} matches {    -- Sum of lesion diameters at baseline
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0086] occurrences matches {0..1} matches {    -- Sum of lesion diameters at nadir
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0088] occurrences matches {0..1} matches {    -- Sum of lesion diameters currently
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0090] occurrences matches {0..1} matches {    -- Percent of change baseline to current
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"%">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0092] occurrences matches {0..1} matches {    -- Percent of change nadir to current
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"%">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0054] occurrences matches {0..*} matches {    -- Non-target/new lesion
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0055] occurrences matches {0..1} matches {    -- Body structure
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0070] occurrences matches {0..1} matches {    -- Body site
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0056] occurrences matches {0..1} matches {    -- Structured body site
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+											}
+											ELEMENT[at0083] occurrences matches {0..1} matches {    -- Measurements
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0058] occurrences matches {0..1} matches {    -- Time point status/response
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0059,    -- Present
+															at0060,    -- Stable
+															at0061,    -- Not evaluated
+															at0062,    -- Not all evaluated
+															at0063,    -- Unequivocal progression
+															at0064]    -- Inevaluable
+														}
+													}
+												}
+											}
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Prior radiotherapy
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0074,    -- No radiotherapy/lesion outside previously irradiated field
+															at0075,    -- New lesion within previously irradiated field
+															at0076]    -- Lesion with documented PD, previously irradiated
+														}
+													}
+												}
+											}
+											ELEMENT[at0065] occurrences matches {0..1} matches {    -- Description of lesion
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0085] occurrences matches {0..1} matches {    -- Sum of lesion diameters at baseline
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0087] occurrences matches {0..1} matches {    -- Sum of lesion diameters at nadir
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0089] occurrences matches {0..1} matches {    -- Sum of lesion diameters currently
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"mm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0091] occurrences matches {0..1} matches {    -- Percent of change baseline to current
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"%">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0093] occurrences matches {0..1} matches {    -- Percent of change nadir to current
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"%">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0022] occurrences matches {0..*} matches {    -- Non-measurable lesion
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0023] occurrences matches {0..1} matches {    -- Non-measurable lesion
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0024,    -- Small lesion
+															at0025,    -- Bone lesion
+															at0026,    -- Leptomeningeal disease
+															at0027,    -- Pleural effusion
+															at0028,    -- Pericardial effusion
+															at0029,    -- Inflammatory breast disease
+															at0030,    -- Lymphangitic involvement of skin
+															at0031,    -- Lymphangitic involvement lung
+															at0032,    -- Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques
+															at0033,    -- Cystic lesion
+															at0034,    -- Necrotic lesion
+															at0035]    -- Tumor lesion situated in a previously irradiated area
+														}
+													}
+												}
+											}
+											ELEMENT[at0039] occurrences matches {0..1} matches {    -- Other non-measurable lesion
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Structured body site
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+											}
+											ELEMENT[at0036] occurrences matches {0..1} matches {    -- Body structure
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											allow_archetype CLUSTER[at0037] occurrences matches {0..1} matches {    -- Structured body site
+												include
+													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+											}
+											ELEMENT[at0044] occurrences matches {0..1} matches {    -- Description of lesion
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0046] occurrences matches {0..1} matches {    -- Time point status/response
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Present
+															at0048,    -- Stable
+															at0049,    -- Not evaluated
+															at0050,    -- Not all evaluated
+															at0051,    -- Unequivocal progression
+															at0052]    -- Inevaluable
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0077] occurrences matches {0..1} matches {    -- Sum of measurements
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0094] occurrences matches {0..1} matches {    -- Overall response
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0097,    -- Complete response (CR)
+															at0098,    -- Partial response (PR)
+															at0099,    -- Stable disease (SD)
+															at0100]    -- Progressive disease (PD)
+														}
+													}
+												}
+												name matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0095,    -- First time point
+															at0096]    -- Subsequent time point
+														}
+													}
+												}
+											}
+											ELEMENT[at0101] occurrences matches {0..1} matches {    -- Best overall response
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0102,    -- Complete response (CR)
+															at0103,    -- Partial response (PR)
+															at0104,    -- Stable disease (SD)
+															at0105]    -- Progressive disease (PD)
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0045] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"RECIST_1_1">
+					description = <"RECIST_1_1">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Method">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Clinical examination">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"X-ray">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"CT">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"MRI">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Radionuclides">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Other">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Other method">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Tumor target lesion">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Body structure">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Structured body site">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Measurements">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Description of lesion">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Lymph node target lesion">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Body site">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Structured body site">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Measurements">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Description of lesion">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Non-measurable lesion">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Non-measurable lesion">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Small lesion">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Bone lesion">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Leptomeningeal disease">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Pleural effusion">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Pericardial effusion">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Inflammatory breast disease">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Lymphangitic involvement of skin">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Lymphangitic involvement lung">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Cystic lesion">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Necrotic lesion">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Tumor lesion situated in a previously irradiated area">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Body structure">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Structured body site">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Other non-measurable lesion">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Prior radiotherapy">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"No radiotherapy/lesion outside previously irradiated field">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"New lesion within previously irradiated field">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Lesion with documented PD, previously irradiated">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Description of lesion">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0046"] = <
+					text = <"Time point status/response">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Stable">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Not evaluated">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Not all evaluated">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Unequivocal progression">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Inevaluable">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Non-target/new lesion">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Body structure">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Structured body site">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Time point status/response">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Stable">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Not evaluated">
+					description = <"">
+				>
+				["at0062"] = <
+					text = <"Not all evaluated">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Unequivocal progression">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"Inevaluable">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"Description of lesion">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Body site">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Structured body site">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Prior radiotherapy">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"No radiotherapy/lesion outside previously irradiated field">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"New lesion within previously irradiated field">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Lesion with documented PD, previously irradiated">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Sum of measurements">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Sum of lesion diameters at baseline">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Sum of lesion diameters at nadir">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Sum of lesion diameters currently">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Percent of change baseline to current">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Percent of change nadir to current">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Measurements">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Sum of lesion diameters at baseline">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Sum of lesion diameters at baseline">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Sum of lesion diameters at nadir">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Sum of lesion diameters at nadir">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Sum of lesion diameters currently">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Sum of lesion diameters currently">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Percent of change baseline to current">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Percent of change baseline to current">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Percent of change nadir to current">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Percent of change nadir to current">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"Overall response">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"First time point">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Subsequent time point">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Complete response (CR)">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Partial response (PR)">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Stable disease (SD)">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Progressive disease (PD)">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Best overall response">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Complete response (CR)">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Partial response (PR)">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Stable disease (SD)">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"Progressive disease (PD)">
+					description = <"">
+				>
+			>
+		>
+	>
