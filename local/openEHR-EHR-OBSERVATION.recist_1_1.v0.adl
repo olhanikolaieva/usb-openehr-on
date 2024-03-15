@@ -26,8 +26,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bb772bba36bb56f8ddddd1953461f5fe">
+		["MD5-CAM-1.0.1"] = <"e06ae36c56f162823541aa50435356cc">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
+		["references"] = <"openEHR-EHR-OBSERVATION.imaging_exam_result.v1
+openEHR-EHR-CLUSTER.imaging_exam.v1
+openEHR-EHR-CLUSTER.radiotherapy.v1
+
+Els L. van Persijn van Meerten,corresponding author1 Hans Gelderblom,2 and Johan L. Bloem RECIST revised: implications for the radiologist. A review article on the modified RECIST guideline. Eur Radiol. 2010 Jun; 20(6): 1456–1467.">
 	>
 
 definition
