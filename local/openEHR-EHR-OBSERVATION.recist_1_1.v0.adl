@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"97ee325dca4f905a8c452ff75fec8544">
+		["MD5-CAM-1.0.1"] = <"c3682908f11655fa0fe9263601220f72">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -467,7 +467,7 @@ ontology
 				>
 				["at0015"] = <
 					text = <"Measurements">
-					description = <" Size of the longest diameter of the target lesion.">
+					description = <"Size of the longest diameter of the target tumor lesion or the short axis of the target lymph node lesion. ">
 				>
 				["at0016"] = <
 					text = <"Description of lesion">
