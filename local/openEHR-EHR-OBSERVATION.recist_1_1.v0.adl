@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ca71c7cffce23ef0bbf07bf6db8e213f">
+		["MD5-CAM-1.0.1"] = <"84c44373387523b70161b6e1f9be1331">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -463,7 +463,8 @@ ontology
 				>
 				["at0012"] = <
 					text = <"Target lesion">
-					description = <"Measurable lesion based on size (those with the longest diameter) up to a maximum of two tumor lesions per organ and five tumor lesions in total AND two lymph node lesions in total.">
+					description = <"Measurable lesion based on size (those with the longest diameter) up to a maximum of two tumor lesions per organ and five tumor lesions in total AND two lymph node lesions in total. Pathological lymph nodes which are deﬁned as measurable and may be identiﬁed as target lesions must meet the criterion of a short axis
+of  ≥15 mm by CT scan.">
 				>
 				["at0015"] = <
 					text = <"Measurements">
@@ -639,7 +640,7 @@ ontology
 				>
 				["at0170"] = <
 					text = <"Non-target lesion">
-					description = <"">
+					description = <"Measurable lesion">
 				>
 				["at0171"] = <
 					text = <"Body structure">
