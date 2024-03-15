@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"106c9929b957db717c087eba797023e9">
+		["MD5-CAM-1.0.1"] = <"bb772bba36bb56f8ddddd1953461f5fe">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -683,7 +683,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0177"] = <
 					text = <"Stable">
-					description = <"">
+					description = <"No size change of earlier recorded non-target lesion">
 				>
 				["at0178"] = <
 					text = <"Unequivocal progression">
