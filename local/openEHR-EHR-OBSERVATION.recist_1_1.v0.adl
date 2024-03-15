@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"06ddad87bbc9c13436f532a010916378">
+		["MD5-CAM-1.0.1"] = <"deb825a33bcb2be0d0ae574f521b8c80">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -626,7 +626,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0143"] = <
 					text = <"Lymph node">
-					description = <"To be marked as 'true' if target lesion is lymph node. ">
+					description = <"To be marked as 'true' if target lesion is pathological lymph node. ">
 				>
 				["at0144"] = <
 					text = <"Body structure">
