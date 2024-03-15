@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a4add3302d3e537ddd624fd61ac5161c">
+		["MD5-CAM-1.0.1"] = <"d9c902e57906326633252d29d6f6e3a1">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -645,7 +645,8 @@ ontology
 				>
 				["at0071"] = <
 					text = <"Structured body site">
-					description = <"">
+					description = <"Structured details about the area of the body under examination.">
+					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
 				>
 				["at0073"] = <
 					text = <"Prior radiotherapy">
