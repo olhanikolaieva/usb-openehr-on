@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"84c44373387523b70161b6e1f9be1331">
+		["MD5-CAM-1.0.1"] = <"06ddad87bbc9c13436f532a010916378">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -640,7 +640,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0170"] = <
 					text = <"Non-target lesion">
-					description = <"Measurable lesion">
+					description = <"Measurable lesion other from five tumor target lesions and two lymph node target lesions; other pathological nodes (those with short axis ≥10 mm but <15 mm).">
 				>
 				["at0171"] = <
 					text = <"Body structure">
