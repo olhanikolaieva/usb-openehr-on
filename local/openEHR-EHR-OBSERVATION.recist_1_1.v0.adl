@@ -18,8 +18,16 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			keywords = <"Response evaluation criteria in solid tumours, RECIST 1.1", ...>
-			use = <"Use to assess the change in tumour burden. ">
+			purpose = <"To record the evaluation of tumor response to treatment in solid tumors during clinical trials and daily oncology practice. ">
+			keywords = <"Response evaluation criteria in solid tumors, RECIST 1.1, oncology, radiology, clinical trial, treatment, chemotherapy, radiotherapy.", ...>
+			use = <"Use to record the change in tumor burden. ">
+			misuse = <"Not to be used to record the findings on imaging examination. Use the OBSERVATION.imaging_exam_result and/or its family of specialised archetypes for this purpose.
+
+Not to be used to record findings on physical examination. Use the CLUSTER.exam and/or its family of specialised archetypes for this purpose.
+
+Not to be used to replicate the functionality or specifications of a radiology information or source system.
+
+Not to be used to record structured details about any procedure undertaken. Use the specific procedure-related archetypes, such as ACTION.procedure archetype for this purpose.">
 		>
 	>
 	other_details = <
@@ -28,7 +36,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"153348e4438029f0fecad9ef605e23cc">
+		["MD5-CAM-1.0.1"] = <"e1ea1e877d7faa4bf81357a5267aff9d">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 		["references"] = <"openEHR-EHR-OBSERVATION.imaging_exam_result.v1
 openEHR-EHR-CLUSTER.imaging_exam.v1
@@ -433,7 +441,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Response evaluation criteria in solid tumours 1.1">
-					description = <"">
+					description = <"Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
 				>
 				["at0001"] = <
 					text = <"History">
