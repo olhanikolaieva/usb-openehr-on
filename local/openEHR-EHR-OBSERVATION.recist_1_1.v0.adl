@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c3682908f11655fa0fe9263601220f72">
+		["MD5-CAM-1.0.1"] = <"ca71c7cffce23ef0bbf07bf6db8e213f">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -625,7 +625,7 @@ ontology
 				>
 				["at0143"] = <
 					text = <"Lymph node">
-					description = <"">
+					description = <"To be marked as 'true' if target lesion is lymph node. ">
 				>
 				["at0144"] = <
 					text = <"Body structure">
