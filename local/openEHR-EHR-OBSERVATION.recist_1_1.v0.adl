@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"deb825a33bcb2be0d0ae574f521b8c80">
+		["MD5-CAM-1.0.1"] = <"106c9929b957db717c087eba797023e9">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -115,17 +115,29 @@ definition
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
 											}
-											ELEMENT[at0174] occurrences matches {0..1} matches {    -- Time point status/response
+											ELEMENT[at0174] occurrences matches {0..1} matches {    -- Time point status
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
 															at0175,    -- Present
-															at0176,    -- Stable
-															at0177,    -- Not evaluated
-															at0178,    -- Not all evaluated
-															at0179,    -- Unequivocal progression
+															at0176,    -- Absent
+															at0177,    -- Stable
+															at0178,    -- Unequivocal progression
+															at0179,    -- Not evaluated
 															at0180]    -- Inevaluable
+														}
+													}
+												}
+											}
+											ELEMENT[at0243] occurrences matches {0..1} matches {    -- Time point response
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0244,    -- CR
+															at0245,    -- Non-CR/Non-PD
+															at0246]    -- PD
 														}
 													}
 												}
@@ -658,27 +670,27 @@ of  ≥15 mm by CT scan.">
 					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
 				>
 				["at0174"] = <
-					text = <"Time point status/response">
+					text = <"Time point status">
 					description = <"">
 				>
 				["at0175"] = <
 					text = <"Present">
-					description = <"">
+					description = <"To record non-target lesion at baseline">
 				>
 				["at0176"] = <
+					text = <"Absent">
+					description = <"Disappearance of earlier recorded non-target lesion.">
+				>
+				["at0177"] = <
 					text = <"Stable">
 					description = <"">
 				>
-				["at0177"] = <
-					text = <"Not evaluated">
-					description = <"">
-				>
 				["at0178"] = <
-					text = <"Not all evaluated">
-					description = <"">
+					text = <"Unequivocal progression">
+					description = <"A modest ‘increase’ in the size of one or more non-target lesions.">
 				>
 				["at0179"] = <
-					text = <"Unequivocal progression">
+					text = <"Not evaluated">
 					description = <"">
 				>
 				["at0180"] = <
@@ -703,7 +715,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0185"] = <
 					text = <"Description of lesion">
-					description = <"">
+					description = <"Optional narrative description of target lesion.">
 				>
 				["at0207"] = <
 					text = <"Non-measurable lesion">
@@ -823,6 +835,22 @@ of  ≥15 mm by CT scan.">
 				["at0242"] = <
 					text = <"Tumor lesion situated in a previously irradiated area">
 					description = <"">
+				>
+				["at0243"] = <
+					text = <"Time point response">
+					description = <"">
+				>
+				["at0244"] = <
+					text = <"CR">
+					description = <"Complete Response. Disappearance of all non-target lesions and normalisation of tumour marker level. All lymph nodes must be non-pathological in size (<10 mm short axis).">
+				>
+				["at0245"] = <
+					text = <"Non-CR/Non-PD">
+					description = <"Persistence of one or more non-target lesion(s) and/or maintenance of tumour marker level above the normal limits.">
+				>
+				["at0246"] = <
+					text = <"PD">
+					description = <"Unequivocal progression of existing non-target lesions. (Note: the appearance of one or more new lesions is also considered progression).">
 				>
 			>
 		>
