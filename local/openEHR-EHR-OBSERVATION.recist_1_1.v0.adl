@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f67de2b87fd366403d883d4cb00937e4">
+		["MD5-CAM-1.0.1"] = <"97ee325dca4f905a8c452ff75fec8544">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -430,7 +430,8 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Method">
-					description = <"">
+					description = <"Method of assessment used to identify and report lesions.">
+					comment = <"The same method of assessment and the same technique should be used to characterize each identified and reported lesion at baseline and during follow-up.">
 				>
 				["at0005"] = <
 					text = <"Clinical examination">
@@ -458,11 +459,11 @@ ontology
 				>
 				["at0011"] = <
 					text = <"Other method">
-					description = <"">
+					description = <"Another method of assessment different from recommended list used to identify and report lesions.">
 				>
 				["at0012"] = <
 					text = <"Target lesion">
-					description = <"">
+					description = <"Measurable lesion based on size (those with the longest diameter) up to a maximum of two tumor lesions per organ and five tumor lesions in total AND two lymph node lesions in total.">
 				>
 				["at0015"] = <
 					text = <"Measurements">
