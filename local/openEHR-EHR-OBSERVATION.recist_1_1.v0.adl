@@ -15,6 +15,7 @@ description
 		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
+	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -45,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d198e6774f1b3a6dfaf7ff3bc33bc9ce">
+		["MD5-CAM-1.0.1"] = <"a65c3645ba457663e973b0c02092d02c">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
