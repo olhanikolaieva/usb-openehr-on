@@ -45,7 +45,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"63080bfc6e2956cbab3f1a094e164f2b">
+		["MD5-CAM-1.0.1"] = <"d198e6774f1b3a6dfaf7ff3bc33bc9ce">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -525,7 +525,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0094"] = <
 					text = <"Overall response">
-					description = <"The overall response is the response recorded from the start of treatment until the current.">
+					description = <"The overall response is the response recorded from the start of treatment (sum of lesion diamaters at baseline) until the last measurements (sum of lesion diamaters currently). ">
 				>
 				["at0095"] = <
 					text = <"First time point">
@@ -553,7 +553,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0101"] = <
 					text = <"Best overall response">
-					description = <"The best overall response is the best response recorded from the start oftreatment until disease progression/recurrence taking as reference for progressive disease the smallest measurements recorded since the treatment started (sum of lesion diameters at nadir).">
+					description = <"The best overall response is the best response recorded from the start of treatment (sum of lesion diamaters at baseline) until disease progression/recurrence, taking as reference for progressive disease the smallest measurements recorded since the treatment started (sum of lesion diameters at nadir).">
 				>
 				["at0102"] = <
 					text = <"Complete response (CR)">
