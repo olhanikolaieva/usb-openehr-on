@@ -45,7 +45,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4335d9fbfb9ff23cf566b884c86be03a">
+		["MD5-CAM-1.0.1"] = <"1fe520fe5f85a63ac0dc3ac5b7830da8">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -118,7 +118,7 @@ definition
 											}
 										}
 									}
-									CLUSTER[at0170] occurrences matches {0..*} matches {    -- Non-target lesion
+									CLUSTER[at0170] occurrences matches {0..*} matches {    -- Non-target or new lesion
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0171] occurrences matches {0..1} matches {    -- Body structure
 												value matches {
@@ -670,7 +670,7 @@ of  ≥15 mm by CT scan.">
 					comment = <"For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant.">
 				>
 				["at0170"] = <
-					text = <"Non-target lesion">
+					text = <"Non-target or new lesion">
 					description = <"Measurable lesion other from five tumor target lesions and two lymph node target lesions; other pathological nodes (those with short axis ≥10 mm but <15 mm).">
 				>
 				["at0171"] = <
@@ -718,7 +718,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0181"] = <
 					text = <"Prior radiotherapy">
-					description = <"">
+					description = <"Evaluating previous radiotherapy in the area where both non-target lesions and new lesions have emerged.">
 				>
 				["at0182"] = <
 					text = <"No radiotherapy/lesion outside previously irradiated field">
@@ -734,7 +734,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0185"] = <
 					text = <"Description of lesion">
-					description = <"Optional narrative description of target lesion.">
+					description = <"Optional narrative description of non-target or new lesion.">
 				>
 				["at0207"] = <
 					text = <"Non-measurable lesion">
