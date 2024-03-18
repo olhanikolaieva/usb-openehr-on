@@ -33,20 +33,20 @@ Not to be used to record structured details about any procedure undertaken. Use 
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e1ea1e877d7faa4bf81357a5267aff9d">
-		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 		["references"] = <"openEHR-EHR-OBSERVATION.imaging_exam_result.v1
 openEHR-EHR-CLUSTER.imaging_exam.v1
 openEHR-EHR-CLUSTER.radiotherapy.v1
 
 Els L. van Persijn van Meerten,corresponding author1 Hans Gelderblom,2 and Johan L. Bloem RECIST revised: implications for the radiologist. A review article on the modified RECIST guideline. Eur Radiol. 2010 Jun; 20(6): 1456–1467.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"57315f220a910e2a481cc43ac0ea60cf">
+		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Response evaluation criteria in solid tumours 1.1
+	OBSERVATION[at0000] matches {    -- RECIST 1.1
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -440,7 +440,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Response evaluation criteria in solid tumours 1.1">
+					text = <"RECIST 1.1">
 					description = <"Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
 				>
 				["at0001"] = <
