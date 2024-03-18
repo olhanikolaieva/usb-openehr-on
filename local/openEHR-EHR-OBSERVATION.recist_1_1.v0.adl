@@ -33,11 +33,15 @@ Not to be used to record structured details about any procedure undertaken. Use 
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"openEHR-EHR-OBSERVATION.imaging_exam_result.v1
-openEHR-EHR-CLUSTER.imaging_exam.v1
-openEHR-EHR-CLUSTER.radiotherapy.v1
+		["references"] = <"https://ckm.openehr.org/ckm/archetypes/1013.1.1494 [openEHR-EHR-OBSERVATION.imaging_exam_result.v1]
+https://ckm.openehr.org/ckm/archetypes/1013.1.5915 [openEHR-EHR-CLUSTER.imaging_exam.v1]
+https://ckm.openehr.org/ckm/archetypes/1013.1.5699 [openEHR-EHR-CLUSTER.radiotherapy.v1]
 
-Els L. van Persijn van Meerten,corresponding author1 Hans Gelderblom,2 and Johan L. Bloem RECIST revised: implications for the radiologist. A review article on the modified RECIST guideline. Eur Radiol. 2010 Jun; 20(6): 1456–1467.">
+P Therasse, S G Arbuck, E A Eisenhauer, J Wanders, R S Kaplan, L Rubinstein, J Verweij, M Van Glabbeke, A T van Oosterom, M C Christian, S G Gwyther. New guidelines to evaluate the response to treatment in solid tumors. J Natl Cancer Inst. 2000 Feb 2;92(3):205-16.
+
+
+
+E L Van Persijn van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implications for the radiologist. A review article on the modified RECIST guideline. Eur Radiol. 2010 Jun; 20(6): 1456–1467.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
