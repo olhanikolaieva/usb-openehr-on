@@ -45,7 +45,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"57315f220a910e2a481cc43ac0ea60cf">
+		["MD5-CAM-1.0.1"] = <"9158f01d7d13609d49cb5397d964397f">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -694,7 +694,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0175"] = <
 					text = <"Present">
-					description = <"To record non-target lesion at baseline">
+					description = <"To record non-target lesion at baseline.">
 				>
 				["at0176"] = <
 					text = <"Absent">
@@ -702,7 +702,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0177"] = <
 					text = <"Stable">
-					description = <"No size change of earlier recorded non-target lesion">
+					description = <"No size change of earlier recorded non-target lesion.">
 				>
 				["at0178"] = <
 					text = <"Unequivocal progression">
@@ -710,11 +710,11 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0179"] = <
 					text = <"Not evaluated">
-					description = <"">
+					description = <"The lesion was not recorded.">
 				>
 				["at0180"] = <
 					text = <"Inevaluable">
-					description = <"">
+					description = <"The lesion is impossible to record.">
 				>
 				["at0181"] = <
 					text = <"Prior radiotherapy">
