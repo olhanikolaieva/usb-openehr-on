@@ -45,7 +45,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9158f01d7d13609d49cb5397d964397f">
+		["MD5-CAM-1.0.1"] = <"4335d9fbfb9ff23cf566b884c86be03a">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -149,7 +149,7 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0243] occurrences matches {0..1} matches {    -- Time point response
+											ELEMENT[at0243] occurrences matches {0..1} matches {    -- Non-target response
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -690,7 +690,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0174"] = <
 					text = <"Time point status">
-					description = <"">
+					description = <"Qualitative evaluation of non-target lesions at the different specified time points.">
 				>
 				["at0175"] = <
 					text = <"Present">
@@ -856,8 +856,8 @@ of  ≥15 mm by CT scan.">
 					description = <"">
 				>
 				["at0243"] = <
-					text = <"Time point response">
-					description = <"">
+					text = <"Non-target response">
+					description = <"Assessment of progression of non-target disease.">
 				>
 				["at0244"] = <
 					text = <"CR">
