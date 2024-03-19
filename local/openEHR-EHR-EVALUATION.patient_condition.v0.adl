@@ -6,6 +6,13 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,6 +23,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 		>
@@ -26,7 +37,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ca341afb1df9f47592738b0e3fa22320">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["MD5-CAM-1.0.1"] = <"30e0bd94b86fe6dd652ef142872bdcd5">
 		["build_uid"] = <"71913a54-47ad-3783-8194-81b3d3266854">
 	>
 
@@ -93,6 +105,7 @@ definition
 	}
 
 ontology
+	terminologies_available = <"SNOMED-CT", ...>
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -185,6 +198,111 @@ ontology
 					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
 					comment = <"For example: local information requirements or additional metadata to align with FHIR equivalents.">
 				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Patient condition (en)">
+					description = <"*Patient condition (en)">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*General patient condition (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"*Normal (en)">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"*Satisfactory (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Poor (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Stable (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*Unstable (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Change of patient condition (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Resolved (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Greatly improved (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Moderately improved (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Slightly improved (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Unchanged (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Deteriorating (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Slightly worse (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Moderately worse (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Much worse (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the patient's general condition. (en)">
+				>
+				["at0019"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0020"] = <
+					text = <"*Last updated (en)">
+					description = <"*Date when the patient's general condition was recorded. (en)">
+				>
+				["at0021"] = <
+					text = <"*Extention (en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: local information requirements or additional metadata to align with FHIR equivalents. (en)">
+				>
+			>
+		>
+	>
+	term_binding = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0002"] = <[SNOMED-CT::418138009]>
+				["at0003"] = <[SNOMED-CT::81323004]>
+				["at0004"] = <[SNOMED-CT::162669003]>
+				["at0005"] = <[SNOMED-CT::162667001]>
+				["at0006"] = <[SNOMED-CT::359746009]>
+				["at0007"] = <[SNOMED-CT::162668006]>
 			>
 		>
 	>
