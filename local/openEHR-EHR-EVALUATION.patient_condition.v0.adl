@@ -25,10 +25,16 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"*To record patient's general condition.  (en)">
+			keywords = <"*General patient condition, patient status, functional status, health status, performance status, physical health, mental health, quality of life, activities of daily living, ADL assessment, evaluation, finding, patient status determination. (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Use to assess the general patient condition and its changes. (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To record patient's general condition. ">
+			keywords = <"General patient condition, patient status, functional status, health status, performance status, physical health, mental health, quality of life, activities of daily living, ADL assessment, evaluation, finding, patient status determination.", ...>
+			use = <"Use to assess the general patient condition and its changes.">
 		>
 	>
 	other_details = <
@@ -39,11 +45,11 @@ description
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"71913a54-47ad-3783-8194-81b3d3266854">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["MD5-CAM-1.0.1"] = <"d586d97b629e6dc278129c3ffe74dd2b">
+		["MD5-CAM-1.0.1"] = <"6159710b5ecf2fa6f4aff86af2facb2a">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- Patient condition
+	EVALUATION[at0000] matches {    -- General patient condition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
@@ -112,8 +118,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Patient condition">
-					description = <"Patient condition">
+					text = <"General patient condition">
+					description = <"General patient condition describes the general physical, mental and emotional condition of a patient and its impact on their everyday life. Assessing the general condition of a patient involves evaluating their ability to perform activities of daily living, their level of independence, and their overall quality of life. ">
 				>
 				["at0001"] = <
 					text = <"Item tree">
@@ -213,8 +219,8 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Patient condition (en)">
-					description = <"*Patient condition (en)">
+					text = <"*General patient condition (en)">
+					description = <"*General patient condition describes the general physical, mental and emotional condition of a patient and its impact on their everyday life. Assessing the general condition of a patient involves evaluating their ability to perform activities of daily living, their level of independence, and their overall quality of life.  (en)">
 				>
 				["at0001"] = <
 					text = <"Item tree">
