@@ -37,9 +37,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"225bf4a88f206a5c2bc33ec566ba3c5e">
+		["MD5-CAM-1.0.1"] = <"843373dd55c2b4f239ef31049d2323e6">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["references"] = <"Hlatky M, Boineau R, Higginbotham et al. A Brief Self-administered Questionnaire to Determine Functional Capacity (The Duke Activity Status Index). American Journal of Cardiology. 1989;64(15 Sep):651–654.
+
+Carter R, Holiday DB, Grothues C, Nwasuruba C, Stocks J, Tiep B. Criterion validity of the Duke Activity Status Index for assessing functional capacity in patients with chronic obstructive pulmonary disease. J Cardiopulm Rehabil. 2002 Jul-Aug;22(4):298-308.">
 	>
 
 definition
