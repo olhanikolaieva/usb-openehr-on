@@ -25,10 +25,16 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"*Self-administrated assessment of patient functional capacity.  (en)">
+			keywords = <"*Duke activity status index, functional capacity, self-administrated questionnaire, quality of life, peak oxygen uptake, metabolic equivalents, MET,  cardiorespiratory fitness, CRF. (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Use to record Duke activity status index. (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"Self-administrated assessment of patient functional capacity. ">
+			keywords = <"Duke activity status index, functional capacity, self-administrated questionnaire, quality of life, peak oxygen uptake, metabolic equivalents, MET,  cardiorespiratory fitness, CRF.", ...>
+			use = <"Use to record Duke activity status index.">
 		>
 	>
 	other_details = <
