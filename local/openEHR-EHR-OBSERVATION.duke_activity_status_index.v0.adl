@@ -37,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"48aedb5dcea4583742aeed330ca10224">
+		["MD5-CAM-1.0.1"] = <"1158bf7473f5b0652f641e2e423b35d9">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["references"] = <"Hlatky M, Boineau R, Higginbotham et al. A Brief Self-administered Questionnaire to Determine Functional Capacity (The Duke Activity Status Index). American Journal of Cardiology. 1989;64(15 Sep):651–654.
@@ -48,7 +48,7 @@ Franklin B, Brinks J, Berra K, Lavie C, Gordon N, Sperling L. Using Metabolic Eq
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Duke Activity Status Index
+	OBSERVATION[at0000] matches {    -- Duke activity status index
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -202,8 +202,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Duke Activity Status Index">
-					description = <"The Duke Activity Status Index is a patient-reported estimate of functional capacity, maximal oxygen consumption (VO2 max) and maximum metabolic equivalent of tasks (METs). The DASI questionnaire produces a score between 0 and 58.2 points, which is linearly correlated with a patient’s VO2 max and METs, as measured from cardiopulmonary exercise testing (CPET).">
+					text = <"Duke activity status index">
+					description = <"The Duke Activity Status Index is a patient-reported estimate of functional capacity, maximal oxygen consumption (VO2 max) and maximum metabolic equivalent of tasks (METs). ">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -396,8 +396,8 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Duke Activity Status Index (en)">
-					description = <"*The Duke Activity Status Index is a patient-reported estimate of functional capacity, maximal oxygen consumption (VO2 max) and maximum metabolic equivalent of tasks (METs). The DASI questionnaire produces a score between 0 and 58.2 points, which is linearly correlated with a patient’s VO2 max and METs, as measured from cardiopulmonary exercise testing (CPET). (en)">
+					text = <"*Duke activity status index (en)">
+					description = <"*The Duke Activity Status Index is a patient-reported estimate of functional capacity, maximal oxygen consumption (VO2 max) and maximum metabolic equivalent of tasks (METs).  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
