@@ -43,7 +43,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1158bf7473f5b0652f641e2e423b35d9">
+		["MD5-CAM-1.0.1"] = <"c5dd44d0f3aa8e4c3e4c2605e94261b8">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["references"] = <"Hlatky M, Boineau R, Higginbotham et al. A Brief Self-administered Questionnaire to Determine Functional Capacity (The Duke Activity Status Index). American Journal of Cardiology. 1989;64(15 Sep):651–654.
@@ -225,11 +225,11 @@ ontology
 				>
 				["at0004"] = <
 					text = <"1. Take care of yourself, that is, eating, dressing, bathing or using the toilet?">
-					description = <"Take care of self (e.g. eating, dressing, bathing, using the toilet)?">
+					description = <"">
 				>
 				["at0006"] = <
 					text = <"2. Walk indoors, such as around your house?">
-					description = <"Walk indoors (such as around your house)?">
+					description = <"">
 				>
 				["at0008"] = <
 					text = <"Yes">
@@ -241,7 +241,7 @@ ontology
 				>
 				["at0010"] = <
 					text = <"3. Walk a block or two on level ground?">
-					description = <"Walk 1-2 blocks on level ground?">
+					description = <"">
 				>
 				["at0011"] = <
 					text = <"Yes">
@@ -253,7 +253,7 @@ ontology
 				>
 				["at0013"] = <
 					text = <"4. Climb a flight of stairs or walk up a hill?">
-					description = <"Climb a flight of stairs or walk up a hill?">
+					description = <"">
 				>
 				["at0014"] = <
 					text = <"Yes">
@@ -265,7 +265,7 @@ ontology
 				>
 				["at0016"] = <
 					text = <"5. Run a short distance?">
-					description = <"Run a short distance?">
+					description = <"">
 				>
 				["at0017"] = <
 					text = <"Yes">
@@ -277,7 +277,7 @@ ontology
 				>
 				["at0019"] = <
 					text = <"6. Do light work around the house like dusting or washing dishes?">
-					description = <"Do light work around the house (e.g. dusting, washing dishes)?">
+					description = <"">
 				>
 				["at0020"] = <
 					text = <"Yes">
@@ -289,7 +289,7 @@ ontology
 				>
 				["at0022"] = <
 					text = <"7. Do moderate work around the house like vacuuming, sweeping floors, or carrying in groceries?">
-					description = <"Do moderate work around the house (e.g. vacuuming, sweeping floors carrying in groceries)?">
+					description = <"">
 				>
 				["at0023"] = <
 					text = <"Yes">
@@ -301,7 +301,7 @@ ontology
 				>
 				["at0025"] = <
 					text = <"8. Do heavy work around the house like scrubbing floors or lifting or moving heavy furniture?">
-					description = <"Do heavy work around the house (e.g. scrubbing floors, lifting or moving heavy furniture)?">
+					description = <"">
 				>
 				["at0026"] = <
 					text = <"Yes">
@@ -313,7 +313,7 @@ ontology
 				>
 				["at0028"] = <
 					text = <"9. Do yardwork like raking leaves, weeding, or pushing a power mower?">
-					description = <"Do yard work (e.g. raking leaves, weeding, pushing a power mower)?">
+					description = <"">
 				>
 				["at0029"] = <
 					text = <"Yes">
@@ -325,7 +325,7 @@ ontology
 				>
 				["at0031"] = <
 					text = <"10. Have sexual relations?">
-					description = <"Have sexual relations?">
+					description = <"">
 				>
 				["at0032"] = <
 					text = <"Yes">
@@ -337,7 +337,7 @@ ontology
 				>
 				["at0034"] = <
 					text = <"11. Participate in moderate recreational activities like golf, bowling, dancing, doubles tennis, or throwing a baseball or football?">
-					description = <"Participate in moderate recreational activities (e.g. golf, bowling, dancing, double tennis, throwing a baseball or football)?">
+					description = <"">
 				>
 				["at0035"] = <
 					text = <"Yes">
@@ -349,7 +349,7 @@ ontology
 				>
 				["at0037"] = <
 					text = <"12. Participate in strenuous sports like swimming, singles tennis, football, basketball, or skiing?">
-					description = <"Participate in strenuous sports (e.g. swimming, singles tennis, football, basketball, skiing)?">
+					description = <"">
 				>
 				["at0038"] = <
 					text = <"Yes">
@@ -366,7 +366,7 @@ ontology
 				>
 				["at0043"] = <
 					text = <"MET">
-					description = <"Maximal metabolic equivalent at exercise test.">
+					description = <"Maximal metabolic equivalent.">
 					comment = <"MET = VO2 max/ 3.5.">
 				>
 				["at0044"] = <
@@ -395,7 +395,7 @@ ontology
 				>
 				["at0051"] = <
 					text = <"Total score">
-					description = <"">
+					description = <"The total sum of each component variable for the Duke activity status index.">
 				>
 			>
 		>
