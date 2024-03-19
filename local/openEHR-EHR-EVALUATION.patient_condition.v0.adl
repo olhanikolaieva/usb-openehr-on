@@ -1,0 +1,153 @@
+archetype (adl_version=1.4; uid=f1120378-88c6-4046-8237-ef72a2995c7b)
+	openEHR-EHR-EVALUATION.patient_condition.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2024-03-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8b9892cc7072eb89223d161595eabbaa">
+		["build_uid"] = <"71913a54-47ad-3783-8194-81b3d3266854">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Patient condition
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- General patient condition
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003,    -- Normal
+									at0004,    -- Satisfactory
+									at0005,    -- Poor
+									at0006,    -- Stable
+									at0007]    -- Unstable
+								}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Change of patient condition
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0009,    -- Resolved
+									at0010,    -- Greatly improved
+									at0011,    -- Moderately improved
+									at0012,    -- Slightly improved
+									at0013,    -- Unchanged
+									at0014,    -- Deteriorating
+									at0015,    -- Slightly worse
+									at0016,    -- Moderately worse
+									at0017]    -- Much worse
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient condition">
+					description = <"Patient condition">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"General patient condition">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Satisfactory">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Stable">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Unstable">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Change of patient condition">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Resolved">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Greatly improved">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Moderately improved">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Slightly improved">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Unchanged">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Deteriorating">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Slightly worse">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Moderately worse">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Much worse">
+					description = <"">
+				>
+			>
+		>
+	>
