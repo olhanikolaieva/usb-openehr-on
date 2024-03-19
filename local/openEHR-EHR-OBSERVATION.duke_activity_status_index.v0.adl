@@ -42,7 +42,9 @@ description
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["references"] = <"Hlatky M, Boineau R, Higginbotham et al. A Brief Self-administered Questionnaire to Determine Functional Capacity (The Duke Activity Status Index). American Journal of Cardiology. 1989;64(15 Sep):651–654.
 
-Carter R, Holiday DB, Grothues C, Nwasuruba C, Stocks J, Tiep B. Criterion validity of the Duke Activity Status Index for assessing functional capacity in patients with chronic obstructive pulmonary disease. J Cardiopulm Rehabil. 2002 Jul-Aug;22(4):298-308.">
+Carter R, Holiday DB, Grothues C, Nwasuruba C, Stocks J, Tiep B. Criterion validity of the Duke Activity Status Index for assessing functional capacity in patients with chronic obstructive pulmonary disease. J Cardiopulm Rehabil. 2002 Jul-Aug;22(4):298-308.
+
+Franklin B, Brinks J, Berra K, Lavie C, Gordon N, Sperling L. Using Metabolic Equivalents in Clinical Practice. Am J Cardiol. 2018 Feb 1;121(3):382-387.">
 	>
 
 definition
