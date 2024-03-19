@@ -37,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ad11d78cb438aba402009684bc4bef0d">
+		["MD5-CAM-1.0.1"] = <"225bf4a88f206a5c2bc33ec566ba3c5e">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -51,73 +51,73 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Take care of self
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- 1. Take care of yourself, that is, eating, dressing, bathing or using the toilet?
 										value matches {
 											1|[local::at0008],
 											0|[local::at0009]
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Walk indoors
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- 2. Walk indoors, such as around your house?
 										value matches {
 											1|[local::at0048],
 											0|[local::at0049]
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Walk 1-2 blocks on level ground
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- 3. Walk a block or two on level ground?
 										value matches {
 											1|[local::at0011],
 											0|[local::at0012]
 										}
 									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Climb a flight of stairs or walk up a hill
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- 4. Climb a flight of stairs or walk up a hill?
 										value matches {
 											1|[local::at0014],
 											0|[local::at0015]
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Run a short distance
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- 5. Run a short distance?
 										value matches {
 											1|[local::at0017],
 											0|[local::at0018]
 										}
 									}
-									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Do light work around the house
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- 6. Do light work around the house like dusting or washing dishes?
 										value matches {
 											1|[local::at0020],
 											0|[local::at0021]
 										}
 									}
-									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Do moderate work around the house
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- 7. Do moderate work around the house like vacuuming, sweeping floors, or carrying in groceries?
 										value matches {
 											1|[local::at0023],
 											0|[local::at0024]
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Do heavy work around the house
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- 8. Do heavy work around the house like scrubbing floors or lifting or moving heavy furniture?
 										value matches {
 											1|[local::at0026],
 											0|[local::at0027]
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Do yard work
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- 9. Do yardwork like raking leaves, weeding, or pushing a power mower?
 										value matches {
 											1|[local::at0029],
 											0|[local::at0030]
 										}
 									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Have sexual relations
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- 10. Have sexual relations?
 										value matches {
 											1|[local::at0032],
 											0|[local::at0033]
 										}
 									}
-									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Participate in moderate recreational activities
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- 11. Participate in moderate recreational activities like golf, bowling, dancing, doubles tennis, or throwing a baseball or football?
 										value matches {
 											1|[local::at0035],
 											0|[local::at0036]
 										}
 									}
-									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Participate in strenuous sports
+									ELEMENT[at0037] occurrences matches {0..1} matches {    -- 12. Participate in strenuous sports like swimming, singles tennis, football, basketball, or skiing?
 										value matches {
 											1|[local::at0038],
 											0|[local::at0039]
@@ -130,6 +130,7 @@ definition
 												list = <
 													["1"] = <
 														units = <"1">
+														magnitude = <|0.0..58.2|>
 														precision = <|2|>
 													>
 												>
@@ -212,11 +213,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Take care of self">
+					text = <"1. Take care of yourself, that is, eating, dressing, bathing or using the toilet?">
 					description = <"Take care of self (e.g. eating, dressing, bathing, using the toilet)?">
 				>
 				["at0006"] = <
-					text = <"Walk indoors">
+					text = <"2. Walk indoors, such as around your house?">
 					description = <"Walk indoors (such as around your house)?">
 				>
 				["at0008"] = <
@@ -228,7 +229,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0010"] = <
-					text = <"Walk 1-2 blocks on level ground">
+					text = <"3. Walk a block or two on level ground?">
 					description = <"Walk 1-2 blocks on level ground?">
 				>
 				["at0011"] = <
@@ -240,7 +241,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0013"] = <
-					text = <"Climb a flight of stairs or walk up a hill">
+					text = <"4. Climb a flight of stairs or walk up a hill?">
 					description = <"Climb a flight of stairs or walk up a hill?">
 				>
 				["at0014"] = <
@@ -252,7 +253,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0016"] = <
-					text = <"Run a short distance">
+					text = <"5. Run a short distance?">
 					description = <"Run a short distance?">
 				>
 				["at0017"] = <
@@ -264,7 +265,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0019"] = <
-					text = <"Do light work around the house">
+					text = <"6. Do light work around the house like dusting or washing dishes?">
 					description = <"Do light work around the house (e.g. dusting, washing dishes)?">
 				>
 				["at0020"] = <
@@ -276,7 +277,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0022"] = <
-					text = <"Do moderate work around the house">
+					text = <"7. Do moderate work around the house like vacuuming, sweeping floors, or carrying in groceries?">
 					description = <"Do moderate work around the house (e.g. vacuuming, sweeping floors carrying in groceries)?">
 				>
 				["at0023"] = <
@@ -288,7 +289,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0025"] = <
-					text = <"Do heavy work around the house">
+					text = <"8. Do heavy work around the house like scrubbing floors or lifting or moving heavy furniture?">
 					description = <"Do heavy work around the house (e.g. scrubbing floors, lifting or moving heavy furniture)?">
 				>
 				["at0026"] = <
@@ -300,7 +301,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0028"] = <
-					text = <"Do yard work">
+					text = <"9. Do yardwork like raking leaves, weeding, or pushing a power mower?">
 					description = <"Do yard work (e.g. raking leaves, weeding, pushing a power mower)?">
 				>
 				["at0029"] = <
@@ -312,7 +313,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0031"] = <
-					text = <"Have sexual relations">
+					text = <"10. Have sexual relations?">
 					description = <"Have sexual relations?">
 				>
 				["at0032"] = <
@@ -324,7 +325,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0034"] = <
-					text = <"Participate in moderate recreational activities">
+					text = <"11. Participate in moderate recreational activities like golf, bowling, dancing, doubles tennis, or throwing a baseball or football?">
 					description = <"Participate in moderate recreational activities (e.g. golf, bowling, dancing, double tennis, throwing a baseball or football)?">
 				>
 				["at0035"] = <
@@ -336,7 +337,7 @@ ontology
 					description = <"No (+ 0.0)">
 				>
 				["at0037"] = <
-					text = <"Participate in strenuous sports">
+					text = <"12. Participate in strenuous sports like swimming, singles tennis, football, basketball, or skiing?">
 					description = <"Participate in strenuous sports (e.g. swimming, singles tennis, football, basketball, skiing)?">
 				>
 				["at0038"] = <
@@ -349,11 +350,12 @@ ontology
 				>
 				["at0041"] = <
 					text = <"VO2 max">
-					description = <"VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6">
+					description = <"">
+					comment = <"VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6">
 				>
 				["at0043"] = <
 					text = <"MET">
-					description = <"">
+					description = <"Maximal metabolic equivalent at exercise test.">
 				>
 				["at0044"] = <
 					text = <"Item tree">
@@ -404,11 +406,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Take care of self (en)">
+					text = <"*1. Take care of yourself, that is, eating, dressing, bathing or using the toilet? (en)">
 					description = <"*Take care of self (e.g. eating, dressing, bathing, using the toilet)? (en)">
 				>
 				["at0006"] = <
-					text = <"*Walk indoors (en)">
+					text = <"*2. Walk indoors, such as around your house? (en)">
 					description = <"*Walk indoors (such as around your house)? (en)">
 				>
 				["at0008"] = <
@@ -420,7 +422,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0010"] = <
-					text = <"*Walk 1-2 blocks on level ground (en)">
+					text = <"*3. Walk a block or two on level ground? (en)">
 					description = <"*Walk 1-2 blocks on level ground? (en)">
 				>
 				["at0011"] = <
@@ -432,7 +434,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0013"] = <
-					text = <"*Climb a flight of stairs or walk up a hill (en)">
+					text = <"*4. Climb a flight of stairs or walk up a hill? (en)">
 					description = <"*Climb a flight of stairs or walk up a hill? (en)">
 				>
 				["at0014"] = <
@@ -444,7 +446,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0016"] = <
-					text = <"*Run a short distance (en)">
+					text = <"*5. Run a short distance? (en)">
 					description = <"*Run a short distance? (en)">
 				>
 				["at0017"] = <
@@ -456,7 +458,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0019"] = <
-					text = <"*Do light work around the house (en)">
+					text = <"*6. Do light work around the house like dusting or washing dishes? (en)">
 					description = <"*Do light work around the house (e.g. dusting, washing dishes)? (en)">
 				>
 				["at0020"] = <
@@ -468,7 +470,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0022"] = <
-					text = <"*Do moderate work around the house (en)">
+					text = <"*7. Do moderate work around the house like vacuuming, sweeping floors, or carrying in groceries? (en)">
 					description = <"*Do moderate work around the house (e.g. vacuuming, sweeping floors carrying in groceries)? (en)">
 				>
 				["at0023"] = <
@@ -480,7 +482,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0025"] = <
-					text = <"*Do heavy work around the house (en)">
+					text = <"*8. Do heavy work around the house like scrubbing floors or lifting or moving heavy furniture? (en)">
 					description = <"*Do heavy work around the house (e.g. scrubbing floors, lifting or moving heavy furniture)? (en)">
 				>
 				["at0026"] = <
@@ -492,7 +494,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0028"] = <
-					text = <"*Do yard work (en)">
+					text = <"*9. Do yardwork like raking leaves, weeding, or pushing a power mower? (en)">
 					description = <"*Do yard work (e.g. raking leaves, weeding, pushing a power mower)? (en)">
 				>
 				["at0029"] = <
@@ -504,7 +506,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0031"] = <
-					text = <"*Have sexual relations (en)">
+					text = <"*10. Have sexual relations? (en)">
 					description = <"*Have sexual relations? (en)">
 				>
 				["at0032"] = <
@@ -516,7 +518,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0034"] = <
-					text = <"*Participate in moderate recreational activities (en)">
+					text = <"*11. Participate in moderate recreational activities like golf, bowling, dancing, doubles tennis, or throwing a baseball or football? (en)">
 					description = <"*Participate in moderate recreational activities (e.g. golf, bowling, dancing, double tennis, throwing a baseball or football)? (en)">
 				>
 				["at0035"] = <
@@ -528,7 +530,7 @@ ontology
 					description = <"*No (+ 0.0) (en)">
 				>
 				["at0037"] = <
-					text = <"*Participate in strenuous sports (en)">
+					text = <"*12. Participate in strenuous sports like swimming, singles tennis, football, basketball, or skiing? (en)">
 					description = <"*Participate in strenuous sports (e.g. swimming, singles tennis, football, basketball, skiing)? (en)">
 				>
 				["at0038"] = <
@@ -541,11 +543,12 @@ ontology
 				>
 				["at0041"] = <
 					text = <"*VO2 max (en)">
-					description = <"*VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6 (en)">
+					description = <"">
+					comment = <"*VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6 (en)">
 				>
 				["at0043"] = <
 					text = <"*MET (en)">
-					description = <"">
+					description = <"*Maximal metabolic equivalent at exercise test. (en)">
 				>
 				["at0044"] = <
 					text = <"*Item tree (en)">
