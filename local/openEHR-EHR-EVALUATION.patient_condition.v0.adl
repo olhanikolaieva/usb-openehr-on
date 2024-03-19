@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8b9892cc7072eb89223d161595eabbaa">
+		["MD5-CAM-1.0.1"] = <"ca341afb1df9f47592738b0e3fa22320">
 		["build_uid"] = <"71913a54-47ad-3783-8194-81b3d3266854">
 	>
 
@@ -66,6 +66,26 @@ definition
 								}
 							}
 						}
+					}
+					ELEMENT[at0018] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0019] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0021] occurrences matches {0..1} matches {    -- Extention
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -147,6 +167,23 @@ ontology
 				["at0017"] = <
 					text = <"Much worse">
 					description = <"">
+				>
+				["at0018"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the patient's general condition.">
+				>
+				["at0019"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0020"] = <
+					text = <"Last updated">
+					description = <"Date when the patient's general condition was recorded.">
+				>
+				["at0021"] = <
+					text = <"Extention">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR equivalents.">
 				>
 			>
 		>
