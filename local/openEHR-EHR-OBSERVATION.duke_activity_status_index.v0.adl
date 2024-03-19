@@ -48,7 +48,7 @@ Franklin B, Brinks J, Berra K, Lavie C, Gordon N, Sperling L. Using Metabolic Eq
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"99234670fb1f0debfe618cf025e99c2a">
+		["MD5-CAM-1.0.1"] = <"4a5b15c4b663de606f5341d3a903aebd">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -357,7 +357,7 @@ ontology
 				>
 				["at0043"] = <
 					text = <"MET">
-					description = <"Maximal metabolic equivalent of task.">
+					description = <"Maximal metabolic equivalent">
 					comment = <"MET = VO2 max/ 3.5.">
 				>
 				["at0044"] = <
@@ -544,7 +544,7 @@ ontology
 				>
 				["at0043"] = <
 					text = <"*MET (en)">
-					description = <"*Maximal metabolic equivalent of task. (en)">
+					description = <"*Maximal metabolic equivalent (en)">
 					comment = <"*MET = VO2 max/ 3.5. (en)">
 				>
 				["at0044"] = <
