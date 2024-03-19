@@ -43,7 +43,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c5dd44d0f3aa8e4c3e4c2605e94261b8">
+		["MD5-CAM-1.0.1"] = <"dc28c1a4286bf1ad14be25e20fba9658">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["references"] = <"Hlatky M, Boineau R, Higginbotham et al. A Brief Self-administered Questionnaire to Determine Functional Capacity (The Duke Activity Status Index). American Journal of Cardiology. 1989;64(15 Sep):651–654.
@@ -58,7 +58,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					EVENT[at0002] occurrences matches {0..1} matches {    -- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -187,11 +187,6 @@ definition
 					allow_archetype CLUSTER[at0045] occurrences matches {0..*} matches {    -- Extention
 						include
 							archetype_id/value matches {/.*/}
-					}
-					ELEMENT[at0046] occurrences matches {0..1} matches {    -- Comment
-						value matches {
-							DV_TEXT matches {*}
-						}
 					}
 					ELEMENT[at0047] occurrences matches {0..1} matches {    -- Date and time
 						value matches {
@@ -375,11 +370,8 @@ ontology
 				>
 				["at0045"] = <
 					text = <"Extention">
-					description = <"">
-				>
-				["at0046"] = <
-					text = <"Comment">
-					description = <"">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 				["at0047"] = <
 					text = <"Date and time">
@@ -569,11 +561,8 @@ ontology
 				>
 				["at0045"] = <
 					text = <"*Extention (en)">
-					description = <"">
-				>
-				["at0046"] = <
-					text = <"*Comment (en)">
-					description = <"">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
 				["at0047"] = <
 					text = <"*Date and time (en)">
