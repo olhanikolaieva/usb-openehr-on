@@ -37,7 +37,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"843373dd55c2b4f239ef31049d2323e6">
+		["MD5-CAM-1.0.1"] = <"48aedb5dcea4583742aeed330ca10224">
 		["build_uid"] = <"335a2fad-2cbe-37b0-a0f3-e1794530fe7a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["references"] = <"Hlatky M, Boineau R, Higginbotham et al. A Brief Self-administered Questionnaire to Determine Functional Capacity (The Duke Activity Status Index). American Journal of Cardiology. 1989;64(15 Sep):651–654.
@@ -353,12 +353,13 @@ ontology
 				>
 				["at0041"] = <
 					text = <"VO2 max">
-					description = <"">
+					description = <"Peak Oxygen uptake.">
 					comment = <"VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6">
 				>
 				["at0043"] = <
 					text = <"MET">
 					description = <"Maximal metabolic equivalent at exercise test.">
+					comment = <"MET = VO2 max/ 3.5.">
 				>
 				["at0044"] = <
 					text = <"Item tree">
@@ -546,12 +547,13 @@ ontology
 				>
 				["at0041"] = <
 					text = <"*VO2 max (en)">
-					description = <"">
+					description = <"*Peak Oxygen uptake. (en)">
 					comment = <"*VO2 max (in mL/kg/min) = 0.43 x DASI + 9.6 (en)">
 				>
 				["at0043"] = <
 					text = <"*MET (en)">
 					description = <"*Maximal metabolic equivalent at exercise test. (en)">
+					comment = <"*MET = VO2 max/ 3.5. (en)">
 				>
 				["at0044"] = <
 					text = <"*Item tree (en)">
