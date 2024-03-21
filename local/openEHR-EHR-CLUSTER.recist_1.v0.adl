@@ -26,14 +26,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d0cd3b87b517dfc91a3a9297cc29d6db">
+		["MD5-CAM-1.0.1"] = <"d3e898bcc3da1f9341d9fc5c214990bf">
 		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- RECIST 1.1
 		items cardinality matches {1..*; unordered} matches {
-			CLUSTER[at0003] occurrences matches {0..1} matches {    -- Target lesion
+			CLUSTER[at0003] occurrences matches {1..*} matches {    -- Target lesion
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Body structure
 						value matches {
@@ -73,7 +73,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0010] occurrences matches {0..1} matches {    -- Non-target or new lesion
+			CLUSTER[at0010] occurrences matches {0..*} matches {    -- Non-target or new lesion
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Body structure
 						value matches {
@@ -135,7 +135,7 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0027] occurrences matches {0..1} matches {    -- Non-measurable lesion
+			CLUSTER[at0027] occurrences matches {0..*} matches {    -- Non-measurable lesion
 				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Non-measurable lesion
 						value matches {
