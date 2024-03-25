@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d3e898bcc3da1f9341d9fc5c214990bf">
+		["MD5-CAM-1.0.1"] = <"5cac9bc61544a888456010874366f490">
 		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 	>
 
@@ -73,8 +73,23 @@ definition
 					}
 				}
 			}
-			CLUSTER[at0010] occurrences matches {0..*} matches {    -- Non-target or new lesion
+			CLUSTER[at0010] occurrences matches {0..*} matches {    -- Non-target lesion
 				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0078] occurrences matches {0..1} matches {    -- Non-target lesion
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0079] occurrences matches {0..1} matches {    -- Non-measurable lesion
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0080] occurrences matches {0..1} matches {    -- New lesion
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
 					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Body structure
 						value matches {
 							DV_TEXT matches {*}
@@ -121,9 +136,8 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0023,    -- No radiotherapy/lesion outside previously irradiated field
-									at0024,    -- New lesion within previously irradiated field
-									at0025]    -- Lesion with documented PD, previously irradiated
+									at0023,    -- Yes
+									at0024]    -- No
 								}
 							}
 						}
@@ -133,10 +147,6 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-				}
-			}
-			CLUSTER[at0027] occurrences matches {0..*} matches {    -- Non-measurable lesion
-				items cardinality matches {1..*; unordered} matches {
 					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Non-measurable lesion
 						value matches {
 							DV_CODED_TEXT matches {
@@ -153,53 +163,7 @@ definition
 									at0037,    -- Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques
 									at0038,    -- Cystic lesion
 									at0039,    -- Necrotic lesion
-									at0040]    -- Tumor lesion situated in a previously irradiated area
-								}
-							}
-						}
-					}
-					ELEMENT[at0041] occurrences matches {0..1} matches {    -- Description of lesion
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0042] occurrences matches {0..1} matches {    -- Body structure
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0043] occurrences matches {0..1} matches {    -- Body site
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					allow_archetype CLUSTER[at0044] occurrences matches {0..1} matches {    -- Structured body site
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
-					}
-					ELEMENT[at0045] occurrences matches {0..1} matches {    -- Time point status
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0046,    -- Present
-									at0047,    -- Absent
-									at0048,    -- Stable
-									at0049,    -- Unequivocal progression
-									at0050,    -- Not evaluated
-									at0051]    -- Inevaluable
-								}
-							}
-						}
-					}
-					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Prior radiotherapy
-						value matches {
-							DV_CODED_TEXT matches {
-								defining_code matches {
-									[local::
-									at0053,    -- No radiotherapy/lesion outside previously irradiated field
-									at0054,    -- New lesion within previously irradiated field
-									at0055]    -- Lesion with documented PD, previously irradiated
+									at0081]    -- Ascites
 								}
 							}
 						}
@@ -266,6 +230,19 @@ definition
 									>
 								>
 							>
+						}
+					}
+					ELEMENT[at0082] occurrences matches {0..1} matches {    -- Target response
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0083,    -- Complete response (CR)
+									at0084,    -- Partial response (PR)
+									at0085,    -- Stable disease (SD)
+									at0086]    -- Progressive disease (PD)
+								}
+							}
 						}
 					}
 					ELEMENT[at0062] occurrences matches {0..1} matches {    -- Non-target response
@@ -361,7 +338,7 @@ of  ≥15 mm by CT scan.">
 					description = <"To be marked as 'true' if target lesion is pathological lymph node. ">
 				>
 				["at0010"] = <
-					text = <"Non-target or new lesion">
+					text = <"Non-target lesion">
 					description = <"Measurable lesion other from five tumor target lesions and two lymph node target lesions; other pathological nodes (those with short axis ≥10 mm but <15 mm).">
 				>
 				["at0011"] = <
@@ -416,24 +393,16 @@ of  ≥15 mm by CT scan.">
 					description = <"Evaluating previous radiotherapy in the area where both non-target lesions and new lesions have emerged.">
 				>
 				["at0023"] = <
-					text = <"No radiotherapy/lesion outside previously irradiated field">
+					text = <"Yes">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"New lesion within previously irradiated field">
-					description = <"">
-				>
-				["at0025"] = <
-					text = <"Lesion with documented PD, previously irradiated">
+					text = <"No">
 					description = <"">
 				>
 				["at0026"] = <
 					text = <"Description of lesion">
 					description = <"Optional narrative description of a non-target or new lesion.">
-				>
-				["at0027"] = <
-					text = <"Non-measurable lesion">
-					description = <"Small or truly non-measurable lesions. ">
 				>
 				["at0028"] = <
 					text = <"Non-measurable lesion">
@@ -481,73 +450,6 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0039"] = <
 					text = <"Necrotic lesion">
-					description = <"">
-				>
-				["at0040"] = <
-					text = <"Tumor lesion situated in a previously irradiated area">
-					description = <"">
-				>
-				["at0041"] = <
-					text = <"Description of lesion">
-					description = <"Optional narrative description of a non-measurable lesion.">
-				>
-				["at0042"] = <
-					text = <"Body structure">
-					description = <"Identification of the body structure or region examined.">
-					comment = <"For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant.">
-				>
-				["at0043"] = <
-					text = <"Body site">
-					description = <"Identification of the area of the body under examination.">
-					comment = <"For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant.">
-				>
-				["at0044"] = <
-					text = <"Structured body site">
-					description = <"Structured details about the area of the body under examination.">
-					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
-				>
-				["at0045"] = <
-					text = <"Time point status">
-					description = <"Qualitative evaluation of non-target lesions at the different specified time points.">
-				>
-				["at0046"] = <
-					text = <"Present">
-					description = <"To record non-target lesion at baseline.">
-				>
-				["at0047"] = <
-					text = <"Absent">
-					description = <"Disappearance of earlier recorded non-target lesion.">
-				>
-				["at0048"] = <
-					text = <"Stable">
-					description = <"No size change of earlier recorded non-target lesion.">
-				>
-				["at0049"] = <
-					text = <"Unequivocal progression">
-					description = <"A modest ‘increase’ in the size of one or more non-target lesions.">
-				>
-				["at0050"] = <
-					text = <"Not evaluated">
-					description = <"The lesion was not recorded.">
-				>
-				["at0051"] = <
-					text = <"Inevaluable">
-					description = <"The lesion is impossible to record.">
-				>
-				["at0052"] = <
-					text = <"Prior radiotherapy">
-					description = <"Evaluating previous radiotherapy in the area where both non-target lesions and new lesions have emerged.">
-				>
-				["at0053"] = <
-					text = <"No radiotherapy/lesion outside previously irradiated field">
-					description = <"">
-				>
-				["at0054"] = <
-					text = <"New lesion within previously irradiated field">
-					description = <"">
-				>
-				["at0055"] = <
-					text = <"Lesion with documented PD, previously irradiated">
 					description = <"">
 				>
 				["at0056"] = <
@@ -635,6 +537,42 @@ of  ≥15 mm by CT scan.">
 					description = <"">
 				>
 				["at0077"] = <
+					text = <"Progressive disease (PD)">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Non-target lesion">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Non-measurable lesion">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"New lesion">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Ascites">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Target response">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Complete response (CR)">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Partial response (PR)">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Stable disease (SD)">
+					description = <"">
+				>
+				["at0086"] = <
 					text = <"Progressive disease (PD)">
 					description = <"">
 				>
