@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5cb3396fb9cf23090ecd8c013c32a99c">
+		["MD5-CAM-1.0.1"] = <"005b96718746fa77cc83271de6d4c622">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -705,7 +705,8 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0262"] = <
 					text = <"Non-target response">
-					description = <"The response of non-target lesions represents their change from baseline to current time point for patients who have non-measurable disease at baseline; assesses the change of non-target disease from baseline to current time point additional to target response. ">
+					description = <"The response of non-target lesions represents their change from baseline to current time point in addition to target response or for patients with non-measurable disease only at baseline.  
+">
 				>
 				["at0263"] = <
 					text = <"CR">
@@ -733,7 +734,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0269"] = <
 					text = <"Target response">
-					description = <"The response of target lesions represents their change from baseline to current time point for patients who have measurable disease at baseline.">
+					description = <"The response of target lesions represents their change from baseline to current time point for patients with measurable disease at baseline.">
 				>
 				["at0270"] = <
 					text = <"Complete response (CR)">
@@ -753,7 +754,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0274"] = <
 					text = <"Comparison sum of lesion diameters">
-					description = <"">
+					description = <"Slot for a citation of the previous sum of lesion diameters, e.g. baseline or nadir values. ">
 				>
 			>
 		>
