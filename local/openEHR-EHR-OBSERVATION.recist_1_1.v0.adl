@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6ac9ac382639517c1bab88bcca0fda88">
+		["MD5-CAM-1.0.1"] = <"54d1d1e557cb78a9c482c7e689f70c32">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -55,7 +55,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					POINT_EVENT[at0259] occurrences matches {0..1} matches {    -- Baseline
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Follow-up
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -303,9 +303,9 @@ definition
 							}
 						}
 					}
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Follow-up
+					POINT_EVENT[at0259] occurrences matches {0..1} matches {    -- Baseline
 						data matches {
-							use_node ITEM_TREE /data[at0001]/events[at0259]/data[at0003]
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
 						}
 					}
 				}
@@ -399,7 +399,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"RECIST 1.1">
-					description = <" Response evaluation criteria in solid tumors version 1.1. Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
+					description = <"Response evaluation criteria in solid tumors version 1.1. Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
 				>
 				["at0001"] = <
 					text = <"History">
