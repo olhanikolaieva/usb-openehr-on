@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a65c3645ba457663e973b0c02092d02c">
+		["MD5-CAM-1.0.1"] = <"c3ed522197a9cbb9960464b33181f3a6">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -55,7 +55,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					POINT_EVENT[at0259] occurrences matches {0..1} matches {    -- Baseline
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -362,6 +362,11 @@ definition
 									}
 								}
 							}
+						}
+					}
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0259]/data[at0003]
 						}
 					}
 				}
@@ -883,6 +888,10 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0258"] = <
 					text = <"Lesion with documented PD, previously irradiated">
+					description = <"">
+				>
+				["at0259"] = <
+					text = <"Baseline">
 					description = <"">
 				>
 			>
