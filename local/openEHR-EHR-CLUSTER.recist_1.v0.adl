@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"697d99945d42c1c071d5dc8377edd818">
+		["MD5-CAM-1.0.1"] = <"276b0a8d929c3970f618a39895a842f2">
 		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 	>
 
@@ -256,13 +256,7 @@ definition
 					}
 				}
 				name matches {
-					DV_CODED_TEXT matches {
-						defining_code matches {
-							[local::
-							at0071,    -- First time point
-							at0072]    -- Subsequent time point
-						}
-					}
+					DV_CODED_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0073] occurrences matches {0..1} matches {    -- Best overall response
@@ -494,14 +488,6 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0070"] = <
 					text = <"Progressive disease (PD)">
-					description = <"">
-				>
-				["at0071"] = <
-					text = <"First time point">
-					description = <"">
-				>
-				["at0072"] = <
-					text = <"Subsequent time point">
 					description = <"">
 				>
 				["at0073"] = <
