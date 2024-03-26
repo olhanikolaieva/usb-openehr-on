@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"276b0a8d929c3970f618a39895a842f2">
+		["MD5-CAM-1.0.1"] = <"7e02f8336d308d20e0b2af5556df6f58">
 		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 	>
 
@@ -512,7 +512,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0091"] = <
 					text = <"Baseline">
-					description = <"">
+					description = <"Evaluation is done ≤4 weeks before start of treatment.">
 				>
 				["at0092"] = <
 					text = <"New lesion">
