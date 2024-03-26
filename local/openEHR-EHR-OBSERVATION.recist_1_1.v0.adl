@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8131ba51a2fc64de99dca23681d47317">
+		["MD5-CAM-1.0.1"] = <"8e923ff58a67256e228626535fc76956">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -85,7 +85,7 @@ definition
 												include
 													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
 											}
-											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Measurements
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Measurement
 												value matches {
 													C_DV_QUANTITY <
 														property = <[openehr::122]>
@@ -111,6 +111,16 @@ definition
 									}
 									CLUSTER[at0170] occurrences matches {0..*} matches {    -- Non-target lesion
 										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0267] occurrences matches {0..1} matches {    -- New lesion
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0268] occurrences matches {0..1} matches {    -- Non-measurable lesion
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
 											ELEMENT[at0171] occurrences matches {0..1} matches {    -- Body structure
 												value matches {
 													DV_TEXT matches {*}
@@ -146,7 +156,7 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0266] occurrences matches {0..1} matches {    -- Measurements
+											ELEMENT[at0266] occurrences matches {0..1} matches {    -- Measurement
 												value matches {
 													C_DV_QUANTITY <
 														property = <[openehr::122]>
@@ -190,16 +200,6 @@ definition
 													DV_TEXT matches {*}
 												}
 											}
-											ELEMENT[at0267] occurrences matches {0..1} matches {    -- New lesion
-												value matches {
-													DV_BOOLEAN matches {*}
-												}
-											}
-											ELEMENT[at0268] occurrences matches {0..1} matches {    -- Non-measurable lesion
-												value matches {
-													DV_BOOLEAN matches {*}
-												}
-											}
 										}
 									}
 									ELEMENT[at0140] occurrences matches {0..1} matches {    -- Sum of lesion diameters
@@ -213,6 +213,10 @@ definition
 												>
 											>
 										}
+									}
+									allow_archetype CLUSTER[at0274] occurrences matches {0..*} matches {    -- Comparison sum of lesion diameters
+										include
+											archetype_id/value matches {/.*/}
 									}
 									ELEMENT[at0141] occurrences matches {0..1} matches {    -- Percent of change baseline to current
 										value matches {
@@ -266,19 +270,6 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0101] occurrences matches {0..1} matches {    -- Best overall response
-										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {
-													[local::
-													at0102,    -- Complete response (CR)
-													at0103,    -- Partial response (PR)
-													at0104,    -- Stable disease (SD)
-													at0105]    -- Progressive disease (PD)
-												}
-											}
-										}
-									}
 									ELEMENT[at0094] occurrences matches {0..1} matches {    -- Overall response
 										value matches {
 											DV_CODED_TEXT matches {
@@ -293,6 +284,19 @@ definition
 										}
 										name matches {
 											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0101] occurrences matches {0..1} matches {    -- Best overall response
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0102,    -- Complete response (CR)
+													at0103,    -- Partial response (PR)
+													at0104,    -- Stable disease (SD)
+													at0105]    -- Progressive disease (PD)
+												}
+											}
 										}
 									}
 								}
@@ -415,7 +419,7 @@ ontology
 of  ≥15 mm by CT scan.">
 				>
 				["at0015"] = <
-					text = <"Measurements">
+					text = <"Measurement">
 					description = <"Size of the longest diameter of the target tumor lesion or the short axis of the target lymph node lesion. ">
 				>
 				["at0016"] = <
@@ -716,7 +720,7 @@ of  ≥15 mm by CT scan.">
 					description = <"Unequivocal progression of existing non-target lesions. (Note: the appearance of one or more new lesions is also considered progression).">
 				>
 				["at0266"] = <
-					text = <"Measurements">
+					text = <"Measurement">
 					description = <"Optional description of the size of the longest diameter of the non-target tumor lesion or the short axis of the non-target lymph node lesion. ">
 				>
 				["at0267"] = <
@@ -745,6 +749,10 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0273"] = <
 					text = <"Progressive disease (PD)">
+					description = <"">
+				>
+				["at0274"] = <
+					text = <"Comparison sum of lesion diameters">
 					description = <"">
 				>
 			>
