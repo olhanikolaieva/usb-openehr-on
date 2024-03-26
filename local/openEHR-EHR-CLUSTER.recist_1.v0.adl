@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7e02f8336d308d20e0b2af5556df6f58">
+		["MD5-CAM-1.0.1"] = <"33a17d015ed7a253099f61c4162a854f">
 		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 	>
 
@@ -36,6 +36,11 @@ definition
 			ELEMENT[at0091] occurrences matches {0..1} matches {    -- Baseline
 				value matches {
 					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0095] occurrences matches {0..1} matches {    -- Follow-up
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 			CLUSTER[at0003] occurrences matches {1..*} matches {    -- Target lesion
@@ -524,6 +529,10 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0094"] = <
 					text = <"Ascites">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Follow-up">
 					description = <"">
 				>
 			>
