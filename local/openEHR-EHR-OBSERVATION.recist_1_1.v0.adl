@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5ab0e87fd21cf61912265a8cdad00790">
+		["MD5-CAM-1.0.1"] = <"e9933d96bf7a206b45709fa9536b3906">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -238,6 +238,34 @@ definition
 											>
 										}
 									}
+									ELEMENT[at0269] occurrences matches {0..1} matches {    -- Target response
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0270,    -- Complete response (CR)
+													at0271,    -- Partial response (PR)
+													at0272,    -- Stable disease (SD)
+													at0273]    -- Progressive disease (PD)
+												}
+											}
+										}
+										name matches {
+											DV_CODED_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0262] occurrences matches {0..1} matches {    -- Non-target response
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0263,    -- CR
+													at0264,    -- Non-CR/Non-PD
+													at0265]    -- PD
+												}
+											}
+										}
+									}
 									ELEMENT[at0101] occurrences matches {0..1} matches {    -- Best overall response
 										value matches {
 											DV_CODED_TEXT matches {
@@ -265,18 +293,6 @@ definition
 										}
 										name matches {
 											DV_CODED_TEXT matches {*}
-										}
-									}
-									ELEMENT[at0262] occurrences matches {0..1} matches {    -- Non-target response
-										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {
-													[local::
-													at0263,    -- CR
-													at0264,    -- Non-CR/Non-PD
-													at0265]    -- PD
-												}
-											}
 										}
 									}
 								}
@@ -709,6 +725,26 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0268"] = <
 					text = <"Non-measurable lesion">
+					description = <"">
+				>
+				["at0269"] = <
+					text = <"Target response">
+					description = <"The overall response is the response recorded from the start of treatment (sum of lesion diamaters at baseline) until the last measurements (sum of lesion diamaters currently). ">
+				>
+				["at0270"] = <
+					text = <"Complete response (CR)">
+					description = <"">
+				>
+				["at0271"] = <
+					text = <"Partial response (PR)">
+					description = <"">
+				>
+				["at0272"] = <
+					text = <"Stable disease (SD)">
+					description = <"">
+				>
+				["at0273"] = <
+					text = <"Progressive disease (PD)">
 					description = <"">
 				>
 			>
