@@ -26,13 +26,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"43198df7d0aeb3908dcb8fe579e89a2f">
+		["MD5-CAM-1.0.1"] = <"093f79586e0f3cab16b4a7072e1468bd">
 		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- RECIST 1.1_new
+	CLUSTER[at0000] matches {    -- RECIST 1.1
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0091] occurrences matches {0..1} matches {    -- Baseline
 				value matches {
@@ -288,7 +288,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"RECIST 1.1_new">
+					text = <"RECIST 1.1">
 					description = <"RECIST 1">
 				>
 				["at0003"] = <
