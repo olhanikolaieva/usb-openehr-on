@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e9933d96bf7a206b45709fa9536b3906">
+		["MD5-CAM-1.0.1"] = <"8131ba51a2fc64de99dca23681d47317">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -395,7 +395,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"RECIST 1.1">
-					description = <"Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
+					description = <" Response evaluation criteria in solid tumors version 1.1. Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
 				>
 				["at0001"] = <
 					text = <"History">
