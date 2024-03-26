@@ -1,5 +1,5 @@
-archetype (adl_version=1.4; uid=4961561b-3ec8-4627-8d0b-54d3228e933b)
-	openEHR-EHR-OBSERVATION.recist_1_1.v0
+archetype (adl_version=1.4; uid=5f82007f-a71c-4dca-9e8e-3c3194ec363e)
+	openEHR-EHR-CLUSTER.recist_1.v0
 
 concept
 	[at0000]
@@ -9,440 +9,339 @@ language
 
 description
 	original_author = <
-		["date"] = <"2024-03-14">
+		["date"] = <"2024-03-20">
 		["name"] = <"Olha Nikolaieva">
 		["organisation"] = <"University Hospital Basel">
 		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
-	other_contributors = <"Amanda Herbrand, University Hospital Basel, Switzerland","Jannis Pesch, University Hospital Basel, Switzerland">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the evaluation of tumor response to treatment in solid tumors during clinical trials and daily oncology practice. ">
-			keywords = <"Response evaluation criteria in solid tumors, RECIST 1.1, oncology, radiology, clinical trial, treatment, chemotherapy, radiotherapy.", ...>
-			use = <"Use to record the change in tumor burden. ">
-			misuse = <"Not to be used to record the findings on imaging examination. Use the OBSERVATION.imaging_exam_result and/or its family of specialised archetypes for this purpose.
-
-Not to be used to record findings on physical examination. Use the CLUSTER.exam and/or its family of specialised archetypes for this purpose.
-
-Not to be used to replicate the functionality or specifications of a radiology information or source system.
-
-Not to be used to record structured details about any procedure undertaken. Use the specific procedure-related archetypes, such as ACTION.procedure archetype for this purpose.">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"https://ckm.openehr.org/ckm/archetypes/1013.1.1494 [openEHR-EHR-OBSERVATION.imaging_exam_result.v1]
-https://ckm.openehr.org/ckm/archetypes/1013.1.5915 [openEHR-EHR-CLUSTER.imaging_exam.v1]
-https://ckm.openehr.org/ckm/archetypes/1013.1.5699 [openEHR-EHR-CLUSTER.radiotherapy.v1]
-
-P Therasse, S G Arbuck, E A Eisenhauer, J Wanders, R S Kaplan, L Rubinstein, J Verweij, M Van Glabbeke, A T van Oosterom, M C Christian, S G Gwyther. New guidelines to evaluate the response to treatment in solid tumors. J Natl Cancer Inst. 2000 Feb 2;92(3):205-16.
-
-E A Eisenhauer, P Therasse, J Bogaerts, L H Schwartz, D Sargent, R Ford, J Dancey, S Arbuck, S Gwyther, M Mooney, L Rubinstein, L Shankar, L Dodd, R Kaplan, D Lacombe, J Verweij. New response evaluation criteria in solid tumours: revised RECIST guideline (version 1.1). Eur J Cancer. 2009 Jan;45(2):228-47.
-
-E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implications for the radiologist. A review article on the modified RECIST guideline. Eur Radiol. 2010 Jun; 20(6): 1456–1467.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a65c3645ba457663e973b0c02092d02c">
-		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
+		["MD5-CAM-1.0.1"] = <"d87a38ed8ae4fc956542296278088e54">
+		["build_uid"] = <"bbc19b5d-e341-3ea9-99f7-2ca5f4c48d37">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- RECIST 1.1
-		data matches {
-			HISTORY[at0001] matches {    -- History
-				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
-						data matches {
-							ITEM_TREE[at0003] matches {    -- Tree
-								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] matches {    -- Method
-										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {
-													[local::
-													at0005,    -- Clinical examination
-													at0006,    -- X-ray
-													at0007,    -- CT
-													at0008,    -- MRI
-													at0009,    -- Radionuclides
-													at0010]    -- Other
-												}
-											}
-										}
-									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Other method
-										value matches {
-											DV_TEXT matches {*}
-										}
-									}
-									CLUSTER[at0012] occurrences matches {1..7} matches {    -- Target lesion
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0144] occurrences matches {0..1} matches {    -- Body structure
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0145] occurrences matches {0..1} matches {    -- Body site
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											allow_archetype CLUSTER[at0071] occurrences matches {0..1} matches {    -- Structured body site
-												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
-											}
-											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Measurements
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::122]>
-														list = <
-															["1"] = <
-																units = <"mm">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Description of lesion
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0143] occurrences matches {0..1} matches {    -- Lymph node
-												value matches {
-													DV_BOOLEAN matches {*}
-												}
-											}
-										}
-									}
-									CLUSTER[at0170] occurrences matches {0..*} matches {    -- Non-target or new lesion
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0171] occurrences matches {0..1} matches {    -- Body structure
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0172] occurrences matches {0..1} matches {    -- Body site
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											allow_archetype CLUSTER[at0173] occurrences matches {0..1} matches {    -- Structured body site
-												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
-											}
-											ELEMENT[at0174] occurrences matches {0..1} matches {    -- Time point status
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0175,    -- Present
-															at0176,    -- Absent
-															at0177,    -- Stable
-															at0178,    -- Unequivocal progression
-															at0179,    -- Not evaluated
-															at0180]    -- Inevaluable
-														}
-													}
-												}
-											}
-											ELEMENT[at0243] occurrences matches {0..1} matches {    -- Non-target response
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0244,    -- CR
-															at0245,    -- Non-CR/Non-PD
-															at0246]    -- PD
-														}
-													}
-												}
-											}
-											ELEMENT[at0181] occurrences matches {0..1} matches {    -- Prior radiotherapy
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0182,    -- No radiotherapy/lesion outside previously irradiated field
-															at0183,    -- New lesion within previously irradiated field
-															at0184]    -- Lesion with documented PD, previously irradiated
-														}
-													}
-												}
-											}
-											ELEMENT[at0185] occurrences matches {0..1} matches {    -- Description of lesion
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-										}
-									}
-									CLUSTER[at0207] occurrences matches {0..*} matches {    -- Non-measurable lesion
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0230] occurrences matches {0..1} matches {    -- Non-measurable lesion
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0231,    -- Small lesion
-															at0232,    -- Bone lesion
-															at0233,    -- Leptomeningeal disease
-															at0234,    -- Pleural effusion
-															at0235,    -- Pericardial effusion
-															at0236,    -- Inflammatory breast disease
-															at0237,    -- Lymphangitic involvement of skin
-															at0238,    -- Lymphangitic involvement lung
-															at0239,    -- Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques
-															at0240,    -- Cystic lesion
-															at0241,    -- Necrotic lesion
-															at0242]    -- Tumor lesion situated in a previously irradiated area
-														}
-													}
-												}
-											}
-											ELEMENT[at0222] occurrences matches {0..1} matches {    -- Description of lesion
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0208] occurrences matches {0..1} matches {    -- Body structure
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											ELEMENT[at0209] occurrences matches {0..1} matches {    -- Body site
-												value matches {
-													DV_TEXT matches {*}
-												}
-											}
-											allow_archetype CLUSTER[at0210] occurrences matches {0..1} matches {    -- Structured body site
-												include
-													archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
-											}
-											ELEMENT[at0247] occurrences matches {0..1} matches {    -- Non-target response
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0248,    -- CR
-															at0249,    -- Non-CR/Non-PD
-															at0250]    -- PD
-														}
-													}
-												}
-											}
-											ELEMENT[at0251] occurrences matches {0..1} matches {    -- Non-target response
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0252,    -- CR
-															at0253,    -- Non-CR/Non-PD
-															at0254]    -- PD
-														}
-													}
-												}
-											}
-											ELEMENT[at0255] occurrences matches {0..1} matches {    -- Prior radiotherapy
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0256,    -- No radiotherapy/lesion outside previously irradiated field
-															at0257,    -- New lesion within previously irradiated field
-															at0258]    -- Lesion with documented PD, previously irradiated
-														}
-													}
-												}
-											}
-										}
-									}
-									CLUSTER[at0133] matches {    -- Sum of measurements
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0138] occurrences matches {0..1} matches {    -- Sum of lesion diameters at baseline
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::122]>
-														list = <
-															["1"] = <
-																units = <"mm">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0139] occurrences matches {0..1} matches {    -- Sum of lesion diameters at nadir
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::122]>
-														list = <
-															["1"] = <
-																units = <"mm">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0140] occurrences matches {0..1} matches {    -- Sum of lesion diameters currently
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::122]>
-														list = <
-															["1"] = <
-																units = <"mm">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0141] occurrences matches {0..1} matches {    -- Percent of change baseline to current
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"%">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0142] occurrences matches {0..1} matches {    -- Percent of change nadir to current
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"%">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0094] occurrences matches {0..1} matches {    -- Overall response
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0097,    -- Complete response (CR)
-															at0098,    -- Partial response (PR)
-															at0099,    -- Stable disease (SD)
-															at0100]    -- Progressive disease (PD)
-														}
-													}
-												}
-												name matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0095,    -- First time point
-															at0096]    -- Subsequent time point
-														}
-													}
-												}
-											}
-											ELEMENT[at0101] occurrences matches {0..1} matches {    -- Best overall response
-												value matches {
-													DV_CODED_TEXT matches {
-														defining_code matches {
-															[local::
-															at0102,    -- Complete response (CR)
-															at0103,    -- Partial response (PR)
-															at0104,    -- Stable disease (SD)
-															at0105]    -- Progressive disease (PD)
-														}
-													}
-												}
-											}
-										}
-									}
+	CLUSTER[at0000] matches {    -- RECIST 1.1
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0078] occurrences matches {0..1} matches {    -- Assessment
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0080,    -- Baseline
+							at0081,    -- Follow-up 1
+							at0082,    -- Follow-up 2
+							at0083,    -- Follow-up 3
+							at0084,    -- Follow-up 4
+							at0085,    -- Follow-up 5
+							at0086,    -- Follow-up 6
+							at0087,    -- Follow-up 7
+							at0088,    -- Follow-up 8
+							at0089,    -- Follow-up 9
+							at0090]    -- Follow-up 10
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0079] occurrences matches {0..1} matches {    -- Date
+				value matches {
+					DV_DATE matches {
+						value matches {yyyy-mm-dd}
+					}
+				}
+			}
+			CLUSTER[at0003] occurrences matches {1..*} matches {    -- Target lesion
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Body structure
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Body site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0006] occurrences matches {0..1} matches {    -- Structured body site
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Measurements
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Description of lesion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Lymph node
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0010] occurrences matches {0..*} matches {    -- Non-target or new lesion
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Body structure
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Body site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0013] occurrences matches {0..1} matches {    -- Structured body site
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Measurements
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Time point status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0016,    -- Present
+									at0017,    -- Absent
+									at0018,    -- Stable
+									at0019,    -- Unequivocal progression
+									at0020,    -- Not evaluated
+									at0021]    -- Inevaluable
+								}
+							}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- Prior radiotherapy
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0023,    -- No radiotherapy/lesion outside previously irradiated field
+									at0024,    -- New lesion within previously irradiated field
+									at0025]    -- Lesion with documented PD, previously irradiated
+								}
+							}
+						}
+					}
+					ELEMENT[at0026] occurrences matches {0..1} matches {    -- Description of lesion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			CLUSTER[at0027] occurrences matches {0..*} matches {    -- Non-measurable lesion
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0028] occurrences matches {0..1} matches {    -- Non-measurable lesion
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0029,    -- Small lesion
+									at0030,    -- Bone lesion
+									at0031,    -- Leptomeningeal disease
+									at0032,    -- Pleural effusion
+									at0033,    -- Pericardial effusion
+									at0034,    -- Inflammatory breast disease
+									at0035,    -- Lymphangitic involvement of skin
+									at0036,    -- Lymphangitic involvement lung
+									at0037,    -- Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques
+									at0038,    -- Cystic lesion
+									at0039,    -- Necrotic lesion
+									at0040]    -- Tumor lesion situated in a previously irradiated area
+								}
+							}
+						}
+					}
+					ELEMENT[at0041] occurrences matches {0..1} matches {    -- Description of lesion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0042] occurrences matches {0..1} matches {    -- Body structure
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0043] occurrences matches {0..1} matches {    -- Body site
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0044] occurrences matches {0..1} matches {    -- Structured body site
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location\.v1|openEHR-EHR-CLUSTER\.anatomical_location_circle\.v1|openEHR-EHR-CLUSTER\.anatomical_location_relative\.v2/}
+					}
+					ELEMENT[at0045] occurrences matches {0..1} matches {    -- Time point status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0046,    -- Present
+									at0047,    -- Absent
+									at0048,    -- Stable
+									at0049,    -- Unequivocal progression
+									at0050,    -- Not evaluated
+									at0051]    -- Inevaluable
+								}
+							}
+						}
+					}
+					ELEMENT[at0052] occurrences matches {0..1} matches {    -- Prior radiotherapy
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0053,    -- No radiotherapy/lesion outside previously irradiated field
+									at0054,    -- New lesion within previously irradiated field
+									at0055]    -- Lesion with documented PD, previously irradiated
 								}
 							}
 						}
 					}
 				}
 			}
-		}
-		protocol matches {
-			ITEM_TREE[at0045] matches {    -- Item tree
-				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0107] occurrences matches {0..1} matches {    -- Study instance identifier
+			CLUSTER[at0056] occurrences matches {0..1} matches {    -- Response
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0057] occurrences matches {0..1} matches {    -- Sum of lesion diameters at baseline
 						value matches {
-							DV_IDENTIFIER matches {*}
-							DV_TEXT matches {*}
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+									>
+								>
+							>
 						}
 					}
-					ELEMENT[at0112] occurrences matches {0..1} matches {    -- Report identifier
+					ELEMENT[at0058] occurrences matches {0..1} matches {    -- Sum of lesion diameters at nadir
 						value matches {
-							DV_IDENTIFIER matches {*}
-							DV_TEXT matches {*}
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+									>
+								>
+							>
 						}
 					}
-					ELEMENT[at0130] matches {    -- Study date
+					ELEMENT[at0059] occurrences matches {0..1} matches {    -- Sum of lesion diameters currently
 						value matches {
-							DV_DATE_TIME matches {*}
+							C_DV_QUANTITY <
+								property = <[openehr::122]>
+								list = <
+									["1"] = <
+										units = <"mm">
+									>
+								>
+							>
 						}
 					}
-					CLUSTER[at0119] occurrences matches {0..1} matches {    -- Comparison study details
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0120] occurrences matches {0..1} matches {    -- Study name
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0121] occurrences matches {0..1} matches {    -- Study identifier
-								value matches {
-									DV_IDENTIFIER matches {*}
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0122] occurrences matches {0..1} matches {    -- Study date
-								value matches {
-									DV_DATE_TIME matches {*}
-								}
-							}
-							allow_archetype CLUSTER[at0124] occurrences matches {0..*} matches {    -- Comparison series details
-								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.imaging_series(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.imaging_series(-[a-zA-Z0-9_]+)*\.v1/}
-							}
+					ELEMENT[at0060] occurrences matches {0..1} matches {    -- Percent of change baseline to current
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::380]>
+								list = <
+									["1"] = <
+										units = <"%">
+									>
+								>
+							>
 						}
 					}
-					CLUSTER[at0125] occurrences matches {0..1} matches {    -- Examination request details
-						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0126] occurrences matches {0..1} matches {    -- Receiver order identifier
-								value matches {
-									DV_IDENTIFIER matches {*}
-									DV_CODED_TEXT matches {*}
+					ELEMENT[at0061] occurrences matches {0..1} matches {    -- Percent of change nadir to current
+						value matches {
+							C_DV_QUANTITY <
+								property = <[openehr::380]>
+								list = <
+									["1"] = <
+										units = <"%">
+									>
+								>
+							>
+						}
+					}
+					ELEMENT[at0062] occurrences matches {0..1} matches {    -- Non-target response
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0063,    -- CR
+									at0064,    -- Non-CR/Non-PD
+									at0065]    -- PD
 								}
-							}
-							ELEMENT[at0127] occurrences matches {0..1} matches {    -- Requester order identifier
-								value matches {
-									DV_IDENTIFIER matches {*}
-									DV_TEXT matches {*}
-								}
-							}
-							ELEMENT[at0128] occurrences matches {0..*} matches {    -- Examination requested name
-								value matches {
-									DV_TEXT matches {*}
-								}
-							}
-							allow_archetype CLUSTER[at0129] occurrences matches {0..*} matches {    -- Requester
-								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.person(-[a-zA-Z0-9_]+)*\.v1/}
 							}
 						}
 					}
-					allow_archetype CLUSTER[at0131] occurrences matches {0..1} matches {    -- Distribution list
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.organisation(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.person(-[a-zA-Z0-9_]+)*\.v1/}
+					ELEMENT[at0066] occurrences matches {0..1} matches {    -- Overall response
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0067,    -- Complete response (CR)
+									at0068,    -- Partial response (PR)
+									at0069,    -- Stable disease (SD)
+									at0070]    -- Progressive disease (PD)
+								}
+							}
+						}
+						name matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0071,    -- First time point
+									at0072]    -- Subsequent time point
+								}
+							}
+						}
 					}
-					allow_archetype CLUSTER[at0132] occurrences matches {0..1} matches {    -- Extension
-						include
-							archetype_id/value matches {/.*/}
+					ELEMENT[at0073] occurrences matches {0..1} matches {    -- Best overall response
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0074,    -- Complete response (CR)
+									at0075,    -- Partial response (PR)
+									at0076,    -- Stable disease (SD)
+									at0077]    -- Progressive disease (PD)
+								}
+							}
+						}
 					}
 				}
 			}
@@ -455,434 +354,368 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"RECIST 1.1">
-					description = <"Standardized methodology for assessing tumor response in solid tumors during oncology clinical trials and  daily clinical oncological practice.">
-				>
-				["at0001"] = <
-					text = <"History">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"Any event">
-					description = <"@ internal @">
+					description = <"RECIST 1">
 				>
 				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"Method">
-					description = <"Method of assessment used to identify and report lesions.">
-					comment = <"The same method of assessment and the same technique should be used to characterize each identified and reported lesion at baseline and during follow-up.">
-				>
-				["at0005"] = <
-					text = <"Clinical examination">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"X-ray">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"CT">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"MRI">
-					description = <"">
-				>
-				["at0009"] = <
-					text = <"Radionuclides">
-					description = <"">
-				>
-				["at0010"] = <
-					text = <"Other">
-					description = <"">
-				>
-				["at0011"] = <
-					text = <"Other method">
-					description = <"Another method of assessment different from recommended list used to identify and report lesions.">
-				>
-				["at0012"] = <
 					text = <"Target lesion">
 					description = <"Measurable lesion based on size (those with the longest diameter) up to a maximum of two tumor lesions per organ and five tumor lesions in total AND two lymph node lesions in total. Pathological lymph nodes which are deﬁned as measurable and may be identiﬁed as target lesions must meet the criterion of a short axis
 of  ≥15 mm by CT scan.">
 				>
-				["at0015"] = <
+				["at0004"] = <
+					text = <"Body structure">
+					description = <"Identification of the body structure or region examined.">
+					comment = <"For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant.">
+				>
+				["at0005"] = <
+					text = <"Body site">
+					description = <"Identification of the area of the body under examination.">
+					comment = <"For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant.">
+				>
+				["at0006"] = <
+					text = <"Structured body site">
+					description = <"Structured details about the area of the body under examination.">
+					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
+				>
+				["at0007"] = <
 					text = <"Measurements">
 					description = <"Size of the longest diameter of the target tumor lesion or the short axis of the target lymph node lesion. ">
 				>
-				["at0016"] = <
+				["at0008"] = <
 					text = <"Description of lesion">
 					description = <"Optional narrative description of the target lesion.">
 				>
-				["at0045"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0071"] = <
-					text = <"Structured body site">
-					description = <"Structured details about the area of the body under examination.">
-					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
-				>
-				["at0094"] = <
-					text = <"Overall response">
-					description = <"The overall response is the response recorded from the start of treatment (sum of lesion diamaters at baseline) until the last measurements (sum of lesion diamaters currently). ">
-				>
-				["at0095"] = <
-					text = <"First time point">
-					description = <"">
-				>
-				["at0096"] = <
-					text = <"Subsequent time point">
-					description = <"">
-				>
-				["at0097"] = <
-					text = <"Complete response (CR)">
-					description = <"">
-				>
-				["at0098"] = <
-					text = <"Partial response (PR)">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"Stable disease (SD)">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"Progressive disease (PD)">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"Best overall response">
-					description = <"The best overall response is the best response recorded from the start of treatment (sum of lesion diamaters at baseline) until disease progression/recurrence, taking as reference for progressive disease the smallest measurements recorded since the treatment started (sum of lesion diameters at nadir).">
-				>
-				["at0102"] = <
-					text = <"Complete response (CR)">
-					description = <"">
-				>
-				["at0103"] = <
-					text = <"Partial response (PR)">
-					description = <"">
-				>
-				["at0104"] = <
-					text = <"Stable disease (SD)">
-					description = <"">
-				>
-				["at0105"] = <
-					text = <"Progressive disease (PD)">
-					description = <"">
-				>
-				["at0107"] = <
-					text = <"Study instance identifier">
-					description = <"Unique identifier for the imaging study assigned by the imaging device.">
-					comment = <"Equivalent to Study Instance UID (0020,000D) in DICOM and ImagingStudy.identifier in FHIR.">
-				>
-				["at0112"] = <
-					text = <"Report identifier">
-					description = <"Unique identifier for the imaging report assigned by the radiology service.">
-					comment = <"As one instance of this archetype is used per study, this identifier can be used to connect more than one imaging study within a single combined report. Equivalent to DiagnosticReport.identifier in FHIR. ">
-				>
-				["at0119"] = <
-					text = <"Comparison study details">
-					description = <"Details about images from a prior study used for comparison to the reported study.">
-				>
-				["at0120"] = <
-					text = <"Study name">
-					description = <"The name of the comparison imaging examination performed.">
-				>
-				["at0121"] = <
-					text = <"Study identifier">
-					description = <"Unique identifier for the comparison imaging study.">
-				>
-				["at0122"] = <
-					text = <"Study date">
-					description = <"Date and time the comparison examination started.">
-				>
-				["at0124"] = <
-					text = <"Comparison series details">
-					description = <"Details about an imaging series being compared to the reported study.">
-				>
-				["at0125"] = <
-					text = <"Examination request details">
-					description = <"Details about a single imaging examination requested.">
-				>
-				["at0126"] = <
-					text = <"Receiver order identifier">
-					description = <"Unique identifier for the imaging examination order assigned by the radiology service.">
-					comment = <"Equivalent to the HL7 Filler Order Identifier or DICOM Accession number attribute (0008,0050).">
-				>
-				["at0127"] = <
-					text = <"Requester order identifier">
-					description = <"Unique identifier for the imaging examination order assigned by the requester.">
-					comment = <"Equivalent to the HL7 Placer Order Identifier.">
-				>
-				["at0128"] = <
-					text = <"Examination requested name">
-					description = <"Identification of imaging examination requested.">
-					comment = <"This can be useful in situations where the examination requested differs from the examination performed.">
-				>
-				["at0129"] = <
-					text = <"Requester">
-					description = <"Details about the clinician and/or organisation requesting the imaging examination.">
-					comment = <"Equivalent to DICOM Referring Physician's Name (0008,0090)">
-				>
-				["at0130"] = <
-					text = <"Study date">
-					description = <"Date/time when the imaging was performed.">
-					comment = <"Equivalent to ImagingStudy.started in FHIR.">
-				>
-				["at0131"] = <
-					text = <"Distribution list">
-					description = <"Details of additional clinicians or organisations who require a copy of the examination result.">
-					comment = <"The 'Distribution list' is for information-only, and that the primary recipient of the report is the person intended to act on the information.">
-				>
-				["at0132"] = <
-					text = <"Extension">
-					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
-					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
-				>
-				["at0133"] = <
-					text = <"Sum of measurements">
-					description = <"">
-				>
-				["at0138"] = <
-					text = <"Sum of lesion diameters at baseline">
-					description = <"Sum of lesion longest diameters at baseline, measured ≤4 weeks before start of treatment.">
-				>
-				["at0139"] = <
-					text = <"Sum of lesion diameters at nadir">
-					description = <"The smallest sum of the longest lesion diameters during treatment.">
-				>
-				["at0140"] = <
-					text = <"Sum of lesion diameters currently">
-					description = <"Sum of current lesion diameters.">
-				>
-				["at0141"] = <
-					text = <"Percent of change baseline to current">
-					description = <"Percent of change baseline to current sum of the longest lesion diameters.">
-				>
-				["at0142"] = <
-					text = <"Percent of change nadir to current">
-					description = <"Percent of change smallest during treatment to current sum of the longest lesion diameters.">
-				>
-				["at0143"] = <
+				["at0009"] = <
 					text = <"Lymph node">
 					description = <"To be marked as 'true' if target lesion is pathological lymph node. ">
 				>
-				["at0144"] = <
-					text = <"Body structure">
-					description = <"Identification of the body structure or region examined.">
-					comment = <"For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant.">
-				>
-				["at0145"] = <
-					text = <"Body site">
-					description = <"Identification of the area of the body under examination.">
-					comment = <"For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant.">
-				>
-				["at0170"] = <
+				["at0010"] = <
 					text = <"Non-target or new lesion">
 					description = <"Measurable lesion other from five tumor target lesions and two lymph node target lesions; other pathological nodes (those with short axis ≥10 mm but <15 mm).">
 				>
-				["at0171"] = <
+				["at0011"] = <
 					text = <"Body structure">
 					description = <"Identification of the body structure or region examined.">
 					comment = <"For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant.">
 				>
-				["at0172"] = <
+				["at0012"] = <
 					text = <"Body site">
 					description = <"Identification of the area of the body under examination.">
 					comment = <"For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant.">
 				>
-				["at0173"] = <
+				["at0013"] = <
 					text = <"Structured body site">
 					description = <"Structured details about the area of the body under examination.">
 					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
 				>
-				["at0174"] = <
+				["at0014"] = <
+					text = <"Measurements">
+					description = <"Size of the longest diameter of the non-target tumor lesion or the short axis of the target lymph node lesion. ">
+				>
+				["at0015"] = <
 					text = <"Time point status">
 					description = <"Qualitative evaluation of non-target lesions at the different specified time points.">
 				>
-				["at0175"] = <
+				["at0016"] = <
 					text = <"Present">
 					description = <"To record non-target lesion at baseline.">
 				>
-				["at0176"] = <
+				["at0017"] = <
 					text = <"Absent">
 					description = <"Disappearance of earlier recorded non-target lesion.">
 				>
-				["at0177"] = <
+				["at0018"] = <
 					text = <"Stable">
 					description = <"No size change of earlier recorded non-target lesion.">
 				>
-				["at0178"] = <
+				["at0019"] = <
 					text = <"Unequivocal progression">
 					description = <"A modest ‘increase’ in the size of one or more non-target lesions.">
 				>
-				["at0179"] = <
+				["at0020"] = <
 					text = <"Not evaluated">
 					description = <"The lesion was not recorded.">
 				>
-				["at0180"] = <
+				["at0021"] = <
 					text = <"Inevaluable">
 					description = <"The lesion is impossible to record.">
 				>
-				["at0181"] = <
+				["at0022"] = <
 					text = <"Prior radiotherapy">
 					description = <"Evaluating previous radiotherapy in the area where both non-target lesions and new lesions have emerged.">
 				>
-				["at0182"] = <
+				["at0023"] = <
 					text = <"No radiotherapy/lesion outside previously irradiated field">
 					description = <"">
 				>
-				["at0183"] = <
+				["at0024"] = <
 					text = <"New lesion within previously irradiated field">
 					description = <"">
 				>
-				["at0184"] = <
+				["at0025"] = <
 					text = <"Lesion with documented PD, previously irradiated">
 					description = <"">
 				>
-				["at0185"] = <
+				["at0026"] = <
 					text = <"Description of lesion">
 					description = <"Optional narrative description of a non-target or new lesion.">
 				>
-				["at0207"] = <
+				["at0027"] = <
 					text = <"Non-measurable lesion">
 					description = <"Small or truly non-measurable lesions. ">
 				>
-				["at0208"] = <
+				["at0028"] = <
+					text = <"Non-measurable lesion">
+					description = <"Small or truly non-measurable lesions. ">
+				>
+				["at0029"] = <
+					text = <"Small lesion">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Bone lesion">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Leptomeningeal disease">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Pleural effusion">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Pericardial effusion">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Inflammatory breast disease">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Lymphangitic involvement of skin">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Lymphangitic involvement lung">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Cystic lesion">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Necrotic lesion">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Tumor lesion situated in a previously irradiated area">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Description of lesion">
+					description = <"Optional narrative description of a non-measurable lesion.">
+				>
+				["at0042"] = <
 					text = <"Body structure">
 					description = <"Identification of the body structure or region examined.">
 					comment = <"For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant.">
 				>
-				["at0209"] = <
+				["at0043"] = <
 					text = <"Body site">
 					description = <"Identification of the area of the body under examination.">
 					comment = <"For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant.">
 				>
-				["at0210"] = <
+				["at0044"] = <
 					text = <"Structured body site">
 					description = <"Structured details about the area of the body under examination.">
 					comment = <"For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant.">
 				>
-				["at0222"] = <
-					text = <"Description of lesion">
-					description = <"Optional narrative description of a non-measurable lesion.">
+				["at0045"] = <
+					text = <"Time point status">
+					description = <"Qualitative evaluation of non-target lesions at the different specified time points.">
 				>
-				["at0230"] = <
-					text = <"Non-measurable lesion">
-					description = <"Small or truly non-measurable lesions. ">
+				["at0046"] = <
+					text = <"Present">
+					description = <"To record non-target lesion at baseline.">
 				>
-				["at0231"] = <
-					text = <"Small lesion">
-					description = <"">
+				["at0047"] = <
+					text = <"Absent">
+					description = <"Disappearance of earlier recorded non-target lesion.">
 				>
-				["at0232"] = <
-					text = <"Bone lesion">
-					description = <"">
+				["at0048"] = <
+					text = <"Stable">
+					description = <"No size change of earlier recorded non-target lesion.">
 				>
-				["at0233"] = <
-					text = <"Leptomeningeal disease">
-					description = <"">
+				["at0049"] = <
+					text = <"Unequivocal progression">
+					description = <"A modest ‘increase’ in the size of one or more non-target lesions.">
 				>
-				["at0234"] = <
-					text = <"Pleural effusion">
-					description = <"">
+				["at0050"] = <
+					text = <"Not evaluated">
+					description = <"The lesion was not recorded.">
 				>
-				["at0235"] = <
-					text = <"Pericardial effusion">
-					description = <"">
+				["at0051"] = <
+					text = <"Inevaluable">
+					description = <"The lesion is impossible to record.">
 				>
-				["at0236"] = <
-					text = <"Inflammatory breast disease">
-					description = <"">
-				>
-				["at0237"] = <
-					text = <"Lymphangitic involvement of skin">
-					description = <"">
-				>
-				["at0238"] = <
-					text = <"Lymphangitic involvement lung">
-					description = <"">
-				>
-				["at0239"] = <
-					text = <"Abdominal mass/abdominal organomegaly identified by physical exam that is not measurable by reproducible imaging techniques">
-					description = <"">
-				>
-				["at0240"] = <
-					text = <"Cystic lesion">
-					description = <"">
-				>
-				["at0241"] = <
-					text = <"Necrotic lesion">
-					description = <"">
-				>
-				["at0242"] = <
-					text = <"Tumor lesion situated in a previously irradiated area">
-					description = <"">
-				>
-				["at0243"] = <
-					text = <"Non-target response">
-					description = <"Assessment of progression of non-target disease.">
-				>
-				["at0244"] = <
-					text = <"CR">
-					description = <"Complete Response. Disappearance of all non-target lesions and normalisation of tumour marker level. All lymph nodes must be non-pathological in size (<10 mm short axis).">
-				>
-				["at0245"] = <
-					text = <"Non-CR/Non-PD">
-					description = <"Persistence of one or more non-target lesion(s) and/or maintenance of tumour marker level above the normal limits.">
-				>
-				["at0246"] = <
-					text = <"PD">
-					description = <"Unequivocal progression of existing non-target lesions. (Note: the appearance of one or more new lesions is also considered progression).">
-				>
-				["at0247"] = <
-					text = <"Non-target response">
-					description = <"Assessment of progression of non-target disease.">
-				>
-				["at0248"] = <
-					text = <"CR">
-					description = <"Complete Response. Disappearance of all non-target lesions and normalisation of tumour marker level. All lymph nodes must be non-pathological in size (<10 mm short axis).">
-				>
-				["at0249"] = <
-					text = <"Non-CR/Non-PD">
-					description = <"Persistence of one or more non-target lesion(s) and/or maintenance of tumour marker level above the normal limits.">
-				>
-				["at0250"] = <
-					text = <"PD">
-					description = <"Unequivocal progression of existing non-target lesions. (Note: the appearance of one or more new lesions is also considered progression).">
-				>
-				["at0251"] = <
-					text = <"Non-target response">
-					description = <"Assessment of progression of non-target disease.">
-				>
-				["at0252"] = <
-					text = <"CR">
-					description = <"Complete Response. Disappearance of all non-target lesions and normalisation of tumour marker level. All lymph nodes must be non-pathological in size (<10 mm short axis).">
-				>
-				["at0253"] = <
-					text = <"Non-CR/Non-PD">
-					description = <"Persistence of one or more non-target lesion(s) and/or maintenance of tumour marker level above the normal limits.">
-				>
-				["at0254"] = <
-					text = <"PD">
-					description = <"Unequivocal progression of existing non-target lesions. (Note: the appearance of one or more new lesions is also considered progression).">
-				>
-				["at0255"] = <
+				["at0052"] = <
 					text = <"Prior radiotherapy">
 					description = <"Evaluating previous radiotherapy in the area where both non-target lesions and new lesions have emerged.">
 				>
-				["at0256"] = <
+				["at0053"] = <
 					text = <"No radiotherapy/lesion outside previously irradiated field">
 					description = <"">
 				>
-				["at0257"] = <
+				["at0054"] = <
 					text = <"New lesion within previously irradiated field">
 					description = <"">
 				>
-				["at0258"] = <
+				["at0055"] = <
 					text = <"Lesion with documented PD, previously irradiated">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Response">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Sum of lesion diameters at baseline">
+					description = <"Sum of lesion longest diameters at baseline, measured ≤4 weeks before start of treatment.">
+				>
+				["at0058"] = <
+					text = <"Sum of lesion diameters at nadir">
+					description = <"The smallest sum of the longest lesion diameters during treatment.">
+				>
+				["at0059"] = <
+					text = <"Sum of lesion diameters currently">
+					description = <"Sum of current lesion diameters.">
+				>
+				["at0060"] = <
+					text = <"Percent of change baseline to current">
+					description = <"Percent of change baseline to current sum of the longest lesion diameters.">
+				>
+				["at0061"] = <
+					text = <"Percent of change nadir to current">
+					description = <"Percent of change smallest during treatment to current sum of the longest lesion diameters.">
+				>
+				["at0062"] = <
+					text = <"Non-target response">
+					description = <"Assessment of progression of non-target disease.">
+				>
+				["at0063"] = <
+					text = <"CR">
+					description = <"Complete Response. Disappearance of all non-target lesions and normalisation of tumour marker level. All lymph nodes must be non-pathological in size (<10 mm short axis).">
+				>
+				["at0064"] = <
+					text = <"Non-CR/Non-PD">
+					description = <"Persistence of one or more non-target lesion(s) and/or maintenance of tumour marker level above the normal limits.">
+				>
+				["at0065"] = <
+					text = <"PD">
+					description = <"Unequivocal progression of existing non-target lesions. (Note: the appearance of one or more new lesions is also considered progression).">
+				>
+				["at0066"] = <
+					text = <"Overall response">
+					description = <"The overall response is the response recorded from the start of treatment (sum of lesion diamaters at baseline) until the last measurements (sum of lesion diamaters currently). ">
+				>
+				["at0067"] = <
+					text = <"Complete response (CR)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"Partial response (PR)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Stable disease (SD)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Progressive disease (PD)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"First time point">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Subsequent time point">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Best overall response">
+					description = <"The best overall response is the best response recorded from the start of treatment (sum of lesion diamaters at baseline) until disease progression/recurrence, taking as reference for progressive disease the smallest measurements recorded since the treatment started (sum of lesion diameters at nadir).">
+				>
+				["at0074"] = <
+					text = <"Complete response (CR)">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Partial response (PR)">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Stable disease (SD)">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Progressive disease (PD)">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Assessment">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Date">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Baseline">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Follow-up 1">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Follow-up 2">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Follow-up 3">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Follow-up 4">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Follow-up 5">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Follow-up 6">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Follow-up 7">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Follow-up 8">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Follow-up 9">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Follow-up 10">
 					description = <"">
 				>
 			>
