@@ -46,7 +46,7 @@ E L Van Persijn Van Meerten, H Gelderblom,  J L Bloem. RECIST revised: implicati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8e923ff58a67256e228626535fc76956">
+		["MD5-CAM-1.0.1"] = <"e200959fc23ecbf0c8912dd36acb6fb5">
 		["build_uid"] = <"e3bd89b0-e702-36dc-bf1b-b264eae0519d">
 	>
 
@@ -437,7 +437,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0094"] = <
 					text = <"Overall response">
-					description = <"The overall response is the response recorded from the start of treatment (sum of lesion diamaters at baseline) until the last measurements (sum of lesion diamaters currently). ">
+					description = <"The overall response status is the response that concludes target and non-target responses at a particular time point for patients who have measurable disease at baseline.">
 				>
 				["at0097"] = <
 					text = <"Complete response (CR)">
@@ -705,7 +705,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0262"] = <
 					text = <"Non-target response">
-					description = <"Assessment of progression of non-target disease.">
+					description = <"The response of non-target lesions represents their change from baseline to current time point for patients who have non-measurable disease at baseline; assesses the change of non-target disease from baseline to current time point additional to target response. ">
 				>
 				["at0263"] = <
 					text = <"CR">
@@ -733,7 +733,7 @@ of  ≥15 mm by CT scan.">
 				>
 				["at0269"] = <
 					text = <"Target response">
-					description = <"The overall response is the response recorded from the start of treatment (sum of lesion diamaters at baseline) until the last measurements (sum of lesion diamaters currently). ">
+					description = <"The response of target lesions represents their change from baseline to current time point for patients who have measurable disease at baseline.">
 				>
 				["at0270"] = <
 					text = <"Complete response (CR)">
