@@ -1,0 +1,75 @@
+archetype (adl_version=1.4; uid=186a2904-753a-44c7-a5b8-cf979d9fbe8a)
+	openEHR-EHR-OBSERVATION.symbol_digit_modalities_test.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Olha Nikolaieva">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+		["organisation"] = <"University Hospital Basel">
+		["date"] = <"2024-04-04">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record an assessment of symbol digit modalities test in adults. ">
+			keywords = <"Symbol digit modalities test, SDMT, divided attention, visual scanning, tracking, motor speed.", ...>
+			use = <"Use to record an assessment of symbol digit modalities test in adults. ">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["references"] = <"Strauss E, Sherman E, Spreen O. A compendium of neuropsychological tests: Administration, norms, and commentary. 3rd ed. New York, NY: Oxford University Press; 2006. 1216 p.
+">
+		["MD5-CAM-1.0.1"] = <"da667db778bd87b6723a873c41f6ff9e">
+		["build_uid"] = <"3189a32f-7a73-3993-9c69-e001919db27c">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Symbol digit modalities test
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Symbol digit modalities test">
+					description = <"Symbol digit modalities test is used to assess divided attention, visual scanning, tracking, and motor speed.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
