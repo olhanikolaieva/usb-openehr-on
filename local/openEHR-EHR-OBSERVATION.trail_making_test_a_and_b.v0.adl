@@ -32,6 +32,12 @@ description
 		["MD5-CAM-1.0.1"] = <"9b47b590c736e224d8a02a8bd5f21cec">
 		["build_uid"] = <"6d271bc2-5974-349d-bd85-22a318a74b78">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+		["references"] = <"Reitan RM. Validity of the Trail Making test as an indicator of organic brain damage. Percept Mot Skills. 1958;8:271-276.
+
+Lezak MD, Howieson DB, Loring DW. Neuropsychological Assessment. 4th ed. New York: Oxford University Press; 2004. 
+
+Strauss E, Sherman E, Spreen O. A compendium of neuropsychological tests: Administration, norms, and commentary. 3rd ed. New York, NY: Oxford University Press; 2006. 1216 p.
+">
 	>
 
 definition
