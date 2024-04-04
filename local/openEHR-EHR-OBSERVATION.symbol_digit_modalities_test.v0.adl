@@ -31,7 +31,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a354fd99439041ad1c89e767289181c7">
+		["MD5-CAM-1.0.1"] = <"6e8eb380edb2f9d2dcb9bf8bd9a6dd2f">
 		["build_uid"] = <"3189a32f-7a73-3993-9c69-e001919db27c">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
@@ -113,7 +113,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"@ internal @">
+					description = <"Any event">
 				>
 				["at0003"] = <
 					text = <"Tree">
