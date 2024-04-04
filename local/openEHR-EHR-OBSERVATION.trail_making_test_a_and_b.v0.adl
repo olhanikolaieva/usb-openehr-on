@@ -9,15 +9,16 @@ language
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-04-04">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"Trail making test A and B, TMT A&B, Partington pathways, divided attention test, attention, speed, mental flexibility.", ...>
 		>
 	>
 	other_details = <
@@ -26,7 +27,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"18d6932d27c141e4cdac766856f31056">
+		["MD5-CAM-1.0.1"] = <"3e49c79f6a058fdffb348c6bdf030003">
 		["build_uid"] = <"6d271bc2-5974-349d-bd85-22a318a74b78">
 	>
 
@@ -121,7 +122,7 @@ ontology
 				>
 				["at0005"] = <
 					text = <"Administration">
-					description = <"">
+					description = <"The version of the trail making test used in assessment: standard written or oral.">
 				>
 				["at0006"] = <
 					text = <"Test A">
