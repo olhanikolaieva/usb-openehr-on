@@ -18,7 +18,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To record an assessment of parts A and B of the trail making test in adults. ">
 			keywords = <"Trail making test A and B, TMT A&B, Partington pathways, divided attention test, attention, speed, mental flexibility.", ...>
+			use = <"Use to record an assessment of parts A and B of the trail making test in adults. ">
 		>
 	>
 	other_details = <
@@ -27,7 +29,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3e49c79f6a058fdffb348c6bdf030003">
+		["MD5-CAM-1.0.1"] = <"9995ee23582b5e371f41c545e31f7f50">
 		["build_uid"] = <"6d271bc2-5974-349d-bd85-22a318a74b78">
 	>
 
@@ -106,7 +108,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Trail making test A and B">
-					description = <"Trail making test A and B">
+					description = <"Trail making test A and B  is a measure of attention, speed, and mental flexibility.">
 				>
 				["at0001"] = <
 					text = <"History">
