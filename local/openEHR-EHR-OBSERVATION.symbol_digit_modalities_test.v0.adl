@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
-		["name"] = <"Olha Nikolaieva">
-		["email"] = <"olha.nikolaieva.med@gmail.com">
-		["organisation"] = <"University Hospital Basel">
 		["date"] = <"2024-04-04">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,13 +26,14 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Strauss E, Sherman E, Spreen O. A compendium of neuropsychological tests: Administration, norms, and commentary. 3rd ed. New York, NY: Oxford University Press; 2006. 1216 p.
+">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["references"] = <"Strauss E, Sherman E, Spreen O. A compendium of neuropsychological tests: Administration, norms, and commentary. 3rd ed. New York, NY: Oxford University Press; 2006. 1216 p.
-">
-		["MD5-CAM-1.0.1"] = <"99f014ddd0dd9dcf74d1ad4fb460ba1c">
+		["MD5-CAM-1.0.1"] = <"a354fd99439041ad1c89e767289181c7">
 		["build_uid"] = <"3189a32f-7a73-3993-9c69-e001919db27c">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
@@ -98,6 +99,7 @@ definition
 	}
 
 ontology
+	terminologies_available = <"SNOMED-CT", ...>
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -156,6 +158,14 @@ ontology
 					description = <"Record any circumstances that you believe may have affected the patient's performance.">
 					comment = <"Example confounding factors include (but are not limited to): \"The patient had a cold\", \"The patient reports not feeling well\", or \"The patient tripped but did not fall\".">
 				>
+			>
+		>
+	>
+	term_binding = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::273857000]>
+				["at0007"] = <[SNOMED-CT::718387005]>
 			>
 		>
 	>
