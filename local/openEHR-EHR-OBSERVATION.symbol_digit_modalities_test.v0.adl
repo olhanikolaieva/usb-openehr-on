@@ -18,7 +18,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record an assessment of symbol digit modalities test in adults. ">
+			purpose = <"To record an assessment of symbol digit modalities test. ">
 			keywords = <"Symbol digit modalities test, SDMT, divided attention, visual scanning, tracking, motor speed.", ...>
 			use = <"Use to record an assessment of symbol digit modalities test in adults. ">
 		>
@@ -31,7 +31,7 @@ description
 		["custodian_namespace"] = <"org.openehr">
 		["references"] = <"Strauss E, Sherman E, Spreen O. A compendium of neuropsychological tests: Administration, norms, and commentary. 3rd ed. New York, NY: Oxford University Press; 2006. 1216 p.
 ">
-		["MD5-CAM-1.0.1"] = <"da667db778bd87b6723a873c41f6ff9e">
+		["MD5-CAM-1.0.1"] = <"99f014ddd0dd9dcf74d1ad4fb460ba1c">
 		["build_uid"] = <"3189a32f-7a73-3993-9c69-e001919db27c">
 	>
 
@@ -42,11 +42,58 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Administration
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- Written
+													at0006]    -- Oral
+												}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- SDMT score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..110|}
+											}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Trial not completed
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {true}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Reasons for non-completion
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0011] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0012] occurrences matches {0..*} matches {    -- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0010] matches {*}    -- Item tree
 		}
 	}
 
@@ -69,6 +116,45 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Administration">
+					description = <"The version of the trail making test used in assessment: standard written or oral.">
+				>
+				["at0005"] = <
+					text = <"Written">
+					description = <"Written version of symbol digit modalities test.">
+				>
+				["at0006"] = <
+					text = <"Oral">
+					description = <"Oral version of symbol digit modalities test.">
+				>
+				["at0007"] = <
+					text = <"SDMT score">
+					description = <"The number of correct substitutions within the 90-second interval.">
+				>
+				["at0008"] = <
+					text = <"Trial not completed">
+					description = <"Could the trial not be completed or was the trial terminated prematurely?">
+					comment = <"Record as True if the trial was not able to be completed as per the standard methodology. Please specify reasons for this separately. A successful trial needs not to be specifically marked.">
+				>
+				["at0009"] = <
+					text = <"Reasons for non-completion">
+					description = <"Record the reasons, if the trial was not completed or the test was terminated prematurely.">
+					comment = <"Example reasons for non-completion include (but are not limited to), if the patient's disease has progressed or physical limitations prohibit him from completing the trial, indicate \"Unable to complete trial due to physical limitations\" or \"Severely impaired patient\". In addition, record any specifics that can be observed (i.e., \"Patient lost the vision and unable to complete the test\"). If the patient did not complete a trial for any other reason, specify this as well (e.g., \"Patient fell and was too fatigued to complete another trial\", or \"Patient refused to complete trial\").">
+				>
+				["at0010"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0012"] = <
+					text = <"Confounding factors">
+					description = <"Record any circumstances that you believe may have affected the patient's performance.">
+					comment = <"Example confounding factors include (but are not limited to): \"The patient had a cold\", \"The patient reports not feeling well\", or \"The patient tripped but did not fall\".">
 				>
 			>
 		>
