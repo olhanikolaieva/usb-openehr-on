@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"46c2ebe83ef3c63d54605f004247af37">
+		["MD5-CAM-1.0.1"] = <"3b03335f7fcef79fc023ee5e64923f9c">
 		["build_uid"] = <"6d271bc2-5974-349d-bd85-22a318a74b78">
 	>
 
@@ -35,7 +35,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any trial
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -91,11 +91,6 @@ definition
 							}
 						}
 					}
-					POINT_EVENT[at0004] occurrences matches {0..1} matches {    -- Trial 1
-						data matches {
-							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
-						}
-					}
 				}
 			}
 		}
@@ -117,16 +112,12 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any trial">
+					text = <"Any event">
 					description = <"@ internal @">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"Trial 1">
-					description = <"">
 				>
 				["at0005"] = <
 					text = <"Administration">
