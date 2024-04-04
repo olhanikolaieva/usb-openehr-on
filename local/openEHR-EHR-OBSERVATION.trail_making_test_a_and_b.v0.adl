@@ -29,8 +29,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9995ee23582b5e371f41c545e31f7f50">
+		["MD5-CAM-1.0.1"] = <"9b47b590c736e224d8a02a8bd5f21cec">
 		["build_uid"] = <"6d271bc2-5974-349d-bd85-22a318a74b78">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 	>
 
 definition
@@ -103,6 +104,7 @@ definition
 	}
 
 ontology
+	terminologies_available = <"SNOMED-CT", ...>
 	term_definitions = <
 		["en"] = <
 			items = <
@@ -159,12 +161,19 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Written">
-					description = <"">
+					description = <"Standard written version of TMT.">
 				>
 				["at0014"] = <
 					text = <"Oral">
-					description = <"">
+					description = <"Oral version of TMT.">
 				>
+			>
+		>
+	>
+	term_binding = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::273882000]>
 			>
 		>
 	>
