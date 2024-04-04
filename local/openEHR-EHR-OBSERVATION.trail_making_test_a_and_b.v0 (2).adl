@@ -1,0 +1,185 @@
+archetype (adl_version=1.4; uid=1f89cb9b-ce8f-42ad-8cce-b9883b710eb3)
+	openEHR-EHR-OBSERVATION.trail_making_test_a_and_b.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-04-04">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva.med@gmail.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record an assessment of parts A and B of the trail making test in adults. ">
+			keywords = <"Trail making test A and B, TMT A&B, Partington pathways, divided attention test, attention, speed, mental flexibility.", ...>
+			use = <"Use to record an assessment of parts A and B of the trail making test in adults. ">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Reitan RM. Validity of the Trail Making test as an indicator of organic brain damage. Percept Mot Skills. 1958;8:271-276.
+
+Lezak MD, Howieson DB, Loring DW. Neuropsychological Assessment. 4th ed. New York: Oxford University Press; 2004. 
+
+Strauss E, Sherman E, Spreen O. A compendium of neuropsychological tests: Administration, norms, and commentary. 3rd ed. New York, NY: Oxford University Press; 2006. 1216 p.
+">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"75fd5985921755e8887d6ae18ef0f17e">
+		["build_uid"] = <"6d271bc2-5974-349d-bd85-22a318a74b78">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Trail making test A and B
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Administration
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0013,    -- Written
+													at0014]    -- Oral
+												}
+											}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Test A
+										value matches {
+											DV_DURATION matches {
+												value matches {PTS}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Test B
+										value matches {
+											DV_DURATION matches {
+												value matches {PTS/|<=PT300S|}
+											}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Trial not completed
+										value matches {
+											DV_BOOLEAN matches {
+												value matches {true}
+											}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Reasons for non-completion
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						state matches {
+							ITEM_TREE[at0011] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0012] occurrences matches {0..*} matches {    -- Confounding factors
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0009] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Trail making test A and B">
+					description = <"Trail making test A and B  is a measure of attention, speed, and mental flexibility.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Any event">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Administration">
+					description = <"The version of the trail making test used in assessment: standard written or oral.">
+				>
+				["at0006"] = <
+					text = <"Test A">
+					description = <"Time required to successfully complete the part A of trail making test. ">
+				>
+				["at0007"] = <
+					text = <"Test B">
+					description = <"Time required to successfully complete the part B of trail making test. ">
+				>
+				["at0008"] = <
+					text = <"Trial not completed">
+					description = <"Could the trial not be completed or was the trial terminated prematurely?">
+					comment = <"Record as True if the trial was not able to be completed as per the standard methodology. Please specify reasons for this separately. A successful trial needs not to be specifically marked.">
+				>
+				["at0009"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0010"] = <
+					text = <"Reasons for non-completion">
+					description = <"Record the reasons, if the trial was not completed or the test was terminated prematurely.">
+					comment = <"Example reasons for non-completion include (but are not limited to), if the patient's disease has progressed or physical limitations prohibit him from completing the trial, indicate \"Unable to complete trial due to physical limitations\" or \"Severely impaired patient\". In addition, record any specifics that can be observed (i.e., \"Patient lost the vision and unable to complete the test\"). If the patient did not complete a trial for any other reason, specify this as well (e.g., \"Patient fell and was too fatigued to complete another trial\", or \"Patient refused to complete trial\").">
+				>
+				["at0011"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0012"] = <
+					text = <"Confounding factors">
+					description = <"Record any circumstances that you believe may have affected the patient's performance.">
+					comment = <"Example confounding factors include (but are not limited to): \"The patient had a cold\", \"The patient reports not feeling well\", or \"The patient tripped but did not fall\".">
+				>
+				["at0013"] = <
+					text = <"Written">
+					description = <"Standard written version of TMT.">
+				>
+				["at0014"] = <
+					text = <"Oral">
+					description = <"Oral version of TMT.">
+				>
+			>
+		>
+	>
+	term_binding = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0000"] = <[SNOMED-CT::273882000]>
+			>
+		>
+	>
