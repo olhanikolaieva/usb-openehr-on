@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "342d2ffc512fdf2ca938238a4dd47f94",
+      "MD5-CAM-1.0.1" : "3ec76fa46dfff9996062c500791fb6ad",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -386,9 +386,42 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "C2E3543CEF6E93E0C929C718B2308564"
+        "PARENT:MD5-CAM-1.0.1" : "15c8239d47cf5d40f602c9657447f782"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Aufzeichnung des MSFC-Werts einer Person bezüglich einer Referenzpopulation. Das MSFC wurde von der Clinical Outcomes Assessment Task Force der National Multiple Sclerosis Society entwickelt. Der MSFC-Wert bildet eine Gesamtgröße, die mit der Schwere der Erkrankung bezüglich einer Referenzpopulation korreliert. Dabei werden in drei einzelnen Tests (Timed 25-Foot Walk, Nine Hole Peg Test und Paced Auditory Serial Addition Test) verschiedene Aspekte höherer Gehirnfunktionen gemessen. Die Ergebnisse dieser drei Test werden in Z-Werten normiert und im MSFC-Wert zusammengeführt.",
+          "keywords" : [ "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sklerose", "MS", "Neurologie" ],
+          "use" : "Verwendung zur Aufzeichnung des MSFC-Werts und der Datenbasis, sowie von Links zu den gemessenen Ergebnissen der drei einzelnen Tests (Timed 25-Foot Walk, Nine Hole Peg Test und Paced Auditory Serial Addition Test).\r\n\r\nDer MSFC-Wert ist eine aus den gemittelten Ergebnissen der einzelnen Tests berechnete Größe, adjustiert bezüglich einer Referenzpopulation. D.h. MSFC-Wert = 1/3 * (Z_arm,avg. + Z_leg,avg. + Z_cognitive), mit Z_x = Z-Wert aus jedem Ergebnis eines Tests. Dieser Wert muss extern berechnet werden, nur das Ergebnis wird hier aufgezeichnet.\r\n\r\nSiehe MSFC-Handbuch für weitere Auswertungsanweisungen, Formeln und Hintergrundinformationen.",
+          "misuse" : "Nicht verwenden zur Aufzeichnung der Messergebnisse der drei einzelnen Tests des MSFC. Jeder Test sollte den speziell zutreffenden Archetyp verwenden: openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1.adl, openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1.adl und openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1.adl.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the MSFC Score for an individual with respect to a reference population. The MSFC was developed by the National Multiple Sclerosis Society’s Clinical Outcomes Assessment Task Force. The MSFC Score forms a total value that correlates with the severity of the disease with respect to a reference population. In three separate tests (Timed 25-Foot Walk, Nine Hole Peg Test and Paced Auditory Serial Addition Test) various aspects of higher brain functions are measured. The results of these three tests are standardized into Z-scores ​​and merged into the MSFC Score.",
+          "keywords" : [ "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sclerosis", "MS", "Neurology" ],
+          "use" : "Use to record the MSFC Score and the reference data set, as well as links to the measured results of the three individual tests (Timed 25-Foot Walk, Nine Hole Peg Test and Paced Auditory Serial Addition Test).\r\n\r\nThe MSFC Score is a computed value based on the average of each test result, adjusted to the reference population. I.e. MSFC Score = 1/3 * (Z_arm,avg. + Z_leg,avg. + Z_cognitive), where Z_x = Z-score of each test result. This score has to be computed externally, only the resulting value is to be recorded here.\r\n\r\nUse the MSFC Manual for further scoring instructions, formulas and background information.",
+          "misuse" : "Not to be used to record the result of the three individual tests of the MSFC. Each test should use the correct specific archetype: openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1.adl, openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1.adl, and openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1.adl.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.msfc_score.v1",
     "differential" : true,
@@ -414,7 +447,25 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0007.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_EHR_URI",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "String",
+                      "occurrences" : "1..1",
+                      "constraint" : [ "^/data[at0001]/events[at0002]/data[at0003]/items[at0004]^" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -474,7 +525,38 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EBC56378345269E681B5B2FCDADCF273"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Protokollierung der Messungen, die während eines Timed 25-Foot Walk aufgenommen wurden, in der Regel als Teil der Testreihe des Multiple Sclerosis Functional Composite (MSFC).",
+          "keywords" : [ "Timed 25-Foot Walk", "T25-FW", "T25FW", "TW", "Multiple Sclerosis Functional Composite", "MSFC" ],
+          "use" : "Verwendung zur Aufzeichnung der Messungen, die während eines Timed 25-Foot Walk aufgenommen wurden. Dieser Test wird normalerweise als eine Komponente des Multiple Sclerosis Functional Composite (MSFC) durchgeführt, kann jedoch auch davon unabhängig eingesetzt werden. Der Patient wird zu einem Ende einer klar markierten Strecke von 25 Fuß (7,62 m) Länge geführt. Dann wird er angewiesen, diese Strecke so schnell wie möglich, jedoch sicher, zurückzulegen. Die Aufgabe wird anschließend sofort wiederholt, der Patient legt dieselbe Strecke auf umgekehrtem Weg zurück. Unterstützende Hilfsmittel (i. Allg. die gewohnten Gehhilfen) dürfen beim Test verwendet werden. Siehe MSFC-Handbuch für detaillierte Handlungsanweisungen. Der Test sollte nur von einer entsprechend geschulten Person durchgeführt werden.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the measurements recorded during a Timed 25-Foot Walk test, normally as part of the Multiple Sclerosis Functional Composite (MSFC) suite of tests.",
+          "keywords" : [ "Timed 25-Foot Walk", "T25-FW", "T25FW", "TW", "Multiple Sclerosis Functional Composite", "MSFC" ],
+          "use" : "Use to record the measurements recorded during a Timed 25-Foot Walk test. This test is commonly carried out as one component of the Multiple Sclerosis Functional Composite (MSFC) assessment, but may be performed independently. The patient is directed to one end of a clearly marked 25-foot (7,62 m) course. Then he is instructed to walk this course as quickly as possible, but safely. The task is immediately administered again by having the patient walk back the same distance. Assistive devices (in general, customary walking devices) may be used when doing this task. Use the MSFC Manual for detailed administration instructions. The test should only be administred by a suitably trained person.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.timed_25_foot_walk.v1",
     "differential" : true,
@@ -608,7 +690,56 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "36D0FB8781326F7D2D963CBEE3015F7F"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Protokollierung der Messungen, die während eines Nine Hole Peg Test aufgezeichnet wurden, normalerweise als Teil der Testreihe des Multiple Sclerosis Functional Composite.",
+          "keywords" : [ "NHPT", "9-Hole Peg Test", "9-HPT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sklerose", "MS", "Neurologie" ],
+          "use" : "Verwendung zur Protokollierung der Messungen, die während eines Nine Hole Peg Test aufgezeichnet wurden. Dieser Test wird normalerweise als eine Komponente des Assessments des Multiple Sclerosis Functional Composite (MSFC) durchgeführt, kann jedoch auch unabhängig eingesetzt werden.  Sowohl die dominante als auch die nichtdominante Hand des Patienten werden zwei Mal getestet (zwei aufeinanderfolgende Testläufe der dominanten Hand, gefolgt von zwei aufeinanderfolgenden Testläufen der nichtdominanten Hand). Für jeden Testlauf werden neun Stifte einer nach dem anderen aus einem Behälter entnommen, in die Löcher auf einem Steckbrett platziert und dann einzeln wieder in den Behälter zurückgelegt. Der Proband darf in jedem Testlauf nur eine Hand einsetzen, darf das Lochbrett jedoch mit der freien Hand festhalten.\r\n\r\nDieser Archetyp deckt Varianten des Tests ab. Nach Mathiowetz et al. (1985) wird für jede Hand ein Probelauf ohne Zeitmessung vor dem Testlauf mit Zeitmessung durchgeführt. Das MSFC-Handbuch schreibt zwei Testläufe mit Zeitmessung für jede Hand vor, jedoch keinen Probelauf. Für detaillierte Testanleitungen das MSFC-Handbuch verwenden oder siehe Mathiowetz et al. (1985). Der Test sollte nur von einer entsprechend geschulten Person durchgeführt werden.",
+          "misuse" : "Nicht zur Bewertung von Patienten mit schwerwiegenden körperlichen Beeinträchtigungen einsetzen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the measurements recorded during a Nine Hole Peg Test, normally as part of the Multiple Sclerosis Functional Composite suite of tests.",
+          "keywords" : [ "NHPT", "9-Hole Peg Test", "9-HPT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sclerosis", "MS", "Neurology" ],
+          "use" : "Use to record the measurements recorded during a Nine Hole Peg Test. This test is commonly carried out as one component of the Multiple Sclerosis Functional Composite (MSFC) assessment, but may be performed independently. Both the dominant and non-dominant hand of the patient are tested twice (two consecutive trials of the dominant hand, followed by two consecutive trials of the non-dominant hand). For each trial nine pegs are picked one by one from a container, placed in the holes on a pegboard and then separately returned to the container. The subject may only use one hand at each trial, but may hold the pegboard with the free hand.\r\n\r\nThis archetype covers variations of the test. According to Mathiowetz et al. (1985) an untimed practice trial should be administered prior to the timed trial for each hand. The MSFC Manual stipulates two timed trials for each hand, but no practice trial. Use the MSFC Manual or see Mathiowetz et al. (1985) for detailed administration instructions. The test should only be administered by a suitably trained person.",
+          "misuse" : "Not to be used for the assessment of patients with serious physical impairments.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在用于记载九孔插棒测验过程中所记录的那些测试结果，且通常是作为多发性硬化症功能组合试验的组成部分。",
+          "keywords" : [ "九孔插棒测验", "九孔插棒试验", "九孔插板试验", "9孔圆柱实验", "九孔手功能测试", "Nine-Hole Peg Test", "NHPT", "9-Hole Peg Test", "9-HPT", "多发性硬化症功能组合", "Multiple Sclerosis Functional Composite", "MSFC", "多发性硬化症", "多发性硬化", "Multiple Sclerosis", "MS", "神经病学" ],
+          "use" : "用于记载九孔插棒测验过程中所记录的那些测试结果。该测验通常是作为多发性硬化症功能组合（Multiple Sclerosis Functional Composite，MSFC）评估的组成部分来完成的，但也可能独立进行。受检患者的优势手和非优势手均测试两次（针对优势手的两次连续测试，接着是针对非优势手的两次连续测试）。对于每次测试，均要求将九根插棒从容器（盒子）里逐个拿出来并分别插到测试板的小孔之中，随后再将它们分别收回容器（盒子）里。受检对象在每次测试过程中只能使用一只手，但可以用另一只手扶着测试板。\r\n本原始型涵盖了该测验的各种变种。依据文献Mathiowetz et al. (1985)，在每只手的计时测试之前，应当进行一次不计时的测试练习。《MSFC手册》（MSFC Manual）规定的是每只手进行两次计时测试，并不进行测试练习。关于详细的施用说明，请参见《MSFC手册》或文献Mathiowetz et al. (1985)。该测验应当仅仅由经过合适培训的人员来执行。",
+          "misuse" : "并不用于评估那些存在严重身体缺陷的患者。",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.nine_hole_peg_test.v1",
     "differential" : true,
@@ -814,7 +945,38 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "4A376958A6434A49CA40592071FC7E2D"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Protokollierung der Messungen, die während eines Paced Auditory Serial Addition Test aufgezeichnet wurden, normalerweise als Teil der Testreihe des Multiple Sclerosis Functional Composite.",
+          "keywords" : [ "PASAT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sklerose", "MS", "Neurologie" ],
+          "use" : "Verwendung zur Protokollierung der Messungen, die während eines Paced Auditory Serial Addition Test aufgezeichnet wurden. Dieser Test wird normalerweise als eine Komponente des Multiple Sclerosis Functional Composite durchgeführt, kann jedoch auch davon unabhängig eingesetzt werden. Dem Probanden werden nacheinander 61 einstelligen Ziffern vorgespielt. Beim PASAT-3'' wird alle drei Sekunden eine neue Zahl präsentiert, beim optionalen PASAT-2'' alle zwei Sekunden. Der Proband soll jeweils die Summe der letzten beiden Ziffern bilden (nicht die fortlaufende Summe). Das heißt, es sind maximal 60 richtige Ergebnisse möglich. \r\n\r\nVerwendung des MSFC-Handbuchs für detaillierte Testanleitungen. Vor der Aufzeichnung des eigentlichen Tests muss wenigstens ein Probelauf durchgeführt werden (diese Übungssequenz ist Bestandteil des PASAT). Wenn dabei weniger als drei richtige Antworten gegeben werden, sollte die Übungssequenz wiederholt werden (max. drei Mal). Wenn mehr als zwei korrekte Antworten gegeben wurden, kann mit dem PASAT-3'' fortgefahren werden (der Patient sollte die Aufgabe hinreichend verstanden haben). Um zusätzliche Informationen über die kognitiven Funktionen zu erhalten, kann der PASAT-2'' optional im Anschluss an den 3''-Test durchgeführt werden. Die Tests sollte nur von einer entsprechend geschulten Person durchgeführt werden.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the measurements recorded during a Paced Auditory Serial Addition Test, normally as part of the Multiple Sclerosis Functional Composite suite of tests.",
+          "keywords" : [ "PASAT", "Multiple Sclerosis Functional Composite", "MSFC", "Multiple Sclerosis", "MS", "Neurology" ],
+          "use" : "Use to record the measurements recorded during a Paced Auditory Serial Addition Test. This test is commonly carried out as one component of the Multiple Sclerosis Functional Composite, but may be performed independently. 61 single-digit numbers are presented to the subject one by one. During PASAT-3'' a new number is presented every three seconds, in the optional PASAT-2'' every two seconds. In each case the subject is asked to respond with the sum of the last two digits (not the running total). That is, there is a maximum of 60 possible correct sums.\r\n\r\nUse the MSFC Manual for detailed administration instructions. Prior to the recording of the actual tests at least one practice trial has to be performed (this training sequence is part of the PASAT). If less than three correct answers were given, the practice trial should be repeated (up to three times). If more than two correct answers were given, the PASAT-3'' can be administered (the patient should have understood the task sufficiently). To obtain additional information about the cognitive functions, the PASAT-2'' can be performed optionally after the 3'' test. The tests should only be administered by a suitably trained person.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.paced_auditory_serial_addition_test.v1",
     "differential" : true,
