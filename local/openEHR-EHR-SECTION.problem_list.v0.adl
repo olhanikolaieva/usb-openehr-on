@@ -126,7 +126,7 @@ In order for this list to be accurate and safe to use as the basis for decision 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8367D4F2CF2BA5BE59DC4442FD28C085">
+		["MD5-CAM-1.0.1"] = <"584d5349d3a41fb3afe91e9046d02da2">
 		["build_uid"] = <"46c18c89-3428-4e56-8aaa-33e4907ea711">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -150,6 +150,9 @@ definition
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-[a-zA-Z0-9_]+)*\.v2/}
 			}
+		}
+		name matches {
+			DV_CODED_TEXT matches {*}
 		}
 	}
 
