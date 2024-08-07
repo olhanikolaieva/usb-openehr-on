@@ -1,18 +1,17 @@
-archetype (adl_version=1.4; uid=dcae10b9-634e-4fa7-b695-1995af5c89dd)
+﻿archetype (adl_version=1.4; uid=dcae10b9-634e-4fa7-b695-1995af5c89dd)
 	openEHR-EHR-OBSERVATION.symptom_sign_screening.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Symptom/sign screening questionnaire
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Sarah Ballout, Natalia Strauch">
+				["name"] = <"Sarah Ballout, Natalia Strauch, Alina Rehberg">
 				["organisation"] = <"Medizinische Hochschule Hannover">
-				["email"] = <"ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de">
+				["email"] = <"ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de">
 			>
 		>
 		["fi"] = <
@@ -42,21 +41,17 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2020-03-13">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2020-03-13">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Astrid Askeland, Dips AS, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Yexuan Cheng, 浙江大学, China","Are Edvardsen, SKDE, Helse Nord RHF, Norway","Alexander Eikrem-Lüthi, Lovisenberg Diakonale Sykehus, Norway","Kåre Flø, DIPS ASA, Norway","Grant Forrest, Lunaria Ltd, United Kingdom","Heather Grain, Llewelyn Grain Informatics, Australia","Anca Heyd, DIPS ASA, Norway","Joost Holslag, Nedap, Netherlands","Evelyn Hovenga, EJSH Consulting, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway","Gunnar Jårvik, Helse Vest IKT AS, Norway","Anjali Kulkarni, Karkinos, India","Kanika Kuwelker, Helse Vest IKT, Norway","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway","Øygunn Leite Kallevik, Helse Bergen, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Ian McNicoll, freshEHR Clinical Informatics, UK","Per Meinich, Helse Sør-Øst RHF, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Vanessa Pereira, Luxembourg Institute of Health (LIH), Portugal","Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil","Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Norwegian Review Summary, Norwegian Public Hospitals, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Ina Wille, Helse-Vest RHF, Norway">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Schaffung von Rahmenbedingungen für die Darstellung von Antworten auf vordefinierte Screening-Fragen zu Symptomen oder Anzeichen.">
-			keywords = <"Screening, Fragebogen, Beschwerde, Symptom, Störung, Problem, Unwohlsein, Anzeichen", ...>
 			use = <"Verwendung als Rahmenbedingung für die Darstellung von Antworten auf vordefinierte Screening-Fragen zu Symptomen oder Anzeichen.
 
 Häufige Anwendungsfälle umfassen, sind aber nicht beschränkt auf:
@@ -72,37 +67,14 @@ Die Semantik dieses Archetyps ist absichtlich locker, und die Abfrage dieses Arc
 Die Quelle der Informationen in einer Fragebogenantwort kann in verschiedenen Kontexten variieren, kann jedoch mithilfe des Elements „Information provider“ im Referenzmodell spezifisch identifiziert werden.
 
 Dieser Archetyp wurde entwickelt, um als Screening-Tool oder zur Darstellung einfacher Daten im Fragebogenformat zur Verwendung in Situationen wie einem Krankheitsregister verwendet zu werden. Wenn der Screening-Fragebogen das Vorhandensein eines Symptoms oder Anzeichens identifiziert, wird empfohlen, dass das klinische System die spezifischen Details über das Symptom unter Verwendung des Archetyps CLUSTER.symptom_sign, der im SLOT für die Zusätzliche Angaben eingefügt wird, darstellt und beibehält.">
+			keywords = <"Screening, Fragebogen, Beschwerde, Symptom, Störung, Problem, Unwohlsein, Anzeichen", ...>
 			misuse = <"Darf nicht verwendet werden, um Details über das Vorhandensein oder Fehlen eines Symptoms außerhalb eines Screening-Kontexts darzustellen. Verwenden Sie zu diesem Zweck CLUSTER.symptom_sign oder CLUSTER.exclusion_symptom_sign.
 
 Darf nicht verwendet werden, um Details zu einer einfachen Auswahlliste darzustellen, in der eine Frage entweder als \"vorhanden\" oder \"unbestimmt\" aufgezeichnet werden kann. Verwenden Sie dazu OBSERVATION.selection_list.">
 		>
-		["fi"] = <
-			language = <[ISO_639-1::fi]>
-			purpose = <"*To create a framework for recording answers about symptoms or signs, to the questions of a pre-defined screening questionnaire. (en)">
-			keywords = <"*screening, questionnaire, emotions, pain numbness vertigo (en)", ...>
-			use = <"*Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.
-
-Common use cases include, but are not limited to:
-- Systematic inquiry in any consultation, for example:
---- Do you have headaches? Yes, No, Unknown.
---- Have you had dizziness in the past four weeks? Yes, No, Unknown.
-- Specific questioning related to disease surveillance.
-
-The semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.
-
-The EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you dizzy now?\" compared to \"Have you had any dizziness in the past 4 weeks?
-
-The source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.
-
-This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype. (en)">
-			misuse = <"*Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.
-
-Not to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)">
-		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Ett ramverk för att registrera svar på fördefinierade screeningfrågor om symtom eller tecken.">
-			keywords = <"screening, formulär, frågeformulär, självrapporteringsskala, symptom, besvär, problem, tecken", ...>
 			use = <"Använd som ett ramverk för att registrera svar på fördefinierade screeningfrågor om symtom eller tecken.
 
 Vanliga användningsfall inkluderar, men är inte begränsade till:
@@ -118,12 +90,35 @@ EVENT-strukturen från openEHRs referensmodell kan användas för att specificer
 Källan till informationen i ett enkätsvar kan variera i olika sammanhang men kan specifikt identifieras med hjälp av elementet 'provider' i referensmodellens ENTRY-klass.
 
 Denna arketyp har utformats för att användas som ett screeningverktyg eller för att registrera enkla data i frågeformulärformat för användning i register etc. Om screeningsfrågeformuläret identifierar närvaron av ett symptom eller tecken, rekommenderas att det kliniska systemet även registrerar och behåller de specifika detaljerna om symtomet eller tecknet med hjälp av arketypen CLUSTER.symptom_sign inkapslad i avsedd SLOT för \"ytterligare detaljer\" i denna arketyp.">
+			keywords = <"screening, formulär, frågeformulär, självrapporteringsskala, symptom, besvär, problem, tecken", ...>
 			misuse = <"Får inte användas för att registrera detaljer om närvaron eller frånvaron av ett symptom, utanför ett screeningsammanhang. Använd CLUSTER.symptom_sign eller CLUSTER.exclusion_symptom_sign inkapslade i andra lämpligare arketyper för dessa ändamål.">
+		>
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			purpose = <"*To create a framework for recording answers about symptoms or signs, to the questions of a pre-defined screening questionnaire. (en)">
+			use = <"*Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.
+
+Common use cases include, but are not limited to:
+- Systematic inquiry in any consultation, for example:
+--- Do you have headaches? Yes, No, Unknown.
+--- Have you had dizziness in the past four weeks? Yes, No, Unknown.
+- Specific questioning related to disease surveillance.
+
+The semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.
+
+The EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a symptom that has been present at any time in the past and information about a symptom within a specified time interval - for example the difference between \"\"Are you dizzy now?\" compared to \"Have you had any dizziness in the past 4 weeks?
+
+The source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.
+
+This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype. (en)">
+			keywords = <"*screening, questionnaire, emotions, pain numbness vertigo (en)", ...>
+			misuse = <"*Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.
+
+Not to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om symptomer eller sykdomstegn.">
-			keywords = <"intervjuskjema, kartleggingskjema, spørreskjema, lidelse, plage, problem, ubehag, symptom, sykdomstegn, lyte, skavank", ...>
 			use = <"Brukes for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om symptomer eller sykdomstegn.
 
 Vanlige bruksområder inkluderer, men er ikke begrenset til:
@@ -140,6 +135,7 @@ Bruk egne instanser av denne arketypen for å skille mellom spørsmål om prosed
 Kilden til informasjonen i et spørreskjema kan variere i ulike kontekster, men kan identifiseres spesifikt ved å benytte \"Information provider\" elementet i openEHR referansemodellen.
 
 Denne arketypen er laget for å bli brukt i et spørreskjema eller for å registrere enkle strukturerte data til for eksempel et sykdomsregister. Dersom det i spørreskjemaet identifiseres at et symptom eller sykdomstegn er tilstede, anbefales det at spesifikke detaljer om symptomet registreres og lagres i pasientjournalen i arketypen CLUSTER.symptom_sign (Symptom/Sykdomstegn) i SLOTet \"Ytterligere detaljer\" i denne arketypen.">
+			keywords = <"intervjuskjema, kartleggingskjema, spørreskjema, lidelse, plage, problem, ubehag, symptom, sykdomstegn, lyte, skavank", ...>
 			misuse = <"Brukes ikke for å registrere detaljer om tilstedeværelse eller fravær av et symptom utenfor konteksten av kartleggingen. Bruk arketypen CLUSTER.symptom_sign (Symptom/sykdomstegn) eller CLUSTER.exclusion_symptom_sign (Eksklusjon av et symptom) for dette formålet.
 
 Brukes ikke for å registrere detaljer om en enkel utvalgsliste der et spørsmål kan registreres som enten \"Tilstede\" eller \"Ubestemt\". Bruk arketypen OBSERVATION.selection_list for dette formålet.">
@@ -147,7 +143,6 @@ Brukes ikke for å registrere detaljer om en enkel utvalgsliste der et spørsmå
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To create a framework for recording answers to pre-defined screening questions about symptoms or signs.">
-			keywords = <"screening, questionnaire, complaint, symptom, disturbance, problem, discomfort, sign", ...>
 			use = <"Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.
 
 Common use cases include, but are not limited to:
@@ -163,6 +158,7 @@ The EVENT structure from the reference model can be used to specify whether the 
 The source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.
 
 This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype.">
+			keywords = <"screening, questionnaire, complaint, symptom, disturbance, problem, discomfort, sign", ...>
 			misuse = <"Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.
 
 Not to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose.">
@@ -170,7 +166,6 @@ Not to be used to record details about a simple selection list where a question 
 		["it"] = <
 			language = <[ISO_639-1::it]>
 			purpose = <"*To create a framework for recording answers about symptoms or signs, to the questions of a pre-defined screening questionnaire. (en)">
-			keywords = <"*screening, questionnaire, emotions, pain numbness vertigo (en)", ...>
 			use = <"*Use to create a framework for recording answers to pre-defined screening questions about symptoms or signs.
 
 Common use cases include, but are not limited to:
@@ -186,11 +181,14 @@ The EVENT structure from the reference model can be used to specify whether the 
 The source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.
 
 This archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a symptom or sign, it is recommended that clinical system record and persist the specific details about the symptom or sign using the CLUSTER.symptom_sign archetype nested within the Additional details SLOT in this archetype. (en)">
+			keywords = <"*screening, questionnaire, emotions, pain numbness vertigo (en)", ...>
 			misuse = <"*Not to be used to record details about the presence or absence of a symptom, outside of a screening context. Use CLUSTER.symptom_sign or CLUSTER.exclusion_symptom_sign for these purposes.
 
 Not to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Astrid Askeland, Dips AS, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Yexuan Cheng, 浙江大学, China", "Are Edvardsen, SKDE, Helse Nord RHF, Norway", "Alexander Eikrem-Lüthi, Lovisenberg Diakonale Sykehus, Norway", "Kåre Flø, DIPS ASA, Norway", "Grant Forrest, Lunaria Ltd, United Kingdom", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anca Heyd, DIPS ASA, Norway", "Joost Holslag, Nedap, Netherlands", "Evelyn Hovenga, EJSH Consulting, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway", "Gunnar Jårvik, Helse Vest IKT AS, Norway", "Anjali Kulkarni, Karkinos, India", "Kanika Kuwelker, Helse Vest IKT, Norway", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway", "Øygunn Leite Kallevik, Helse Bergen, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, UK", "Per Meinich, Helse Sør-Øst RHF, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Vanessa Pereira, Luxembourg Institute of Health (LIH), Portugal", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Andre Smitt-Ingebretsen, Sørlandet sykehus HF, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Ina Wille, Helse-Vest RHF, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -198,10 +196,10 @@ Not to be used to record details about a simple selection list where a question 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CFAA5A21F30725BDA8D018E31997EA7A">
-		["build_uid"] = <"cb339629-23a5-4417-991c-359fe3baea7e">
+		["MD5-CAM-1.0.1"] = <"BEAB7193BB7D94577AC77FC9A46CD1FA">
+		["build_uid"] = <"cc86f3fb-359a-43c2-a3e7-39534a42da10">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
-		["revision"] = <"1.0.3">
+		["revision"] = <"1.0.4">
 	>
 
 definition
@@ -309,6 +307,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -664,7 +663,7 @@ For eksempel: \"Pre operativ screening\" eller navnet på det faktiske spørresk
 				>
 				["at0005"] = <
 					text = <"Vorhanden?">
-					description = <"*Is there a history of the specific symptom or sign being present? (en)">
+					description = <"Gibt es eine Vorgeschichte, bei der das spezifische Symptom oder Anzeichen vorhanden war?">
 					comment = <"In einem Template würde das Datenelement normalerweise in die spezifisch gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem der Choice-Datentyp DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.">
 				>
 				["at0007"] = <
@@ -736,9 +735,10 @@ Zum Beispiel: \"Screening vor der Aufnahme\" oder der Name des eigentlichen Frag
 					description = <"Beschreibung über die Geschichte der Symptome oder Anzeichen, die für das Screening relevant sind.">
 				>
 				["at0037"] = <
-					text = <"*Timing (en)">
-					description = <"*Indication of timing related to the specific symptom or sign. (en)">
-					comment = <"*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific symptom or sign occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the specific symptom or sign; the interval of time during which the specific symptom or sign occured; the duration of the specific symptom or sign; the age of the individual at the time of the specific symptom or sign occured; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)">
+					text = <"Zeitpunkt">
+					description = <"Angabe des Zeitpunkts im Zusammenhang mit dem spezifischen Symptom oder Zeichen.
+">
+					comment = <"Das Datenelement „Zeitpunkt“ wurde bewusst locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, wie es in Fragebögen verwendet werden kann, um zu erfassen, wann das spezifische Symptom oder Zeichen aufgetreten ist. Die spezifische und beabsichtigte Semantik kann in einem Template weiter verdeutlicht werden. Zum Beispiel: das tatsächliche Datum und/oder die tatsächliche Uhrzeit; die Start- und Stoppzeit für das Auftreten eines bestimmten Symptoms oder Zeichens; der Zeitraum, in dem das spezifische Symptom oder Zeichen auftrat; die Dauer des spezifischen Symptoms oder Anzeichens; das Alter der Person zum Zeitpunkt des Auftretens des spezifischen Symptoms oder Anzeichens; oder die Zeitspanne, seit es aufgetreten ist. Bei Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum gültig, um nur ein Jahr aufzuzeichnen.">
 				>
 				["at0039"] = <
 					text = <"Zusätzliche Angaben">
@@ -969,7 +969,7 @@ Exempel: \"screening inför inskrivning\" eller namnet på själva frågeformul�
 			>
 		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0023"] = <[SNOMED-CT::373066001]>
