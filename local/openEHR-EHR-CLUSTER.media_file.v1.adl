@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=e2c3697a-6163-4bc7-86d0-519dd6b954f9)
+﻿archetype (adl_version=1.4; uid=e2c3697a-6163-4bc7-86d0-519dd6b954f9)
 	openEHR-EHR-CLUSTER.media_file.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Media file
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -18,9 +17,9 @@ language
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			author = <
-				["name"] = <"Åsa Skagerhult, Erik Sundvall">
-				["organisation"] = <"Region Östergötland">
-				["email"] = <"asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se">
+				["name"] = <"Åsa Skagerhult, Erik Sundvall, Manna Vosta">
+				["organisation"] = <"Region Östergötland, Karolinska University Hospital">
+				["email"] = <"asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se, manna.vosta@regionstockholm.se">
 			>
 		>
 		["nb"] = <
@@ -47,21 +46,17 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2019-12-10">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2019-12-10">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Michael Anywar, Universitätsklinikum SH, Germany","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","Paulo Bandiera-Paiva, Federal University of Sao Paulo, Brazil","itai Basel, Private, Israel","SB Bhattacharyya, Sudisa Consultancy Services, India","Stefan Dubois, Dep't of Pathology and Genetics, University Hospitals of Lund and Malmö, Sweden","Grant Forrest, Lunaria Ltd, United Kingdom","Rosane Gotardo, Systema Ltda., Brazil","Heather Grain, Llewelyn Grain Informatics, Australia","Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)","Joost Holslag, Nedap, Netherlands","Anjali Kulkarni, Karkinos, India","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Michael Lutz, BITsoft, Germany","Manisha Mantri, C-DAC, India","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","Arunakiry Natarajan, medondo, Germany","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Ana Pereira, CINTESIS, CUF-Porto, Portugal","Sidharth Ramesh, Kasturba Medical College, India","FREDERICO RIBEIRO, Hospital das Clínicas da UFPE, Brazil","Saeed Samie, Pars Hospital, Iran","Bjoern Schreiweis, UKSH, Germany","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Norwegian Review Summary, Nasjonal IKT HF, Norway","Nyree Taylor, Ocean Health Systems, Australia","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Michael Zampaglione, Australia","Wouter Zanen, Eurotranplant, Netherlands","Lin Zhang, Taikang Insurance Group, China">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.">
-			keywords = <"Bild","Audio","Text","Video","Anwendung","Datei","Multimedia","DICOM","digital","Dokument","Foto","Sprachaufnahme">
 			use = <"Zur Darstellung einer Mediendatei erworbenen und verwendeten im Bereich des Gesundheitswesens sowie der Informationen zu den zugehörigen Metadaten.
 
 Die Absicht dieses Archetyps besteht nur darin, die Mediendatei und die Metadaten, die ihre Erfassung beschreiben, darzustellen. Dieser Archetyp wird in einen anderen Archetyp verschachtelt, normalerweise ein OBSERVATION- oder ACTION-Archetyp, der den Kontext und die Umstände im Zusammenhang mit der Erfassung der Mediendatei enthält. Zum Beispiel werden Details zu Modalität, Ansicht oder Aspekt eines Röntgenbildes und DICOM-Details im Archetyp OBSERVATION.imaging_exam_result dargestellt.
@@ -84,40 +79,42 @@ Wenn eine Reihe von Mediendateien als einzelnes Element dargestellt wird, z. B. 
 
 
 ">
+			keywords = <"Bild", "Audio", "Text", "Video", "Anwendung", "Datei", "Multimedia", "DICOM", "digital", "Dokument", "Foto", "Sprachaufnahme">
 			misuse = <"Nicht zur Darstellung von Informationen, Lehr- oder Schulungsmaterial verwenden, die außerhalb des Gesundheitsprozesses generiert werden, z. B. Broschüren zur Patientenaufklärung, die dem Patienten oder der Pflegeperson zur Verfügung gestellt werden. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.information_resource.
 
 Nicht zur Darstellung von Referenz auf eine externe digitale Ressource, die als Quelle für maßgebliche Informationen oder Experteninformationen verwendet wird. Verwenden Sie für diesen Zweck den Archetyp CLUSTER.knowledge_base_reference.">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
-			purpose = <"*To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata. (en)">
-			keywords = <"*image (en)","*audio (en)","*text (en)","*video (en)","*application (en)","*file (en)","*multimedia (en)","*audio (en)","*DICOM (en)","*digital (en)","*document (en)","*photo (en)","*voice (en)">
-			use = <"*Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.
+			purpose = <"Att registrera en mediefil som förvärvats eller använts som en del i en vårdprocess, samt detaljer om filens metadata.">
+			use = <"Används för att registrera en mediefil som förvärvats eller används som del i en vårdprocess, samt detaljer om filens metadata. 
 
-The intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. 
+Avsikten för denna arketyp är att inneha mediefilen och dess metadata som beskriver insamlingen. Arketypen kan nästlas i en annan arketyp, vanligtvis en OBSERVATION eller ACTION arketyp som innehar sammanhanget och omständigheterna för registreringen av mediefilen. Till exempel detaljer om modaliteten, synvinkel eller aspekt av en röntgenbild eller detaljer rörande DICOM-filer kan lagras i arketypen OBSERVATION.imaging_exam_result.
 
-Examples include, but are not limited to:
-- A photo of an injury;
-- A diagram of the location of a specific clinical finding;
-- A radiological image;
-- An audio or video recording of an interview;
-- Scanned pathology slide;
-- Data output from a clinical device, such as an ECG machine; or
-- A scanned image of paper documentation or hand-written clinical notes.
+Exempel inkluderar, men är inte begränsade till:
+-Ett foto av en skada
+-Ett diagram över anatomisk lokalisation för ett specifikt kliniskt fynd
+-En röntgenbild
+-En ljud- eller videoinspelning av en intervju
+-Inskannade histopatologiska glas
+-Data från medicinsk utrustning, så som en EKG-mätare, eller
+-Inskannat foto av pappersdokumentation eller handskrivna kliniska anteckningar
 
-The 'Content' data element allows for the media file to be captured and stored within the health record using the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source. See https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.
+Datafältet \"Innehåll\" tillåter mediefilen att förvärvas och lagras i journalen via datatypen Multimedia. Multimedia datatypen har flertalet RM attribut som filstorlek och URI till en extern källa. Se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.
 
-If more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.
+Om mer än en mediefil har registrerats, såsom \"före\" och \"efter\" bilder av ett sår, använd separata instanser av denna arketyp för att representera varje mediefil.
 
-If a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group. (en)">
-			misuse = <"*Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.
+Om en serie av mediefiler representeras av ett enda objekt, till exempel en datortomografi, kan en instans av denna arketyp användas för att representera en URI sträng till filen.">
+			keywords = <"bild", "foto", "ljud", "text", "video", "film", "applikation", "fil", "multimedia", "DICOM", "digital", "dokument", "röst">
+			misuse = <"Ska inte användas för att representera information, instruktions- eller undervisningsmaterial tilldelade till en patient eller deras vårdgivare, till exempel som utbildningsbroschyrer. Använd CLUSTER.information_resource för detta syfte.
 
-Not to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose. (en)">
+Ska inte användas för att registrera en referens till en databas. Använd CLUSTER.knowledge_base_reference för detta syfte.
+
+">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.">
-			keywords = <"bilde","foto","audio","tekstfil","video","applikasjon","fil","multimedia","DICOM","digital","dokument","skannet","scannet","lyd">
 			use = <"Brukes for å dokumentere detaljer om en mediafil, samt tilknyttede metadata, som er ervervet eller brukt i forbindelse med en helsetjeneste.
 
 Hensikten med denne arketypen er kun å være en bærer for mediafilen og metadataene som beskriver innholdet i filen. Denne arketypen vil være nøstet i en annen arketype, vanligvis en OBSERVATION eller ACTION arketype, som vil inneholde konteksten og omstendighetene knyttet til hvordan innholdet ble dannet. For eksempel blir detaljer om modalitet, visning eller aspekt av et radiologisk bilde og DICOM-detaljer dokumentert i arketypen OBSERVATION.imaging_exam_result.
@@ -136,6 +133,7 @@ Dataelementet \"Innhold\" gjør det mulig å fange og lagre mediafiler i den ele
 Hvis mer enn én mediafil skal dokumenteres, for eksempel bilder før og etter behandling av et sår, bruk en forekomst av denne arketypen for hvert bilde.
 
 Hvis en serie mediafiler er representert som et enkelt element, for eksempel en CT-skanning, kan en forekomst av denne arketypen brukes til å representere en URI til gruppen/serien.">
+			keywords = <"bilde", "foto", "audio", "tekstfil", "video", "applikasjon", "fil", "multimedia", "DICOM", "digital", "dokument", "skannet", "scannet", "lyd">
 			misuse = <"Skal ikke brukes til å representere informasjon, instruksjons- eller utdanningsmateriale levert til en person, eller dens omsorgsperson, for eksempel brosjyrer for pasientopplæring. Bruk CLUSTER.information_resource til dette formålet.
 
 Skal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUSTER. Knowledge_base_reference for dette formålet.">
@@ -143,7 +141,6 @@ Skal ikke brukes til å registrere en referanse til en kunnskapsbase - bruk CLUS
 		["sk"] = <
 			language = <[ISO_639-1::sk]>
 			purpose = <"Na zaznamenanie mediálneho súboru, ktorý sa získa alebo použije ako súčasť procesu zdravotnej starostlivosti, a podrobností o súvisiacich metadátach.">
-			keywords = <"obrázky","zvuky","text","video","aplikácie","súbory","multimédiá","zvuky","DICOM","digital","dokument","fotka","hlasový záznam">
 			use = <"Používa sa na zaznamenanie mediálneho súboru, ktorý sa získa alebo použije ako súčasť procesu zdravotnej starostlivosti, a podrobností o súvisiacich metadátach.
 
 Zámerom tohto archetypu je iba uchovávať mediálny súbor a metadáta popisujúce jeho zachytenie. Tento archetyp bude vnorený do iného archetypu, zvyčajne POZOROVANIA alebo AKCIE, ktorá bude obsahovať kontext a okolnosti súvisiace so zachytením mediálneho súboru. Napríklad podrobnosti o modalite, zobrazení alebo aspekte rádiografickej snímky a podrobnosti DICOM budú zachytené v rámci archetypu OBSERVATION.imaging_exam_result.
@@ -162,6 +159,7 @@ Príklady zahŕňajú, ale nie sú obmedzené na:
 Ak bol zachytený viac ako jeden mediálny súbor, napríklad obrázky rany „pred“ a „po“, použite na reprezentáciu každého mediálneho súboru samostatnú inštanciu tohto archetypu.
 
 Ak je séria mediálnych súborov reprezentovaná ako jedna položka, ako napríklad CT sken, tak sa môže jedna inštancia tohto archetypu použiť na reprezentáciu cesty pomocou URI k skupine.">
+			keywords = <"obrázky", "zvuky", "text", "video", "aplikácie", "súbory", "multimédiá", "zvuky", "DICOM", "digital", "dokument", "fotka", "hlasový záznam">
 			misuse = <"Nesmie sa používať na reprezentáciu informácií, inštruktážnych alebo vzdelávacích materiálov dodávaných jednotlivcom alebo ich opatrovateľom, napríklad letáky s informáciami pre pacientov. Na tento účel použite CLUSTER.information_resource.
 
 Nesmie sa používať na zaznamenanie odkazu na bázu znalostí – na tento účel použite CLUSTER.knowledge_base_reference.">
@@ -169,8 +167,6 @@ Nesmie sa používať na zaznamenanie odkazu na bázu znalostí – na tento ú�
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.">
-			keywords = <"image","audio","text","video","application","file","multimedia","audio","DICOM","digital","document","photo","voice">
-			copyright = <"© openEHR Foundation">
 			use = <"Use to record a media file that is acquired or used as part of the healthcare process, and details about associated metadata.
 
 The intent of this archetype is only to hold the media file and the metadata describing its capture. This archetype will be nested within another archetype, usually an OBSERVATION or ACTION that will hold the context and circumstances related to the capture of the media file. For example, details about the modality, view or aspect of a radiographic image and DICOM details will be captured within the OBSERVATION.imaging_exam_result archetype. 
@@ -189,14 +185,15 @@ The 'Content' data element allows for the media file to be captured and stored w
 If more than one media file has been captured, such as 'before' and 'after' images of a wound, use a separate instance of this archetype to represent each media file.
 
 If a series of media files is represented as a single item, such as a CT scan, one instance of this archetype can be used to represent a URI path to the group.">
+			keywords = <"image", "audio", "text", "video", "application", "file", "multimedia", "audio", "DICOM", "digital", "document", "photo", "voice">
 			misuse = <"Not to be used to represent information, instructional or educational material supplied to an individual, or their carer, for example patient education leaflets. Use the CLUSTER.information_resource for this purpose.
 
 Not to be used to record a reference to a knowledge base - use CLUSTER.knowledge_base_reference for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 		["nl"] = <
 			language = <[ISO_639-1::nl]>
 			purpose = <"Om een mediabestand vast te leggen dat is verkregen of gebruikt als onderdeel van het zorgproces, en details over bijbehorende metadata.">
-			keywords = <"afbeelding","audio","tekst","video","applicatie","bestand","multimedia","geluid","DICOM","digitaal","document","foto","spraak">
 			use = <"Te gebruiken om een mediabestand vast te leggen dat is verkregen of gebruikt als onderdeel van het zorgproces, en details over bijbehorende metadata.
 
 Dit archetype is alleen bedoeld voor het mediabestand en de metadata die het vastleggen ervan beschrijven. Dit archetype wordt genest binnen een ander archetype, meestal een OBSERVATION of ACTION die de context en omstandigheden bevat die verband houden met het vastleggen van het mediabestand. Bijvoorbeeld, details over de modaliteit, weergave of aspect van een radiografisch beeld en DICOM-details worden vastgelegd in het archetype OBSERVATION.imaging_exam_result.
@@ -215,11 +212,14 @@ Met het gegevenselement 'Inhoud' kan het mediabestand worden vastgelegd en opges
 Als er meer dan één mediabestand is vastgelegd, zoals 'voor' en 'na' beelden van een wond, gebruik dan een afzonderlijke instantie van dit archetype om elk mediabestand te vertegenwoordigen.
 
 Als een reeks mediabestanden wordt weergegeven als een enkel item, zoals een CT-scan, kan één instantie van dit archetype worden gebruikt om een URI-pad naar de groep weer te vertegenwoordigen.">
+			keywords = <"afbeelding", "audio", "tekst", "video", "applicatie", "bestand", "multimedia", "geluid", "DICOM", "digitaal", "document", "foto", "spraak">
 			misuse = <"Niet te gebruiken om informatie, instructie- of educatief materiaal weer te geven dat aan een persoon of hun verzorger wordt verstrekt, bijvoorbeeld folders voor patiënteneducatie. Gebruik hiervoor de CLUSTER.information_resource.
 
 Niet te gebruiken om een verwijzing naar een kennisbank op te nemen - gebruik hiervoor CLUSTER.knowledge_base_reference.">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Michael Anywar, Universitätsklinikum SH, Germany", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Paulo Bandiera-Paiva, Federal University of Sao Paulo, Brazil", "itai Basel, Private, Israel", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Stefan Dubois, Dep't of Pathology and Genetics, University Hospitals of Lund and Malmö, Sweden", "Grant Forrest, Lunaria Ltd, United Kingdom", "Rosane Gotardo, Systema Ltda., Brazil", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Joost Holslag, Nedap, Netherlands", "Anjali Kulkarni, Karkinos, India", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Michael Lutz, BITsoft, Germany", "Manisha Mantri, C-DAC, India", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Arunakiry Natarajan, medondo, Germany", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Ana Pereira, CINTESIS, CUF-Porto, Portugal", "Sidharth Ramesh, Kasturba Medical College, India", "FREDERICO RIBEIRO, Hospital das Clínicas da UFPE, Brazil", "Saeed Samie, Pars Hospital, Iran", "Bjoern Schreiweis, UKSH, Germany", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Health Systems, Australia", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Michael Zampaglione, Australia", "Wouter Zanen, Eurotranplant, Netherlands", "Lin Zhang, Taikang Insurance Group, China">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -228,9 +228,9 @@ Niet te gebruiken om een verwijzing naar een kennisbank op te nemen - gebruik hi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4F1513E139C5587C27C46E70882ECD97">
-		["build_uid"] = <"21541612-8bf4-47f1-b03e-c184783772ab">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"E1C0201AED51855810B4D9FD7633573E">
+		["build_uid"] = <"a5332c85-dd4d-4b75-915b-c7c65e990200">
+		["revision"] = <"1.0.3">
 	>
 
 definition
@@ -282,6 +282,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -335,47 +336,47 @@ ontology
 		["sv"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Media file (en)">
-					description = <"*A media file that is acquired or used as part of the healthcare process, and associated metadata. (en)">
+					text = <"Mediefil">
+					description = <"En mediefil och dess metadata som förvärvats eller använts som del av en vårdprocess.">
 				>
 				["at0001"] = <
-					text = <"Multimedia">
-					description = <"*Digital representation of the media file. (en)">
-					comment = <"*If the file is stored locally, the actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the file is stored at a location outside of the health record, the detailed path to the file is captured using the URI attribute in the Multimedia data type. The Multimedia data type has many RM attributes such as the size of file and URI to an external source - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class. (en)">
+					text = <"Innehåll">
+					description = <"Digital representation av mediefilen.">
+					comment = <"Om filen lagras lokalt kommer det faktiska innehållet förvärvas och sparas i Multimedia datatypen. Till exempel: RTF eller PDF för ett dokument, JPG för en bild, MP4 för en video, eller WAV för en ljudfil. Om filen sparas på en plats utanför journalen, används URI-attributet i Multimedia datatypen för att identifiera sökvägen. Multimedia datatypen har många RM attribut, såsom filstorlek och URI till en extern källa - se https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_multimedia_class.">
 				>
 				["at0002"] = <
-					text = <"*Content name (en)">
-					description = <"*Descriptive name or title for the media file. (en)">
-					comment = <"*A description of the content of the media file. Use an agreed standardised naming convention, if available. For example: \"Right hand burn #1\" or \"Cardiology video consultation on May 2\". (en)">
+					text = <"Innehållets namn">
+					description = <"Deskriptivt namn eller titel för mediefilen.">
+					comment = <"En beskrivning av innehållet i mediefilen. Om tillgängligt, använd ett standardiserat sätt för att namnge filen. Till exempel: \"Höger hand brännskada #1\" eller \"Kardiologi video konsultation 2/5\".">
 				>
 				["at0004"] = <
 					text = <"Skapad">
-					description = <"*The date/time, partial date or period when the media file was generated or authored. (en)">
+					description = <"Datum och tid eller period då mediefilen skapades.">
 				>
 				["at0005"] = <
 					text = <"Beskrivning">
-					description = <"*Narrative description about the media file. (en)">
+					description = <"Narrativ beskrivning av mediefilen.">
 				>
 				["at0007"] = <
-					text = <"Version">
-					description = <"*Additional narrative about the media file not captured in other fields. (en)">
+					text = <"Kommentar">
+					description = <"Ytterligare redogörelse om mediefilen som inte beskrivits i andra fält.">
 				>
 				["at0010"] = <
-					text = <"*Identifier (en)">
-					description = <"*Unique ID for the media file. (en)">
+					text = <"Identifierare">
+					description = <"Unikt ID för mediefilen.">
 				>
 				["at0011"] = <
-					text = <"*Source device(en)">
-					description = <"*Details about the device used to generate or author the media file. (en)">
-					comment = <"*For example: the camera used to capture an image.(en)">
+					text = <"Enhetskälla">
+					description = <"Detaljer om källan använd för att skapa mediefilen.">
+					comment = <"Till exempel: kameran som användes för att ta en bild.">
 				>
 				["at0012"] = <
-					text = <"*Creator(en)">
-					description = <"*Details about the individual or organisation who generated or authored the media file. (en)">
+					text = <"Skapare">
+					description = <"Detaljer om individ eller organisation som skapade mediefilen.">
 				>
 				["at0013"] = <
-					text = <"*Additional details(en)">
-					description = <"*Additional structured details about the media file. (en)">
+					text = <"Ytterligare detaljer">
+					description = <"Ytterligare strukturerade detaljer om mediefilen.">
 				>
 			>
 		>
@@ -525,8 +526,8 @@ ontology
 		["sk"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Media file(en)">
-					description = <"*A media file that is acquired or used as part of the healthcare process, and associated metadata.(en)">
+					text = <"Mediálny súbor">
+					description = <"Mediálny súbor, ktorý sa získava alebo používa ako súčasť procesu zdravotnej starostlivosti, a súvisiace metadáta">
 				>
 				["at0001"] = <
 					text = <"Obsah">
