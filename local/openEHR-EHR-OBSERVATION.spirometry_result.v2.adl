@@ -1,12 +1,19 @@
-archetype (adl_version=1.4; uid=80bc786e-3275-4790-9fcf-4e595e6c021c)
+﻿archetype (adl_version=1.4; uid=80bc786e-3275-4790-9fcf-4e595e6c021c)
 	openEHR-EHR-OBSERVATION.spirometry_result.v2
 
 concept
-	[at0000]
-
+	[at0000]	-- Spirometry result
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Alina Rehberg">
+				["organisation"] = <"Medizinische Hochschule Hannover">
+				["email"] = <"rehberg.alina@mh-hannover.de">
+			>
+		>
 		["fi"] = <
 			language = <[ISO_639-1::fi]>
 			author = <
@@ -31,21 +38,43 @@ language
 			>
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2013-03-08">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"freshEHR Informatics, UK">
 		["email"] = <"ian.mcnicoll@freshEHR.com">
+		["date"] = <"2013-03-08">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway","Håvard Andreassen Sæverud, Oslo universitetssykehus, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Astrid Askeland, Dips AS, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Hanne Marte Bårholm, Helse Vest IKT, Norway (openEHR Editor)","Derek Corrigan, Royal College of Surgeons in Ireland, Ireland","Manuela Domingo, hospital general universitario dr. balmis, Spain","Ola Drange Røksund, Helse Bergen, Norway","Kåre Flø, DIPS ASA, Norway","Heather Grain, Llewelyn Grain Informatics, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)","Merete Havn Torland, Helse Vest IKT, Norway","Sam Heard, Ocean Informatics, Australia","Evelyn Hovenga, EJSH Consulting, Australia","Tiago Jacinto, CINTESIS - FMUP, Portugal","Lars Morgan Karlsen, DIPS ASA, Norway","Agathe Krekvik Govertsen, Helse Bergen, Norway","Kanika Kuwelker, Helse Vest IKT, Norway (openEHR Editor)","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Valeria Lecca, Sardegna Ricerche, Italia","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Anne M Gromsrud, DIPS AS, Norway","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom","Svenne Naumann, Finnmarkssykehuset, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Bjørn Næss, DIPS ASA, Norway","Andrej Orel, Marand d.o.o., Slovenia","Ana Pereira, CINTESIS, CUF-Porto, Portugal","Francisco Sanchez Laguna, Ministry of Health, Spain","Norwegian Review Summary, Norwegian Public Hospitals, Norway","Nina Særvold, Helse Bergen, Norway","Nyree Taylor, Ocean Health Systems, Australia","Anders Thurin, VGR, Sweden","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Ina Wille, Helse-Vest RHF, Norway">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Darstellung der Ergebnisse eines Lungenfunktionstests, der mit einem Spirometer oder Peak-Flow-Meter durchgeführt wird.">
+			use = <"Zur Darstellung der Ergebnisse eines Lungenfunktionstests, der mit einem Spirometer oder Peak-Flow-Meter durchgeführt wurde.
+
+Mit diesem Archetyp sollen diese Ergebnisse erfasst werden:
+- elektronische oder mechanische Messgeräte. Verwenden Sie das Element „Art der Messung“ im Protokoll, um aufzuzeichnen, wie das Ergebnis gemessen wurde.
+- orale, nasale oder Tracheotomietests. Verwenden Sie das Element „Methode“ im Protokoll, um die Art der Atemgeräte aufzuzeichnen, die zur Durchführung des Tests verwendet wurden. Zum Beispiel: Mundstück oder Gesichtsmaske. Messungen mit unterschiedlicher „Methode“ müssen mithilfe separater Instanzen des Archetyps aufgezeichnet werden.
+- Inspirations- und Exspirationstests. Der Name jedes Tests gibt an, ob der Test ein inspiratorisches oder exspiratorisches Ergebnis aufzeichnet.
+
+Erfolgt der Spirometrietest im Zusammenhang mit der Gabe von Bronchodilatatoren oder Challenge-Substanzen, kann dies über das Element „Challenge/Reversibilität“ erfasst werden. Details darüber, was verabreicht wurde, sollten mithilfe einer Instanz des ACTION.medication-Archetyps aufgezeichnet werden, die innerhalb derselben COMPOSITION festgeschrieben wurde.
+
+Werden zusätzliche Informationen über Körpertemperatur, Umgebungsdruck oder Luftfeuchtigkeit benötigt, können diese über zusätzliche Archetypen erfasst werden. Die Körpertemperatur kann mithilfe einer Instanz des Archetyps OBSERVATION.body_temperature aufgezeichnet werden, die innerhalb derselben COMPOSITION festgeschrieben wird. Umgebungsdruck oder Luftfeuchtigkeit können mit CLUSTER.environmental_conditions im Slot „Enviromental Conditions“ erfasst werden.
+
+Das „Jede Ereignis“ kann geklont und eingeschränkt werden, um die Darstellung von Folgendem zu unterstützen:
+- Mehrere Messungen und ihr Durchschnitt – klonen Sie „Jedes Ereignis“ so oft wie nötig, plus ein zusätzliches Ereignis, das auf „Intervall“ eingestellt ist und das Attribut „Mittelwert“ auswählt;
+- Ergebnisse vor und nach der Bronchialprovokation oder dem Bronchodilatator – klonen Sie „Jedes Ereignis“ und benennen Sie es in „Grundlinie“ und „Postprovokation/Bronchodilatator“ um, bei Bedarf mit einem Zeitversatz verbunden.">
+			keywords = <"Atemwege", "pulmonal", "Spirometrie", "Spitzenfluss", "Lunge", "bronchial", "Atemweg", "pef", "pefr", "Lungenfunktion">
+			misuse = <"Nicht zur Aufzeichnung der Ergebnisse anderer Arten von Lungenfunktionstests, beispielsweise Körperplethysmographie oder Lungendiffusionstests, geeignet. Verwenden Sie für diese Zwecke bestimmte Archetypen.
+
+Nicht zur Aufzeichnung von Details zur Incentive-Spirometrie geeignet. Verwenden Sie für diese Zwecke bestimmte Archetypen.
+
+Nicht zur Aufzeichnung der Ergebnisse von Blutgasuntersuchungen geeignet. Verwenden Sie zu diesem Zweck das OBSERVATION.laboratory_test_result.
+
+Nicht zur Aufzeichnung von Messungen zur Pulsoximetrie geeignet. Verwenden Sie zu diesem Zweck die OBSERVATION.pulse_oximetry.">
+		>
 		["fi"] = <
 			language = <[ISO_639-1::fi]>
 			purpose = <"*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)">
-			keywords = <"*respiratory (en)","*pulmonary (en)","*spirometry (en)","*peak flow (en)","*lung (en)","*bronchial (en)","*airway (en)","*pef (en)","*pefr (en)">
 			use = <"*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.
 
 This archetype is intended to be used to record the results from:
@@ -60,6 +89,7 @@ If additional information about body temperature, ambient pressure or humidity i
 The 'Any event' can be cloned and constrained to support the representation of:
 - Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
 - Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)">
+			keywords = <"*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)">
 			misuse = <"*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
 
 Not to be used to record details about incentive spirometry. Use specific archetypes for these purposes.
@@ -71,7 +101,6 @@ Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere resultatet av en lungefunksjonstest utført med et spirometer eller en PEF-måler.">
-			keywords = <"pulmonar,","lunge","spirometri","PEF","PEFR","bronkie","bronkial","luftvei","kols","astma","pusteprøve","blåsetest","belastningsspiro","løpetest","astmaundersøkelse","metakolintest">
 			use = <"Brukes for å registrere resultatene av en spirometriundersøkelse eller en PEF-måling.
 
 Denne arketypen er ment for bruk til å registrere resultater fra: 
@@ -86,44 +115,16 @@ Hvis man må registrere ytterligere informasjon om kroppstemperatur, lufttrykk e
 \"Uspesifisert hendelse\" kan repeteres og begrenses for å støtte representasjon av
 - Flere målinger og gjennomsnitt av disse – \"Uspesifisert hendelse\" repeteres så mange ganger som nødvendig, samt i tillegg en intervallhendelse med den matematiske funksjonen \"gjennomsnitt\"
 - Resultatet av provokasjons- eller reversilibilitetstest – repeter \"Uspesifisert hendelse\" og endre navn til \"Baseline\" og Etter provokasjon/bronkodilator. Der det er passende, kan det spesifiseres en tidsforskyvning.">
+			keywords = <"pulmonar,", "lunge", "spirometri", "PEF", "PEFR", "bronkie", "bronkial", "luftvei", "kols", "astma", "pusteprøve", "blåsetest", "belastningsspiro", "løpetest", "astmaundersøkelse", "metakolintest">
 			misuse = <"Skal ikke brukes for å registrere resultatene av andre typer lungefunksjonstester, som for eksempel plethysmografi eller lungediffusjonstester. Bruk spesifikke arketyper for disse formålene.
 
 Skal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat).
 
 Skal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).">
 		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the results of a pulmonary function test performed using a spirometer or peak flow meter.">
-			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway","pef","pefr">
-			copyright = <"© openEHR Foundation">
-			use = <"Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.
-
-This archetype is intended to be used to record the results from:
-- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; 
-- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.
-- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. 
-
-If the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.
-
-If additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.
-
-The 'Any event' can be cloned and constrained to support the representation of:
-- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
-- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.">
-			misuse = <"Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
-
-Not to be used to record details about incentive spirometry. Use specific archetypes for these purposes.
-
-Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
-
-Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
-		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			purpose = <"*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)">
-			keywords = <"*respiratory (en)","*pulmonary (en)","*spirometry (en)","*peak flow (en)","*lung (en)","*bronchial (en)","*airway (en)","*pef (en)","*pefr (en)">
-			copyright = <"© openEHR Foundation">
 			use = <"*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.
 
 This archetype is intended to be used to record the results from:
@@ -138,6 +139,7 @@ If additional information about body temperature, ambient pressure or humidity i
 The 'Any event' can be cloned and constrained to support the representation of:
 - Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
 - Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)">
+			keywords = <"*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)">
 			misuse = <"*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
 
 Not to be used to record details about incentive spirometry. Use specific archetypes for these purposes.
@@ -145,8 +147,38 @@ Not to be used to record details about incentive spirometry. Use specific archet
 Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
 
 Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)">
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results of a pulmonary function test performed using a spirometer or peak flow meter.">
+			use = <"Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.
+
+This archetype is intended to be used to record the results from:
+- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; 
+- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.
+- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. 
+
+If the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.
+
+If additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.
+
+The 'Any event' can be cloned and constrained to support the representation of:
+- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
+- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.">
+			keywords = <"respiratory", "pulmonary", "spirometry", "peak flow", "lung", "bronchial", "airway", "pef", "pefr">
+			misuse = <"Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
+
+Not to be used to record details about incentive spirometry. Use specific archetypes for these purposes.
+
+Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
+
+Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
+			copyright = <"© openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Dag Aarhus, Vestre Viken HF, Norway", "Håvard Andreassen Sæverud, Oslo universitetssykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Astrid Askeland, Dips AS, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Hanne Marte Bårholm, Helse Vest IKT, Norway (openEHR Editor)", "Derek Corrigan, Royal College of Surgeons in Ireland, Ireland", "Manuela Domingo, hospital general universitario dr. balmis, Spain", "Ola Drange Røksund, Helse Bergen, Norway", "Kåre Flø, DIPS ASA, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)", "Merete Havn Torland, Helse Vest IKT, Norway", "Sam Heard, Ocean Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Tiago Jacinto, CINTESIS - FMUP, Portugal", "Lars Morgan Karlsen, DIPS ASA, Norway", "Agathe Krekvik Govertsen, Helse Bergen, Norway", "Kanika Kuwelker, Helse Vest IKT, Norway (openEHR Editor)", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Valeria Lecca, Sardegna Ricerche, Italia", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Anne M Gromsrud, DIPS AS, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Svenne Naumann, Finnmarkssykehuset, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Ana Pereira, CINTESIS, CUF-Porto, Portugal", "Francisco Sanchez Laguna, Ministry of Health, Spain", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Nina Særvold, Helse Bergen, Norway", "Nyree Taylor, Ocean Health Systems, Australia", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Ina Wille, Helse-Vest RHF, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -162,10 +194,10 @@ Sheshadri A, Keus L, Blanco D, Lei X, Kellner C, Shannon VR, Balachandran DD, Ji
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8C75665CB2BB8D77131D4F1DAC8F9E2D">
-		["build_uid"] = <"74bae2f5-2f72-4b3d-8096-dfb0a34ce1af">
+		["MD5-CAM-1.0.1"] = <"7C30237E2A5AD7DAEC81DB4EB35BDB77">
+		["build_uid"] = <"c92d5ec3-921f-4162-8bc8-4ba4ff57b49a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"2.0.0">
+		["revision"] = <"2.0.1">
 	>
 
 definition
@@ -527,6 +559,8 @@ definition
 			}
 		}
 	}
+
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>
@@ -1854,8 +1888,341 @@ ontology
 				>
 			>
 		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Spirometrie Ergebnis">
+					description = <"Ergebnisse von Lungenfunktionstests mit einem Spirometer oder Peak-Flow-Meter.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Jedes Ereignis">
+					description = <"Jeder Zeitpunkt oder jedes Intervall, das in einem Template oder zur Laufzeit definiert werden kann.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Vorhergesagtes Ergebnis">
+					description = <"Vorhergesagter Durchfluss">
+				>
+				["at0013"] = <
+					text = <"Forcierte Exspirationszeit (FET)">
+					description = <"Die Zeit, die zum Abschließen eines erzwungenen Ablaufs benötigt wird.">
+				>
+				["at0018"] = <
+					text = <"Vorhergesagtes Ergebnis">
+					description = <"Vorhergesagtes Verhältnis">
+				>
+				["at0029"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0030"] = <
+					text = <"Gerät">
+					description = <"Details über das Gerät mit dem die Spirometrie gemessen wird.">
+				>
+				["at0031"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"Gemessenes/vorhergesagtes Verhältnis">
+					description = <"Das Verhältnis der gemessenen zu den vorhergesagten Testergebnissen">
+				>
+				["at0052"] = <
+					text = <"Volumen">
+					description = <"Das Testergebnis wird als gemessenes Volumen oder berechnete Kapazität dargestellt.">
+					comment = <"Jedes Testergebnis wird über eine separate Instanz dieses Clusters aufgezeichnet.">
+				>
+				["at0053"] = <
+					text = <"Ergebnis">
+					description = <"Gemessenes Volumen">
+				>
+				["at0054"] = <
+					text = <"Vorhergesagtes Ergebnis">
+					description = <"Vorhergesagtes Volumen">
+				>
+				["at0055"] = <
+					text = <"Ratio">
+					description = <"Ein berechnetes Testergebnis ausgedrückt als Verhältnis.">
+					comment = <"Jedes Verhältnis wird mithilfe einer separaten Instanz dieses Clusters aufgezeichnet.">
+				>
+				["at0056"] = <
+					text = <"Ergebnis">
+					description = <"Berechnetes Verhältnis">
+				>
+				["at0057"] = <
+					text = <"Flussrate">
+					description = <"Das Testergebnis wird als gemessene Durchflussrate dargestellt.">
+					comment = <"Jedes Testergebnis wird mithilfe einer separaten Instanz dieses Clusters aufgezeichnet.">
+				>
+				["at0058"] = <
+					text = <"Ergebnis">
+					description = <"Gemessener Durchfluss">
+				>
+				["at0064"] = <
+					text = <"SVC">
+					description = <"Die langsame Vitalkapazität (SVC) ist das maximale Luftvolumen, das aus einer Position voller Inspiration langsam ausgeatmet werden kann. Auch als exspiratorische Vitalkapazität (EVC) bekannt. Entspricht IRV + TV + ERV.">
+				>
+				["at0065"] = <
+					text = <"FVC">
+					description = <"Die forcierte Vitalkapazität (FVC) ist das maximale Luftvolumen, das aus einer Position voller Inspiration zwangsweise ausgeatmet werden kann.">
+				>
+				["at0067"] = <
+					text = <"FEV1">
+					description = <"Das forcierte Exspirationsvolumen bei 1 Sekunde (FEV1) ist das Luftvolumen, das während der ersten Sekunde der forcierten Ausatmung während der Durchführung der FVC ausgeatmet wurde.">
+				>
+				["at0068"] = <
+					text = <"FEV3">
+					description = <"Das forcierte Exspirationsvolumen bei 3 Sekunden (FEV3) ist das Luftvolumen, das während der ersten drei Sekunden der forcierten Ausatmung während der Durchführung der FVC ausgeatmet wurde.">
+				>
+				["at0069"] = <
+					text = <"FEV6">
+					description = <"Das forcierte Exspirationsvolumen nach 6 Sekunden (FEV6) ist das Luftvolumen, das während der ersten sechs Sekunden der forcierten Ausatmung während der Durchführung der FVC ausgeatmet wurde.">
+				>
+				["at0070"] = <
+					text = <"FEV0.75">
+					description = <"Das forcierte Exspirationsvolumen bei 0.75 Sekunden (FEV0.75) ist das Luftvolumen, das während der ersten dreiviertel Sekunde der forcierten Ausatmung während der Durchführung der FVC ausgeatmet wurde.">
+				>
+				["at0072"] = <
+					text = <"FEF25-75%">
+					description = <"Der forcierte exspiratorische Luftstrom 25–75 % (FEF25–75 %) ist der mittlere forcierte exspiratorische Luftstrom, der während der Ausatmung von 25–75 % des Volumens der forcierten Vitalkapazität (FVC) gemessen wird.">
+				>
+				["at0073"] = <
+					text = <"FEF25-50%">
+					description = <"Der forcierte exspiratorische Luftstrom 25–50 % (FEF25–50 %) ist der mittlere forcierte exspiratorische Luftstrom, der während der Ausatmung von 25–50 % des Volumens der forcierten Vitalkapazität (FVC) gemessen wird.">
+				>
+				["at0074"] = <
+					text = <"FIF25-75%">
+					description = <"Der forcierte Inspirationsfluss 25–75 % (FIF25–75 %) ist der mittlere forcierte Inspirationsluftfluss, der während der Inspiration von 25–75 % des Volumens der forcierten inspiratorischen Vitalkapazität (FIVC) gemessen wird.">
+				>
+				["at0075"] = <
+					text = <"FIF25-50%">
+					description = <"Der forcierte Inspirationsfluss 25–50 % (FIF25–50 %) ist der mittlere forcierte Inspirationsluftfluss, der während der Inspiration von 25–50 % des Volumens der forcierten inspiratorischen Vitalkapazität (FIVC) gemessen wird.">
+				>
+				["at0076"] = <
+					text = <"IC">
+					description = <"Die Inspirationskapazität (IC) ist das maximale Luftvolumen, das nach dem Ausatmen eines normalen Atemzugvolumens eingeatmet werden kann. Entspricht TV + IRV.">
+				>
+				["at0077"] = <
+					text = <"ERV">
+					description = <"Das exspiratorische Reservevolumen (ERV) ist das maximale Luftvolumen, das nach dem Ausatmen des normalen Atemzugvolumens zwangsweise ausgeatmet werden kann.">
+				>
+				["at0078"] = <
+					text = <"IRV">
+					description = <"Das inspiratorische Reservevolumen (IRV) ist das maximale Luftvolumen, das nach einer Inhalation mit normalem Atemzugvolumen zwangsweise eingeatmet werden kann.">
+				>
+				["at0080"] = <
+					text = <"FEV1/SVC Ratio">
+					description = <"Das Verhältnis von „Forciertes Exspirationsvolumen in 1 Sekunde (FEV1)“ zu „Langsame Vitalkapazität (SVC)“.">
+				>
+				["at0081"] = <
+					text = <"FEV1/FVC Ratio">
+					description = <"Das Verhältnis von „Forciertes Exspirationsvolumen in 1 Sekunde (FEV1)“ zu „Forcierter Vitalkapazität (FVC)“. Auch bekannt als FEV1 %FVC oder FEV1 %F.">
+				>
+				["at0082"] = <
+					text = <"TV">
+					description = <"Das Atemzugvolumen (TV) ist das normale Luftvolumen, das während eines Atemzyklus ohne zusätzliche Anstrengung ein- oder ausgeatmet werden kann. Auch als Vᴛ bekannt.">
+				>
+				["at0098"] = <
+					text = <"Einflussfaktoren">
+					description = <"Zum Darstellung aller Probleme oder Faktoren, die sich auf den Spirometrietest auswirken könnten.">
+					comment = <"Zum Beispiel: bekannte COPD.">
+				>
+				["at0101"] = <
+					text = <"Kommentar">
+					description = <"Zusätzlicher Freitext über die Testergebnisse und deren Interpretation, die nicht in anderen Felder erfasst werden konnte.">
+				>
+				["at0115"] = <
+					text = <"Position">
+					description = <"Die Position der untersuchten Person während der Messung.">
+				>
+				["at0116"] = <
+					text = <"Stehend">
+					description = <"Stehend zum Zeitpunkt der Blutdruckmessung.">
+				>
+				["at0117"] = <
+					text = <"Sitzend">
+					description = <"Sitzend zum Zeitpunkt der Blutdruckmessung (z.B. auf einem Bett oder Stuhl).">
+				>
+				["at0118"] = <
+					text = <"Zurückgelehnt">
+					description = <"Patient zurückgelehnt zum Zeitpunkt der Blutdruckmessung.">
+				>
+				["at0119"] = <
+					text = <"Liegend">
+					description = <"Flach liegend zum Zeitpunkt der Blutdruckmessung.">
+				>
+				["at0122"] = <
+					text = <"Gemessenes/vorhergesagtes Verhältnis">
+					description = <"Das Verhältnis der gemessenen zu den vorhergesagten Testergebnissen">
+				>
+				["at0130"] = <
+					text = <"Klinische Interpretation">
+					description = <"Gesamte klinische Interpretation aller Messungen und berechneten Verhältnisse.">
+				>
+				["at0131"] = <
+					text = <"Multimediale Darstellung">
+					description = <"Digitale Darstellung der Testergebnisse.">
+					comment = <"Zum Beispiel: Durchflussvolumenschleife; oder Volumen-Zeit-Trace.">
+				>
+				["at0132"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Information, die für die Erfassung des lokalen Kontexts oder für die Anpassung an andere Referenzmodelle/Formalismen benötigt wird.">
+					comment = <"Zum Beispiel: Informationen bzgl. der lokalen Krankenhausabteilung oder zusätzliche Metadata zur Anpassung an entsprechende FHIR oder CIMI Gegenstücke.">
+				>
+				["at0145"] = <
+					text = <"FEV0.5">
+					description = <"Das forcierte Exspirationsvolumen bei 0.5 Sekunden (FEV0.5) ist das Luftvolumen, das während der ersten halben Sekunde der forcierten Ausatmung während der Durchführung der FVC ausgeatmet wurde.">
+				>
+				["at0146"] = <
+					text = <"FEV2">
+					description = <"Das forcierte Exspirationsvolumen bei 2 Sekunden (FEV2) ist das Luftvolumen, das während der ersten zwei Sekunden der forcierten Ausatmung während der Durchführung der FVC ausgeatmet wurde.">
+				>
+				["at0152"] = <
+					text = <"PEFR">
+					description = <"Die maximale exspiratorische Flussrate (PEFR) ist die maximale Flussrate während eines Manövers mit forcierter Vitalkapazität (FVC). Wird auch als forcierter exspiratorischer Fluss bei maximaler Anstrengung (FEFmax) bezeichnet.">
+				>
+				["at0156"] = <
+					text = <"Druck">
+					description = <"Testergebnis wird als gemessener Druck dargestellt.">
+					comment = <"Jedes Testergebnis wird mithilfe einer separaten Instanz dieses Clusters aufgezeichnet.">
+				>
+				["at0165"] = <
+					text = <"Ergebnis">
+					description = <"Gemessener Druck">
+				>
+				["at0166"] = <
+					text = <"Vorhergesagtes Ergebnis">
+					description = <"Vorhergesagter Druck">
+				>
+				["at0167"] = <
+					text = <"Gemessenes/vorhergesagtes Verhältnis">
+					description = <"Das Verhältnis der gemessenen zu den vorhergesagten Testergebnissen">
+				>
+				["at0170"] = <
+					text = <"MEP">
+					description = <"Der maximale Ausatmungsdruck (MEP) ist der maximale Ausatmungsdruck während eines Manövers mit forcierter Vitalkapazität (FVC).">
+				>
+				["at0171"] = <
+					text = <"FIV1">
+					description = <"Das forcierte Inspirationsvolumen bei 1 Sekunde (FIV1) ist das Luftvolumen, das während der ersten Sekunde der forcierten Inhalation während der Durchführung von FIVC eingeatmet wurde.">
+				>
+				["at0172"] = <
+					text = <"FIVC">
+					description = <"Die forcierte inspiratorische Vitalkapazität (FIVC) ist das maximale Luftvolumen, das aus einer Position voller Exspiration zwangsweise eingeatmet werden kann.">
+				>
+				["at0174"] = <
+					text = <"IVC">
+					description = <"Die inspiratorische Vitalkapazität (IVC) ist das maximale Luftvolumen, das aus einer Position voller Exspiration langsam eingeatmet werden kann. Entspricht ERV + TV + IRV.">
+				>
+				["at0176"] = <
+					text = <"MVV">
+					description = <"Die maximale freiwillige Ventilation (MVV) ist das maximale Luftvolumen, das die Person während eines durch ein Intervallereignis festgelegten Zeitraums atmen kann.">
+				>
+				["at0177"] = <
+					text = <"FEF25%">
+					description = <"Forced expiratory flow 25 % (FEF25%) is the maximal instantaneous expiratory flow when 25 % of the of the volume of the forced vital capacity (FVC) has been expired. Also known as maximal voluntary flow 75% (MEF75%).">
+				>
+				["at0178"] = <
+					text = <"FEF50%">
+					description = <"Der forcierte exspiratorische Fluss 50 % (FEF50 %) ist der maximale momentane exspiratorische Fluss, wenn 50 % des Volumens der forcierten Vitalkapazität (FVC) ausgeatmet wurden. Auch bekannt als maximaler freiwilliger Fluss 50 % (MEF50 %).">
+				>
+				["at0179"] = <
+					text = <"FEF75%">
+					description = <"Der forcierte exspiratorische Fluss 75 % (FEF75 %) ist der maximale momentane exspiratorische Fluss, wenn 75 % des Volumens der forcierten Vitalkapazität (FVC) ausgeatmet wurden. Auch bekannt als maximaler freiwilliger Fluss 25 % (MEF25 %).">
+				>
+				["at0181"] = <
+					text = <"MIP">
+					description = <"Der maximale Inspirationsdruck (MIP) ist der maximale Inspirationsdruck während eines FIVC-Manövers (Forced Inspiratory Vital Capacity).">
+				>
+				["at0182"] = <
+					text = <"SNIP">
+					description = <"Der Sniff-Naseninspirationsdruck (SNIP) ist der maximale Inspirationsdruck in einem verschlossenen Nasenloch während eines maximalen Schnüffelvorgangs, der vom entspannten Ende bis zur Ausatmung durch das andere offene Nasenloch durchgeführt wird.
+
+">
+				>
+				["at0185"] = <
+					text = <"Quelle der vorhergesagten Ergebnisse">
+					description = <"Die für die vorhergesagten Ergebnisse verwendete Wissensbasis.">
+					comment = <"Zum Beispiel: GLI 2012.">
+				>
+				["at0186"] = <
+					text = <"FIF25%">
+					description = <"Der forcierte Inspirationsfluss 25 % (FIF25 %) ist der maximale momentane Inspirationsfluss, wenn 25 % des Volumens der forcierten inspiratorischen Vitalkapazität (FIVC) eingeatmet wurden. Wird auch als maximaler Inspirationsfluss 75 % (MIF75 %) bezeichnet.">
+				>
+				["at0187"] = <
+					text = <"FIF50%">
+					description = <"Der forcierte Inspirationsfluss 50 % (FIF50 %) ist der maximale momentane Inspirationsfluss, wenn 50 % des Volumens der forcierten inspiratorischen Vitalkapazität (FIVC) eingeatmet wurden. Wird auch als maximaler Inspirationsfluss 50 % (MIF50 %) bezeichnet.">
+				>
+				["at0188"] = <
+					text = <"FIF75%">
+					description = <"Der forcierte Inspirationsfluss 75 % (FIF75 %) ist der maximale momentane Inspirationsfluss, wenn 75 % des Volumens der forcierten inspiratorischen Vitalkapazität (FIVC) eingeatmet wurden. Wird auch als maximaler Inspirationsfluss 25 % (MIF25 %) bezeichnet.">
+				>
+				["at0189"] = <
+					text = <"FEV1/FEV6 Ratio">
+					description = <"Das Verhältnis von „Forciertes Exspirationsvolumen in 1 Sekunde (FEV1)“ zu „Forciertes Exspirationsvolumen in 6 Sekunden (FEV6)“.">
+				>
+				["at0190"] = <
+					text = <"FEV1/IVC Ratio">
+					description = <"The ratio of 'Forced expiratory volume in 1 second (FEV1)' to 'Inspired vital capacity (IVC)'.">
+				>
+				["at0191"] = <
+					text = <"Grad der Anstrengung">
+					description = <"Details zur körperlichen Aktivität zum Zeitpunkt der Spirometrieaufzeichnung.">
+				>
+				["at0192"] = <
+					text = <"Herausforderung/Reversibilität">
+					description = <"Aussage darüber, ob der Spirometrietest als Reversibilitätstest oder als Bronchialprovokationstest durchgeführt wurde.">
+					comment = <"Ein Reversibilitätstest wird normalerweise mit einem inhalierten Bronchodilatator wie Salbutamol durchgeführt und wird manchmal auch als Post-Bronchodilatator-Test bezeichnet. Ein Bronchial-Provokationstest wird normalerweise mit einem inhalierten Bronchokonstriktor wie Methacholin, intensiver körperlicher Betätigung oder dem Einatmen kalter/trockener Luft durchgeführt.">
+				>
+				["at0193"] = <
+					text = <"Keine">
+					description = <"Der Spirometrietest wurde weder als Reversibilitätstest noch als Bronchialprovokationstest durchgeführt.">
+				>
+				["at0194"] = <
+					text = <"Bronchialer Provokationstest">
+					description = <"Der Spirometrietest wurde als bronchialer Provokationstest durchgeführt.">
+				>
+				["at0195"] = <
+					text = <"Reversibilitätstest">
+					description = <"Der Spirometrietest wurde als Reversibilitätstest durchgeführt.">
+				>
+				["at0196"] = <
+					text = <"Art der Messung">
+					description = <"Messart der Spirometrie.">
+					comment = <"Dies ist insbesondere für PEFR- und PIFR-Tests relevant.">
+				>
+				["at0197"] = <
+					text = <"Mechanisch">
+					description = <"Messung mit einem rein mechanischen Gerät.">
+				>
+				["at0198"] = <
+					text = <"Elektronisch">
+					description = <"Messung mit einem elektronischen Gerät.">
+				>
+				["at0199"] = <
+					text = <"Methode">
+					description = <"Die zur Durchführung des Tests verwendete Methode.">
+					comment = <"Zum Beispiel: Messungen werden oral mit Mundstück und Nasenklammer oder nasal mit einer Gesichtsmaske bei fest geschlossenem Mund durchgeführt. Messungen mit unterschiedlichen Methoden müssen mithilfe separater Instanzen des Archetyps aufgezeichnet werden.">
+				>
+				["at0205"] = <
+					text = <"PIFR">
+					description = <"Die maximale inspiratorische Flussrate (PIFR) ist die maximale Flussrate während eines forcierten inspiratorischen Vitalkapazitätsmanövers (FIVC).">
+				>
+				["at0209"] = <
+					text = <"Umweltbedingungen">
+					description = <"Details zu den Umgebungsbedingungen zum Zeitpunkt der Spirometrieaufzeichnung.">
+				>
+			>
+		>
 	>
-	term_binding = <
+	term_bindings = <
 		["SNOMED-CT"] = <
 			items = <
 				["at0065"] = <[SNOMED-CT::50834005]>
