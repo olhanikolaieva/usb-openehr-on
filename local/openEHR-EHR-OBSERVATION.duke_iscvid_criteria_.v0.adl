@@ -1,0 +1,303 @@
+archetype (adl_version=1.4; uid=13f65c2b-3d6f-4d2b-a394-122e5d5a9735)
+	openEHR-EHR-OBSERVATION.duke_iscvid_criteria_.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2025-02-12">
+		["name"] = <"Olha Nikolaieva">
+		["organisation"] = <"University Hospital Basel">
+		["email"] = <"olha.nikolaieva@usb.ch">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results for each component parameter and diagnostic result for the Duke ISCVID infective endocarditis criteria.">
+			keywords = <"Duke criteria, ISCVID, infective endocarditis, IE, cardiology, PET/CT, echocardiography.", ...>
+			use = <"Use to record the results for each component parameter and diagnostic result for the Duke ISCVID infective endocarditis criteria. Most data items are assigned a repeating cardinality (0..*), enabling users to document multiple instances of each criterion for more detailed granularity. For cases where only a single value is needed, the cardinality should be constrained to a single optional (0..1).">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Durack DT, Lukes AS, Bright DK. New criteria for diagnosis of infective endocarditis: utilization of specific echocardiographic findings. Duke Endocarditis Service. Am J Med. 1994 Mar;96(3):200-9. doi: 10.1016/0002-9343(94)90143-0. PMID: 8154507.
+
+Li JS, Sexton DJ, Mick N, Nettles R, Fowler VG Jr, Ryan T, Bashore T, Corey GR. Proposed modifications to the Duke criteria for the diagnosis of infective endocarditis. Clin Infect Dis. 2000 Apr;30(4):633-8. doi: 10.1086/313753. Epub 2000 Apr 3. PMID: 10770721.
+
+Fowler VG, Durack DT, Selton-Suty C, Athan E, Bayer AS, Chamis AL, Dahl A, DiBernardo L, Durante-Mangoni E, Duval X, Fortes CQ, Fosbøl E, Hannan MM, Hasse B, Hoen B, Karchmer AW, Mestres CA, Petti CA, Pizzi MN, Preston SD, Roque A, Vandenesch F, van der Meer JTM, van der Vaart TW, Miro JM. The 2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023 Aug 22;77(4):518-526. doi: 10.1093/cid/ciad271. Erratum in: Clin Infect Dis. 2023 Oct 13;77(8):1222. doi: 10.1093/cid/ciad510. PMID: 37138445; PMCID: PMC10681650.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"57c07256f47617e5c5ff51233c3289bc">
+		["build_uid"] = <"3ce8af06-65b7-3ff9-8f62-c29854bd892f">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- duke_iscvid_criteria_
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0032] occurrences matches {0..1} matches {    -- Pathologic criteria
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0033] occurrences matches {0..1} matches {    -- Microorganism identification
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0034] occurrences matches {0..1} matches {    -- Histopathologic findings
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Major criteria
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0022] occurrences matches {0..1} matches {    -- Microbiologic
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0006] occurrences matches {0..*} matches {    -- Positive blood cultures
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													ELEMENT[at0025] occurrences matches {0..*} matches {    -- Positive laboratory tests
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0023] occurrences matches {0..1} matches {    -- Imaging
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0007] occurrences matches {0..*} matches {    -- Echocardiography and cardiac CT imaging
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													ELEMENT[at0026] occurrences matches {0..*} matches {    -- [18F]FDG PET/CT imaging
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+												}
+											}
+											CLUSTER[at0024] occurrences matches {0..1} matches {    -- Surgical
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Evidence from surgery
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- Minor clinical criteria
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0008] occurrences matches {0..*} matches {    -- Predisposition
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- Fever
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0010] occurrences matches {0..*} matches {    -- Vascular phenomena
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0011] occurrences matches {0..*} matches {    -- Immunologic phenomena
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0012] occurrences matches {0..*} matches {    -- Microbiological evidence
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Imaging
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0031] occurrences matches {0..1} matches {    -- Physical examination
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Duke-ISCVID IE conclusion
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0035,    -- Definite endocarditis
+													at0036,    -- Possible endocarditis
+													at0037]    -- Rejected endocarditis
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0013] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"duke_iscvid_criteria_">
+					description = <"Duke International Society for Cardiovascular Infectious Diseases (ISCVID) infective endocarditis criteria according to 2023 update. Backward compatible with the modified Duke criteria for infective endocarditis.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Major criteria">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Minor clinical criteria">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Positive blood cultures">
+					description = <"Microorganisms that commonly cause IE isolated from 2 or more separate blood culture sets (Typical); or microorganisms that occasionally or rarely cause IE isolated from 3 or more separate blood culture sets (Nontypical).">
+				>
+				["at0007"] = <
+					text = <"Echocardiography and cardiac CT imaging">
+					description = <"Echocardiography and/or cardiac CT showing vegetation, valvular/leaflet perforation, valvular/leaflet aneurysm, abscess, pseudoaneurysm, or intracardiac fistula; or significant new valvular regurgitation on echocardiography as compared with previous imaging. Worsening or changing of preexisting regurgitation is not sufficient; or new partial dehiscence of prosthetic valve as compared with previous imaging.">
+				>
+				["at0008"] = <
+					text = <"Predisposition">
+					description = <"Previous history of IE, prosthetic valve, previous valve repair, congenital heart disease, more than mild regurgitation or stenosis of any etiology, endovascular intracardiac implantable electronic device (CIED), hypertrophic obstructive cardiomyopathy, injection drug use. ">
+				>
+				["at0009"] = <
+					text = <"Fever">
+					description = <"Documented temperature greater than 38.0 °C  (100.4 °F).">
+				>
+				["at0010"] = <
+					text = <"Vascular phenomena">
+					description = <"Clinical or radiological evidence of arterial emboli, septic pulmonary infarcts, cerebral or splenic abscess, mycotic aneurysm, intracranial hemorrhage, conjunctival hemorrhages, Janeway lesions, purulent purpura.">
+				>
+				["at0011"] = <
+					text = <"Immunologic phenomena">
+					description = <"Positive rheumatoid factor, Osler nodes, Roth spots, or immune complex-mediated glomerulonephritis.">
+				>
+				["at0012"] = <
+					text = <"Microbiological evidence">
+					description = <"Positive blood cultures for a microorganism consistent with IE but not meeting the requirements for major criterion; or positive culture, PCR, or other nucleic acid based test (amplicon or shotgun sequencing, in situ hybridization) for an organism consistent with IE from a sterile body site other than cardiac tissue, cardiac prosthesis, or arterial embolus; or a single finding of a skin bacterium by PCR on a valve or wire without additional clinical or microbiological supporting evidence.">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"e.g. Local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0015"] = <
+					text = <"Duke-ISCVID IE conclusion">
+					description = <"Result based on met Duke-ISCVID IE criteria. ">
+				>
+				["at0022"] = <
+					text = <"Microbiologic">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Imaging">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Surgical">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Positive laboratory tests">
+					description = <"Positive polymerase chain reaction (PCR) or other nucleic acid-based technique for Coxiella burnetii, Bartonella species, or Tropheryma whipplei from blood; or Coxiella burnetii antiphase I immunoglobulin G (IgG) antibody titer >1:800, or isolated from a single blood culture; or indirect immunofluorescence assays (IFA) for detection of IgM and IgG antibodies to Bartonella henselae or Bartonella quintana with
+immunoglobulin G (IgG) titer ≥1:800.">
+				>
+				["at0026"] = <
+					text = <"[18F]FDG PET/CT imaging">
+					description = <"Abnormal metabolic activity involving a native or prosthetic valve, ascending aortic graft (with concomitant evidence of valve involvement), intracardiac device leads or other prosthetic material.">
+				>
+				["at0027"] = <
+					text = <"Evidence from surgery">
+					description = <"Evidence of IE documented by direct inspection during heart surgery neither Major Imaging Criteria nor subsequent histologic or microbiologic confirmation.">
+				>
+				["at0028"] = <
+					text = <"Imaging">
+					description = <"Abnormal metabolic activity as detected by [18F]FDG PET/CT within 3 mo of implantation of prosthetic valve, ascending aortic graft (with concomitant evidence of valve involvement), intracardiac device leads or other prosthetic material.">
+				>
+				["at0031"] = <
+					text = <"Physical examination">
+					description = <"New valvular regurgitation identified on auscultation if echocardiography is not available. Worsening or changing of preexisting murmur not sufficient.">
+				>
+				["at0032"] = <
+					text = <"Pathologic criteria">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Microorganism identification">
+					description = <"Microorganisms identified in the context of clinical signs of active endocarditis in a vegetation; from cardiac tissue; from an explanted prosthetic valve or sewing ring; from an ascending aortic graft (with concomitant evidence of valve involvement); from an endovascular intracardiac implantable electronic device (CIED); or from an arterial embolus.">
+				>
+				["at0034"] = <
+					text = <"Histopathologic findings">
+					description = <"Active endocarditis (may be acute or subacute/chronic) identified in or on a vegetation; from cardiac tissue; from an explanted prosthetic valve or sewing ring; from an ascending aortic graft (with concomitant evidence of valve involvement); from a CIED; or from an arterial embolus.">
+				>
+				["at0035"] = <
+					text = <"Definite endocarditis">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Possible endocarditis">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Rejected endocarditis">
+					description = <"">
+				>
+			>
+		>
+	>
